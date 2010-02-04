@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Hans Hamid <hh@hanshamid.web.id>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: premiumnews/archive.php:57
+#: premiumnews/single.php:34
+#: premiumnews/search.php:42
+#: premiumnews/tag.php:42
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Tulisan Sebelumnya"
+
+#. Text in function
+#: premiumnews/comments.php:138
+#: premiumnews/comments.php:141
+msgid "(required)"
+msgstr "(harus diisi)"
+
+#. Text in echo
+#: premiumnews/sidebar.php:104
+msgid "ARCHIVES"
+msgstr "ARSIP"
+
+#. Text in echo
+#: premiumnews/archive.php:11
+#: premiumnews/archive.php:16
+#: premiumnews/archive.php:19
+#: premiumnews/archive.php:22
+#: premiumnews/header.php:11
+#: premiumnews/header.php:12
+msgid "Archive"
+msgstr "Arsip"
+
+#. Text in echo
+#: premiumnews/header.php:8
+msgid "Author Archives"
+msgstr "Arsip Penulis"
+
+#. Text in echo
+#: premiumnews/sidebar.php:74
+msgid "CATEGORIES"
+msgstr "KATEGORI"
+
+#. Text in echo
+#: premiumnews/sidebar.php:11
+msgid "COMMENTS"
+msgstr "KOMENTAR"
+
+#. Text in echo
+#: premiumnews/sitemap.php:31
+msgid "Categories"
+msgstr "Kategori"
+
+#. Text in echo
+#: premiumnews/single.php:11
+msgid "Categorized"
+msgstr "Terkategorikan"
+
+#. Text in echo
+#: premiumnews/includes/video.php:6
+msgid "Click below to view videos..."
+msgstr "Klik di bawah ini untuk melihat video..."
+
+#. Text in echo
+#: premiumnews/sitemap.php:56
+msgid "Comments"
+msgstr "Komentar"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+msgid "Comments (%)"
+msgstr "Komentar (%)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (0)"
+msgstr "Komentar (0)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (1)"
+msgstr "Komentar (1)"
+
+#. Text in echo
+#: premiumnews/comments.php:37
+msgid "Comments For This Post"
+msgstr "Komentar Untuk Tulisan Ini"
+
+#. Text in echo
+#: premiumnews/sidebar.php:125
+msgid "Comments RSS"
+msgstr "RSS Komentar"
+
+#. Text in echo
+#: premiumnews/comments.php:115
+msgid "Comments are closed"
+msgstr "Komentar ditutup"
+
+#. Text in function
+#: premiumnews/archive.php:47
+#: premiumnews/includes/featured.php:33
+#: premiumnews/single.php:22
+#: premiumnews/search.php:32
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:32
+#: premiumnews/layouts/blog.php:31
+msgid "Continue Reading"
+msgstr "Lanjutkan Membaca"
+
+#. Text in echo
+#: premiumnews/footer.php:6
+msgid "Copyright"
+msgstr "Copyright"
+
+#. Text in echo
+#: premiumnews/sidebar.php:120
+msgid "Designed by"
+msgstr "Design oleh"
+
+#. Text in echo
+#: premiumnews/includes/theme-comments.php:15
+msgid "Direct link to this comment"
+msgstr "Link langsung ke komentar ini"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:15
+msgid "Edit"
+msgstr "Ubah"
+
+#. Text in echo
+#: premiumnews/header.php:107
+msgid "Enter your search keywords here..."
+msgstr "Masukkan kata kunci pencarian di sini..."
+
+#. Text in echo
+#: premiumnews/sidebar.php:124
+msgid "Entries RSS"
+msgstr "RSS Tulisan"
+
+#. Text in echo
+#: premiumnews/sidebar.php:12
+msgid "FEATURED"
+msgstr "FITUR"
+
+#. Text in echo
+#: premiumnews/header.php:108
+msgid "Go"
+msgstr "Go"
+
+#. Text in echo
+#: premiumnews/sidebar.php:117
+msgid "INFORMATION"
+msgstr "INFORMASI"
+
+#. Text in echo
+#: premiumnews/comments.php:123
+msgid "Leave a Reply"
+msgstr "Tinggalkan Balasan"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Log out of this account"
+msgstr "Log out dari akun ini"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logged in as"
+msgstr "Log in sebagai"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logout &raquo;"
+msgstr "Logout &raquo;"
+
+#. Text in echo
+#: premiumnews/comments.php:141
+msgid "Mail (will not be published)"
+msgstr "Email (tidak akan ditampilkan)"
+
+#. Text in echo
+#: premiumnews/comments.php:138
+msgid "Name"
+msgstr "Nama"
+
+#. Text in function
+#: premiumnews/archive.php:58
+#: premiumnews/single.php:35
+#: premiumnews/search.php:43
+#: premiumnews/tag.php:43
+msgid "Next Entries &raquo;"
+msgstr "Tulisan Berikutnya &raquo;"
+
+#. Text in echo
+#: premiumnews/search.php:50
+msgid "None Found!"
+msgstr "Tidak Ada yang Ditemukan!"
+
+#. Text in echo
+#: premiumnews/sidebar.php:10
+msgid "POPULAR"
+msgstr "POPULER"
+
+#. Text in echo
+#: premiumnews/404.php:7
+msgid "Page Not Found"
+msgstr "Halaman Tidak Ditemukan"
+
+#. Text in echo
+#: premiumnews/sitemap.php:19
+msgid "Pages"
+msgstr "Halaman"
+
+#. Text in echo
+#: premiumnews/includes/featured.php:31
+#: premiumnews/includes/featured.php:33
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:28
+#: premiumnews/layouts/blog.php:27
+#: premiumnews/sidebar.php:37
+msgid "Permanent Link to"
+msgstr "Link Permanen ke"
+
+#. Text in echo
+#: premiumnews/sidebar.php:55
+msgid "Photos from our Flickr stream"
+msgstr "Foto dari Flickr stream kami"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/layouts/default.php:28
+#: premiumnews/tag.php:29
+#: premiumnews/layouts/blog.php:28
+msgid "Posted on"
+msgstr "Ditulis di"
+
+#. Text in echo
+#: premiumnews/sidebar.php:123
+msgid "Powered by"
+msgstr "Didukung oleh"
+
+#. Text in echo
+#: premiumnews/includes/video.php:5
+msgid "RECENT VIDEOS"
+msgstr "VIDEO SEBELUMNYA"
+
+#. Text in echo
+#: premiumnews/sidebar.php:87
+msgid "RELATED SITES"
+msgstr "SITUS TERKAIT"
+
+#. Text in function
+#: premiumnews/archive.php:13
+msgid "RSS feed for this section"
+msgstr "RSS feed untuk bagian ini"
+
+#. Text in echo
+#: premiumnews/layouts/default.php:40
+#: premiumnews/layouts/blog.php:44
+msgid "SEE MORE ARTICLES IN THE ARCHIVE"
+msgstr "LIHAT ARTIKEL LAINNYA DI ARSIP"
+
+#. Text in echo
+#: premiumnews/header.php:127
+msgid "SUBSCRIBE TO THE FEED VIA E-MAIL"
+msgstr "DAFTAR FEED VIA EMAIL"
+
+#. Text in echo
+#: premiumnews/header.php:126
+msgid "SUBSCRIBE TO THE RSS FEED"
+msgstr "DAFTAR RSS FEED"
+
+#. Text in echo
+#: premiumnews/comments.php:85
+msgid "Says"
+msgstr "Mengatakan"
+
+#. Text in echo
+#: premiumnews/search.php:9
+#: premiumnews/search.php:50
+#: premiumnews/header.php:7
+msgid "Search Results"
+msgstr "Hasil Pencarian"
+
+#. Text in echo
+#: premiumnews/sidebar.php:59
+msgid "See all photos"
+msgstr "Liat semua foto"
+
+#. Text in echo
+#: premiumnews/search.php:51
+msgid "Sorry! Your search yielded no results. Please search again."
+msgstr "Maaf! Tidak ada hasil. Silakan cari lagi."
+
+#. Text in echo
+#: premiumnews/404.php:8
+msgid "Sorry, but the page you were looking for is not here"
+msgstr "Maaf, halaman yang anda cari tidak ada."
+
+#. Text in echo
+#: premiumnews/comments.php:152
+msgid "Submit Comment"
+msgstr "Masukkan Komentar"
+
+#. Text in echo
+#: premiumnews/tag.php:9
+#: premiumnews/header.php:13
+msgid "Tag Archive"
+msgstr "Arsip Tag"
+
+#. Text in echo
+#: premiumnews/comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Tulisan ini dilindungi password. Masukkan password untuk melihat komentar."
+
+#. Text in echo
+#: premiumnews/comments.php:77
+msgid "Trackbacks For This Post"
+msgstr "Trackback untuk tulisan ini"
+
+#. Text in echo
+#: premiumnews/comments.php:144
+msgid "Website"
+msgstr "Website"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "You must be"
+msgstr "Anda pasti"
+
+#. Text in echo
+#: premiumnews/comments.php:87
+msgid "Your comment is awaiting moderation"
+msgstr "Komentar anda sedang dimoderasi"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:20
+msgid "Your comment is awaiting moderation."
+msgstr "Komentar anda sedang dimoderasi."
+
+#. Text in function
+#: premiumnews/search.php:9
+msgid "\\'%s\\'"
+msgstr "\\'%s\\'"
+
+#. Text in echo
+#: premiumnews/comments.php:91
+msgid "at"
+msgstr "pada"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/tag.php:29
+#: premiumnews/footer.php:6
+msgid "by"
+msgstr "oleh"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "logged in"
+msgstr "logged in"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "to post a comment."
+msgstr "untuk menuliskan komentar."
+

@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Helen Pluut <helenpluut@qurious.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: premiumnews/archive.php:57
+#: premiumnews/single.php:34
+#: premiumnews/search.php:42
+#: premiumnews/tag.php:42
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Vorige berichten"
+
+#. Text in function
+#: premiumnews/comments.php:138
+#: premiumnews/comments.php:141
+msgid "(required)"
+msgstr "(vereist)"
+
+#. Text in echo
+#: premiumnews/sidebar.php:104
+msgid "ARCHIVES"
+msgstr "ARCHIEVEN"
+
+#. Text in echo
+#: premiumnews/archive.php:11
+#: premiumnews/archive.php:16
+#: premiumnews/archive.php:19
+#: premiumnews/archive.php:22
+#: premiumnews/header.php:11
+#: premiumnews/header.php:12
+msgid "Archive"
+msgstr "Archief"
+
+#. Text in echo
+#: premiumnews/header.php:8
+msgid "Author Archives"
+msgstr "Auteursarchieven"
+
+#. Text in echo
+#: premiumnews/sidebar.php:74
+msgid "CATEGORIES"
+msgstr "CATEGORIEËN"
+
+#. Text in echo
+#: premiumnews/sidebar.php:11
+msgid "COMMENTS"
+msgstr "REACTIES"
+
+#. Text in echo
+#: premiumnews/sitemap.php:31
+msgid "Categories"
+msgstr "Categorieën"
+
+#. Text in echo
+#: premiumnews/single.php:11
+msgid "Categorized"
+msgstr "Gecategoriseerd"
+
+#. Text in echo
+#: premiumnews/includes/video.php:6
+msgid "Click below to view videos..."
+msgstr "Klink hieronder om video's te bekijken..."
+
+#. Text in echo
+#: premiumnews/sitemap.php:56
+msgid "Comments"
+msgstr "Reacties"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+msgid "Comments (%)"
+msgstr "Reacties (%)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (0)"
+msgstr "Reacties (0)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (1)"
+msgstr "Reacties (1)"
+
+#. Text in echo
+#: premiumnews/comments.php:37
+msgid "Comments For This Post"
+msgstr "Reacties voor dit bericht"
+
+#. Text in echo
+#: premiumnews/sidebar.php:125
+msgid "Comments RSS"
+msgstr "Reacties RSS"
+
+#. Text in echo
+#: premiumnews/comments.php:115
+msgid "Comments are closed"
+msgstr "Reacties zijn gesloten"
+
+#. Text in function
+#: premiumnews/archive.php:47
+#: premiumnews/includes/featured.php:33
+#: premiumnews/single.php:22
+#: premiumnews/search.php:32
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:32
+#: premiumnews/layouts/blog.php:31
+msgid "Continue Reading"
+msgstr "Lees verder"
+
+#. Text in echo
+#: premiumnews/footer.php:6
+msgid "Copyright"
+msgstr "Copyright"
+
+#. Text in echo
+#: premiumnews/sidebar.php:120
+msgid "Designed by"
+msgstr "Ontworpen door"
+
+#. Text in echo
+#: premiumnews/includes/theme-comments.php:15
+msgid "Direct link to this comment"
+msgstr "Directe link naar deze reactie"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:15
+msgid "Edit"
+msgstr "Bewerk"
+
+#. Text in echo
+#: premiumnews/header.php:107
+msgid "Enter your search keywords here..."
+msgstr "Voer je zoeksleutelwoord hier in..."
+
+#. Text in echo
+#: premiumnews/sidebar.php:124
+msgid "Entries RSS"
+msgstr "Berichten RSS"
+
+#. Text in echo
+#: premiumnews/sidebar.php:12
+msgid "FEATURED"
+msgstr "AANBEVOLEN"
+
+#. Text in echo
+#: premiumnews/header.php:108
+msgid "Go"
+msgstr "Ga"
+
+#. Text in echo
+#: premiumnews/sidebar.php:117
+msgid "INFORMATION"
+msgstr "INFORMATIE"
+
+#. Text in echo
+#: premiumnews/comments.php:123
+msgid "Leave a Reply"
+msgstr "Laat een reactie achter"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Log out of this account"
+msgstr "Log uit van deze account"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logged in as"
+msgstr "Ingelogd als"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logout &raquo;"
+msgstr "Log uit &raquo;"
+
+#. Text in echo
+#: premiumnews/comments.php:141
+msgid "Mail (will not be published)"
+msgstr "Mail (wordt niet gepubliceerd)"
+
+#. Text in echo
+#: premiumnews/comments.php:138
+msgid "Name"
+msgstr "Naam"
+
+#. Text in function
+#: premiumnews/archive.php:58
+#: premiumnews/single.php:35
+#: premiumnews/search.php:43
+#: premiumnews/tag.php:43
+msgid "Next Entries &raquo;"
+msgstr "Volgende berichten &raquo;"
+
+#. Text in echo
+#: premiumnews/search.php:50
+msgid "None Found!"
+msgstr "Geen gevonden!"
+
+#. Text in echo
+#: premiumnews/sidebar.php:10
+msgid "POPULAR"
+msgstr "POPULAIR"
+
+#. Text in echo
+#: premiumnews/404.php:7
+msgid "Page Not Found"
+msgstr "Pagina niet gevonden"
+
+#. Text in echo
+#: premiumnews/sitemap.php:19
+msgid "Pages"
+msgstr "Pagina's"
+
+#. Text in echo
+#: premiumnews/includes/featured.php:31
+#: premiumnews/includes/featured.php:33
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:28
+#: premiumnews/layouts/blog.php:27
+#: premiumnews/sidebar.php:37
+msgid "Permanent Link to"
+msgstr "Permanente link naar"
+
+#. Text in echo
+#: premiumnews/sidebar.php:55
+msgid "Photos from our Flickr stream"
+msgstr "Foto's van onze Flickr stream"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/layouts/default.php:28
+#: premiumnews/tag.php:29
+#: premiumnews/layouts/blog.php:28
+msgid "Posted on"
+msgstr "Geplaatst op"
+
+#. Text in echo
+#: premiumnews/sidebar.php:123
+msgid "Powered by"
+msgstr "Draait op"
+
+#. Text in echo
+#: premiumnews/includes/video.php:5
+msgid "RECENT VIDEOS"
+msgstr "RECENTE VIDEO'S"
+
+#. Text in echo
+#: premiumnews/sidebar.php:87
+msgid "RELATED SITES"
+msgstr "GERELATEERDE SITES"
+
+#. Text in function
+#: premiumnews/archive.php:13
+msgid "RSS feed for this section"
+msgstr "RSS feed voor deze sectie"
+
+#. Text in echo
+#: premiumnews/layouts/default.php:40
+#: premiumnews/layouts/blog.php:44
+msgid "SEE MORE ARTICLES IN THE ARCHIVE"
+msgstr "ZIE MEER ARTIKELEN IN HET ARCHIEF"
+
+#. Text in echo
+#: premiumnews/header.php:127
+msgid "SUBSCRIBE TO THE FEED VIA E-MAIL"
+msgstr "SCHRIJF IN OP DEZE FEED VIA E-MAIL"
+
+#. Text in echo
+#: premiumnews/header.php:126
+msgid "SUBSCRIBE TO THE RSS FEED"
+msgstr "SCHRIJF IN OP DEZE RSS FEED"
+
+#. Text in echo
+#: premiumnews/comments.php:85
+msgid "Says"
+msgstr "Zegt "
+
+#. Text in echo
+#: premiumnews/search.php:9
+#: premiumnews/search.php:50
+#: premiumnews/header.php:7
+msgid "Search Results"
+msgstr "Zoekresultaten"
+
+#. Text in echo
+#: premiumnews/sidebar.php:59
+msgid "See all photos"
+msgstr "Zie alle foto's"
+
+#. Text in echo
+#: premiumnews/search.php:51
+msgid "Sorry! Your search yielded no results. Please search again."
+msgstr "Sorry! Je zoekopdracht leverde geen resultaten op. Zoek alsjeblief opnieuw."
+
+#. Text in echo
+#: premiumnews/404.php:8
+msgid "Sorry, but the page you were looking for is not here"
+msgstr "Sorry, maar de pagina waarnaar je op zoekt bent, is niet hier"
+
+#. Text in echo
+#: premiumnews/comments.php:152
+msgid "Submit Comment"
+msgstr "Verstuur reactie"
+
+#. Text in echo
+#: premiumnews/tag.php:9
+#: premiumnews/header.php:13
+msgid "Tag Archive"
+msgstr "Tag-archief"
+
+#. Text in echo
+#: premiumnews/comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Dit bericht is beveiligd met een wachtwoord. Voer het wachtwoord in om de reacties te zien."
+
+#. Text in echo
+#: premiumnews/comments.php:77
+msgid "Trackbacks For This Post"
+msgstr "Trackbacks voor dit bericht"
+
+#. Text in echo
+#: premiumnews/comments.php:144
+msgid "Website"
+msgstr "Website"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "You must be"
+msgstr "Je moet zijn"
+
+#. Text in echo
+#: premiumnews/comments.php:87
+msgid "Your comment is awaiting moderation"
+msgstr "Je reactie wacht op moderatie"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:20
+msgid "Your comment is awaiting moderation."
+msgstr "Je reactie wacht op moderatie."
+
+#. Text in function
+#: premiumnews/search.php:9
+msgid "\\'%s\\'"
+msgstr "\\'%s\\'"
+
+#. Text in echo
+#: premiumnews/comments.php:91
+msgid "at"
+msgstr "op"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/tag.php:29
+#: premiumnews/footer.php:6
+msgid "by"
+msgstr "door"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "logged in"
+msgstr "ingelogd"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "to post a comment."
+msgstr "om een reactie te plaatsen."
+

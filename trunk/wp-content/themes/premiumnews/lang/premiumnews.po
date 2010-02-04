@@ -1,0 +1,381 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: premiumnews/archive.php:57
+#: premiumnews/single.php:34
+#: premiumnews/search.php:42
+#: premiumnews/tag.php:42
+msgid "&laquo; Previous Entries"
+msgstr ""
+
+#. Text in function
+#: premiumnews/comments.php:138
+#: premiumnews/comments.php:141
+msgid "(required)"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:104
+msgid "ARCHIVES"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/archive.php:11
+#: premiumnews/archive.php:16
+#: premiumnews/archive.php:19
+#: premiumnews/archive.php:22
+#: premiumnews/header.php:11
+#: premiumnews/header.php:12
+msgid "Archive"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/header.php:8
+msgid "Author Archives"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:74
+msgid "CATEGORIES"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:11
+msgid "COMMENTS"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sitemap.php:31
+msgid "Categories"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/single.php:11
+msgid "Categorized"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/includes/video.php:6
+msgid "Click below to view videos..."
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sitemap.php:56
+msgid "Comments"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+msgid "Comments (%)"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (0)"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (1)"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:37
+msgid "Comments For This Post"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:125
+msgid "Comments RSS"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:115
+msgid "Comments are closed"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:47
+#: premiumnews/includes/featured.php:33
+#: premiumnews/single.php:22
+#: premiumnews/search.php:32
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:32
+#: premiumnews/layouts/blog.php:31
+msgid "Continue Reading"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/footer.php:6
+msgid "Copyright"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:120
+msgid "Designed by"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/includes/theme-comments.php:15
+msgid "Direct link to this comment"
+msgstr ""
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:15
+msgid "Edit"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/header.php:107
+msgid "Enter your search keywords here..."
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:124
+msgid "Entries RSS"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:12
+msgid "FEATURED"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/header.php:108
+msgid "Go"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:117
+msgid "INFORMATION"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:123
+msgid "Leave a Reply"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Log out of this account"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logged in as"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logout &raquo;"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:141
+msgid "Mail (will not be published)"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:138
+msgid "Name"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:58
+#: premiumnews/single.php:35
+#: premiumnews/search.php:43
+#: premiumnews/tag.php:43
+msgid "Next Entries &raquo;"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/search.php:50
+msgid "None Found!"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:10
+msgid "POPULAR"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/404.php:7
+msgid "Page Not Found"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sitemap.php:19
+msgid "Pages"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/includes/featured.php:31
+#: premiumnews/includes/featured.php:33
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:28
+#: premiumnews/layouts/blog.php:27
+#: premiumnews/sidebar.php:37
+msgid "Permanent Link to"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:55
+msgid "Photos from our Flickr stream"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/layouts/default.php:28
+#: premiumnews/tag.php:29
+#: premiumnews/layouts/blog.php:28
+msgid "Posted on"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:123
+msgid "Powered by"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/includes/video.php:5
+msgid "RECENT VIDEOS"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:87
+msgid "RELATED SITES"
+msgstr ""
+
+#. Text in function
+#: premiumnews/archive.php:13
+msgid "RSS feed for this section"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/layouts/default.php:40
+#: premiumnews/layouts/blog.php:44
+msgid "SEE MORE ARTICLES IN THE ARCHIVE"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/header.php:127
+msgid "SUBSCRIBE TO THE FEED VIA E-MAIL"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/header.php:126
+msgid "SUBSCRIBE TO THE RSS FEED"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:85
+msgid "Says"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/search.php:9
+#: premiumnews/search.php:50
+#: premiumnews/header.php:7
+msgid "Search Results"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/sidebar.php:59
+msgid "See all photos"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/search.php:51
+msgid "Sorry! Your search yielded no results. Please search again."
+msgstr ""
+
+#. Text in echo
+#: premiumnews/404.php:8
+msgid "Sorry, but the page you were looking for is not here"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:152
+msgid "Submit Comment"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/tag.php:9
+#: premiumnews/header.php:13
+msgid "Tag Archive"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:77
+msgid "Trackbacks For This Post"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:144
+msgid "Website"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "You must be"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:87
+msgid "Your comment is awaiting moderation"
+msgstr ""
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:20
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. Text in function
+#: premiumnews/search.php:9
+msgid "\\'%s\\'"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:91
+msgid "at"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/tag.php:29
+#: premiumnews/footer.php:6
+msgid "by"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "logged in"
+msgstr ""
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "to post a comment."
+msgstr ""

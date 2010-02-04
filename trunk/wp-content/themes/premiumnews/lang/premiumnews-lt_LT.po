@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Tomas Laurinavičius <ltomas.lt@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: premiumnews/archive.php:57
+#: premiumnews/single.php:34
+#: premiumnews/search.php:42
+#: premiumnews/tag.php:42
+msgid "&laquo; Previous Entries"
+msgstr "&laquo; Buvę įrašai"
+
+#. Text in function
+#: premiumnews/comments.php:138
+#: premiumnews/comments.php:141
+msgid "(required)"
+msgstr "(privaloma)"
+
+#. Text in echo
+#: premiumnews/sidebar.php:104
+msgid "ARCHIVES"
+msgstr "ARCHYVAI"
+
+#. Text in echo
+#: premiumnews/archive.php:11
+#: premiumnews/archive.php:16
+#: premiumnews/archive.php:19
+#: premiumnews/archive.php:22
+#: premiumnews/header.php:11
+#: premiumnews/header.php:12
+msgid "Archive"
+msgstr "Archyvas"
+
+#. Text in echo
+#: premiumnews/header.php:8
+msgid "Author Archives"
+msgstr "Autorių archyvai"
+
+#. Text in echo
+#: premiumnews/sidebar.php:74
+msgid "CATEGORIES"
+msgstr "KATEGORIJOS"
+
+#. Text in echo
+#: premiumnews/sidebar.php:11
+msgid "COMMENTS"
+msgstr "KOMENTARAI"
+
+#. Text in echo
+#: premiumnews/sitemap.php:31
+msgid "Categories"
+msgstr "Kategorijos"
+
+#. Text in echo
+#: premiumnews/single.php:11
+msgid "Categorized"
+msgstr "Kategorizuota"
+
+#. Text in echo
+#: premiumnews/includes/video.php:6
+msgid "Click below to view videos..."
+msgstr "Spauskite žemiau video peržiūrai..."
+
+#. Text in echo
+#: premiumnews/sitemap.php:56
+msgid "Comments"
+msgstr "Komentarai"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+msgid "Comments (%)"
+msgstr "Komentarai (%)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (0)"
+msgstr "Komentarai (0)"
+
+#. Text in function
+#: premiumnews/archive.php:50
+#: premiumnews/search.php:35
+#: premiumnews/layouts/default.php:30
+#: premiumnews/tag.php:35
+#: premiumnews/layouts/blog.php:34
+msgid "Comments (1)"
+msgstr "Komentarai (1)"
+
+#. Text in echo
+#: premiumnews/comments.php:37
+msgid "Comments For This Post"
+msgstr "Šio įrašo komentarai"
+
+#. Text in echo
+#: premiumnews/sidebar.php:125
+msgid "Comments RSS"
+msgstr "Komentarų RSS"
+
+#. Text in echo
+#: premiumnews/comments.php:115
+msgid "Comments are closed"
+msgstr "Komentarai neleidžiami"
+
+#. Text in function
+#: premiumnews/archive.php:47
+#: premiumnews/includes/featured.php:33
+#: premiumnews/single.php:22
+#: premiumnews/search.php:32
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:32
+#: premiumnews/layouts/blog.php:31
+msgid "Continue Reading"
+msgstr "Skaityti plačiau"
+
+#. Text in echo
+#: premiumnews/footer.php:6
+msgid "Copyright"
+msgstr "Autorinės teisės priklauso"
+
+#. Text in echo
+#: premiumnews/sidebar.php:120
+msgid "Designed by"
+msgstr "Dizainas:"
+
+#. Text in echo
+#: premiumnews/includes/theme-comments.php:15
+msgid "Direct link to this comment"
+msgstr "Komentaro nuoroda"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:15
+msgid "Edit"
+msgstr "Redaguoti"
+
+#. Text in echo
+#: premiumnews/header.php:107
+msgid "Enter your search keywords here..."
+msgstr "Įveskite paieškos raktažodžius čia..."
+
+#. Text in echo
+#: premiumnews/sidebar.php:124
+msgid "Entries RSS"
+msgstr "Įrašų RSS"
+
+#. Text in echo
+#: premiumnews/sidebar.php:12
+msgid "FEATURED"
+msgstr "AKTUALU"
+
+#. Text in echo
+#: premiumnews/header.php:108
+msgid "Go"
+msgstr "Pirmyn"
+
+#. Text in echo
+#: premiumnews/sidebar.php:117
+msgid "INFORMATION"
+msgstr "INFORMACIJA"
+
+#. Text in echo
+#: premiumnews/comments.php:123
+msgid "Leave a Reply"
+msgstr "Rašyti komentarą"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Log out of this account"
+msgstr "Atsijungti"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logged in as"
+msgstr "Prisijungėte kaip"
+
+#. Text in echo
+#: premiumnews/comments.php:133
+msgid "Logout &raquo;"
+msgstr "Atsijungti &raquo;"
+
+#. Text in echo
+#: premiumnews/comments.php:141
+msgid "Mail (will not be published)"
+msgstr "El. paštas (nebus publikuojamas)"
+
+#. Text in echo
+#: premiumnews/comments.php:138
+msgid "Name"
+msgstr "Vardas"
+
+#. Text in function
+#: premiumnews/archive.php:58
+#: premiumnews/single.php:35
+#: premiumnews/search.php:43
+#: premiumnews/tag.php:43
+msgid "Next Entries &raquo;"
+msgstr "Sekantys įrašai &raquo;"
+
+#. Text in echo
+#: premiumnews/search.php:50
+msgid "None Found!"
+msgstr "Nieko nerasta!"
+
+#. Text in echo
+#: premiumnews/sidebar.php:10
+msgid "POPULAR"
+msgstr "POPULIARU"
+
+#. Text in echo
+#: premiumnews/404.php:7
+msgid "Page Not Found"
+msgstr "Puslapis nerastas"
+
+#. Text in echo
+#: premiumnews/sitemap.php:19
+msgid "Pages"
+msgstr "Puslapiai"
+
+#. Text in echo
+#: premiumnews/includes/featured.php:31
+#: premiumnews/includes/featured.php:33
+#: premiumnews/layouts/default.php:29
+#: premiumnews/tag.php:28
+#: premiumnews/layouts/blog.php:27
+#: premiumnews/sidebar.php:37
+msgid "Permanent Link to"
+msgstr "Nuoroda į"
+
+#. Text in echo
+#: premiumnews/sidebar.php:55
+msgid "Photos from our Flickr stream"
+msgstr "Nuotraukos iš Flickr"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/layouts/default.php:28
+#: premiumnews/tag.php:29
+#: premiumnews/layouts/blog.php:28
+msgid "Posted on"
+msgstr "Parašyta"
+
+#. Text in echo
+#: premiumnews/sidebar.php:123
+msgid "Powered by"
+msgstr "Varikliukas:"
+
+#. Text in echo
+#: premiumnews/includes/video.php:5
+msgid "RECENT VIDEOS"
+msgstr "NAUJAUSI VIDEO"
+
+#. Text in echo
+#: premiumnews/sidebar.php:87
+msgid "RELATED SITES"
+msgstr "PANAŠŪS PUSLAPIAI"
+
+#. Text in function
+#: premiumnews/archive.php:13
+msgid "RSS feed for this section"
+msgstr "Šios skilties RSS"
+
+#. Text in echo
+#: premiumnews/layouts/default.php:40
+#: premiumnews/layouts/blog.php:44
+msgid "SEE MORE ARTICLES IN THE ARCHIVE"
+msgstr "PERŽIŪRĖTI DAUGIAU ARCHYVO STRAIPSNIŲ"
+
+#. Text in echo
+#: premiumnews/header.php:127
+msgid "SUBSCRIBE TO THE FEED VIA E-MAIL"
+msgstr "UŽSIPRENUMERUOTI EL. PAŠTU"
+
+#. Text in echo
+#: premiumnews/header.php:126
+msgid "SUBSCRIBE TO THE RSS FEED"
+msgstr "UŽSIPRENUMERUOTI RSS"
+
+#. Text in echo
+#: premiumnews/comments.php:85
+msgid "Says"
+msgstr "Sako"
+
+#. Text in echo
+#: premiumnews/search.php:9
+#: premiumnews/search.php:50
+#: premiumnews/header.php:7
+msgid "Search Results"
+msgstr "Paieškos rezultatai"
+
+#. Text in echo
+#: premiumnews/sidebar.php:59
+msgid "See all photos"
+msgstr "Peržiūrėti visas nuotraukas"
+
+#. Text in echo
+#: premiumnews/search.php:51
+msgid "Sorry! Your search yielded no results. Please search again."
+msgstr "Atsiprašome, bet nieko nerasta. Bandykite dar kartą."
+
+#. Text in echo
+#: premiumnews/404.php:8
+msgid "Sorry, but the page you were looking for is not here"
+msgstr "Atsiprašome, bet puslapio, kurio ieškote čia nėra"
+
+#. Text in echo
+#: premiumnews/comments.php:152
+msgid "Submit Comment"
+msgstr "Pateikti komentarą"
+
+#. Text in echo
+#: premiumnews/tag.php:9
+#: premiumnews/header.php:13
+msgid "Tag Archive"
+msgstr "Žymos archyvas"
+
+#. Text in echo
+#: premiumnews/comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Šis puslapis apsaugotas slaptažodžiu. Prašome įvesti slaptažodį."
+
+#. Text in echo
+#: premiumnews/comments.php:77
+msgid "Trackbacks For This Post"
+msgstr "Nuorodos į šį įrašą"
+
+#. Text in echo
+#: premiumnews/comments.php:144
+msgid "Website"
+msgstr "Svetainė"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "You must be"
+msgstr "Jūs privalote būti"
+
+#. Text in echo
+#: premiumnews/comments.php:87
+msgid "Your comment is awaiting moderation"
+msgstr "Jūsų komentaras laukia peržiūros"
+
+#. Text in function
+#: premiumnews/includes/theme-comments.php:20
+msgid "Your comment is awaiting moderation."
+msgstr "Jūsų komentaras laukia peržiūros."
+
+#. Text in function
+#: premiumnews/search.php:9
+msgid "\\'%s\\'"
+msgstr "\\'%\\'"
+
+#. Text in echo
+#: premiumnews/comments.php:91
+msgid "at"
+msgstr "data"
+
+#. Text in echo
+#: premiumnews/archive.php:44
+#: premiumnews/single.php:19
+#: premiumnews/search.php:29
+#: premiumnews/tag.php:29
+#: premiumnews/footer.php:6
+msgid "by"
+msgstr "autorius"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "logged in"
+msgstr "prisijungęs"
+
+#. Text in echo
+#: premiumnews/comments.php:126
+msgid "to post a comment."
+msgstr ", kad galėtumėte komentuoti."
+

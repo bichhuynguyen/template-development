@@ -1,0 +1,195 @@
+/*
+Theme Name: Sharpfolio
+Theme URI: http://webrevolutionary.com/sharpfolio
+Description: A WordPress theme designed to help build your online portfolio.
+Version: 2.0
+Author: Matt Lenz
+Author URI: http://webrevolutionary.com/
+Tags: sharpfolio, portfolio, dark, light
+*/
+body {
+	text-align: center;
+	background: #191919 url('images/background.png') repeat-x top;
+	color: #999;
+	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+}
+div#wrapper {
+	text-align: left;
+	margin: auto;
+	width: 800px;
+}
+a {
+	color: #ccc;
+}
+a:hover {
+	color: #fff;
+}
+p {
+	margin: 0 0 24px;
+}
+h1, h2, h3, h4 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+div#header {
+	border-bottom: 1px solid #484848;
+}
+h1 {
+	font-size: 48px;
+	color: #666;
+}
+h1 a {
+	text-decoration: none;
+	color: #666;
+}
+div#header h2, ul#navigation {
+	margin: 0 0 6px;
+}
+ul#navigation {
+	display: block;
+	width: 500px;
+	float: left;
+}
+ul#navigation li {
+	display: inline;
+}
+ul#navigation li a {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	text-decoration: none;
+	color: #666;
+	font-size: 14px;
+	margin: 0 32px 0 0;
+}
+ul#navigation li a:hover {
+	color: #999;
+}
+div#header h2 {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-weight: normal;
+	display: block;
+	width: 300px;
+	float: right;
+	text-align: right;
+	font-size: 16px;
+}
+span.f {
+	font-style: italic;
+}
+div#content {
+	margin: 72px 0 0 0;
+}
+div#content2 {
+	margin: 45px 0 0 0;
+}
+div.thumbnail {
+	width: 500px;
+	float: left;
+}
+div.entry {
+	width: 250px;
+	float: right;
+}
+div#content h2 {
+	font-size: 24px;
+	color: #fff;
+	line-height: 32px;
+}
+div#content2 h2 {
+	font-size: 24px;
+	color: #fff;
+	line-height: 32px;
+}
+div#content h2 a {
+	text-decoration: none;
+	color: #fff;
+}
+div#content2 h2 a {
+	text-decoration: none;
+	color: #fff;
+}
+p.comment-link {
+	margin: 0;
+}
+p.comment-link a {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #808080;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 36px;
+}
+p.comment-link a:hover {
+	color: #999;
+	text-decoration: underline;
+}
+div#footer p {
+	line-height: 108px;
+	color: #333;
+	text-align: center;
+}
+div#footer p a {
+	color: #444;
+	text-decoration: none;
+}
+div#footer p a:hover {
+	color: #555;
+	text-decoration: underline;
+}
+div.post {
+	margin: 0 0 76px;
+}
+h3#comments, h3#respond {
+	color: #fff;
+	line-height: 64px;
+}
+div.author {
+	width: 250px;
+	float: left;
+}
+div.author cite {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0 0 0 12px;
+}
+div.author img {
+	position: relative;
+	top: 10px;
+}
+div.comment {
+	width: 500px;
+	float: right;
+	padding: 18px 0 0 0;
+}
+ol.commentlist {
+	border-top: 1px solid #333;
+	margin: 0 0 48px;
+}
+ol.commentlist li {
+	border-bottom: 1px solid #333;
+	padding: 12px 0 0;
+}
+form input, form textarea {
+	margin: 0 12px 0;
+}
+div.alignleft, div.alignright {
+	display: block;
+	width: 40%;
+	float: left;
+}
+div.alignright {
+	float: right;
+	text-align: right;
+}
+div.alignleft a, div.alignright a {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 18px;
+	text-decoration: none;
+	color: #777;
+}
+div.alignleft a:hover, div.alignright a:hover {
+	color: #999;
+	text-decoration: underline;
+}
