@@ -21,8 +21,8 @@
 <a href="<?php echo get_option('home'); ?>/wp-login.php?action=lostpassword">Recover password</a>
 <?php } else { ?>
 <h2>Logout</h2>
-<a href="<?php echo wp_logout_url(urlencode($_SERVER['REQUEST_URI'])); ?>">logout</a><br />
-<a href="http://XXX/wp-admin/">admin</a>
+<a href="<?php echo wp_logout_url(get_settings('home')); ?>">logout</a><br />
+<a href="/wp-admin">admin</a>
 <?php }?>
 <!--Login Script End-->
 
