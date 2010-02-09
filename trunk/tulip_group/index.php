@@ -37,9 +37,7 @@
 	
 
 
-<span style="white-space:nowrap;"><script src="http://ads.adbrite.com/mb/text_group.php?sid=293573&zs=3436385f3630" type="text/javascript"></script><!--
---><a target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=293573&afsid=1"><img src="http://files.adbrite.com/mb/images/adbrite-your-ad-here-banner.gif" style="background-color:#FFFFFF" alt="Your Ad Here" width="11" height="60" border="0" /></a></span>
-<!-- End: AdBrite -->
+
 <br>	<br>	
 	</div>
 	
