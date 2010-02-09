@@ -30,7 +30,7 @@ body{
 }
 
 #content_2{
-	background:#FFFFFA url(./images/page.jpg) no-repeat;
+	background:#FFFFFA url(./images/main.jpg) no-repeat;
 	float:left;
 	padding:10px;
 	padding-top:295px;
@@ -68,15 +68,16 @@ body{
 }
 
 #left{
-	background:#CCCCCC;
+	background:#4F4624;
     font-size:1.1em;
 	margin:0;
 	float:left;
 	width:240px;
+	
 }
 
 #left2{
-	background:#CCCCCC;
+	background:#4F4624;
 	font-size:1.1em;
 	margin:0;
 	float:left;
