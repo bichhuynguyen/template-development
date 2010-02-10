@@ -2,11 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>left.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
 			<string>archive.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T14:14:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -15,6 +19,8 @@
 		<dict>
 			<key>filename</key>
 			<string>comments.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T14:50:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -23,6 +29,8 @@
 		<dict>
 			<key>filename</key>
 			<string>footer.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T14:50:39Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -39,10 +47,16 @@
 		<dict>
 			<key>filename</key>
 			<string>index.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T14:50:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>left.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T15:04:31Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -57,6 +71,8 @@
 			<string>Photoshop Header Files</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>Plugins</string>
 			<key>regexFolderFilter</key>
@@ -67,6 +83,8 @@
 		<dict>
 			<key>filename</key>
 			<string>readme.txt</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T14:14:05Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -87,6 +105,8 @@
 		<dict>
 			<key>filename</key>
 			<string>style.css</string>
+			<key>lastUsed</key>
+			<date>2010-02-09T15:04:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -96,10 +116,91 @@
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
-	<dict/>
+	<dict>
+		<key>footer.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>105</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>left.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>71</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+		</dict>
+		<key>style.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>8</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>16</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>22</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>footer.php</string>
+		<string>style.css</string>
+		<string>left.php</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{90, 122}, {903, 878}}</string>
+	<string>{{-6, 126}, {903, 878}}</string>
 </dict>
 </plist>
