@@ -6,7 +6,10 @@
 <?php wp_get_archives('type=postbypost&limit=9'); ?>
 </ul>
 
-
+<h2>Archives</h2>
+<ul>
+<?php wp_get_archives('type=monthly&limit=12'); ?>
+</ul>
 
 <!--Login Script Start-->
 <?php if (!(current_user_can('level_0'))){ ?>
