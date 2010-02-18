@@ -1,15 +1,10 @@
 <div id="left">
 
-<a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" border="0" /></a>
-
+<!--><a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" border="0" /></a> -->
 <ul class="latest">
-<?php wp_get_archives('type=postbypost&limit=9'); ?>
+<?php wp_get_archives('type=postbypost&limit=5'); ?>
 </ul>
 
-<h2>Archives</h2>
-<ul>
-<?php wp_get_archives('type=monthly&limit=12'); ?>
-</ul>
 
 <!--Login Script Start-->
 <?php if (!(current_user_can('level_0'))){ ?>
