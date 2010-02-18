@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentDocument</key>
-	<string>sidebar.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -30,7 +28,7 @@
 			<key>filename</key>
 			<string>footer.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-09T14:50:39Z</date>
+			<date>2010-02-18T14:44:17Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -54,7 +52,9 @@
 			<key>filename</key>
 			<string>left.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-12T09:55:03Z</date>
+			<date>2010-02-18T14:44:17Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -96,9 +96,7 @@
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-12T09:55:03Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-02-18T14:44:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -108,7 +106,7 @@
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-02-12T09:54:12Z</date>
+			<date>2010-02-18T14:44:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -118,71 +116,7 @@
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
-	<dict>
-		<key>footer.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>105</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>left.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>sidebar.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>style.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>39</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>8</integer>
-		</dict>
-	</dict>
-	<key>openDocuments</key>
-	<array>
-		<string>footer.php</string>
-		<string>style.css</string>
-		<string>sidebar.php</string>
-		<string>left.php</string>
-	</array>
+	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
