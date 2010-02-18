@@ -460,3 +460,13 @@ img.alignleft{
     margin-right: 3px;
     margin-left: 0px;
 	}
+	
+/*************************************
++Login
+*************************************/
+#login{
+	border: 1px solid white;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	text-align: center;
+}
