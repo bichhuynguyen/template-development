@@ -101,6 +101,7 @@ body{
 
 #header h1 a{
 	color:#333;
+	
 }
 
 #header h1 a:hover{
@@ -175,8 +176,8 @@ h4{
 }
 
 .latest li a:hover{
-   text-decoration:underline;
-   color:#fff;
+   background: #ffdc30;
+   color:#000;
 }
 
 .latestactivity{
@@ -246,19 +247,21 @@ h4{
 
 #sidebar ul li{
 	list-style-type:none;
-	margin:0;
+	margin:3px 0;
 	
 }
 
 #sidebar ul li a{
-	color:#666;
-	display:block;
-	padding:2px;
+	background: #000;
+   color:#ffdc30;
+   
+	padding: 1px;
 }
 
 #sidebar ul li a:hover{
-	margin:0;
-	background:#D3D1C6;
+	
+	background:#ffdc30;
+	color: #000;
 }
 
 
@@ -301,10 +304,15 @@ a:hover{
  *************************************/
 
 .entry{
+	background:#F1F2F1;
+	border:1px solid #fff;
+	color:#555555;
+	font-size:1.2em;
 	font-size:1.2em;
 	margin:5px 5px 0;
 	padding: 30px;
 	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
 }
 
 .entrytitle{
@@ -326,12 +334,7 @@ a:hover{
 	color:#666;
 }
 
-.entry-1{
-	background:#F1F2F1;
-	border:1px solid #fff;
-	color:#555555;
-	font-size:1.2em;
-}
+
 
 .entry-1 .entrymeta{
 	color:#888;
