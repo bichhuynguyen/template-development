@@ -1,6 +1,6 @@
 <div id="sidebar">
 
-<h2>Pages</h2>
+
 <ul>
 <li><a href="<?php echo get_settings('home'); ?>/">Home</a></li>
 <?php wp_list_pages('title_li='); ?> 
