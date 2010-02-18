@@ -20,8 +20,8 @@ body{
 	margin:0;
 }
 
-#content{
-	background:#000 url(./images/main.jpg) no-repeat;
+#content, #content_2{
+	background:#000 url(./images/main.gif) no-repeat;
 	float:left;
 	padding:10px;
 	padding-top:290px;
@@ -30,15 +30,7 @@ body{
 	margin-top: -6px;
 }
 
-#content_2{
-	background:#000 url(./images/main.jpg) no-repeat;
-	float:left;
-	padding:10px;
-	padding-top:295px;
-	width:480px;
-	font-size:1em;
-	margin-top: -6px;
-}
+
 
 #footer{	
 	color:#888;
