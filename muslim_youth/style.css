@@ -28,6 +28,8 @@ body{
 	width:480px;
 	font-size:1em;
 	margin-top: -6px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
 }
 
 

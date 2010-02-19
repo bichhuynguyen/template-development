@@ -21,7 +21,7 @@
 		
 	</div>
 	<div class="commentsblock">
-		<?php comments_template(); ?>
+		<?php //comments_template(); ?>
 	</div>
 		<?php endwhile; ?>
 		<div class="navigation">
