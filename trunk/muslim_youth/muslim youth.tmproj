@@ -10,11 +10,13 @@
 			<key>filename</key>
 			<string>archive.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-09T14:14:12Z</date>
+			<date>2010-02-19T16:36:49Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>archives.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-19T16:36:29Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -30,7 +32,7 @@
 			<key>filename</key>
 			<string>footer.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-18T16:57:57Z</date>
+			<date>2010-02-19T16:30:02Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -48,7 +50,7 @@
 			<key>filename</key>
 			<string>index.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-09T14:50:31Z</date>
+			<date>2010-02-19T16:36:58Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -59,6 +61,8 @@
 		<dict>
 			<key>filename</key>
 			<string>page.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-19T16:37:29Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -91,6 +95,8 @@
 		<dict>
 			<key>filename</key>
 			<string>search.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-19T16:42:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -106,7 +112,7 @@
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-02-18T16:57:57Z</date>
+			<date>2010-02-19T16:42:20Z</date>
 			<key>selected</key>
 			<true/>
 		</dict>
@@ -119,14 +125,84 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>archive.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>23</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>archives.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>6</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>21</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>index.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>page.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>20</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>search.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>23</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -152,20 +228,25 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>470</integer>
+				<integer>31</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>416</integer>
+			<integer>12</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>sidebar.php</string>
 		<string>style.css</string>
+		<string>page.php</string>
+		<string>search.php</string>
+		<string>archive.php</string>
+		<string>index.php</string>
+		<string>archives.php</string>
 		<string>footer.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
