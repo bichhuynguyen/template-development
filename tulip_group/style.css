@@ -11,7 +11,7 @@ Author URI: http://mildfuzz.com
  *************************************/
 
 body{
-    background:#26210e url(./images/background.gif) center repeat-y;
+    background:#61574E url(./images/background.gif) center repeat-y;
 	color:#666;
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
 	font-size:62.5%;
@@ -55,7 +55,7 @@ body{
 
 #sidebar{
 	color:#ddd;
-	background:#EBE9DC url(./images/sidebar.gif) no-repeat;
+	background:#A63E8B url(./images/sidebar.gif) no-repeat;
 	padding:20px 35px 10px 30px;
 	margin:0;
 	font-size:1.1em;
@@ -70,7 +70,7 @@ body{
 }
 
 #left{
-	background:#4F4624;
+	background:#76895B;
     font-size:1.1em;
 	margin:0;
 	float:left;
@@ -158,10 +158,10 @@ h4{
  *************************************/
 
 .latest {
-   background:#4f4624 url(./images/latest.gif) no-repeat;
+   
    color:#333;
    margin:0;
-   padding:50px 0 16px 10px;
+   padding: 0 0 16px 10px;
 }
 
 .latest li{
@@ -249,11 +249,11 @@ h4{
 #sidebar ul li{
 	list-style-type:none;
 	margin:0;
-	border-bottom:1px solid #D3D1C6;
+	
 }
 
 #sidebar ul li a{
-	color:#666;
+	color: #e2e4e1;
 	display:block;
 	padding:2px;
 }
@@ -270,7 +270,7 @@ h4{
 
 a{
     text-decoration:none;
-    color:#d05d00;
+    color:##E2E4E1;
 }
 
 a:hover{
