@@ -56,7 +56,7 @@ body{
 #sidebar{
 	color:#ddd;
 	background:#A63E8B url(./images/sidebar.gif) no-repeat;
-	padding:20px 35px 10px 30px;
+	padding:110px 35px 10px 30px;
 	margin:0;
 	font-size:1.1em;
 	float:left;
@@ -163,7 +163,9 @@ h4{
    margin:0;
    padding: 0 0 16px 10px;
 }
-
+#left_content{
+	padding-top: 105px;
+}
 .latest li{
    list-style-type:none;
    margin:5px 0;
