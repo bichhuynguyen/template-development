@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentDocument</key>
-	<string>footer.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -30,9 +28,7 @@
 			<key>filename</key>
 			<string>footer.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-22T17:01:19Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-02-23T09:47:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -56,7 +52,7 @@
 			<key>filename</key>
 			<string>left.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-22T17:01:17Z</date>
+			<date>2010-02-23T15:06:43Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -98,7 +94,7 @@
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-22T17:01:18Z</date>
+			<date>2010-02-24T10:01:11Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -108,7 +104,9 @@
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-02-22T17:01:19Z</date>
+			<date>2010-02-24T10:01:12Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -118,41 +116,7 @@
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
-	<dict>
-		<key>footer.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>75</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>style.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>1</integer>
-				<key>line</key>
-				<integer>39</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>396</integer>
-		</dict>
-	</dict>
-	<key>openDocuments</key>
-	<array>
-		<string>footer.php</string>
-		<string>style.css</string>
-	</array>
+	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
