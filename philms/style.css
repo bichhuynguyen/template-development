@@ -1,0 +1,358 @@
+/*
+Theme Name: Philms
+Theme URI: http://mildfuzz.com
+Description: Custome theme, exclusive to philms.org.uk
+Version: 2 (WP2.6.2)
+Author: John Farrow
+Author URI: http://mildfuzz.com
+*/
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";
+
+/*****Genral Styles*****/
+html {
+	overflow-x: hidden;
+}
+body {
+	background:transparent url('style/images/bckgrnd.png') repeat scroll;
+	color: white;
+	
+	font-family: 'American Typewriter';
+	
+	font-size: 20px;
+	min-width: 960px;
+	
+}
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+}
+
+/*****header Styles******/
+#header{
+	background:transparent url('style/images/header_bckgrnd.png') repeat-x scroll;
+	
+	height: 247px;
+	min-width: 950px;
+	
+	
+	color: #339999;
+	
+	letter-spacing: 0pt;
+}
+#header a{
+	color: #999933;
+	margin-left: 5px;
+}
+#header a:hover {
+	color: #caca3f;
+	margin-left: 5px;
+}
+#header img{
+	float: left;
+	margin: 10px 0 10px 0;
+}
+#title{
+
+	margin-left: 34px;
+
+}
+#nav_wrap{
+	float: left;
+	margin-top: 40px;
+	margin-left: 40px;
+}
+#nav_wrap_top{
+	margin-left: 55px;
+}
+#nav_wrap_bottom{
+	float: left;
+	margin-left: 43px;
+	
+}
+.nav_out{
+	margin-left: -71px;
+}
+.nav_out2{
+	margin-left: -19px;
+}
+
+li.cat-item, li.page_item{
+	text-align: left;
+}
+.nav_element{
+	float: left;
+	text-align: right;
+}
+#header li.current-cat a, #header li.current_page_item a{
+	color:#caca3f;
+}
+
+/*****Featured Styles******/
+#featured_section{
+	background:#380a17 url('style/images/content_top_gradient.png') repeat-x  top scroll;
+	width: 100%;
+	min-height: 400px;
+	top: 20px;
+	position:relative;
+}
+/*****Slider Styles******/
+#container {
+	
+	margin-left: 60px;
+	min-height: 400px;
+	padding-bottom: 43px;
+	width:950px;
+	top: 30px; 
+	min-height:375px; 
+	overflow:hidden; 
+	position:relative; 
+	
+
+}
+#featured_base{
+	position: relative;
+	clear: both;
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	
+	bottom: -18px;
+	background:transparent url('style/images/content_bottom_gradient.png') repeat-x  bottom scroll;
+}
+
+.featured_button{
+	position: absolute;
+	margin-top: -30px;
+	left: 470px;
+	top: 5px;
+
+	
+}
+div.post_border{
+	background:transparent url('style/images/content_brdr.png') repeat-x scroll;
+}
+a.next{
+	position:relative; 
+	bottom: 4px;
+}
+
+.slides {
+	position:absolute; 
+	top:0; 
+	left:0;
+}
+
+.slides div { 
+	padding: 0 10px 0 10px;
+	top:30px; 
+	width:950px;
+	 
+}
+.slides div.the_video {
+	padding: 0;
+	-moz-border-radius:3ex;
+	-webkit-border-radius:3ex;
+}
+
+
+.slides div a.post_title{
+	position: relative;
+	top: -40px;
+	width: 460px;
+	left: 7px;
+	height: 45px;
+	overflow: hidden;
+	color: white;
+	
+	font-family: courier,"courier new",monospace;
+	font-size: 2.5em;
+	letter-spacing: -3pt;
+	word-spacing: 0pt;
+	line-height: 1.2;
+	
+}
+.slides div p{
+	width: 260px;
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+	font-size: 12px;
+	
+	letter-spacing: 0.6pt;
+	word-spacing: 0pt;
+	line-height: 1.7;
+	margin-left: 3px;
+	padding: 0 0 10px 0;
+}
+.slides div div.body_content{
+	margin-left: 3px;
+	margin-top: -26px;
+	
+}
+
+object {
+	position: relative;
+	top: 31px;
+	clear: both;
+	float: right;
+}
+.slides div div.the_video embed{
+	
+	
+	margin-top: 3px;
+}
+
+ul.pagination li {
+	font-size:1em;
+	display: none;
+}
+ul.pagination li.total {
+	display: block;
+	left: 525px;
+}
+ul.pagination li.active{
+	display: block;
+}
+
+
+/*****Footer Styles******/
+#footer{
+	position: relative;
+	height: 90px;
+}
+#footer p, #footer li{
+	
+	display: inline;
+	
+	
+}
+
+div.footer_text{
+	padding: 10px;
+	position: relative;
+	top: 64px;
+	left: 60px;
+	color: #999999;
+}
+div.footer_text a{
+	color: #fff;
+}
+p.contact_text{
+	margin-left: 53px;
+}
+/*****Single Styles******/
+
+.body_content p{
+	
+	
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: 0.6pt;
+	word-spacing: 0pt;
+	line-height: 1.7;
+	margin-left: 3px;
+	padding: 5px 0 5px 0;
+}
+
+.container {
+	clear: both;
+	margin-left: 60px;
+	padding-bottom: 50px;
+	width:900px;
+	top: 30px; 
+	min-height:375px; 
+	overflow:hidden; 
+	position:relative; 
+	
+
+}
+#cat-title{
+	position: relative;
+	width: 955px;
+}
+#featured_section div.container div.single_post{
+	position: relative;
+	clear: both;
+	height: 100%;
+	overflow: hidden;
+	
+	margin-bottom: 40px;
+}
+#featured_section h2{
+	position: relative;
+	font-weight: 100;
+	float: right;
+	right: 0px;
+	top: 5px;
+	font-size: 2.5em;
+	letter-spacing: 0pt;
+	word-spacing: 0pt;
+	line-height: 1.2;
+	color: #ccc;
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+}
+h3.post_title{
+	font-family: courier,"courier new",monospace;
+	font-size: 2.5em;
+	letter-spacing: -3pt;
+	word-spacing: 0pt;
+	line-height: 1.2;
+	font-weight: 100;
+	width: 400px;
+	
+}
+.cufon-canvas{
+	
+	font-size: 1.5em;
+	top: 8px;
+}
+div.the_text{
+	position: relative;
+	float: left;
+	min-height: 350px;
+}
+div.the_text p{
+		width: 260px;
+	}
+.single_archive_video object {
+	position: relative;
+	float: right;
+	top: 63px;
+	width: 488px;
+}
+/*****Contact styles*****/
+.formcontainer{
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+	font-size: 12px;
+	
+	letter-spacing: 0.6pt;
+	word-spacing: 0pt;
+	line-height: 1.7;
+	padding: 15px;
+	margin: 15px;
+	
+	background:transparent url('style/images/content_brdr.png') no-repeat scroll;
+}
+
+fieldset {
+	padding-right: 30px;
+	position: relative;
+	float: left;
+}
+#clear-title {
+	clear: both;
+}
+div.post p{
+	padding: 15px;
+	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
+	font-size: 12px;
+	
+	letter-spacing: 0.6pt;
+	word-spacing: 0pt;
+	line-height: 1.7;
+}
