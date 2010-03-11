@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>style.css</string>
+	<string>functions.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -110,11 +110,17 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>style.css</string>
+			<string>functions.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-19T16:42:20Z</date>
+			<date>2010-03-11T14:46:23Z</date>
 			<key>selected</key>
 			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>style.css</string>
+			<key>lastUsed</key>
+			<date>2010-03-11T14:46:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -161,6 +167,20 @@
 				<integer>0</integer>
 				<key>line</key>
 				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>functions.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -242,6 +262,7 @@
 	<array>
 		<string>sidebar.php</string>
 		<string>style.css</string>
+		<string>functions.php</string>
 		<string>page.php</string>
 		<string>search.php</string>
 		<string>archive.php</string>
