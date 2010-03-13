@@ -100,6 +100,7 @@ li.cat-item, li.page_item{
 	min-height: 400px;
 	top: 20px;
 	position:relative;
+	float: left;
 }
 /*****Slider Styles******/
 #container {
@@ -111,7 +112,8 @@ li.cat-item, li.page_item{
 	top: 30px; 
 	min-height:375px; 
 	overflow:hidden; 
-	position:relative; 
+	position:relative;
+	float: left; 
 	
 
 }
@@ -143,7 +145,8 @@ a.next{
 }
 
 .slides {
-	position:absolute; 
+	position:relative;
+	float: left; 
 	top:0; 
 	left:0;
 }
