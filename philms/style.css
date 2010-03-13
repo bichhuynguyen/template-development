@@ -97,7 +97,7 @@ li.cat-item, li.page_item{
 #featured_section{
 	background:#380a17 url('style/images/content_top_gradient.png') repeat-x  top scroll;
 	width: 100%;
-	min-height: 400px;
+	
 	top: 20px;
 	position:relative;
 	float: left;
@@ -107,8 +107,9 @@ li.cat-item, li.page_item{
 	
 	margin-left: 60px;
 	min-height: 400px;
+	_height: 400px;
 	padding-bottom: 43px;
-	width:950px;
+	width:990px;
 	top: 30px; 
 	min-height:375px; 
 	overflow:hidden; 
@@ -120,9 +121,9 @@ li.cat-item, li.page_item{
 #featured_base{
 	position: relative;
 	clear: both;
-	height: 100%;
+	
 	overflow: hidden;
-	width: 100%;
+
 	
 	bottom: -18px;
 	background:transparent url('style/images/content_bottom_gradient.png') repeat-x  bottom scroll;
@@ -134,7 +135,7 @@ li.cat-item, li.page_item{
 	left: 470px;
 	top: 5px;
 
-	
+
 }
 div.post_border{
 	background:transparent url('style/images/content_brdr.png') repeat-x scroll;
@@ -145,10 +146,7 @@ a.next{
 }
 
 .slides {
-	position:relative;
-	float: left; 
-	top:0; 
-	left:0;
+
 }
 
 .slides div { 
@@ -159,21 +157,21 @@ a.next{
 }
 .slides div.the_video {
 	padding: 0;
-	-moz-border-radius:3ex;
-	-webkit-border-radius:3ex;
+	float: left;
+	
 }
 
 
 .slides div a.post_title{
 	position: relative;
 	top: -40px;
-	width: 460px;
+	
 	left: 7px;
 	height: 45px;
 	overflow: hidden;
 	color: white;
 	
-	font-family: courier,"courier new",monospace;
+	
 	font-size: 2.5em;
 	letter-spacing: -3pt;
 	word-spacing: 0pt;
@@ -192,8 +190,9 @@ a.next{
 	padding: 0 0 10px 0;
 }
 .slides div div.body_content{
-	margin-left: 3px;
-	margin-top: -26px;
+	float: left;
+	width: 300px;
+	margin-top: -260px;
 	
 }
 
@@ -224,8 +223,7 @@ ul.pagination li.active{
 
 /*****Footer Styles******/
 #footer{
-	position: relative;
-	height: 90px;
+	
 }
 #footer p, #footer li{
 	
@@ -263,20 +261,20 @@ p.contact_text{
 }
 
 .container {
-	clear: both;
+	
 	margin-left: 60px;
 	padding-bottom: 50px;
 	width:900px;
 	top: 30px; 
-	min-height:375px; 
+	
 	overflow:hidden; 
 	position:relative; 
 	
 
 }
 #cat-title{
-	position: relative;
-	width: 955px;
+	float: right;
+	margin-right: 460px;
 }
 #featured_section div.container div.single_post{
 	position: relative;
@@ -287,15 +285,8 @@ p.contact_text{
 	margin-bottom: 40px;
 }
 #featured_section h2{
-	position: relative;
 	font-weight: 100;
-	float: right;
-	right: 0px;
-	top: 5px;
 	font-size: 2.5em;
-	letter-spacing: 0pt;
-	word-spacing: 0pt;
-	line-height: 1.2;
 	color: #ccc;
 	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
 }
@@ -323,10 +314,18 @@ div.the_text p{
 		width: 260px;
 	}
 .single_archive_video object {
+	
+	
 	position: relative;
 	float: right;
 	top: 63px;
 	width: 488px;
+}
+
+.single_archive_video object embed{
+	
+	-webkit-box-shadow: -10px 10px 30px #0F0305;  
+	-moz-box-shadow: -10px 10px 30px #0F0305;
 }
 /*****Contact styles*****/
 .formcontainer{
