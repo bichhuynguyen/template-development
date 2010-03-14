@@ -25,8 +25,9 @@
 
 
 			<div class="container body_content">
-				
+		<div id="content_wrap">		
 		<?php while (have_posts()) : the_post(); ?>
+			
 			<div class="single_post">
 				
 				
@@ -40,6 +41,7 @@
 				<h3 class="post_title"><?php the_title(); ?></h3>
 				<img  class="border" src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
 				<?php the_content() ?>
+				
 				
 				</div>
 			</div>	
@@ -58,6 +60,7 @@
 		
 
 	<?php endif; ?>
+	</div>
 		<ul>
 			<li><?php next_posts_link('&laquo; Older Entries') ?></li>
 			<li><?php previous_posts_link('Newer Entries &raquo;') ?></li>

@@ -41,7 +41,7 @@
 	
 		<div id="header">
 			<div id="header_wrap">
-			<h1 id="title"><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo bloginfo('template_directory'); ?>/style/images/title.png" width="364" height="138" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>"></a></h1>
+			<h1 id="title"><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo bloginfo('template_directory'); ?>/style/images/title.png" width="364" height="138" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" /></a></h1>
 			
 		
 		<div id="nav_wrap">
@@ -60,7 +60,7 @@
 					<li>&nbsp;</li>
 					<li>&nbsp;</li>
 					<li>&nbsp;</li>
-					<li>things</li>
+					<li id="menu_things">things</li>
 				</ul>
 			
 		
