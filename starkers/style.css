@@ -73,8 +73,9 @@ a {
 	float: right;
 	margin-top: 40px;
 	margin-left: 40px;
+	_width: 347px;
 	
-	width: 360px;
+	
 }
 #nav_wrap_top{
 	margin-left: 55px;
@@ -98,6 +99,7 @@ li.cat-item, li.page_item{
 	float: left;
 	text-align: right;
 }
+
 #header li.current-cat a, #header li.current_page_item a{
 	color:#caca3f;
 }
@@ -159,11 +161,21 @@ a.next{
 }
 .slides div.the_video {
 	display: block;
-	width: 500px;
+	
 	
 
 }
+div.the_video{
+	width: 500px;
+	float: right;
+	margin-right: 50px;
+}
 .slides div.the_copy{
+	display: block;
+	float: left;
+	width: 360px;
+}
+.single_post div.the_copy{
 	display: block;
 	float: left;
 	width: 360px;
@@ -171,6 +183,7 @@ a.next{
 img.border{
 	padding-top:10px;
 	padding-bottom:10px;
+	display: block;
 }
 
 .slides div a.post_title{
@@ -204,11 +217,7 @@ img.border{
 object {
 	float: right;
 }
-.slides div div.the_video embed{
-	
-	
-	
-}
+
 
 ul.pagination li {
 	font-size:1em;
@@ -261,15 +270,21 @@ p.contact_text{
 	margin-left: 3px;
 	padding: 5px 0 5px 0;
 }
-
-.container {
+#container{
+	overflow:hidden; 
+}
+#content_wrap{
+	width: 1024px;
+	margin-left: 20px;
+}
+#container {
 	
 	margin-left: 60px;
 	padding-bottom: 50px;
 	width:900px;
 	top: 30px; 
 	
-	overflow:hidden; 
+	
 	position:relative; 
 	
 
@@ -284,7 +299,7 @@ p.contact_text{
 	height: 100%;
 	overflow: hidden;
 	
-	margin-bottom: 40px;
+	padding: 40px 0 40px 20px;
 }
 #featured_section h2{
 	font-weight: 100;
@@ -293,7 +308,7 @@ p.contact_text{
 	font-family: 'Helvetica Neue','Helvetica', Arial, sans-serif;
 }
 h3.post_title{
-	font-family: courier,"courier new",monospace;
+	
 	font-size: 2.5em;
 	letter-spacing: -3pt;
 	word-spacing: 0pt;
@@ -309,6 +324,7 @@ h3.post_title{
 }
 div.the_text{
 	position: relative;
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	float: left;
 	min-height: 350px;
 }
@@ -324,7 +340,7 @@ div.the_text p{
 	width: 488px;
 }
 
-.single_archive_video object embed{
+embed{
 	
 	-webkit-box-shadow: -10px 10px 30px #0F0305;  
 	-moz-box-shadow: -10px 10px 30px #0F0305;

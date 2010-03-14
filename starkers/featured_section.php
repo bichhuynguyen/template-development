@@ -5,7 +5,7 @@
 	<a href='#' class='next'  title='next'><img src="<?php echo bloginfo('template_directory'); ?>/style/images/next_btn.png" alt="" /></a>
 	</span>
 	</div>
-	<div id="container">
+	<div id="container" >
 		<div class="slides">
 			<?php
 			    $recentPosts = new WP_Query();
