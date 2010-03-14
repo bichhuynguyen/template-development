@@ -40,6 +40,7 @@
 		<div id="wrap">
 	
 		<div id="header">
+			<div id="header_wrap">
 			<h1 id="title"><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo bloginfo('template_directory'); ?>/style/images/title.png" width="364" height="138" alt="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>"></a></h1>
 			
 		
@@ -88,4 +89,5 @@
 				</ul>
 			</div><!--End nav-top-wrap-->
 		</div><!--End nav-wrap-->
+		</div><!--end header_wrap-->
 		</div><!--end header-->
