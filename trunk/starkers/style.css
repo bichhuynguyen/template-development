@@ -73,10 +73,11 @@ a {
 	float: right;
 	margin-top: 40px;
 	margin-left: 40px;
-	width: 347px;
+	width: 400px;
 	
 	
 }
+
 #nav_wrap_top{
 	margin-left: 55px;
 }
@@ -86,16 +87,17 @@ a {
 	
 }
 .nav_out{
-	margin-left: -71px;
+	margin-left: -60px;
 }
 .nav_out2{
-	margin-left: -19px;
+	margin-left: -15px;
 }
 
 li.cat-item, li.page_item{
 	text-align: left;
 }
 .nav_element{
+	
 	float: left;
 	text-align: right;
 }
