@@ -38,7 +38,7 @@
 				
 				<div class="the_text">
 				<h3 class="post_title"><?php the_title(); ?></h3>
-				<img src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
+				<img  class="border" src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
 				<?php the_content() ?>
 				
 				</div>
