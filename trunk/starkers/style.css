@@ -186,7 +186,7 @@ img.border{
 	display: block;
 }
 
-.slides div a.post_title{
+.slides div span.post_title{
 	color: white;
 	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 	font-size: 2.5em;

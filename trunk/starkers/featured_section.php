@@ -18,7 +18,7 @@
 			
 		
 			<div class="the_copy">
-				<a class="post_title"href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+				<h3 class="post_title"><?php the_title(); ?></h3>
 				
 					<img class="border" src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
 					<p class="body_copy">

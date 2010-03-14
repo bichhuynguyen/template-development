@@ -6,7 +6,8 @@
 <div id="container">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class="body_content">
+		<div class="single_post">
+			
 			
 			<div class="the_video single_archive_video">
 			<?php echo get_post_meta($post->ID, 'video', true)?>
@@ -15,14 +16,12 @@
 			<div class="the_text">
 			<h3 class="post_title"><?php the_title(); ?></h3>
 			<img  class="border" src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
-			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-				<img src="<?php echo bloginfo('template_directory'); ?>/style/images/content_brdr.png" alt="" />
+			<?php the_content() ?>
+			
 			
 			</div>
-			
-			
-		
-		</div>
+		</div>	
+
 
 
 		
