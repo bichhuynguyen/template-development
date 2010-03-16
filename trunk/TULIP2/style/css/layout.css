@@ -35,7 +35,7 @@ body{
 	float: left;
 	overflow: hidden;
 }
-.home div.post{
+.home div.post {
 	width: 272px;
 }
 .post{
@@ -43,15 +43,15 @@ body{
 	padding-bottom: 4000px;
 	float: left;
 }
-.page div.post. .category div.post{
-	width: 848px;
+.page div.post, .category div.post, .archive div.post{
+	width: 836px;
 }
 div.post h2, div.post p, h3, ol, li, form{
 	padding: 5px 10px;
 }
 #sidebar{
 	float: right;
-	width: 120px;
+	width: 152px;
 }
 #footer{
 	clear:both;
