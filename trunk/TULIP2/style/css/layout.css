@@ -38,13 +38,17 @@ body{
 .home div.post {
 	width: 272px;
 }
-.post{
+.post, #comments-block{
 	margin: 8px 8px -3992px 0;
 	padding-bottom: 4000px;
 	float: left;
 }
-.page div.post, .category div.post, .archive div.post{
+.page div.post, .category div.post, .archive div.post, .single div.post, .single #comments-block{
 	width: 836px;
+}
+* html .single #comments-block{
+	width: 826px;
+	margin: 8px 0 -3992px 0;
 }
 div.post h2, div.post p, h3, ol, li, form{
 	padding: 5px 10px;
@@ -61,7 +65,7 @@ div.post h2, div.post p, h3, ol, li, form{
 	float:right;
 }
 #pagination{
-	position: relative;
-	clear: both;
+	width: 100%;
+	float: left;
 	
 }

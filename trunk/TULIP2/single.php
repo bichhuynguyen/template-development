@@ -5,11 +5,12 @@
  */
 
 get_header();
+get_sidebar();
 ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<?php previous_post_link('&laquo; %link') ?> | <?php next_post_link('%link &raquo;') ?>
+	
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<h2><?php the_title(); ?></h2>
@@ -49,9 +50,9 @@ get_header();
 			</p>
 				
 		</div>
-
+	
 	<?php comments_template(); ?>
-
+	<?php get_pagination(); ?>
 	<?php endwhile; else: ?>
 
 		<p>Sorry, no posts matched your criteria.</p>
