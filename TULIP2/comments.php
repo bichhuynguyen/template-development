@@ -1,3 +1,4 @@
+<div id="comments-block">
 <?php
 /**
  * @package WordPress
@@ -87,3 +88,4 @@
 </div>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
+</div>

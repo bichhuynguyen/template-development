@@ -19,5 +19,8 @@
 	
 	<body <?php body_class(); ?>>
 		
-		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<p><?php bloginfo('description'); ?></p>
+		<div id="header">
+			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<h2><?php bloginfo('description'); ?></h2>
+		</div>
+<div id="container">
