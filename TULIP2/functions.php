@@ -14,4 +14,6 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h2>',
 	));
 }
+function get_pagination(){
+include (TEMPLATEPATH . "/pagination.php");}
 ?>
