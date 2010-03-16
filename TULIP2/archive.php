@@ -5,6 +5,7 @@
  */
 
 get_header();
+get_sidebar();
 ?>
 
 	<?php if (have_posts()) : ?>
@@ -27,7 +28,7 @@ get_header();
 	<?php } ?>
 
 
-		<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
+		
 
 		<?php while (have_posts()) : the_post(); ?>
 			
@@ -40,9 +41,7 @@ get_header();
 
 		<?php endwhile; ?>
 
-		<?php if (next_posts_link() || previous_posts_link()): ?>
-			<?php next_posts_link('&laquo; Older Entries') ?> | <?php previous_posts_link('Newer Entries &raquo;') ?>
-		<?php endif ?>
+	
 		
 	<?php else :
 
@@ -61,5 +60,5 @@ get_header();
 	endif;
 ?>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
