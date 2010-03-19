@@ -2,7 +2,7 @@
 /* TYPOGRAPHY */
 /* ----------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
+/*h1, h2, h3, h4, h5, h6 { font-weight:bold } /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
 .alert { background:red; color:white } /* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
 
 
@@ -70,3 +70,14 @@ Verdana, Geneva, Tahoma, sans-serif - p
 Verdana, Tahoma, Geneva, sans-serif - t
 
 */
+body{
+	font-family: Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6,h7,h8{
+	
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
+#header h1 a{
+	font-size: 150px;
+	text-decoration: none;
+}
