@@ -1,0 +1,13 @@
+body{
+	color: #545454;
+}
+a{
+	color: #323232;
+	
+}
+#sidebar{
+	border-left: black solid 10px;
+}
+#container .post{
+	border-left: black solid 3px;
+}
