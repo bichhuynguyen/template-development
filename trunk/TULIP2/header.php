@@ -22,5 +22,5 @@
 		<div id="header">
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<h2><?php bloginfo('description'); ?></h2>
-		</div>
+		<img id="header-img" src="<?php echo bloginfo('template_directory'); ?>/style/images/header.jpg" width="858" height="120" alt="<?php bloginfo('name'); ?>"></div>
 <div id="container">
