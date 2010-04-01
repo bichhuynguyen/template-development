@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>style/css/layout.css</string>
+	<string>header.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,6 +21,8 @@
 			<date>2010-03-19T15:08:16Z</date>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -29,6 +31,8 @@
 			<string>style</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>images</string>
 			<key>regexFolderFilter</key>
@@ -37,8 +41,6 @@
 			<string>style/images</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>css</string>
 			<key>regexFolderFilter</key>
@@ -50,7 +52,7 @@
 			<key>filename</key>
 			<string>style/css/typography.css</string>
 			<key>lastUsed</key>
-			<date>2010-03-19T15:19:01Z</date>
+			<date>2010-03-19T16:16:36Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -62,7 +64,7 @@
 			<key>filename</key>
 			<string>style/css/layout.css</string>
 			<key>lastUsed</key>
-			<date>2010-03-19T15:20:46Z</date>
+			<date>2010-03-19T16:27:42Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -116,7 +118,9 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-03-16T11:32:45Z</date>
+			<date>2010-03-20T10:21:39Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -208,39 +212,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>41</integer>
 				<key>line</key>
-				<integer>16</integer>
+				<integer>17</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>9</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>25</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
 		</dict>
 		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>109</integer>
 				<key>line</key>
-				<integer>25</integer>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -252,9 +240,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>20</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -336,9 +324,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>15</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>23</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>style/css/ie.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -350,35 +352,42 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>72</integer>
+				<integer>54</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>20</integer>
+			<integer>19</integer>
 		</dict>
 		<key>style/css/typography.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>73</integer>
+				<integer>84</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>25</integer>
+			<integer>36</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>style/css/color.css</string>
+		<string>index.php</string>
 		<string>style/css/typography.css</string>
 		<string>style/css/layout.css</string>
+		<string>header.php</string>
+		<string>functions.php</string>
+		<string>page.php</string>
+		<string>style/css/ie.css</string>
+		<string>single.php</string>
+		<string>sidebar.php</string>
 		<string>style.css</string>
 		<string>pagination.php</string>
 	</array>

@@ -11,3 +11,15 @@ a{
 #container .post{
 	border-left: black solid 3px;
 }
+.post h2{
+	background-color: black;
+	
+}
+.post h2 a{
+	color: white;
+}
+img#header-img{
+	border: none;
+	border-top: solid black 7px ;
+	
+}
