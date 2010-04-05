@@ -70,3 +70,15 @@ Verdana, Geneva, Tahoma, sans-serif - p
 Verdana, Tahoma, Geneva, sans-serif - t
 
 */
+body{
+	font-size: 1em;
+}
+a{
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
+#header h1{
+	font-size: 6.5em;
+}

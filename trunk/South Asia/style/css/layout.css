@@ -15,20 +15,25 @@ li#theme-switcher { background:#fff; border:10px solid red; padding:20px; positi
 
 /*
 BORDER - REMOVE WHEN LAYOUT FINISHED
-*/
+*//*
 div, body{
 	border: 1px black solid;
 }/**/
 
 body{
-	width: 1000px;
-	_width: 1024px;
-	padding: 12px;
+	margin: 0 auto;
+	width: 1024px;	
+	
+	
 	
 }
 #header{
-	width: 100%;
+	
 	height: 300px;
+}
+.wrapper{
+	
+
 }
 #container{
 	width: 100%;
@@ -36,7 +41,7 @@ body{
 	overflow: hidden;
 }
 .home div.post {
-	width: 272px;
+	width: 375px;
 }
 .post, #comments-block{
 	margin: 8px 8px -3992px 0;
@@ -44,7 +49,7 @@ body{
 	float: left;
 }
 .page div.post, .category div.post, .archive div.post, .single div.post, .single #comments-block{
-	width: 836px;
+	width: 750px;
 }
 * html .single #comments-block{
 	width: 826px;
@@ -55,11 +60,12 @@ div.post h2, div.post p, h3, ol, li, form{
 }
 #sidebar{
 	float: right;
-	width: 152px;
+	
 }
-#footer{
-	clear:both;
-	height: 200px;
+
+#footer p{
+	position: relative;
+	top: 120px;
 }
 .post-info{
 	float:right;
@@ -69,3 +75,17 @@ div.post h2, div.post p, h3, ol, li, form{
 	float: left;
 	
 }
+
+/*
+HEADER
+*/
+h3 ul li{
+	display: inline;
+	
+}
+h3 ul, h3 ul li, #header h3{
+	padding: 0;
+	margin: 0;
+}
+
+

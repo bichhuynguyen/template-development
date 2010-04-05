@@ -8,6 +8,10 @@ Author URI: http://mildfuzz.com
 
 */
 
+
+
 @import "style/css/reset.css";
+@import "style/css/footer.css";
 @import "style/css/typography.css";
 @import "style/css/layout.css";
+@import "style/css/colour.css";
