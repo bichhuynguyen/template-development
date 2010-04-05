@@ -18,9 +18,11 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
+		<div class="wrapper">
 		
 		<div id="header">
 			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<h2><?php bloginfo('description'); ?></h2>
+			<h3><ul><?php wp_list_pages('depth=1&title_li=');?></ul></h3>
 		</div>
 <div id="container">
