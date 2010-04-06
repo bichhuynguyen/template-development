@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/comments.php</string>
+	<string>style/css/layout.css</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -17,6 +17,8 @@
 		<dict>
 			<key>filename</key>
 			<string>style.css</string>
+			<key>lastUsed</key>
+			<date>2010-04-05T16:00:53Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -47,6 +49,8 @@
 		<dict>
 			<key>filename</key>
 			<string>style/css/typography.css</string>
+			<key>lastUsed</key>
+			<date>2010-04-06T20:52:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -58,7 +62,7 @@
 			<key>filename</key>
 			<string>style/css/layout.css</string>
 			<key>lastUsed</key>
-			<date>2010-03-16T11:16:54Z</date>
+			<date>2010-04-06T20:52:30Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -74,7 +78,7 @@
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-03-15T17:04:20Z</date>
+			<date>2010-04-05T15:34:04Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -102,7 +106,7 @@
 			<key>filename</key>
 			<string>index.php</string>
 			<key>lastUsed</key>
-			<date>2010-03-16T11:15:46Z</date>
+			<date>2010-04-05T14:03:00Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -112,7 +116,7 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-03-16T11:32:45Z</date>
+			<date>2010-04-06T20:32:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -124,15 +128,13 @@
 			<key>filename</key>
 			<string>footer.php</string>
 			<key>lastUsed</key>
-			<date>2010-03-16T11:55:20Z</date>
+			<date>2010-04-05T15:58:06Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>comments.php</string>
 			<key>lastUsed</key>
 			<date>2010-03-16T11:56:42Z</date>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -159,93 +161,35 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/archive.php</key>
+		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>8</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/comments.php</key>
+		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>76</integer>
 				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>2</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/footer.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
-				<key>line</key>
-				<integer>9</integer>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/functions.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>25</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>9</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>25</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/header.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
-				<integer>25</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/index.php</key>
+		<key>index.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -259,35 +203,7 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/page.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>29</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/pagination.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/sidebar.php</key>
+		<key>sidebar.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -299,97 +215,90 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>25</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/single.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>27</integer>
-				<key>line</key>
-				<integer>54</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
 			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>11</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/ie.css</key>
+		<key>style.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>25</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>13</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/layout.css</key>
+		<key>style/css/colour.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>8</integer>
+				<integer>10</integer>
 				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>10</integer>
-		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/reset.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>16</integer>
-				<key>line</key>
-				<integer>18</integer>
+				<integer>38</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/typography.css</key>
+		<key>style/css/footer.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>14</integer>
+				<integer>11</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>style/css/layout.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>7</integer>
+				<key>line</key>
+				<integer>106</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>66</integer>
+		</dict>
+		<key>style/css/typography.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>83</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>40</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/index.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/footer.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/pagination.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/comments.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/layout.css</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/archive.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/ie.css</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/header.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/single.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/functions.php</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/typography.css</string>
-		<string>/Applications/MAMP/htdocs/template/wp-content/themes/TULIP2/style/css/reset.css</string>
+		<string>header.php</string>
+		<string>style/css/layout.css</string>
+		<string>style/css/colour.css</string>
+		<string>style/css/typography.css</string>
+		<string>footer.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{128, -32}, {838, 1027}}</string>
+	<string>{{4, 1}, {718, 877}}</string>
 </dict>
 </plist>

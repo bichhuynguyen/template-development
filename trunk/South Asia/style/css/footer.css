@@ -15,5 +15,5 @@ html, body {
 }
 #footer, .push {
 	clear: both;
-	height: 146px; /* .push must be the same height as .footer */
+	height: 280px; /* .push must be the same height as .footer */
 }
