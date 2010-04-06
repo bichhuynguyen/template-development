@@ -1,6 +1,6 @@
 .Grey, body {/*Defines off black/blue/grey colour for all type.*/
   color: #25242B;
- background: #25242B;
+ background: #000;
 }
 .Orange {
   color: #F45717;
@@ -36,9 +36,12 @@ h1 a, h2 a, #header a{
 a{
 	color: #F45717;
 }
-.wrapper,#footer{
+#container{
 	background: white;
 }
 #header{
-	background: #25242B;
+	background: #000;
+}
+h3 ul.menu{
+	background: black;
 }
