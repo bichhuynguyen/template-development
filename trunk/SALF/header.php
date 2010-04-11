@@ -4,18 +4,7 @@
 	<head profile="http://gmpg.org/xfn/11">
 		
 		<title>
-			<?php if (is_home()) { echo bloginfo('name');
-			} elseif (is_404()) {
-			echo '404 Not Found';
-			} elseif (is_category()) {
-			echo 'Category:'; wp_title('');
-			} elseif (is_search()) {
-			echo 'Search Results';
-			} elseif ( is_day() || is_month() || is_year() ) {
-			echo 'Archives:'; wp_title('');
-			} else {
-			echo wp_title('');
-			}
+			<?php bloginfo('name');
 			?>
 		</title>
 
@@ -33,10 +22,15 @@
 
 	</head>
 
-	<body>
+<body <?php body_class();?>>
 	
+		<div id="header">
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<p><?php bloginfo('description'); ?></p>
-		<ul>
-<?php wp_list_pages('title_li='); ?>
-		</ul>
+			<ul id="nav">
+				<?php wp_list_pages('title_li='); ?>
+			
+			</ul>
+		</div>
+			<?php get_sidebar(); ?>
+		<div id="content-wrapper">
