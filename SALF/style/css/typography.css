@@ -70,3 +70,7 @@ Verdana, Geneva, Tahoma, sans-serif - p
 Verdana, Tahoma, Geneva, sans-serif - t
 
 */
+body {
+	font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 0.9em;
+}
