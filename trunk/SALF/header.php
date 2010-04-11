@@ -28,9 +28,10 @@
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 		<p><?php bloginfo('description'); ?></p>
 			<ul id="nav">
-				<?php wp_list_pages('title_li='); ?>
+				
 			
 			</ul>
-		</div>
 			<?php get_sidebar(); ?>
+		</div>
+			<?php wp_list_pages('title_li='); ?>
 		<div id="content-wrapper">
