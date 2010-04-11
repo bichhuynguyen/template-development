@@ -16,11 +16,14 @@ li#theme-switcher { background:#fff; border:10px solid red; padding:20px; positi
 body{
 	width: 100%;
 	background: #FBBF13;
-	color: #231F20;
+	color: white;
+}
+h1 a{
+	color: white;
 }
 .post{
 	
-	background: #CE8F2A;
+	background: #292627;
 	
 }
 #content-wrapper, #header{
@@ -28,7 +31,29 @@ body{
 	margin: 0 auto;
 }
 .post{
+	padding: 30px;
 	float: left;
+	border-radius : 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-bottom-right-radius : 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+}
+.post p{
+	margin-bottom: 1.2em;
+}
+.home .post{
+	padding-left: 490px;
+}
+#header{
+	
+}
+#sidebar{
+	float: right;
+}
+#nav{
+	clear:both;
 }
 #mc_signup_container{
 	float: left;

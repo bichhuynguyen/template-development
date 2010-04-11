@@ -74,3 +74,13 @@ body {
 	font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 0.9em;
 }
+#header{
+	
+}
+#header  a{
+	font:'Palatino Linotype', Times, 'Times New Roman', serif;
+	font-size: 2em;
+}
+#header a{
+	text-decoration: none;
+}
