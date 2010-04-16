@@ -23,12 +23,16 @@
 		<dict>
 			<key>filename</key>
 			<string>ela.css</string>
+			<key>lastUsed</key>
+			<date>2010-04-16T15:33:43Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>footer.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-23T09:47:46Z</date>
+			<date>2010-04-16T15:33:42Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -89,37 +93,45 @@
 		<dict>
 			<key>filename</key>
 			<string>search.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-24T16:04:17Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-24T10:01:11Z</date>
+			<date>2010-02-24T16:04:16Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>single.php</string>
+			<key>lastUsed</key>
+			<date>2010-02-24T16:04:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-02-24T10:01:12Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-04-16T15:33:41Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>Thumbs.db</string>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>../../../../tulipgroup/Resources/color.css</string>
+			<key>lastUsed</key>
+			<date>2010-04-16T15:28:07Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>200</integer>
+	<integer>172</integer>
 	<key>metaData</key>
 	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{35, 1}, {1434, 1027}}</string>
+	<string>{{4, 1}, {838, 1027}}</string>
 </dict>
 </plist>
