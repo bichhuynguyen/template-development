@@ -11,7 +11,8 @@ Author URI: http://mildfuzz.com
  *************************************/
 
 body{
-    background:#61574E url(./images/background.gif) center repeat-y;
+	
+    background:#121219 url(./images/background.gif) center repeat-y;
 	color:#666;
 	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
 	font-size:62.5%;
@@ -65,12 +66,13 @@ body{
 
 #wrap{
 	margin:0 auto;
+	
 	text-align:left;
 	width:960px;
 }
 
 #left{
-	background:#76895B;
+	background:#2a5183;
     font-size:1.1em;
 	margin:0;
 	float:left;
