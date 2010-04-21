@@ -1,6 +1,6 @@
 <div id="left">
 
-<a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><h1><?php bloginfo('name'); ?></h2></a>
+<a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><h1><img style="border:none;"src="<?php echo get_bloginfo('template_url'); ?>/images/logo.png" width="227" height="129" alt="<?php bloginfo('name'); ?>" /></h1></a>
 
 <div id="left_content">
 
