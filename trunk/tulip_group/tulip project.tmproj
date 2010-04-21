@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>left.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -37,10 +39,10 @@
 			<string>header.php</string>
 			<key>lastUsed</key>
 			<date>2010-04-16T18:51:03Z</date>
-			<key>selected</key>
-			<true/>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>images</string>
 			<key>regexFolderFilter</key>
@@ -58,7 +60,7 @@
 			<key>filename</key>
 			<string>left.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-16T18:51:01Z</date>
+			<date>2010-04-20T10:59:11Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -102,7 +104,7 @@
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-16T18:51:00Z</date>
+			<date>2010-04-20T10:26:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -114,7 +116,7 @@
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-04-16T18:51:02Z</date>
+			<date>2010-04-20T10:29:41Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -124,13 +126,93 @@
 			<key>filename</key>
 			<string>../../../Resources/color.css</string>
 			<key>lastUsed</key>
-			<date>2010-04-16T15:28:07Z</date>
+			<date>2010-04-20T10:59:11Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>172</integer>
 	<key>metaData</key>
-	<dict/>
+	<dict>
+		<key>../../../Resources/color.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>21</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>21</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>15</integer>
+				<key>line</key>
+				<integer>21</integer>
+			</dict>
+		</dict>
+		<key>left.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>236</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>sidebar.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>style.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>58</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>23</integer>
+		</dict>
+	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>sidebar.php</string>
+		<string>style.css</string>
+		<string>left.php</string>
+		<string>../../../Resources/color.css</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
