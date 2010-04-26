@@ -1,9 +1,8 @@
 <div id="sidebar">
 
-<h2>Pages</h2>
-<ul>
-<li><a href="<?php echo get_settings('home'); ?>/">Home</a></li>
-<?php wp_list_pages('title_li='); ?> 
+<h2>Latest Posts</h2>
+<ul>	
+<?php wp_get_archives('type=postbypost&limit=9'); ?>
 </ul>
 
 <h2>Categories</h2>

@@ -14,8 +14,8 @@ body{
 	
     background:#121219 url(./images/background.gif) center repeat-y;
 	color:#666;
-	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-	font-size:62.5%;
+	font-family: Arial, Sans-Serif;
+	font-size: 0.6em;
 	line-height:1.7;
 	text-align:center;
 	margin:0;
@@ -57,11 +57,12 @@ body{
 #sidebar{
 	color:#ddd;
 	background:#e9b428;
-	padding:110px 35px 10px 30px;
+	padding:10px 35px 10px 30px;
 	margin:0;
 	font-size:1.1em;
 	float:left;
-	width:155px
+	width:145px;
+	
 }
 
 #wrap{
@@ -94,7 +95,7 @@ body{
 
 
 #sidebar h2{
-	color:#333231;
+	
 	font-size:1.4em;
 	margin-bottom:10px;
 	font-weight:normal;
@@ -115,8 +116,8 @@ body{
 }
 
 h1, h2, h3, h4{
-    font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
-    letter-spacing:-1px;
+    font-family: Georgia, Serif;
+    color: #333;
 }
 
 h2{
@@ -169,6 +170,8 @@ h4{
 	padding-top: 125px;
 }
 #left_content h2{
+	color: #000;
+	font-weight: 100;
 	padding-left: 28px;
 }
 .latest li{
@@ -456,3 +459,15 @@ img.alignleft{
     margin-right: 3px;
     margin-left: 0px;
 	}
+	/*************************************
+	 +Menu 
+	 *************************************/
+	
+	
+
+
+
+	
+
+	
+	
