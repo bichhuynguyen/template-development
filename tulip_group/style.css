@@ -56,12 +56,12 @@ body{
 
 #sidebar{
 	color:#ddd;
-	background:#e9b428;
-	padding:10px 35px 10px 30px;
+	background:#aa3c0c;
+	padding:80px 0 0 30px;
 	margin:0;
 	font-size:1.1em;
 	float:left;
-	width:145px;
+	width:140px;
 	
 }
 
@@ -95,7 +95,9 @@ body{
 
 
 #sidebar h2{
+	color: #e9b428;
 	
+	padding: 3px 0 5px 2px;
 	font-size:1.4em;
 	margin-bottom:10px;
 	font-weight:normal;
@@ -116,7 +118,7 @@ body{
 }
 
 h1, h2, h3, h4{
-    font-family: Georgia, Serif;
+    font-family: Arial, sans-serif;
     color: #333;
 }
 
@@ -170,7 +172,8 @@ h4{
 	padding-top: 125px;
 }
 #left_content h2{
-	color: #000;
+	color: #e9b428;
+	background: #103055;
 	font-weight: 100;
 	padding-left: 28px;
 }
@@ -316,6 +319,10 @@ a:hover{
 	font-size:1.2em;
 	margin:5px 0 0 0;
 	padding:10px;
+	border-bottom-right-radius : 30px;
+	-moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-right-radius: 30px;
+	
 }
 
 .entrytitle{
