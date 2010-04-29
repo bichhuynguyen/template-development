@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>left.php</string>
+	<string>style.css</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -38,11 +38,9 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-16T18:51:03Z</date>
+			<date>2010-04-22T15:54:59Z</date>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>images</string>
 			<key>regexFolderFilter</key>
@@ -60,11 +58,19 @@
 			<key>filename</key>
 			<string>left.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-20T10:59:11Z</date>
+			<date>2010-04-26T08:44:28Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>contact.php</string>
+			<key>lastUsed</key>
+			<date>2010-04-26T09:57:31Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>page.php</string>
+			<key>lastUsed</key>
+			<date>2010-04-26T09:56:13Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -104,7 +110,7 @@
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-20T10:26:45Z</date>
+			<date>2010-04-26T08:48:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -116,7 +122,9 @@
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-04-20T10:29:41Z</date>
+			<date>2010-04-28T10:48:29Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -126,7 +134,7 @@
 			<key>filename</key>
 			<string>../../../Resources/color.css</string>
 			<key>lastUsed</key>
-			<date>2010-04-20T10:59:11Z</date>
+			<date>2010-04-26T09:04:16Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
@@ -138,7 +146,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>13</integer>
+				<integer>11</integer>
 				<key>line</key>
 				<integer>21</integer>
 			</dict>
@@ -163,12 +171,12 @@
 				<integer>21</integer>
 			</dict>
 		</dict>
-		<key>left.php</key>
+		<key>contact.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>236</integer>
+				<integer>22</integer>
 				<key>line</key>
 				<integer>2</integer>
 			</dict>
@@ -177,14 +185,72 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>sidebar.php</key>
+		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>left.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>75</integer>
+				<key>line</key>
+				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>page.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
 				<integer>0</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>41</integer>
+			</dict>
+		</dict>
+		<key>sidebar.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>3</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -196,26 +262,29 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>38</integer>
 				<key>line</key>
-				<integer>58</integer>
+				<integer>323</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>23</integer>
+			<integer>293</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>sidebar.php</string>
 		<string>style.css</string>
+		<string>page.php</string>
+		<string>contact.php</string>
+		<string>header.php</string>
 		<string>left.php</string>
 		<string>../../../Resources/color.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {838, 1027}}</string>
+	<string>{{4, 1}, {1493, 1027}}</string>
 </dict>
 </plist>

@@ -9,7 +9,10 @@ Author URI: http://mildfuzz.com
 /*************************************
  +Containers
  *************************************/
-
+html{
+	margin: 0 auto;
+	width: 960px;
+}
 body{
 	
     background:#121219 url(./images/background.gif) center repeat-y;
