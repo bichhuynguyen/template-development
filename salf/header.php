@@ -41,8 +41,8 @@
 				<ul id="pages">
 
 					<li class="page_item page-item-2 current_page_item"><a href="#post-2" title="About">ABOUT</a></li>
-					<li class="page_item page-item-7"><a href="#partners" title="Partners">PARTNERS</a></li>
 					<li class="page_item page-item-6"><a href="#venues" title="Venues">VENUES</a></li>
+					<li class="page_item page-item-7"><a href="#partners" title="Partners">PARTNERS</a></li>
 					<li class="page_item page-item-6"><a href="#enquiries" title="Venues">ENQUIRIES</a></li>
 
 				</ul>	
