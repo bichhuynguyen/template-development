@@ -22,21 +22,19 @@ Template Name: Holding Page
 		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.jpg" width="512" height="354" alt="Partners Logo">
 		
 		<ul id="partner-links">
-			<li><a href="http://www.mla.gov.uk/">MLA</a></li>
 			<li><a href="http://www.foyles.co.uk/">Foyles</a></li>
-			<li>iipg</li>
+			<li><a href="http://www.ipg.uk.com/">iipg</a></li>
 			<li><a href="http://www.britishcouncil.org">British Council</a></li>
 			<li><a href="http://www.applesandsnakes.org/">Apples &amp; Snakes</a></li>
-			<li>London</li>
 			<li><a href="http://www.open.ac.uk/">The Open University</a></li>
 			<li><a href="http://www.amg.biz/">AMG</a></li>
 			<li><a href="http://www.nehrucentre.org.uk/">The Nehru Centre</a></li>
-			<li>read</li>
+			<li><a href="http://www.readingagency.org.uk/">The Reading Agency</li>
 			<li><a href="http://www.freewordonline.com/">Free Word</a></li>
 			<li><a href="http://www.publishers.org.uk/en/home/">The Publishers Association</a></li>
 			<li><a href="http://www.wasafiri.org/">Wasafari</a></li>
 			<li><a href="http://www.bl.uk/">British Library</a></li>
-			<li><a href="http://www.booktrust.org.uk/Home">booktrust</a></li>
+			<li><a href="http://www.booktrust.org.uk/Home">Booktrust</a></li>
 			<li><a href="http://www.vayunaiducompany.org.uk/">Vaya Naidu Company</a></li>
 			<li><a href="http://www.spinebreakers.co.uk/Pages/Home.aspx">Spine Breakers</a></li>
 			<li><a href="http://www.richmix.org.uk/">Richmix</a></li>
@@ -44,6 +42,7 @@ Template Name: Holding Page
 			<li><a href="http://www.kingsplace.co.uk/">Kings Place</a></li>
 			<li><a href="http://www.artscouncil.org.uk/">Arts Council England</a></li>
 			<li><a href="http://www.livity.co.uk/">Livity</a></li>
+			<li><a href="http://www.booksellers.org.uk/">The Booksellers Association</a></li>
 		</ul>
 		
 		</div>
