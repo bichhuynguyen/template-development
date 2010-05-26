@@ -74,4 +74,20 @@ Template Name: Holding Page
 				<?php echo do_shortcode('[contact-form 1 "Contact form 1"]') ?> 
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
+		<div id="events" class="post">
+			<?php
+			query_posts( array( 'post_type' => 'event') );
+			
+			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+			<h3><?php the_title();?>	</h3>
+			<p style="float: right"><?php the_content();?></p>
+			<?php endwhile; else:?>
+			 
+			<?php endif;
+			//Reset Query
+			wp_reset_query();
+			?>
+		
+		</div>
+		<a class="top" href="#" title="Top">BACK TO TOP</a>
 <?php get_footer(); ?>
