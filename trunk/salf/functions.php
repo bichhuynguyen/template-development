@@ -7,10 +7,9 @@ if ( function_exists('register_sidebar') ) {
        'after_title' => '</h2>',
    ));
 }
-?>
 
 
-<?php
+
 add_action('init', 'my_custom_init');
 function my_custom_init() 
 {
@@ -43,7 +42,7 @@ function my_custom_init()
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array('title','editor','author','thumbnail','excerpt','comments')
+    'supports' => array('title','editor')
   ); 
   	register_post_type('event',$args);
 	register_taxonomy_for_object_type('date', 'event');
