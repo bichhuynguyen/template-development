@@ -18,8 +18,11 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+		
+		
 
 		<?php wp_head(); ?>
+		<script src="<?php bloginfo('template_url'); ?>/salf_ui.js" type="text/javascript"></script>
 
 	</head>
 
@@ -40,10 +43,10 @@
 			<div id="nav">
 				<ul id="pages">
 
-					<li class="page_item page-item-2 current_page_item"><a href="#post-2" title="About">ABOUT</a></li>
-					<li class="page_item page-item-6"><a href="#venues" title="Venues">VENUES</a></li>
-					<li class="page_item page-item-7"><a href="#partners" title="Partners">PARTNERS</a></li>
-					<li class="page_item page-item-6"><a href="#enquiries" title="Venues">ENQUIRIES</a></li>
+					<li class="page_item page-item-2 current_page_item"><a href="#post-2" title="About" id="about_btn">ABOUT</a></li>
+					<li class="page_item page-item-6"><a href="#venues" title="Venues" id="venues_btn">VENUES</a></li>
+					<li class="page_item page-item-7"><a href="#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
+					<li class="page_item page-item-6"><a href="#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
 
 				</ul>	
 
