@@ -10,8 +10,8 @@ if ( function_exists('register_sidebar') ) {
 
 
 
-add_action('init', 'my_custom_init');
-function my_custom_init() 
+add_action('init', 'add_events_object');
+function add_events_object() 
 {
   $labels = array(
     'name' => _x('Events', 'post type general name'),
@@ -45,7 +45,13 @@ function my_custom_init()
     'supports' => array('title','editor')
   ); 
   	register_post_type('event',$args);
-	register_taxonomy_for_object_type('date', 'event');
+	$date_args = array(
+	'show_ui' => true,
+	);
+	$date_labels = array(
+	'name' => 'Genres',
+	);
+	register_taxonomy('Genres', 'event');
 }
 
 //add filter to insure the text Event, or Event, is displayed when user updates a Event 

@@ -81,6 +81,32 @@ Template Name: Holding Page
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<h3><?php the_title();?>	</h3>
 			<p style="float: right"><?php the_content();?></p>
+			
+			<?php
+			$args=array(
+			  'public'   => true,
+			  
+
+			); 
+			$output = 'objects'; // or names
+			//$output = 'names'; // or objects
+			
+			$taxonomies=get_taxonomies($args,$output); 
+			if  ($taxonomies) {
+			  foreach ($taxonomies  as $taxonomy ) {
+				//var_dump($taxonomy->Genres);
+			    //echo '<p>'. $taxonomy->names . '</p>';
+			var_dump($taxonomy->Genres);
+				
+				
+				/*foreach($taxonomy->Genres as $genre_list){
+					echo '<p> List ='. $genre_list. '</p>';
+				}//*/
+			  }
+			}
+			?>
+			
+			
 			<?php endwhile; else:?>
 			 
 			<?php endif;
