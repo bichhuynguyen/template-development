@@ -125,7 +125,7 @@ a.top{
 }
 
 #header{
-	height: 218px;
+	height: 228px;
 	padding: 0;
 	border-bottom: 1px white solid;
 }
@@ -226,7 +226,7 @@ a.top{
 	clear: both;
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: 15px;
 	color:#717171;
 	padding-right: 20px;
 }
