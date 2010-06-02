@@ -22,8 +22,8 @@
 		
 
 		<?php wp_head(); ?>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_url'); ?>/salf_ui.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/scripts/salf_ui.js" type="text/javascript"></script>
 
 	</head>
 

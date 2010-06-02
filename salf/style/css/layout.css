@@ -164,7 +164,9 @@ a.top{
 	float: left;
 	_float: right;
 }
-
+.mc_custom_border_hdr h2{
+	cursor: pointer;
+}
 /*Box Layouts*/
 
 #venues img{
@@ -222,6 +224,16 @@ a.top{
 	right: 0;
 	color:#717171;
 	padding-right: 20px;
+}
+div#mc_message.updated{
+	float: left;
+	margin-left: 6px;
+}
+span#pulldown.pointRight{
+	-moz-transform:rotate(0deg);
+}
+span#pulldown.pointDown{
+	-moz-transform:rotate(90deg);
 }
 /*IE6 FIXES*/
 div.mc_signup_submit{
