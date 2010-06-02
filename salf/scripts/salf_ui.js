@@ -33,25 +33,31 @@ jQuery(document).ready(function($) {
 	} else{
 		signUpClicked = true;
 	}
+	
 	$('.mc_custom_border_hdr h2').click(function(){//toggle for touchscreens
 		if(!signUpClicked){
-			/*$('span#pulldown').addClass("pointDown");
-			$('span#pulldown').removeClass("pointRight");//*/
-			rotatePointer('down');
 			
+			rotatePointer('down');
 			$('#mc_signup_container').fadeIn(300);
 			signUpClicked = true;
+			
 			} else {
+			
 			rotatePointer();
 			$('#mc_signup_container').fadeOut(300);
 			signUpClicked = false;	
-		};})
-	/*$('#sidebar').hover(function(){
-			$('#mc_signup_container').fadeIn(300);
-		}, function(){
-			if(!signUpFocus){
-				if(messageLength==0){
-					$('#mc_signup_container').delay(1000).fadeOut(300);
+			
+		};
+	})
+	$('#sidebar').hover(function(){
+			rotatePointer('down');
+			$('#mc_signup_container').fadeIn(300);}, function(){
+				if(!signUpFocus){
+					if(messageLength==0){
+						
+						$('#mc_signup_container').delay(1000).fadeOut(300, function(){
+							rotatePointer();
+						});
 				};
 			};
 		});
