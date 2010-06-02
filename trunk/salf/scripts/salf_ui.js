@@ -50,9 +50,12 @@ jQuery(document).ready(function($) {
 		};
 	})
 	$('#sidebar').hover(function(){
+			
+			
+			$('#mc_signup_container').fadeIn(300);
 			rotatePointer('down');
-			$('#mc_signup_container').fadeIn(300);}, function(){
-				if(!signUpFocus){
+			}, function(){
+					if(!signUpFocus){
 					if(messageLength==0){
 						
 						$('#mc_signup_container').delay(1000).fadeOut(300, function(){
