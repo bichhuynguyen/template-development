@@ -117,6 +117,18 @@ jQuery(document).ready(function($) {
 			$('span#pulldown').addClass("pointRight");
 		}
 	}
+	$(function(){
+		positionFooter(); 
+		function positionFooter(){
+			if($(document.body).height() < $(window).height()){
+				$("#pageFooterOuter").css({position: "absolute",top:($(window).scrollTop()+$(window).height()-$("#pageFooterOuter").height())+"px"})
+			}	
+		}
+
+		$(window)
+			.scroll(positionFooter)
+			.resize(positionFooter)
+	});
 });
 
 	

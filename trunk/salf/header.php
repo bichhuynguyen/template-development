@@ -43,7 +43,7 @@
 		</div>
 		
 			
-		<div id="content-wrapper">
+		<div id="content-wrapper" class="wrapper">
 			
 			<div id="nav">
 				<ul id="pages">
