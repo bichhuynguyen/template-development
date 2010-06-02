@@ -35,12 +35,14 @@ jQuery(document).ready(function($) {
 	}
 	$('.mc_custom_border_hdr h2').click(function(){//toggle for touchscreens
 		if(!signUpClicked){
-			$('span#pulldown').addClass("pointDown");
-			$('span#pulldown').removeClass("pointRight");
+			/*$('span#pulldown').addClass("pointDown");
+			$('span#pulldown').removeClass("pointRight");//*/
+			rotatePointer('down');
 			
 			$('#mc_signup_container').fadeIn(300);
 			signUpClicked = true;
 			} else {
+			rotatePointer();
 			$('#mc_signup_container').fadeOut(300);
 			signUpClicked = false;	
 		};})
@@ -97,7 +99,15 @@ jQuery(document).ready(function($) {
 			}
 		}
 		
-	
+	function rotatePointer(where){
+		if (where == 'down'){
+			$('span#pulldown').addClass("pointDown");
+			$('span#pulldown').removeClass("pointRight");
+		} else {
+			$('span#pulldown').removeClass("pointDown");
+			$('span#pulldown').addClass("pointRight");
+		}
+	}
 });
 
 	
