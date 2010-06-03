@@ -4,12 +4,16 @@ jQuery(document).ready(function($) {
 	/*init*/
 	
 
-	form_submitted = false;
-	fadeOutSpeed = 350;
-	fadeInSpeed = 350;
-	signUpFocus = false;
-	signUpClicked = false;
-	active_element = '#post-2';
+	var form_submitted = false,
+	fadeOutSpeed = 350,
+	fadeInSpeed = 350,
+	signUpFocus = false,
+	signUpClicked = false,
+	active_element = '#post-2',
+	copyText = $('p.copyright').css('float','right');
+	
+	$(active_element).after(copyText);//Move copyright text;
+	$('#footer').remove();
 	$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ')
 	$('div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
@@ -22,6 +26,10 @@ jQuery(document).ready(function($) {
 		submitted = true;
 		$("mc_signup_form").submit();
 	});
+	
+	
+	
+	
 	
 	/*Interface editing for mail sign up form*/
 	buttonHTML = '<input type="image" name="mc_signup_submit" src="'+ templateDir + '/style/images/submit-button.png" id="mc_signup_submit" value="Subscribe" />';
@@ -99,10 +107,15 @@ jQuery(document).ready(function($) {
 	
 	function button_action(mf_element){
 		if (active_element != mf_element){
+			/*Move Copyright Text*/	
+			$(mf_element).after(copyText);
 			
 			$(active_element).fadeOut(fadeOutSpeed, function(){
 				$(mf_element).fadeIn(fadeInSpeed, function(){
+					
+					/*Switch Active Element*/
 					active_element = mf_element;
+					
 					});
 				});
 			}
