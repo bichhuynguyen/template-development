@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<?php include (TEMPLATEPATH . "/left.php"); ?>
 
-<div id="content_2">
 
 	<?php if (have_posts()) :?>
 		<?php $postCount=0; ?>
@@ -20,7 +18,7 @@
 		
 	</div>
 	<div class="commentsblock">
-		<?php comments_template(); ?>
+		<div style="height: 100%; width: 100%; background: none repeat scroll 0% 0% white; -moz-border-radius-topleft: 100px;-webkit-border-top-left-radius: 100px;">&nbsp;</div>
 	</div>
 		<?php endwhile; ?>
 		<div class="navigation">

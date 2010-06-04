@@ -1,7 +1,5 @@
 <?php get_header(); ?>
-<?php include (TEMPLATEPATH . "/left.php"); ?>
 
-<div id="content_2">
 
 	<?php if (have_posts()) :?>
 		<?php $postCount=0; ?>

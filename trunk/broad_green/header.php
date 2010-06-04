@@ -20,3 +20,6 @@
 <!--<div id="header"> <h1><a href="<?php echo get_settings('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 <p class="description"><?php bloginfo('description'); ?></p> 
 </div>-->
+<?php include (TEMPLATEPATH . "/left.php"); ?>
+
+<div id="content">

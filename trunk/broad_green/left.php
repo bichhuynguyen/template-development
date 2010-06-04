@@ -1,10 +1,8 @@
 <div id="left">
 
-<a href="<?php echo get_settings('home'); ?>/" title="<?php bloginfo('name'); ?>"><h1><img style="border:none;margin-left:15px;"src="<?php echo get_bloginfo('template_url'); ?>/images/logo.png" width="227" height="129" alt="<?php bloginfo('name'); ?>" /></h1></a>
-
 <div id="left_content">
 
-	<h2>Pages</h2>
+	<h2>Menu</h2>
 	<ul class="latest dropmenu">
 	<li><a href="<?php echo get_settings('home'); ?>/">Home</a></li>
 	<?php wp_list_pages('title_li=&depth=1'); ?> 
