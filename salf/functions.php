@@ -50,7 +50,7 @@ function add_events_object()
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => null,
-    'supports' => array('title','editor')
+    'supports' => array('title','editor','thumbnail')
   ); 
   	register_post_type('Events',$args);
 	$date_args = array(
@@ -86,70 +86,18 @@ function Event_updated_messages( $messages ) {
   return $messages;
 }
 
-function add_partners_object() 
-{
-  $labels = array(
-    'name' => _x('partners', 'post type general name'),
-    'singular_name' => _x('partner', 'post type singular name'),
-    'add_new' => _x('Add New', 'partner'),
-    'add_new_item' => __('Add New partner'),
-    'edit_item' => __('Edit partner'),
-    'new_item' => __('New partner'),
-    'view_item' => __('View partner'),
-    'search_items' => __('Search partner'),
-    'not_found' =>  __('No partners found'),
-    'not_found_in_trash' => __('No partners found in Trash'), 
-    'event_item_colon' => ''
-  );
-	/*$taxonomies = array(
-		'tax1' => 'tax1',
-		'tax2' => 'tax2'
-		);*/
-	
-  $args = array(
-    'labels' => $labels,
-	//'taxonomies' => $taxonomies,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true, 
-    'query_var' => true,
-    'rewrite' => true,
-    'capability_type' => 'post',
-    'hierarchical' => false,
-    'menu_position' => null,
-    'supports' => array('title','editor')
-  ); 
-  	register_post_type('partner',$args);
-	$date_args = array(
-	'show_ui' => true,
+add_action( 'init', 'add_partners_object' );
+
+function add_partners_object() {
+	register_post_type( 'Partners',
+		array(
+			'labels' => array(
+				'name' => __( 'Partners' ),
+				'singular_name' => __( 'Partner' )
+			),
+			'public' => true,
+			'supports' => array('title','editor','thumbnail')			
+		)
 	);
-	$date_labels = array(
-	'name' => 'Genres',
-	);
-	register_taxonomy('Genres', 'partner');
 }
-
-//add filter to insure the text partner, or partner, is displayed when user updates a partner 
-add_filter('post_updated_messages', 'partner_updated_messages');
-function partner_updated_messages( $partner_messages ) {
-
-  $partner_messages['partner'] = array(
-    0 => '', // Unused. Messages start at index 1.
-    1 => sprintf( __('partner updated. <a href="%s">View partner</a>'), esc_url( get_permalink($post_ID) ) ),
-    2 => __('Custom field updated.'),
-    3 => __('Custom field deleted.'),
-    4 => __('partner updated.'),
-    /* translators: %s: date and time of the revision */
-    5 => isset($_GET['revision']) ? sprintf( __('partner restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-    6 => sprintf( __('partner published. <a href="%s">View post</a>'), esc_url( get_permalink($post_ID) ) ),
-    7 => __('partner saved.'),
-    8 => sprintf( __('partner submitted. <a target="_blank" href="%s">Preview partner</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-    9 => sprintf( __('partner scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview post</a>'),
-      // translators: Publish box date format, see http://php.net/date
-      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-    10 => sprintf( __('partner draft updated. <a target="_blank" href="%s">Preview partner</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-  );
-
-  return $partner_messages;
-}//*/
 ?>
