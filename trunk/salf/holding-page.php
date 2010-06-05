@@ -78,13 +78,22 @@ Template Name: Holding Page
 		<?php if(function_exists('add_custom_background')):?>
 		<div id="events" class="post">
 			<?php
-			query_posts( array( 'post_type' => 'event') );
+			query_posts( array( 'post_type' => 'Events') );
 			
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<h3><?php the_title();?>	</h3>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			} else {
+				// the current post lacks a thumbnail - default thumbnail  <-----------
+			}
+			?>
 			<p style="float: right"><?php the_content();?></p>
 			
 			<?php
+			/*
+			TAXONOMY
 			$args=array(
 			  'public'   => true,
 			  
@@ -103,9 +112,9 @@ Template Name: Holding Page
 				
 				/*foreach($taxonomy->Genres as $genre_list){
 					echo '<p> List ='. $genre_list. '</p>';
-				}//*/
+				}
 			  }
-			}
+			}//*/
 			?>
 			
 			
