@@ -76,6 +76,7 @@ Template Name: Holding Page
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
 		
 		<?php if(function_exists('add_custom_background')):?>
+			
 		<div id="events" class="post">
 			<?php
 			query_posts( array( 'post_type' => 'Events') );
@@ -106,6 +107,8 @@ Template Name: Holding Page
 		
 		
 		<?php if(function_exists('add_custom_background')):?>
+			
+			
 		<div id="about" class="post">
 			<?php
 			query_posts( array( 'post_type' => 'Partners') );
