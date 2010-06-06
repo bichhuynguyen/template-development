@@ -101,7 +101,7 @@ function add_partners_object() {
 				'singular_name' => __( 'Partner' )
 			),
 			'public' => true,
-			'supports' => array('title','editor','thumbnail')			
+			'supports' => array('title','editor','thumbnail','page-attributes')			
 		)
 	);
 	register_taxonomy('Partners', 'Partners');
@@ -115,7 +115,7 @@ function add_people_object() {
 				'singular_name' => __( 'Person' )
 			),
 			'public' => true,
-			'supports' => array('title','editor','thumbnail')			
+			'supports' => array('title','editor','thumbnail','page-attributes')			
 		)
 	);
 	$labels = array(
