@@ -31,7 +31,7 @@ a.top{
 	padding: 4px;
 	
 }
-#venues.post, #post-2.post, #partners.post, #enquiries.post{
+.post{
 	
 	border-radius : 2px;
 	-moz-border-radius: 2px;
@@ -103,9 +103,7 @@ a.top{
 	float: left;
 	background: #151414;
 }
-.post h2{
-	float: left;
-}
+
 #partners.post{
 	width: 900px;
 }

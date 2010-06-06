@@ -111,17 +111,16 @@ Template Name: Holding Page
 			
 		<div id="about" class="post">
 			<?php
-			query_posts( array( 'post_type' => 'Partners') );
+			$about_query = new WP_Query('post_type=Partners&orderby=menu_order');
 			
-			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-			<h3><?php the_title();?>	</h3>
+			if ( $about_query->have_posts() ) : while ( $about_query->have_posts() ) : $about_query->the_post();?>
+			<h2><?php the_title();?></h2>
 			<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
-				
-			} 
+				} 
 			?>
-			<p style="float: right"><?php the_content();?></p>
+			<p><?php the_content();?></p>
 			<?php
 			/*Internal Loop
 			--------------*/
@@ -133,10 +132,15 @@ Template Name: Holding Page
 			$taxonomies = $taxonomies[1];
 			
 		
-			$people = new WP_Query('post_type=People&partners='.$taxonomies);?>			
+			$people = new WP_Query('post_type=People&partners='.$taxonomies.'&orderby=menu_order');?>			
 			<?php if ($people->have_posts()) : while ($people->have_posts()) : $people->the_post(); ?>
-			<?php the_title();?>
-			<?php the_content();?>
+			<h3><?php the_title();?></h3>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+				} 
+			?>
+			<p><?php the_content();?><p>
 			<?php endwhile; else:?>
 			<?php endif;?>
 			<?php
