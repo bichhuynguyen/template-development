@@ -48,7 +48,8 @@
 			<div id="nav">
 				<ul id="pages">
 
-					<li class="page_item"><a href="#post-2" title="About" id="about_btn">ABOUT</a></li>
+					<li class="page_item"><a href="#home" title="Home" id="home_btn">HOME</a></li>
+					<li class="page_item"><a href="#about" title="About" id="about_btn">ABOUT</a></li>
 					<li class="page_item"><a href="#venues" title="Venues" id="venues_btn">VENUES</a></li>
 					<?php if(function_exists('add_custom_background')):?>
 					<li class="page_item"><a href="#events" title="Venues" id="events_btn">EVENTS</a></li>
