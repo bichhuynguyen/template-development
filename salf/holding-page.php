@@ -122,7 +122,22 @@ Template Name: Holding Page
 			} 
 			?>
 			<p style="float: right"><?php the_content();?></p>
-						
+			<?php
+			/*Internal Loop
+			--------------*/
+			$args=array(
+			   'post_type'=>'People',
+			   "Partners" => "Amphora"
+			);
+			$people = new WP_Query($args);?>			
+			<?php if ($people->have_posts()) : while ($people->have_posts()) : $people->the_post(); ?>
+			<?php the_title();?>
+			<?php the_content();?>
+			<?php endwhile; else:?>
+			<?php endif;?>
+			<?php
+			/*--------------
+			Internal Loop*/?>
 			
 			<?php endwhile; else:?>
 			 
