@@ -265,4 +265,31 @@ div #mc_signup_form{
 .wpcf7-response-output{
 	float: left;
 }
+/*about-tab form*/
 
+#about ul{
+	margin: 24px 0 24px 80px;
+}
+#about div.partner-box{
+	float: left;
+	clear: both;
+	position: relative;
+}
+#about div.people-bio-content p{
+	margin: 0 0 12px 80px;
+}
+#about div.people-bio-content{
+	position: relative;
+	width: 45%;
+	float: left;
+}
+
+#about ul li{
+	margin: 5px 0;
+}
+div.partner-box:first-child{
+	border-bottom: solid 1px #333;
+}
+div.partner-box{
+	margin-bottom: 25px;
+}
