@@ -125,11 +125,15 @@ Template Name: Holding Page
 			<?php
 			/*Internal Loop
 			--------------*/
-			$args=array(
-			   'post_type'=>'People',
-			   "Partners" => "Amphora"
-			);
-			$people = new WP_Query($args);?>			
+			
+			$taxonomies=get_the_term_list($post->ID,'Partners','','','');
+		
+			$taxonomies = explode('>',$taxonomies);
+			
+			$taxonomies = $taxonomies[1];
+			
+		
+			$people = new WP_Query('post_type=People&partners='.$taxonomies);?>			
 			<?php if ($people->have_posts()) : while ($people->have_posts()) : $people->the_post(); ?>
 			<?php the_title();?>
 			<?php the_content();?>
