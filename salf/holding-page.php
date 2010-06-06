@@ -114,6 +114,7 @@ Template Name: Holding Page
 			$about_query = new WP_Query('post_type=Partners&orderby=menu_order');
 			
 			if ( $about_query->have_posts() ) : while ( $about_query->have_posts() ) : $about_query->the_post();?>
+			<div class="partner-box">
 			<h2><?php the_title();?></h2>
 			<?php
 			if ( has_post_thumbnail() ) {
@@ -122,7 +123,7 @@ Template Name: Holding Page
 			?>
 			<p><?php the_content();?></p>
 			<?php
-			/*Internal Loop
+			/*People Loop
 			--------------*/
 			
 			$taxonomies=get_the_term_list($post->ID,'Partners','','','');
@@ -134,19 +135,21 @@ Template Name: Holding Page
 		
 			$people = new WP_Query('post_type=People&partners='.$taxonomies.'&orderby=menu_order');?>			
 			<?php if ($people->have_posts()) : while ($people->have_posts()) : $people->the_post(); ?>
+			<div class="people-bio-content">
 			<h3><?php the_title();?></h3>
 			<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 				} 
 			?>
-			<p><?php the_content();?><p>
+			<?php the_content();?>
+			</div>
 			<?php endwhile; else:?>
 			<?php endif;?>
 			<?php
 			/*--------------
-			Internal Loop*/?>
-			
+			People Loop End*/?>
+			</div><!--partner-box end-->
 			<?php endwhile; else:?>
 			 
 			<?php endif;
