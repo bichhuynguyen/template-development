@@ -59,13 +59,11 @@ function add_events_object()
     'supports' => array('title','editor','thumbnail')
   ); 
   	register_post_type('Events',$args);
-	$date_args = array(
+	$tax_args = array(
 	'show_ui' => true,
 	);
-	$date_labels = array(
-	'name' => 'Genres',
-	);
-	register_taxonomy('Genres', 'event');
+	
+	register_taxonomy('Genres', 'event', $tax_args);
 }
 
 //add filter to insure the text Event, or Event, is displayed when user updates a Event 
@@ -93,6 +91,7 @@ function Event_updated_messages( $messages ) {
 }
 
 add_action( 'init', 'add_partners_object' );
+add_action( 'init', 'add_people_object' );
 
 function add_partners_object() {
 	register_post_type( 'Partners',
@@ -105,5 +104,40 @@ function add_partners_object() {
 			'supports' => array('title','editor','thumbnail')			
 		)
 	);
+	register_taxonomy('Partners', 'Partners');
 }
+
+function add_people_object() {
+	register_post_type( 'People',
+		array(
+			'labels' => array(
+				'name' => __( 'People' ),
+				'singular_name' => __( 'Person' )
+			),
+			'public' => true,
+			'supports' => array('title','editor','thumbnail')			
+		)
+	);
+	$labels = array(
+	    'name' => _x('Partners', 'post type general name'),
+	    'singular_name' => _x('Partner', 'post type singular name'),
+	    'add_new' => _x('Add New', 'Partner'),
+	    'add_new_item' => __('Add New Partner'),
+	    'edit_item' => __('Edit Partner'),
+	    'new_item' => __('New Partner'),
+	    'view_item' => __('View Partner'),
+	    'search_items' => __('Search Partners'),
+	    'not_found' =>  __('No partners found'),
+	    'not_found_in_trash' => __('No partners found in Trash'), 
+	    'parent_item_colon' => ''
+	  );
+	$args = array(
+	    'labels' => $labels,
+		'show_tagcloud' => false,
+		'hierarchical'=> true
+	);
+	register_taxonomy('Partners', array('People','Partners'), $args);
+	
+}
+
 ?>
