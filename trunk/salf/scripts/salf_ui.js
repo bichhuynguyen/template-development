@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	fadeInSpeed = 350,
 	signUpFocus = false,
 	signUpClicked = false,
-	active_element = '#post-2',
+	active_element = '#home',
 	copyText = $('p.copyright').css('float','right');
 	
 	$(active_element).after(copyText);//Move copyright text;
@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 	$('div.post').css("margin-top","5px");
 	$('#footer').css("margin-top","25px");
 	$('#footer').css("padding-bottom","10px");
-	$('#post-2').show();
+	$(active_element).show();
 	
 	/*form submission*/
 	$("#mc_signup_submit").click(function(){
@@ -83,8 +83,12 @@ jQuery(document).ready(function($) {
 	
 	
 	/*Navigation */
+	$("#home_btn").click( function() {
+		button_action('#home');
+		return false;
+	});
 	$("#about_btn").click( function() {
-		button_action('#post-2');
+		button_action('#about');
 		return false;
 	});
 		

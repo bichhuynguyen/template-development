@@ -6,7 +6,7 @@ Template Name: Holding Page
 <?php get_header(); ?>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div class="post" id="post-<?php the_ID(); ?>">
+		<div class="post" id="home">
 			<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/new/about_blurb.png" width="235" height="86" alt="Britain's first major festival celebrating South Asian literature"></h2>
 		<?php// the_title(); ?>
 			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
@@ -85,38 +85,41 @@ Template Name: Holding Page
 			<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
-			} else {
-				// the current post lacks a thumbnail - default thumbnail  <-----------
-			}
+				
+			} 
 			?>
 			<p style="float: right"><?php the_content();?></p>
 			
-			<?php
-			/*
-			TAXONOMY
-			$args=array(
-			  'public'   => true,
-			  
-
-			); 
-			$output = 'objects'; // or names
-			//$output = 'names'; // or objects
+		
 			
-			$taxonomies=get_taxonomies($args,$output); 
-			if  ($taxonomies) {
-			  foreach ($taxonomies  as $taxonomy ) {
-				//var_dump($taxonomy->Genres);
-			    //echo '<p>'. $taxonomy->names . '</p>';
-			var_dump($taxonomy->Genres);
-				
-				
-				/*foreach($taxonomy->Genres as $genre_list){
-					echo '<p> List ='. $genre_list. '</p>';
-				}
-			  }
-			}//*/
+			
+			<?php endwhile; else:?>
+			 
+			<?php endif;
+			//Reset Query
+			wp_reset_query();
 			?>
+		
+		</div>
+		<a class="top" href="#" title="Top">BACK TO TOP</a>
+		<?php endif;?>
+		
+		
+		<?php if(function_exists('add_custom_background')):?>
+		<div id="about" class="post">
+			<?php
+			query_posts( array( 'post_type' => 'Partners') );
 			
+			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+			<h3><?php the_title();?>	</h3>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+				
+			} 
+			?>
+			<p style="float: right"><?php the_content();?></p>
+						
 			
 			<?php endwhile; else:?>
 			 

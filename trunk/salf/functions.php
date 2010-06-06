@@ -4,7 +4,13 @@ Thumbnail Support
 ----------------*/
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 100, 100, true);
-//add_image_size( 'homepage', 100, 100, true);
+add_image_size( 'small-uncropped', 100, 100);
+add_image_size( 'small-cropped', 100, 100, true);
+add_image_size( 'med-uncropped', 250, 250);
+add_image_size( 'med-cropped', 250, 250, true);
+add_image_size( 'large-uncropped', 450, 450);
+add_image_size( 'large-cropped', 450, 450, true);
+
 
 if ( function_exists('register_sidebar') ) {
    register_sidebar(array(
