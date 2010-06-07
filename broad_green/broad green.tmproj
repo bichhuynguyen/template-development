@@ -10,11 +10,13 @@
 			<key>filename</key>
 			<string>archive.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-09T14:14:12Z</date>
+			<date>2010-06-04T15:45:17Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>archives.php</string>
+			<key>lastUsed</key>
+			<date>2010-06-07T14:40:49Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -38,7 +40,7 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-22T15:54:59Z</date>
+			<date>2010-06-04T11:07:24Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -52,25 +54,25 @@
 			<key>filename</key>
 			<string>index.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-09T14:50:31Z</date>
+			<date>2010-06-04T15:42:09Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>left.php</string>
 			<key>lastUsed</key>
-			<date>2010-06-01T14:44:03Z</date>
+			<date>2010-06-07T14:40:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>contact.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-29T12:19:36Z</date>
+			<date>2010-06-04T15:42:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>page.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-29T12:19:01Z</date>
+			<date>2010-06-04T15:42:20Z</date>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -104,27 +106,27 @@
 			<key>filename</key>
 			<string>search.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-24T16:04:17Z</date>
+			<date>2010-06-04T15:43:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sidebar.php</string>
 			<key>lastUsed</key>
-			<date>2010-04-29T12:20:08Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-06-04T11:07:56Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>single.php</string>
 			<key>lastUsed</key>
-			<date>2010-02-24T16:04:15Z</date>
+			<date>2010-06-04T15:43:21Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>style.css</string>
 			<key>lastUsed</key>
-			<date>2010-06-01T14:44:03Z</date>
+			<date>2010-06-07T14:40:59Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -146,39 +148,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>21</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>9</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
-		</dict>
-		<key>contact.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>2</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -199,117 +171,28 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>header.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>13</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>left.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>2</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-		</dict>
-		<key>page.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>39</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-		</dict>
-		<key>sidebar.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>23</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>style.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>47</integer>
+				<integer>155</integer>
 				<key>line</key>
-				<integer>14</integer>
+				<integer>475</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>428</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>style.css</string>
-		<string>left.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1493, 1027}}</string>
+	<string>{{842, 1}, {655, 1027}}</string>
 </dict>
 </plist>

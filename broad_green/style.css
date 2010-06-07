@@ -462,21 +462,19 @@ img.alignleft{
 	vertical-align:top;
 }
 
-/*- most recent twitter*/
+/*************************************
+ +Gallery
+ *************************************/
 
-.sb-lasttwitter ul li {
-	list-style-type: none;
-    margin-right: 3px;
-    margin-left: 0px;
-	}
+html > body .ngg-albumoverview .ngg-album{
+	border: none;
+}
 	/*************************************
-	 +Sppech 
+	 +Speech bubble 
 	 *************************************/
 	
-	.speech {height: 100%; width: 100%; background: none repeat scroll 0% 0% #90c0e0; -moz-border-radius-topleft: 100px;-webkit-border-top-left-radius: 100px;"}
+	.speech {height: 100%; width: 100%; background: none repeat scroll 0% 0% #90c0e0; -moz-border-radius-topleft: 100px;-webkit-border-top-left-radius: 100px;}
 	
-
-
 
 	
 
