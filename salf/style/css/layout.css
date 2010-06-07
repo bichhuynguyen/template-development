@@ -265,7 +265,7 @@ div #mc_signup_form{
 .wpcf7-response-output{
 	float: left;
 }
-/*about-tab form*/
+/*about-tab style*/
 
 #about ul{
 	margin: 24px 0 24px 80px;
@@ -274,14 +274,22 @@ div #mc_signup_form{
 	float: left;
 	clear: both;
 	position: relative;
+	margin: 36px 40px 36px 60px;
 }
 #about div.people-bio-content p{
-	margin: 0 0 12px 80px;
+	width: 300px;
+}
+#about div h3{
+	margin: 24px 0;
+}
+#about div h2{
+	font-size: 150%;
 }
 #about div.people-bio-content{
 	position: relative;
-	width: 45%;
+	width: 400px;
 	float: left;
+	
 }
 
 #about ul li{
@@ -289,7 +297,26 @@ div #mc_signup_form{
 }
 div.partner-box:first-child{
 	border-bottom: solid 1px #333;
+	
 }
 div.partner-box{
-	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+/*events-tab style*/
+
+.event-type-box{
+	width: 450px;
+	float: left;
+	margin-bottom: 24px;
+}
+.event-type-box img{
+	float: left;
+	margin-right: 6px;
+}
+.event-type-box p{
+	
+	position: relative;
+	
+	width: 360px;
 }
