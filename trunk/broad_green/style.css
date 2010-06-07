@@ -28,7 +28,7 @@ body{
 }
 
 #content{
-	background:url(./images/main.jpg) no-repeat;
+	background:url(./images/main.jpg) no-repeat #90c0e0;
 	float:left;
 	padding:10px;
 	padding-top:290px;
@@ -76,7 +76,7 @@ body{
 	float: left;
 	text-align:left;
 	width:960px;
-	background: #fff;
+	
 	
 }
 
@@ -470,9 +470,10 @@ img.alignleft{
     margin-left: 0px;
 	}
 	/*************************************
-	 +Menu 
+	 +Sppech 
 	 *************************************/
 	
+	.speech {height: 100%; width: 100%; background: none repeat scroll 0% 0% #90c0e0; -moz-border-radius-topleft: 100px;-webkit-border-top-left-radius: 100px;"}
 	
 
 

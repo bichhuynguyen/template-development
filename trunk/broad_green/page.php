@@ -16,7 +16,7 @@
 		
 	</div>
 	<div class="commentsblock">
-		<div style="height: 100%; width: 100%; background: none repeat scroll 0% 0% white; -moz-border-radius-topleft: 100px;-webkit-border-top-left-radius: 100px;">&nbsp;</div>
+		<div class="speech">&nbsp;</div>
 	</div>
 		<?php endwhile; ?>
 		
