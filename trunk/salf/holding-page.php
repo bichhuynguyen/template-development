@@ -82,18 +82,15 @@ Template Name: Holding Page
 			query_posts( array( 'post_type' => 'Events') );
 			
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-			<h3><?php the_title();?>	</h3>
+			<div class="event-type-box">
 			<?php
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
-				
 			} 
 			?>
+			<h3><?php the_title();?>	</h3>
 			<p style="float: right"><?php the_content();?></p>
-			
-		
-			
-			
+			</div>
 			<?php endwhile; else:?>
 			 
 			<?php endif;
