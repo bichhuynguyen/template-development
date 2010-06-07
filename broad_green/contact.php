@@ -20,7 +20,9 @@ Template Name: Contact
 		<div class="entrymeta"><?php edit_post_link('Edit', '', ''); ?></div>
 		
 	</div>
-	
+	<div class="commentsblock">
+		<div class="speech">&nbsp;</div>
+	</div>
 		<?php endwhile; ?>
 		
 	<?php else : ?>

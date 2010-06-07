@@ -19,7 +19,7 @@
 		
 	</div>
 	<div class="commentsblock">
-		<?php comments_template(); ?>
+		<div class="speech">&nbsp;</div>
 	</div>
 		<?php endwhile; ?>
 		<div class="navigation">
