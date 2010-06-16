@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	fadeInSpeed = 350,
 	signUpFocus = false,
 	signUpClicked = false,
-	active_element = '#about',
+	active_element = '#home',
 	copyText = $('p.copyright').css('float','right');
 	
 	$(active_element).after(copyText);//Move copyright text;
