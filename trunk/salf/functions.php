@@ -104,7 +104,26 @@ function add_partners_object() {
 			'supports' => array('title','editor','thumbnail','page-attributes')			
 		)
 	);
-	register_taxonomy('Partners', 'Partners');
+	$labels = array(
+	    'name' => _x('Pages', 'post type general name'),
+	    'singular_name' => _x('Page', 'post type singular name'),
+	    'add_new' => _x('Add New', 'Page'),
+	    'add_new_item' => __('Add New Page'),
+	    'edit_item' => __('Edit Page'),
+	    'new_item' => __('New Page'),
+	    'view_item' => __('View Page'),
+	    'search_items' => __('Search Page'),
+	    'not_found' =>  __('No Page found'),
+	    'not_found_in_trash' => __('No Page found in Trash'), 
+	    'parent_item_colon' => ''
+	  );
+	$args = array(
+	    'labels' => $labels,
+		'show_tagcloud' => false,
+		'hierarchical'=> true
+	);
+	register_taxonomy('pages', 'Partners', $args);//*/
+	
 }
 
 function add_people_object() {

@@ -108,7 +108,7 @@ Template Name: Holding Page
 			
 		<div id="about" class="post">
 			<?php
-			$about_query = new WP_Query('post_type=Partners&orderby=menu_order');
+			$about_query = new WP_Query('post_type=Partners&pages=about&orderby=menu_order');
 			
 			if ( $about_query->have_posts() ) : while ( $about_query->have_posts() ) : $about_query->the_post();?>
 			<div class="partner-box">
