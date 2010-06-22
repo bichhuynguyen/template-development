@@ -23,7 +23,13 @@ get_header(); ?>
 	<?php endif; ?>
 
 <img src="<?php echo get_bloginfo('template_url'); ?>/style/images/create-mobile.jpg" width="1016" height="468" alt="Create Mobile">
+<img class="banner" src="<?php echo get_bloginfo('template_url'); ?>/style/images/partner-blurb.png" width="691" height="48" alt="Partner Blurb">
 
 
+
+<img class="logos sbc" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sbc-logo.png" width="244" height="79" alt="Sbc Logo">
+<img class="logos sws" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sws-logo.png" width="89" height="96" alt="Sws Logo">
+<img class="logos ace" src="<?php echo get_bloginfo('template_url'); ?>/style/images/ace-logo.png" width="176" height="93" alt="Ace Logo">
+<img class="logos create" src="<?php echo get_bloginfo('template_url'); ?>/style/images/create-logo.png" width="172" height="70" alt="Create Logo">
 </div>
 <?php get_footer(); ?>

@@ -102,3 +102,25 @@ HEADER
 	width: 150px; 
 	
 }
+.banner{
+	float: left;
+	margin: 76px 0 0 120px;
+}
+.logos{
+	clear: left;
+	float: right;
+}
+.sbc{
+	margin-right: 15px;
+	margin-top: 20px;
+}
+.sws{
+	margin-right: 72px;
+}
+.ace{
+	margin-right: 65px;
+}
+.create{
+	margin-right: 62px;
+	margin-top: 30px;
+}
