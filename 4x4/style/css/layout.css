@@ -63,6 +63,7 @@ HEADER
 	width: 300px;
 	margin-top: 12px;
 	font-size: 12px;
+	margin-left: 35px;
 }
 
 #map{
@@ -72,6 +73,11 @@ HEADER
 #map iframe, #map p{
 	clear: both;
 	float: right;
+}
+#map iframe{
+	border: 3px solid #75BA37;
+	
+	
 }
 
 #prem h3{

@@ -22,7 +22,7 @@ get_header(); ?>
 	<?php endwhile; ?>
 	<?php endif; ?>
 
-
+<img src="<?php echo get_bloginfo('template_url'); ?>/style/images/create-mobile.jpg" width="1016" height="468" alt="Create Mobile">
 
 
 </div>

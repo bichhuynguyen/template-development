@@ -13,5 +13,11 @@ jQuery(document).ready(function($) {
 		}
 		return false;
 	});
+	$('#map').click(function(){
+		if(map_show){
+			$('#map').slideUp(500);	
+			map_show=false;
+		}
+	});
 	
 });
