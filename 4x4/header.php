@@ -33,7 +33,7 @@
 		</ul>
 	<div id="prem">
 	<h3>premiere</h3>
-	<p>21<sup>st</sup> July<br />Swindon Art Centre</p>
+	<p>21<sup>st</sup> July<br />Wyvern Theatre</p>
 	<a class="small-ital" href="http://maps.google.com/maps/ms?ie=UTF8&msa=0&msid=116672839499654081499.0004898bdeae87b14e74a&ll=51.558743,-1.781802&spn=0.009659,0.01929&z=16" target='_blank'>click for map</a>
 	</div>	
 	
