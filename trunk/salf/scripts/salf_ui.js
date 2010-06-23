@@ -146,6 +146,15 @@ jQuery(document).ready(function($) {
 			.scroll(positionFooter)
 			.resize(positionFooter)
 	});
+	
+	/*
+	*
+	*Interface Interactions
+	*
+	*/
+	$('a.news-top').hover(function(){
+		$('span.subscribe-hint').slideToggle(100);
+	});
 });
 
 	
