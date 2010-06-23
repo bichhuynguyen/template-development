@@ -41,7 +41,7 @@
 		            loading_text: "loading tweets..."
 		        });
 				$(".query_tweet").tweet({
-		            query: "SALF",
+		            query: "#salf",
 					
 		            join_text: "auto",
 		            avatar_size: 32,
@@ -51,8 +51,9 @@
 		            auto_join_text_ing: "",
 		            auto_join_text_reply: "",
 		            auto_join_text_url: "",
-		            loading_text: "loading tweets..."
-		        });
+		            loading_text: ""
+		        }).bind("empty", function() { $(this).append("No matching tweets found"); });
+				;
 		    });
 		</script>
 	</head>

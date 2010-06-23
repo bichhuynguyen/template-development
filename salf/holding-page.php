@@ -20,14 +20,14 @@ Template Name: Holding Page
 
 
 				
-					<div class="teacher-thumb">
+					<div class="news-feed">
 						
 					</div>
 					
 					<h2><?php the_title(); ?></h2>
 
-					<div class="entry">
-						<?php the_content(); ?>
+					<div class="new-entry">
+						<?php the_excerpt(); ?>
 					</div>
 
 					
@@ -41,8 +41,10 @@ Template Name: Holding Page
 					//wp_reset_query();
 					?>
 			</div>	
-			<div class="dsc_tweet"></div>
-			<div class="query_tweet"></div>   	
+			<div class="dsc_tweet tweets"><H2>TWEETS FROM US</H2></div>
+			<div class="query_tweet tweets"><H2>TWEETS ABOUT US</H2>
+				
+			</div>   	
 			
 			
 			
