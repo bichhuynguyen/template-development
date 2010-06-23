@@ -41,7 +41,8 @@ Template Name: Holding Page
 					//wp_reset_query();
 					?>
 			</div>	
-			<div class="tweet"></div>  	
+			<div class="dsc_tweet"></div>
+			<div class="query_tweet"></div>   	
 			
 			
 			
