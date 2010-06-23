@@ -7,12 +7,14 @@ Template Name: Holding Page
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="home">
-			<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/new/about_blurb.png" width="235" height="86" alt="Britain's first major festival celebrating South Asian literature"></h2>
+			<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/home-page-header-para.png" alt="Britain's first major festival celebrating South Asian literature"></h2>
 		<?php// the_title(); ?>
-			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+			<?php //the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 			<?//php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php endwhile; endif; ?>
+			
 			<div class="news">
+				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="display: none;"class="subscribe-hint">Get RSS Feed</span>
 			<?php
 			$teacher_query = new WP_Query('post_type=post');
 			if ($teacher_query->have_posts()) : while ($teacher_query->have_posts()) : $teacher_query->the_post(); ?>
@@ -22,14 +24,15 @@ Template Name: Holding Page
 				
 					<div class="news-feed">
 						
-					</div>
+					
 					
 					<h2><?php the_title(); ?></h2>
 
 					<div class="new-entry">
 						<?php the_excerpt(); ?>
 					</div>
-
+					
+					
 					
 
 
@@ -40,6 +43,7 @@ Template Name: Holding Page
 					//Reset Query
 					//wp_reset_query();
 					?>
+				</div>
 			</div>	
 			<div class="dsc_tweet tweets"><H2>TWEETS FROM US</H2></div>
 			<div class="query_tweet tweets"><H2>TWEETS ABOUT US</H2>
