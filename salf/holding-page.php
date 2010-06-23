@@ -11,9 +11,45 @@ Template Name: Holding Page
 		<?php// the_title(); ?>
 			<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 			<?//php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+			<?php endwhile; endif; ?>
+			<div class="news">
+			<?php
+			$teacher_query = new WP_Query('post_type=post');
+			if ($teacher_query->have_posts()) : while ($teacher_query->have_posts()) : $teacher_query->the_post(); ?>
+
+
+
+				
+					<div class="teacher-thumb">
+						
+					</div>
+					
+					<h2><?php the_title(); ?></h2>
+
+					<div class="entry">
+						<?php the_content(); ?>
+					</div>
+
+					
+
+
+
+
+					<?php endwhile;
+					endif; 
+					//Reset Query
+					//wp_reset_query();
+					?>
+			</div>	
+			<div class="tweet"></div>  	
+			
+			
+			
+		
+		
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
-		<?php endwhile; endif; ?>
+		
 	<?php// edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
 		<div id="partners" class="post">		
