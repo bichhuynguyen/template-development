@@ -24,12 +24,19 @@ body{
 	
 	background: #FBBF13 url('../images/backdrop-grate.png') repeat-x right 100px;
 	
-	color: #eee;
+	color: #414042;
 	
 }
 a{
+	color: #da2128;
+	text-decoration: none;
+}
+#nav a{
 	color: white;
 	text-decoration: none;
+}
+#sidebar h2, #sidebar label{
+	color: white;
 }
 a.top{
 	float:left;
@@ -44,8 +51,17 @@ a.top{
 	border-top-left-radius : 30px;
 	-moz-border-radius-topleft: 30px;
 	-webkit-border-top-left-radius: 30px;
-	
+	min-width: 900px;
+	_width: 900px;
+	min-height: 300px;
+	_height: 320px;
+	margin: 50px 0 20px 0;
+
+	padding: 30px;
+	float: left;
+	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
+
 #partner-links{
 	float: left;
 	clear: left;
@@ -91,22 +107,13 @@ a.top{
 #enquiries.post:hover{
 	background: #464141;
 }*/
-
+h1, h2, h3, h4,h5,h6{
+	color: #000;
+}
 
 #content-wrapper, #header{
 	width: 960px;
 	margin: 0 auto;
-}
-.post{
-	min-width: 900px;
-	_width: 900px;
-	min-height: 300px;
-	_height: 320px;
-	margin: 50px 0 20px 0;
-	
-	padding: 30px;
-	float: left;
-	background: #151414;
 }
 
 #partners.post{
@@ -324,4 +331,29 @@ div.partner-box{
 	position: relative;
 	
 	width: 360px;
+}
+/*
+*
+* Twitter Styles
+*
+*/
+.tweets{
+	display: inline;
+	float: left;
+	background: #F6D6A3;
+	width: 400px;
+	margin: 0 25px;
+	
+}
+.tweet_list{
+	margin-top: 15px;
+}
+.tweet_list li{
+	margin: 0 12px;
+	width: 370px;
+	height: 75px;
+
+}
+.tweet_list li img{
+	margin: 5px 5px 25px 5px;
 }
