@@ -27,11 +27,25 @@
 		<script language="javascript" src="<?php bloginfo('template_url'); ?>/scripts/tweet/jquery.tweet.js" type="text/javascript"></script>  
 		<script type='text/javascript'>
 		    $(document).ready(function(){
-		        $(".tweet").tweet({
+		        $(".dsc_tweet").tweet({
 		            username: "dsc_SALF",
+					
 		            join_text: "auto",
 		            avatar_size: 32,
-		            count: 3,
+		            count: 4,
+		            auto_join_text_default: "",
+		            auto_join_text_ed: "",
+		            auto_join_text_ing: "",
+		            auto_join_text_reply: "",
+		            auto_join_text_url: "",
+		            loading_text: "loading tweets..."
+		        });
+				$(".query_tweet").tweet({
+		            query: "SALF",
+					
+		            join_text: "auto",
+		            avatar_size: 32,
+		            count: 4,
 		            auto_join_text_default: "",
 		            auto_join_text_ed: "",
 		            auto_join_text_ing: "",
