@@ -51,13 +51,10 @@ $project_query = new WP_Query('post_type=project&orderby=menu_order');
 			<h2><?php the_title(); ?></h2>
 			
 			<div class="entry">
+				
 				<?php the_content();
-				the_meta(); ?>
-				<?php 
-				$post_ID = get_the_ID();
-				$meta_values = get_post_meta($post_ID, 'f4x4-vid_text'); 
-				echo "<br />This is the META----".$meta_values[0];//*/
-				?>
+				 echo f4x4_vimeo_callback(get_the_ID()); ?>
+				
 
 
 
