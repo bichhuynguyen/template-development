@@ -38,4 +38,39 @@ get_header(); ?>
 <img class="logos ace" src="<?php echo get_bloginfo('template_url'); ?>/style/images/ace-logo.png" width="176" height="93" alt="Ace Logo" />
 <img class="logos create" src="<?php echo get_bloginfo('template_url'); ?>/style/images/create-logo.png" width="172" height="70" alt="Create Logo" />
 </div>
+
+<?php //get_sidebar();
+$project_query = new WP_Query('post_type=project&orderby=menu_order');
+
+	if ($project_query->have_posts()) : while ($project_query->have_posts()) : $project_query->the_post(); ?>
+
+
+
+		<div class="post project" id="project-<?php the_ID(); ?>">
+			
+			<h2><?php the_title(); ?></h2>
+			
+			<div class="entry">
+				<?php the_content();
+				the_meta(); ?>
+				<?php 
+				$post_ID = get_the_ID();
+				$meta_values = get_post_meta($post_ID, 'f4x4-vid_text'); 
+				echo "<br />This is the META----".$meta_values[0];//*/
+				?>
+
+
+
+			</div>
+
+		</div>
+
+
+
+
+	<?php endwhile; else: ?>
+
+		<p>Currently, no project profiles have been uploaded.</p>
+
+<?php endif; ?>
 <?php get_footer(); ?>
