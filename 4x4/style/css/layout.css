@@ -136,3 +136,35 @@ HEADER
 	margin-right: 62px;
 	margin-top: 30px;
 }
+/*
+*
+* Project Styling
+*
+*/
+.project{
+	display: inline;
+	width: 100%;
+	float: left;
+	margin: 50px 0 0 0;
+}
+.project .text{
+	display: inline;
+	float: left;
+	margin: 0 0 0 100px;
+	
+}
+.project .text h2{
+	margin-bottom: 26px;
+	width: 475px;
+}
+.project .text p{
+	width: 300px;
+}
+.project .project-videos object{
+	display: inline;
+	clear: right;
+	float: right;
+	
+	margin-right: 30px;
+	margin-bottom: 60px;
+}
