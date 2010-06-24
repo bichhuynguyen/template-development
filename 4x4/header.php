@@ -10,6 +10,7 @@
 
 	<head profile="http://gmpg.org/xfn/11">
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
 		<title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -23,7 +24,7 @@
 	
 <body <?php body_class(); ?>>
 	<div id="header">
-		<h1><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo  get_bloginfo('template_url'); ?>/style/images/4x4_logo.png" width="179" height="98" alt="<?php bloginfo('name'); ?>"></a></h1>
+		<h1><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo  get_bloginfo('template_url'); ?>/style/images/4x4_logo.png" width="179" height="98" alt="<?php bloginfo('name'); ?>" /></a></h1>
 		
 		<ul id="nav">
 			<li>Calling the Shots</li>
