@@ -1,21 +1,21 @@
 jQuery(document).ready(function($) {
 	map_show=false;
-	
+	currentMap=$('#map').css('margin-top');
 	$('#prem a').click(function(){
 		if (!map_show){
-				$('#map').slideDown(500);	
+				$('#map').animate({'margin-top':"0px"});	
 				map_show=true;	
 				
 				
 		} else {
-		$('#map').slideUp(500);	
+		$('#map').animate({'margin-top':currentMap});	
 		map_show=false;
 		}
 		return false;
 	});
 	$('#map').click(function(){
 		if(map_show){
-			$('#map').slideUp(500);	
+			$('#map').animate({'margin-top':currentMap});	
 			map_show=false;
 		}
 	});

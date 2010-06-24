@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>header.php</string>
+	<string>style/css/layout.css</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -36,7 +36,7 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-06-22T11:02:09Z</date>
+			<date>2010-06-22T13:38:37Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -46,7 +46,7 @@
 			<key>filename</key>
 			<string>4x4template.php</string>
 			<key>lastUsed</key>
-			<date>2010-06-22T11:02:09Z</date>
+			<date>2010-06-22T13:48:49Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -120,9 +120,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
+				<integer>37</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>8</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -134,7 +134,7 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>44</integer>
+				<integer>13</integer>
 				<key>line</key>
 				<integer>35</integer>
 			</dict>
@@ -162,9 +162,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>45</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>17</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -176,14 +176,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>124</integer>
+				<integer>120</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>70</integer>
+			<integer>83</integer>
 		</dict>
 		<key>style/css/typography.css</key>
 		<dict>
@@ -197,7 +197,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>11</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
@@ -212,6 +212,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{685, -7}, {627, 1027}}</string>
+	<string>{{685, 0}, {627, 1027}}</string>
 </dict>
 </plist>
