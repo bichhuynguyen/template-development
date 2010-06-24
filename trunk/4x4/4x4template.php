@@ -43,23 +43,24 @@ get_header(); ?>
 $project_query = new WP_Query('post_type=project&orderby=menu_order');
 
 	if ($project_query->have_posts()) : while ($project_query->have_posts()) : $project_query->the_post(); ?>
-
+<img src="<?php echo get_bloginfo('template_url'); ?>/style/images/project_divider.png" width="1017" height="4">
 
 
 		<div class="post project" id="project-<?php the_ID(); ?>">
 			
-			<h2><?php the_title(); ?></h2>
 			
-			<div class="entry">
+			
+			<div class="text">
+				<h2><?php the_title(); ?></h2>
+				<?php the_content();?>
 				
-				<?php the_content();
-				 echo f4x4_vimeo_callback(get_the_ID()); ?>
+				
 				
 
 
 
 			</div>
-
+			<?php echo f4x4_vimeo_callback(get_the_ID()); ?>
 		</div>
 
 

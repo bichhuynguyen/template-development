@@ -85,10 +85,10 @@ $meta_box = array(
     'fields' => array(
         array(
             'name' => 'Vimeo Short Code',
-            'desc' => 'Enter Short Code Here',
+            'desc' => 'Enter Short Codes Here<br />They are the numbers found after vimeo.com/<br />If you wish to add more, separate them with a semicolon (;)',
             'id' => $prefix . 'text',
             'type' => 'text',
-            'std' => '0123456789'
+            'std' => ''
         )/*,
         array(
             'name' => 'Textarea',
@@ -224,7 +224,6 @@ function f4x4_vimeo_callback($post_ID){
 	
 	
 	$meta_values = get_post_meta($post_ID, 'f4x4-vid_text'); 
-	echo $meta_values[0];
 	$vids_array = explode(';',$meta_values[0]);
 	$return = "<div class='project-videos'>";
 	foreach ($vids_array as $current_vid){
