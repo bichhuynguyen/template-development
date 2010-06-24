@@ -26,14 +26,14 @@
 		<h1><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo  get_bloginfo('template_url'); ?>/style/images/4x4_logo.png" width="179" height="98" alt="<?php bloginfo('name'); ?>"></a></h1>
 		
 		<ul id="nav">
-			<li><a href=#>Calling the Shots</a></li>
-			<li><a href=#>Hardenhuish School</a></li>
-			<li><a href=#>2BME</a></li>
-			<li><a href=#>Exmouth Summer Festival</a></li>
+			<li>Calling the Shots</li>
+			<li>Hardenhuish School</li>
+			<li>2BME</li>
+			<li>Exmouth Summer Festival</li>
 		</ul>
 	<div id="prem">
 	<h3>premiere</h3>
-	<p>21<sup>st</sup> July<br />Wyvern Theatre</p>
+	<p>19<sup>th</sup> July<br />Wyvern Theatre</p>
 	<a class="small-ital" href="http://maps.google.com/maps/ms?ie=UTF8&msa=0&msid=116672839499654081499.0004898bdeae87b14e74a&ll=51.558743,-1.781802&spn=0.009659,0.01929&z=16" target='_blank'>click for map</a>
 	</div>	
 	
