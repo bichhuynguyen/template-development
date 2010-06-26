@@ -86,12 +86,12 @@
 					<li class="page_item"><a href="#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
 					<li class="page_item"><a href="#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
 					<?php else:?>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=home" title="Home" id="home_btn">HOME</a></li>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=about" title="About" id="about_btn">ABOUT</a></li>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=venues" title="Venues" id="venues_btn">VENUES</a></li>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=events" title="Venues" id="events_btn">EVENTS</a></li>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=partners" title="Partners" id="partners_btn">PARTNERS</a></li>
-					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#home" title="Home" id="home_btn">HOME</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#about" title="About" id="about_btn">ABOUT</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#venues" title="Venues" id="venues_btn">VENUES</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#events" title="Venues" id="events_btn">EVENTS</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
 					<?php endif;?>
 				</ul>	
 				
