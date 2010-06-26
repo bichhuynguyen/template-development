@@ -355,6 +355,7 @@ div.partner-box{
 	margin-top: 15px;
 }
 .dsc_tweet {
+	clear: left;
 	margin-right: 60px;
 }
 .tweet_list li{

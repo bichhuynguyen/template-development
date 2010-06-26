@@ -153,7 +153,7 @@ jQuery(document).ready(function($) {
 	*
 	*/
 	$('a.news-top').hover(function(){
-		$('span.subscribe-hint').slideToggle(100);
+		$('span.subscribe-hint').toggle(100);
 	});
 });
 
