@@ -1,6 +1,25 @@
-
+jQuery.extend({
+  getUrlVars: function(){
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
 jQuery(document).ready(function($) {
-	
+	if(window.location.hash){
+	active_element = window.location.hash;
+	} else {
+		active_element = '#home';
+	};
 	/*init*/
 	
 
@@ -9,7 +28,7 @@ jQuery(document).ready(function($) {
 	fadeInSpeed = 350,
 	signUpFocus = false,
 	signUpClicked = false,
-	active_element = '#home',
+	
 	copyText = $('p.copyright').css('float','right');
 	
 	$(active_element).after(copyText);//Move copyright text;
