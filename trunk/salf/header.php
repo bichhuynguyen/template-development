@@ -78,16 +78,21 @@
 			
 			<div id="nav">
 				<ul id="pages">
-
+					<?php if(is_front_page()):?>
 					<li class="page_item"><a href="#home" title="Home" id="home_btn">HOME</a></li>
 					<li class="page_item"><a href="#about" title="About" id="about_btn">ABOUT</a></li>
 					<li class="page_item"><a href="#venues" title="Venues" id="venues_btn">VENUES</a></li>
-					<?php if(function_exists('add_custom_background')):?>
 					<li class="page_item"><a href="#events" title="Venues" id="events_btn">EVENTS</a></li>
-					<? endif;?>
 					<li class="page_item"><a href="#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
 					<li class="page_item"><a href="#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
-
+					<?php else:?>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=home" title="Home" id="home_btn">HOME</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=about" title="About" id="about_btn">ABOUT</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=venues" title="Venues" id="venues_btn">VENUES</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=events" title="Venues" id="events_btn">EVENTS</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=partners" title="Partners" id="partners_btn">PARTNERS</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>?sel=enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
+					<?php endif;?>
 				</ul>	
 				
 				<?php get_sidebar(); ?>

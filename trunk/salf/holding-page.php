@@ -27,7 +27,7 @@ Template Name: Holding Page
 						
 					
 					
-					<h2><?php the_title(); ?></h2>
+					<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a>
 
 					<div class="new-entry">
 						<?php mf_post_thumbnail('med-cropped');?>
