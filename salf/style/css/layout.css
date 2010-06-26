@@ -381,7 +381,7 @@ div.partner-box{
 .new-entry p{
 	width: 430px;
 }
-#news-feed div.news-thumb img{
+#news-feed div.news-thumb img, .news-thumb{
 	float: right;
 }
 a.news-top{

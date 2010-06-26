@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 	$(active_element).after(copyText);//Move copyright text;
 	$('#footer').remove();
 	$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ')
-	$('div.post, .top').hide();
+	$('.home div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
 	$('#footer').css("margin-top","25px");
 	$('#footer').css("padding-bottom","10px");
@@ -83,28 +83,28 @@ jQuery(document).ready(function($) {
 	
 	
 	/*Navigation */
-	$("#home_btn").click( function() {
+	$(".home #home_btn").click( function() {
 		button_action('#home');
 		return false;
 	});
-	$("#about_btn").click( function() {
+	$(".home #about_btn").click( function() {
 		button_action('#about');
 		return false;
 	});
 		
-	$("#venues_btn").click( function() {
+	$(".home #venues_btn").click( function() {
 		button_action('#venues');
 		return false;
 	});
-	$("#partners_btn").click( function() {
+	$(".home #partners_btn").click( function() {
 		button_action('#partners');
 		return false;
 	});
-	$("#enquiries_btn").click( function() {
+	$(".home #enquiries_btn").click( function() {
 		button_action('#enquiries');
 		return false;
 	});
-	$("#events_btn").click( function() {
+	$(".home #events_btn").click( function() {
 		button_action('#events');
 		return false;
 	});

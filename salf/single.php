@@ -1,21 +1,22 @@
 <?php get_header(); ?>
-
+	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
+			
 			<h2><?php the_title(); ?></h2>
-
+			<?php mf_post_thumbnail('large-uncropped');?>
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
-			<p>
+				<?php /*<p>
 				This entry was posted
-				<?php /* This is commented, because it requires a little adjusting sometimes.
+			 This is commented, because it requires a little adjusting sometimes.
 					You'll need to download this plugin, and follow the instructions:
 					http://binarybonsai.com/archives/2004/08/17/time-since-plugin/ */
-					/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago'; */ ?>
+					/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); echo time_since($entry_datetime); echo ' ago';  ?>
 				on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>
 				and is filed under <?php the_category(', ') ?>.
 				You can follow any responses to this entry through the <?php post_comments_feed_link('RSS 2.0'); ?> feed.
@@ -36,17 +37,22 @@
 					// Neither Comments, nor Pings are open ?>
 					Both comments and pings are currently closed.
 
-				<?php } edit_post_link('Edit this entry','','.'); ?>
+				<?php } edit_post_link('Edit this entry','','.'); 
 			</p>
+				<ul>
+					<li><?php next_post_link('&laquo; Older Entries') ?></li>
+					<li><?php previous_post_link('Newer Entries &raquo;') ?></li>
+				</ul>
+			
+			*/
+			
+			?>
 
 		</div>
 
-<?php comments_template(); ?>
+
 		
-		<ul>
-			<li><?php next_post_link('&laquo; Older Entries') ?></li>
-			<li><?php previous_post_link('Newer Entries &raquo;') ?></li>
-		</ul>
+	
 
 	<?php endwhile; else: ?>
 
