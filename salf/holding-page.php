@@ -15,7 +15,7 @@ Template Name: Holding Page
 			
 			<div class="news">
 				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="display: none;"class="subscribe-hint">Get RSS Feed</span>
-			<div class="news-feed">
+			<div id="news-feed">
 			<?php
 			$teacher_query = new WP_Query('post_type=post');
 			if ($teacher_query->have_posts()) : while ($teacher_query->have_posts()) : $teacher_query->the_post(); ?>
@@ -30,8 +30,10 @@ Template Name: Holding Page
 					<h2><?php the_title(); ?></h2>
 
 					<div class="new-entry">
+						<?php mf_post_thumbnail('med-cropped');?>
 						<?php the_excerpt(); ?>
 					</div>
+					
 					
 					
 					

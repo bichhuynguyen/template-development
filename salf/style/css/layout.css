@@ -372,11 +372,17 @@ div.partner-box{
 * News Feed
 *
 */
-.news-feed{
+#news-feed {
 	clear: left;
 	float: left;
-	width: 430px;
+	width: 100%;
 	margin-top: 30px;
+}
+.new-entry p{
+	width: 430px;
+}
+#news-feed div.news-thumb img{
+	float: right;
 }
 a.news-top{
 	float: left;
