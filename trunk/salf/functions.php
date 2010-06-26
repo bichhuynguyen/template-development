@@ -12,6 +12,21 @@ add_image_size( 'large-uncropped', 500, 500);
 add_image_size( 'large-cropped', 500, 500, true);
 
 
+function mf_post_thumbnail($style){
+if ( has_post_thumbnail() ) {
+	echo "<div class='news-thumb'>";
+	the_post_thumbnail($style);
+	echo "</div>";
+	} else {
+		/*echo "<div class='news-thumb'><img width='200' height='200'   src='";
+		echo bloginfo('template_directory'); 
+		echo"/images/teacher_no_thumb.png'></div>";*/
+	} 
+
+}
+/*--------------
+Sidebar Support
+----------------*/
 if ( function_exists('register_sidebar') ) {
    register_sidebar(array(
        'before_widget' => '<li id="%1$s" class="widget %2$s">',
@@ -21,7 +36,9 @@ if ( function_exists('register_sidebar') ) {
    ));
 }
 
-
+/*--------------
+Post & Tax Support
+----------------*/
 
 add_action('init', 'add_events_object');
 
