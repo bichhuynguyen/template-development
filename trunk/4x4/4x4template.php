@@ -20,7 +20,7 @@ get_header(); ?>
 
 		
 			<?php the_content('Read the rest of this entry &raquo;'); ?>
-		</div>
+		
 
 	<?php endwhile; ?>
 	<?php endif; ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 <img src="<?php echo get_bloginfo('template_url'); ?>/style/images/create-mobile.jpg" width="1016" height="468" alt="Create Mobile" />
 <img class="banner" src="<?php echo get_bloginfo('template_url'); ?>/style/images/partner-blurb.png" width="691" height="48" alt="Partner Blurb" />
 
-
+</div>
 <div id="logos" >
 <img class="logos sbc" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sbc-logo.png" width="244" height="79" alt="Sbc Logo" />
 <img class="logos sws" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sws-logo.png" width="89" height="96" alt="Sws Logo" />
@@ -40,11 +40,11 @@ get_header(); ?>
 $project_query = new WP_Query('post_type=project&orderby=menu_order');
 
 	if ($project_query->have_posts()) : while ($project_query->have_posts()) : $project_query->the_post(); ?>
-<img src="<?php echo get_bloginfo('template_url'); ?>/style/images/project_divider.png" width="1017" height="4">
+
 
 
 		<div class="post project" id="project-<?php the_ID(); ?>">
-			
+		<img class="border" src="<?php echo get_bloginfo('template_url'); ?>/style/images/project_divider.png" width="1017" height="4">	
 			
 			
 			<div class="text">
