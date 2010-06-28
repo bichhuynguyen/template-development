@@ -22,8 +22,7 @@ if ( function_exists('register_sidebar') ) {
 add_action( 'init', 'add_4x4_objects_and_taxonomy' );
 function add_4x4_objects_and_taxonomy(){
 	add_new_object('project');
-	add_new_object('video');
-	add_new_taxonomy('project', array('project','video'));
+	
 	
 	
 	
@@ -226,13 +225,14 @@ function f4x4_vimeo_callback($post_ID){
 	$meta_values = get_post_meta($post_ID, 'f4x4-vid_text'); 
 	$vids_array = explode(';',$meta_values[0]);
 	$return = "<div class='project-videos'>";
+	if ($vids_array[0]){
 	foreach ($vids_array as $current_vid){
 		$return .= '<object width="400" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=';
 		$return .= $current_vid;
 		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=';
 		$return .= $current_vid;
 		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="225"></embed></object>';
-	}
+	}}
 	$return .= "</div>";
 	return $return;
 }

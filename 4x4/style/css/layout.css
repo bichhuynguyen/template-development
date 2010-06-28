@@ -118,9 +118,15 @@ HEADER
 	margin: 76px 0 0 120px;
 }
 .logos{
-	_display: inline;
+	
 	clear: left;
 	float: right;
+}
+#logos{
+	clear: both;
+	float: right;
+	
+	margin-top: 30px;
 }
 .sbc{
 	margin-right: 15px;
@@ -145,7 +151,7 @@ HEADER
 	display: inline;
 	width: 100%;
 	float: left;
-	margin: 50px 0 0 0;
+	margin: 50px 0;
 }
 .project .text{
 	display: inline;
@@ -158,7 +164,10 @@ HEADER
 	width: 475px;
 }
 .project .text p{
+	
+	margin-bottom: 16px;
 	width: 300px;
+	
 }
 .project .project-videos object{
 	display: inline;
