@@ -29,10 +29,7 @@ get_header(); ?>
 <img class="banner" src="<?php echo get_bloginfo('template_url'); ?>/style/images/partner-blurb.png" width="691" height="48" alt="Partner Blurb" />
 
 
-<div id="logos" style="
-	display: block;
-	clear: both
-	">
+<div id="logos" >
 <img class="logos sbc" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sbc-logo.png" width="244" height="79" alt="Sbc Logo" />
 <img class="logos sws" src="<?php echo get_bloginfo('template_url'); ?>/style/images/sws-logo.png" width="89" height="96" alt="Sws Logo" />
 <img class="logos ace" src="<?php echo get_bloginfo('template_url'); ?>/style/images/ace-logo.png" width="176" height="93" alt="Ace Logo" />

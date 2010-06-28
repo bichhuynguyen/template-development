@@ -27,10 +27,13 @@
 		<h1><a href="<?php echo get_option('home'); ?>/"><img src="<?php echo  get_bloginfo('template_url'); ?>/style/images/4x4_logo.png" width="179" height="98" alt="<?php bloginfo('name'); ?>" /></a></h1>
 		
 		<ul id="nav">
-			<li>Calling the Shots</li>
-			<li>Hardenhuish School</li>
-			<li>2BME</li>
-			<li>Exmouth Summer Festival</li>
+			<?php //get_sidebar();
+			$project_query = new WP_Query('post_type=project&orderby=menu_order');
+
+				if ($project_query->have_posts()) : while ($project_query->have_posts()) : $project_query->the_post(); ?>
+			<a href="#project-<?php the_ID(); ?>"><li><?php the_title(); ?></li></a>
+			
+			<?php endwhile; endif; ?>
 		</ul>
 	<div id="prem">
 	<h3>premiere</h3>
