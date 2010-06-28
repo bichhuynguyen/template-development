@@ -226,15 +226,38 @@ function f4x4_vimeo_callback($post_ID){
 	$vids_array = explode(';',$meta_values[0]);
 	$return = "<div class='project-videos'>";
 	if ($vids_array[0]){
+		
 	foreach ($vids_array as $current_vid){
 		$return .= '<object width="400" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=';
 		$return .= $current_vid;
 		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=';
 		$return .= $current_vid;
 		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="225"></embed></object>';
-	}}
+		
+	}
+	} else {
+		$return .= mf_post_thumbnail('large-uncropped');
+	}
 	$return .= "</div>";
 	return $return;
 }
+/*--------------
+Thumbnail Support
+----------------*/
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 100, 100, true);
+add_image_size( 'small-uncropped', 100, 100);
+add_image_size( 'small-cropped', 100, 100, true);
+add_image_size( 'med-uncropped', 250, 250);
+add_image_size( 'med-cropped', 250, 250, true);
+add_image_size( 'large-uncropped', 400, 400);
+add_image_size( 'large-cropped', 400, 400, true);
 
+function mf_post_thumbnail($size){
+if (has_post_thumbnail() ) {
+	the_post_thumbnail($size);
+	}
+	return $return;
+}//*/
 ?>
+

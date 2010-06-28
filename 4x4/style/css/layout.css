@@ -13,6 +13,8 @@
 br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } /* Use this br class to clear your floated columns */
 li#theme-switcher { background:#fff; border:10px solid red; padding:20px; position:fixed; top:0; right:0 } /* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
 
+html { height: 100%; margin-bottom: 1px; }
+
 body{
 	background: #000;
 	font-family: helvetica, arial, sans-serif;
@@ -172,7 +174,7 @@ HEADER
 	width: 300px;
 	
 }
-.project .project-videos object{
+.project .project-videos object, .project-thumbnail{
 	display: inline;
 	clear: right;
 	float: right;
