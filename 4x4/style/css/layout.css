@@ -153,6 +153,9 @@ HEADER
 	float: left;
 	margin: 50px 0;
 }
+.project img.border{
+	margin-bottom: 36px;
+}
 .project .text{
 	display: inline;
 	float: left;
