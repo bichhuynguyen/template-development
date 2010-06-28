@@ -37,8 +37,8 @@ jQuery(document).ready(function($) {
 	
 	$('.project,#body-wrapper,#logos').hide();
 	$('.project img.border').remove();
-	
-	transSpeed = 500;
+
+	transSpeed = 700;
 	
 	if(window.location.hash){
 	activeElement = window.location.hash;
@@ -51,6 +51,11 @@ jQuery(document).ready(function($) {
 	};
 	
 	$("#nav li a").click(function(){
+		if(map_show){
+			$('#map').animate({'margin-top':currentMap});	
+			map_show=false;
+			
+		}
 		slideChange =  ($(this).attr("href"));
 		
 		if(activeElement != slideChange){
@@ -67,6 +72,11 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	$("#header h1 a").click(function(){
+		if(map_show){
+			$('#map').animate({'margin-top':currentMap});	
+			map_show=false;
+			
+		}
 		if(activeElement != '#body-wrapper,#logos'){
 			$(activeElement).slideUp(transSpeed,function(){
 				activeElement = '#body-wrapper,#logos';
