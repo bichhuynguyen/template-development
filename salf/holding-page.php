@@ -164,6 +164,7 @@ Template Name: Holding Page
 				the_post_thumbnail();
 				} 
 			?>
+		<div class='partner-content'>
 			<p><?php the_content();?></p>
 			<?php
 			/*People Loop
@@ -192,14 +193,19 @@ Template Name: Holding Page
 			<?php
 			/*--------------
 			People Loop End*/?>
+					</div><!--partner-content end-->
+					<img style="
+						float: left;
+					" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="780" height="1">
 			</div><!--partner-box end-->
+			
 			<?php endwhile; else:?>
 			 
 			<?php endif;
 			//Reset Query
 			wp_reset_query();
 			?>
-		
+	
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
 		<?php endif;?>
