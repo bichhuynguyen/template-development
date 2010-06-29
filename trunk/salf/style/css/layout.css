@@ -300,9 +300,13 @@ div #mc_signup_form{
 	clear: both;
 	position: relative;
 	margin: 36px 40px 36px 60px;
+	width: 100%;
+}
+.partner-box h2{
+	float: left;
 }
 #about div.people-bio-content p{
-	width: 300px;
+	width: 230px;
 }
 #about div h3{
 	margin: 24px 0;
@@ -311,19 +315,25 @@ div #mc_signup_form{
 	font-size: 150%;
 }
 #about div.people-bio-content{
+	display: inline;
 	position: relative;
-	width: 400px;
+	width: 230px;
 	float: left;
+	margin-right: 20px;
 	
 }
-
+.partner-content{
+	display: inline;
+	float: right;
+	clear: right;
+	width: 500px;
+	margin-right: 50px;
+	
+}
 #about ul li{
 	margin: 5px 0;
 }
-div.partner-box:first-child{
-	border-bottom: solid 1px #333;
-	
-}
+
 div.partner-box{
 	margin-top: 25px;
 }
