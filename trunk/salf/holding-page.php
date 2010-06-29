@@ -14,7 +14,7 @@ Template Name: Holding Page
 			<?php endwhile; endif; ?>
 			
 			<div class="news">
-				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="display: none;"class="subscribe-hint">Get RSS Feed</span>
+				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed</span>
 			<div id="news-feed">
 			<?php
 			$teacher_query = new WP_Query('post_type=post');

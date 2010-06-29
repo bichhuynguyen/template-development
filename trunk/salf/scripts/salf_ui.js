@@ -172,8 +172,11 @@ jQuery(document).ready(function($) {
 	*
 	*/
 	$('a.news-top').hover(function(){
-		$('span.subscribe-hint').toggle(100);
-	});
+		$('span.subscribe-hint').animate({ opacity: 1}, 200);
+	}, function(){
+		$('span.subscribe-hint').animate({ opacity: 0}, 100);
+	}
+	);
 });
 
 	
