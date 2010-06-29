@@ -35,6 +35,17 @@ a{
 	color: white;
 	text-decoration: none;
 }
+#nav a.selected:hover{
+	
+	text-decoration: none;
+}
+#nav a:hover{
+	color: #DD2522;
+	text-decoration: underline;
+}
+#nav a.selected{
+	color: #DD2522;
+}
 #sidebar h2, #sidebar label{
 	color: white;
 }
