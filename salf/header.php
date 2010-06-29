@@ -62,7 +62,7 @@
 		<script type="text/javascript">
 		var templateDir = "<?php bloginfo('template_directory') ?>";
 		</script>
-		
+		<noscript>This site works best with Javascript turned on. Certain things may look different with it turned off.</noscript>
 		<div id="header">
 		<h1><a href="<?php echo get_option('home'); ?>/"><span><?php bloginfo('name'); ?></span></a></h1>
 		<p><?php bloginfo('description'); ?></p>
