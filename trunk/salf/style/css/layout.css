@@ -400,6 +400,9 @@ div.partner-box{
 .tweets h2 img{
 	margin-bottom: 16px;
 }
+.tweet_list li span.tweet_time a{
+	color: #a02225;
+}
 /*
 *
 * News Feed
@@ -439,4 +442,8 @@ span.subscribe-hint{
 .single h2{
 	font-size: 20px;
 	margin-bottom: 10px;
+}
+html .mc_custom_border_hdr h2.widgettitle{
+	font-size: 12px;
+	margin: 0;
 }
