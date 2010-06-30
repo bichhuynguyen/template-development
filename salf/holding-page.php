@@ -66,7 +66,7 @@ Template Name: Holding Page
 		<div id="partners" class="post">		
 		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" alt="the list of partners continues to grow"></h2>
 		
-		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.jpg" width="512" height="354" alt="Partners Logo">
+		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.png" alt="Partners Logo">
 		
 		<ul id="partner-links">
 			<li><a href="http://www.foyles.co.uk/">Foyles</a></li>
