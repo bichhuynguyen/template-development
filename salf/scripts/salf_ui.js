@@ -33,7 +33,8 @@ jQuery(document).ready(function($) {
 	
 	$(active_element).after(copyText);//Move copyright text;
 	$('#footer').remove();
-	$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ')
+	//$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ');
+	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
 	$('.home div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
 	$('#footer').css("margin-top","25px");
