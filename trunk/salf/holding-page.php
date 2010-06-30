@@ -64,7 +64,7 @@ Template Name: Holding Page
 	<?php// edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
 		<div id="partners" class="post">		
-		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" width="237" height="144" alt="the list of partners continues to grow"></h2>
+		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" alt="the list of partners continues to grow"></h2>
 		
 		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.jpg" width="512" height="354" alt="Partners Logo">
 		
@@ -97,14 +97,27 @@ Template Name: Holding Page
 		<div id="venues" class="post">		
 					
 					
-		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_text.png" width="237" height="144" alt="Events taking place across London"></h2>
+		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/venues_blurb.png"  alt="Events taking place across London"></h2>
 		<div id="venue_images">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_free_world_centre.jpg" width="166" height="130" alt="Venues Free World Centre">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_kings_place.jpg" width="166" height="130" alt="Venues Kings Place">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_london_british_library.jpg" width="166" height="130" alt="Venues London British Library">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_rich_mix.jpg" width="166" height="130" alt="Venues Rich Mix">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_schools.jpg" width="166" height="130" alt="Venues Schools">
-		<img class="venue_image" src="<?php echo bloginfo('template_url'); ?>/style/images/new/images/venues_libraries.jpg" width="166" height="130" alt="Venues Libraries">
+			<?php
+			query_posts( array( 'post_type' => 'Venues') );
+			
+			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+			<div class="venue-box">
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail('venue-images');
+			} 
+			?>
+			<p><?php the_title();?></p>
+			
+			</div>
+			<?php endwhile; else:?>
+			 
+			<?php endif;
+			//Reset Query
+			wp_reset_query();
+			?>
 	
 		
 		
@@ -117,7 +130,7 @@ Template Name: Holding Page
 		
 		
 		<div id="enquiries" class="post">
-			<img src="<?php echo bloginfo('template_url'); ?>/style/images/contact-blurb.png" width="237" height="144" alt="Contact Blurb">
+			<img src="<?php echo bloginfo('template_url'); ?>/style/images/contact-blurb.png" alt="Contact Blurb">
 				<?php echo do_shortcode('[contact-form 1 "Contact form 1"]') ?> 
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
@@ -125,6 +138,9 @@ Template Name: Holding Page
 		<?php if(function_exists('add_custom_background')):?>
 			
 		<div id="events" class="post">
+			<div class="event-type-box">
+			<img src="<?php echo bloginfo('template_url'); ?>/style/images/Events-title.png" alt="Events Title">
+			</div>
 			<?php
 			query_posts( array( 'post_type' => 'Events') );
 			

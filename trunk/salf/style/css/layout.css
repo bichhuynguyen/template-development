@@ -74,7 +74,9 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
-
+.post h2 img{
+	float: left;
+}
 #partner-links{
 	float: left;
 	clear: left;
@@ -83,13 +85,17 @@ a.top{
 	
 }
 #partner-links li{
+	list-style-type: none;
 	float: left;
 	width: 180px;
 	color: #777;
 }
+#partner-links li:hover{
+	list-style-type: circle;
+}
 #partner-links li a{
-	text-decoration: underline;
-	color: white;
+	text-decoration: none;
+	color: #333333;
 }
 /*#venues.post{-----------Boxes Colours - Disused!
 	
@@ -194,7 +200,7 @@ h1, h2, h3, h4,h5,h6{
 }
 /*Box Layouts*/
 
-#venues img{
+#venues div.venue-box, #venu_images{
 	float: left;
 }
 #venue_images img.venue_image {
@@ -210,10 +216,11 @@ h1, h2, h3, h4,h5,h6{
 	float: right;
 }
 #venue_images img{
-	margin: 0 20px 20px 0;
+	margin-right: 20px;
 }
 #partners img.text{
 	float: left;
+	margin-bottom: 20px;
 }
 #partners img.logos{
 	float: right;
