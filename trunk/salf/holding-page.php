@@ -7,7 +7,7 @@ Template Name: Holding Page
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="home">
-			<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/home-page-header-para.png" alt="Britain's first major festival celebrating South Asian literature"></h2>
+			<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/home-page-header-para.png" alt="Britain's first major festival celebrating South Asian literature" ></img></h2>
 		<?php// the_title(); ?>
 			<?php //the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
 			<?//php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
@@ -49,8 +49,8 @@ Template Name: Holding Page
 					?>
 			</div><!--End news-feed-->
 			
-			<div class="dsc_tweet tweets"><H2>TWEETS FROM US</H2></div>
-			<div class="query_tweet tweets"><H2>TWEETS ABOUT US</H2></div>
+			<div class="dsc_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-from.png" width="150" height="25" alt="TWEETS FROM US"></H2></div>
+			<div class="query_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-about.png" width="150" height="25" alt="TWEETS ABOUT US"></H2></div>
 				
 			</div><!--End news-feed-->	   	
 			
@@ -64,9 +64,9 @@ Template Name: Holding Page
 	<?php// edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 
 		<div id="partners" class="post">		
-		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" alt="the list of partners continues to grow"></h2>
+		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" alt="the list of partners continues to grow" ></img></h2>
 		
-		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.png" alt="Partners Logo">
+		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.png" alt="Partners Logo" ></img>
 		
 		<ul id="partner-links">
 			<li><a href="http://www.foyles.co.uk/">Foyles</a></li>
@@ -97,7 +97,7 @@ Template Name: Holding Page
 		<div id="venues" class="post">		
 					
 					
-		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/venues_blurb.png"  alt="Events taking place across London"></h2>
+		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/venues_blurb.png"  alt="Events taking place across London" ></img></h2>
 		<div id="venue_images">
 			<?php
 			query_posts( array( 'post_type' => 'Venues') );
@@ -130,7 +130,7 @@ Template Name: Holding Page
 		
 		
 		<div id="enquiries" class="post">
-			<img src="<?php echo bloginfo('template_url'); ?>/style/images/contact-blurb.png" alt="Contact Blurb">
+			<img src="<?php echo bloginfo('template_url'); ?>/style/images/contact-blurb.png" alt="Contact Blurb" ></img>
 				<?php echo do_shortcode('[contact-form 1 "Contact form 1"]') ?> 
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>

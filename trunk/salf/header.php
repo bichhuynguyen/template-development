@@ -9,6 +9,7 @@
 		</title>
 
 	    <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
+		<meta http-equiv="Content-Style-Type" content="text/css"/>
 		<meta name="description" content="<?php bloginfo('description') ?>" />
 		
 		<meta name="description" content="The DSC South Asian Literature Festival is the UK’s first major literature festival dedicated to the rich and varied cultures of the South Asian Subcontinent, from India and Pakistan through to Bangladesh, Sri Lanka and Nepal. It is about showcasing a rich storytelling heritage in all its forms – imagery, film, music, dance and art through the central prism of words.">
