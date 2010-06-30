@@ -11,6 +11,7 @@ add_image_size( 'med-cropped', 200, 200, true);
 add_image_size( 'large-uncropped', 500, 500);
 add_image_size( 'large-cropped', 500, 500, true);
 add_image_size( 'partner-titles', 274, 41);
+add_image_size( 'venue-images', 165, 115, true);
 
 
 function mf_post_thumbnail($style){
@@ -45,7 +46,7 @@ Objects and Tax
 add_action( 'init', 'add_fitzgraham_objects_and_taxonomy' );
 function add_fitzgraham_objects_and_taxonomy(){
 	add_new_object('Events');
-	
+	add_new_object('Venues');
 	add_new_object('Partners');
 	add_new_object('People');
 	add_new_taxonomy('Partners', array('People','Partners'));
