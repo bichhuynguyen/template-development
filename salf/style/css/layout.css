@@ -382,6 +382,7 @@ div.partner-box{
 }
 .tweet_list{
 	margin-top: 15px;
+	clear: both;
 }
 .dsc_tweet {
 	clear: left;
@@ -396,6 +397,9 @@ div.partner-box{
 .tweet_list li img{
 	margin: 5px 5px 25px 5px;
 }
+.tweets h2 img{
+	margin-bottom: 16px;
+}
 /*
 *
 * News Feed
@@ -405,7 +409,7 @@ div.partner-box{
 	clear: left;
 	float: left;
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .new-entry p{
 	width: 430px;
@@ -415,7 +419,7 @@ div.partner-box{
 }
 a.news-top{
 	float: left;
-	margin: 60px 0 0 0;
+	margin-top: 40px;
 	
 }
 span.subscribe-hint{
@@ -431,4 +435,8 @@ span.subscribe-hint{
 	float: left;
 	width: 100%;
 	clear: both;
+}
+.single h2{
+	font-size: 20px;
+	margin-bottom: 10px;
 }
