@@ -420,3 +420,8 @@ span.subscribe-hint{
 .copyright{
 	color: #fffae6;
 }
+.new-entry{
+	float: left;
+	width: 100%;
+	clear: both;
+}
