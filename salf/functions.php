@@ -10,6 +10,7 @@ add_image_size( 'med-uncropped', 200, 200);
 add_image_size( 'med-cropped', 200, 200, true);
 add_image_size( 'large-uncropped', 500, 500);
 add_image_size( 'large-cropped', 500, 500, true);
+add_image_size( 'partner-titles', 274, 41);
 
 
 function mf_post_thumbnail($style){
