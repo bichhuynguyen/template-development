@@ -27,9 +27,10 @@ Template Name: Holding Page
 						
 					
 					
-					<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a>
+					
 
 					<div class="new-entry">
+						<a href="<?php the_permalink();?>"><h2><?php the_date('j-n-y');?>     <?php the_title(); ?></h2></a>
 						<?php mf_post_thumbnail('med-cropped');?>
 						<?php the_excerpt(); ?>
 					</div>
