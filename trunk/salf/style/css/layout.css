@@ -299,7 +299,7 @@ div #mc_signup_form{
 	float: left;
 	clear: both;
 	position: relative;
-	margin: 36px 40px 36px 60px;
+	margin: 36px 40px 36px 0;
 	width: 100%;
 }
 .partner-box h2{
