@@ -47,13 +47,32 @@
 			*/
 			
 			?>
+				<script type="text/javascript">
+				function getTinyUrl($url) {   
+				     $tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url);  
+				     return $tinyurl;  
+				}
+				var twtTitle  = "Just reading '<?php the_title(); ?>'";
+			 
+				var tinyUrl = "<?php 
+					
+					echo getTinyUrl(get_permalink(get_the_ID()));?>";
+				
+				var twtLink =  'http://twitter.com/home?status='+encodeURIComponent(twtTitle + ' ' + tinyUrl + " #salf");
+				document.write('<a href="'+twtLink+'" target="_blank"'+'><img src="tweetthis.gif"  border="0" alt="Tweet This!" /'+'><'+'/a>');
+				</script>
+				
+				
 
+				<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px"></iframe>
+
+				
 		</div>
 
 
 		
 	
-
+	
 	<?php endwhile; else: ?>
 
 		<p>Sorry, no posts matched your criteria.</p>
