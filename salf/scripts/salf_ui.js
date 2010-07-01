@@ -178,6 +178,14 @@ jQuery(document).ready(function($) {
 		$('span.subscribe-hint').animate({ opacity: 0}, 100);
 	}
 	);
+	//Hover/click classes nav menu
+	$('.page_item a').each(function(){
+		if($(this).attr('href')==active_element){
+			$(this).addClass('selected');
+			$('.page_item a').not(this).removeClass('selected');
+		}
+	});
+	
 	$('.page_item a').click(function(){
 		$(this).addClass('selected');
 		$('.page_item a').not(this).removeClass('selected');
