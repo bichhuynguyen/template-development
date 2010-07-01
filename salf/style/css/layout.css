@@ -371,7 +371,7 @@ div.partner-box{
 	display: inline;
 	float: left;
 	/*background: #F6D6A3;*/
-	width: 400px;
+	width: 370px;
 	
 	/*border-radius : 5px;
 	-moz-border-radius: 5px;
@@ -386,16 +386,16 @@ div.partner-box{
 }
 .dsc_tweet {
 	clear: left;
-	margin-right: 60px;
+	margin-right: 158px;
 }
 .tweet_list li{
 	margin: 0 12px;
-	width: 370px;
-	height: 75px;
+	list-style: none;
+	
 
 }
 .tweet_list li img{
-	margin: 5px 5px 25px 5px;
+	margin: 5px 5px 15px 5px;
 }
 .tweets h2 img{
 	margin-bottom: 16px;
@@ -436,7 +436,7 @@ span.subscribe-hint{
 }
 .new-entry{
 	float: left;
-	width: 100%;
+	width: 730px;
 	clear: both;
 }
 .single h2{
