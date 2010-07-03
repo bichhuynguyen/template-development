@@ -447,3 +447,21 @@ html .mc_custom_border_hdr h2.widgettitle{
 	font-size: 12px;
 	margin: 0;
 }
+/*
+*
+* Facebook
+*/
+iframe.header {
+	position: absolute;
+	z-index: 3;
+	background-color: #FFD6AA;
+	height: 72px;
+	
+	border-radius : 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 2px solid #E7421B;
+}
+iframe{
+	opacity: 0;
+}

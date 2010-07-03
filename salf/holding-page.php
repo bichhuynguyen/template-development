@@ -14,7 +14,7 @@ Template Name: Holding Page
 			<?php endwhile; endif; ?>
 			
 			<div class="news">
-				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed</span>
+				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png" width="117" height="31" alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
 			<div id="news-feed">
 			<?php
 			$teacher_query = new WP_Query('post_type=post');
@@ -33,6 +33,24 @@ Template Name: Holding Page
 						<a href="<?php the_permalink();?>"><h2><?php the_date('j-n-y');?>     <?php the_title(); ?></h2></a>
 						<?php mf_post_thumbnail('med-cropped');?>
 						<?php the_excerpt(); ?>
+						<script type="text/javascript">
+						function getTinyUrl($url) {   
+						     $tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url);  
+						     return $tinyurl;  
+						}
+						var twtTitle  = "Just reading '<?php the_title(); ?>'";
+
+						var tinyUrl = "<?php 
+
+							echo getTinyUrl(get_permalink(get_the_ID()));?>";
+
+						var twtLink =  'http://twitter.com/home?status='+encodeURIComponent(twtTitle + ' ' + tinyUrl + " #salf");
+						document.write('<a href="'+twtLink+'" target="_blank"'+'><img src="tweetthis.gif"  border="0" alt="Tweet This!" /'+'><'+'/a>');
+						</script>
+
+
+
+						<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:60px"></iframe>
 					</div>
 					
 					
