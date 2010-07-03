@@ -10,7 +10,7 @@ add_image_size( 'med-uncropped', 200, 200);
 add_image_size( 'med-cropped', 200, 200, true);
 add_image_size( 'large-uncropped', 500, 500);
 add_image_size( 'large-cropped', 500, 500, true);
-add_image_size( 'partner-titles', 274, 41);
+add_image_size( 'partner-titles', 395, 49);
 add_image_size( 'venue-images', 165, 115, true);
 
 

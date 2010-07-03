@@ -74,6 +74,10 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
+#venues.post{
+	padding: 30px 0 30px 30px;
+	width: 930px;
+}
 .post h2 img{
 	float: left;
 }
@@ -144,12 +148,13 @@ h1, h2, h3, h4,h5,h6{
 .post p{
 	margin-bottom: 1.2em;
 }
-#enquiries.post img,#enquiries.post form{
+#enquiries.post img{
 	float: left;
 }
 
 #enquiries.post form{
-	margin-left: 142px;
+	float: right;
+	
 }
 
 #header{
@@ -209,14 +214,14 @@ h1, h2, h3, h4,h5,h6{
 }
 #venue_images{
 	float: right;
-	width: 558px;
+	width: 520px;
 	margin-right: 8px;
 }
 .venues-sub{
 	float: right;
 }
 #venue_images img{
-	margin-right: 20px;
+	margin-right: 8px;
 }
 #partners img.text{
 	float: left;
@@ -443,6 +448,9 @@ span.subscribe-hint{
 	font-size: 20px;
 	margin-bottom: 10px;
 }
+.single p{
+	width: 380px;
+}
 html .mc_custom_border_hdr h2.widgettitle{
 	font-size: 12px;
 	margin: 0;
@@ -453,19 +461,40 @@ html .mc_custom_border_hdr h2.widgettitle{
 */
 span.facebook-connect{
 	display: none;
-}
-iframe.header {
-	height: 72px;
 	
-
 }
-iframe.facebook{
-	opacity: 0;
-	position: absolute;
-	z-index: 3;
+#nav span.facebook-connect{position: absolute;}
+iframe.header {
+	height: 68px;
 	background-color: #FFD6AA;
 	border-radius : 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border: 2px solid #E7421B;
+	position: absolute;
+	z-index: 3;
+
+}
+iframe.facebook{
+	opacity: 0;
+	
+	
+}
+a.twitter img{
+	margin-right: 5px;
+	
+}
+
+/*
+Chimp Submit
+*/
+input.chimp { 
+display: inline;
+float: left;
+margin: 3px;
+color:#fff; 
+font: bold 100% Arial,helvetica,sans-serif; 
+background-color: #F18F21; 
+border:1px solid; 
+border-color: #E8431B; 
 }

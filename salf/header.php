@@ -29,7 +29,7 @@
 		<script type='text/javascript'>
 		    $(document).ready(function(){
 		        $(".dsc_tweet").tweet({
-		            username: "dsc_SALF",
+		            username: "SthAsianLitFest",
 					
 		            join_text: "auto",
 		            avatar_size: 32,
@@ -95,7 +95,7 @@
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
 					<?php endif;?>
 				</ul>
-				<a href="http://twitter.com/DSC_salf" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>
+				<a class="twitter" href="http://twitter.com/SthAsianLitFest" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>
 				<span class="facebook-connect">
 				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
 				

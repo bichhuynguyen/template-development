@@ -52,7 +52,8 @@ jQuery(document).ready(function($) {
 	
 	
 	/*Interface editing for mail sign up form*/
-	buttonHTML = '<input type="image" name="mc_signup_submit" src="'+ templateDir + '/style/images/submit-button.png" id="mc_signup_submit" value="Subscribe" />';
+	//buttonHTML = '<input type="image" name="mc_signup_submit" src="'+ templateDir + '/style/images/submit-button.png" id="mc_signup_submit" value="Subscribe" />';
+	buttonHTML = '<input class="chimp" type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" />';
 	messageLength = $("div#mc_message.updated").html().length;//checks to see if there is a status message on the input form.
 	$('div.mc_signup_submit').html(buttonHTML);
 
@@ -194,14 +195,17 @@ jQuery(document).ready(function($) {
 	$('span.facebook-connect').show();
 	$('span.facebook-connect').click(function(){
 		parent = $(this);
-		$(this).children('a.facebook').children('img').fadeOut(200, function(){
+		socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
+		
+		$(socialButtons).fadeOut(200, function(){
+			$(parent).siblings('a.twitter').hide();
 			$(parent).children('iframe').animate({ opacity: 1}, 500);
 		});
 		
 		$(this).children('iframe').mouseout(function(){
 			if($(this).css('opacity') == 1){
 				$(this).animate({ opacity: 0}, 200, function(){
-					$(parent).children('a.facebook').children('img').fifadeIn(200);
+					$(socialButtons).fadeIn(200);
 				});
 			}
 		});//*/
