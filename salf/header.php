@@ -97,7 +97,7 @@
 				</ul>
 				<a href="http://twitter.com/DSC_salf" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>
 				<span class="facebook-connect">
-				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Twitter" /></a>
+				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
 				
 				<iframe class="facebook header" src="http://www.facebook.com/plugins/likebox.php?id=131936233494045&amp;width=292&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0"  allowTransparency="true"></iframe class="facebook">
 				</span>

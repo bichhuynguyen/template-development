@@ -451,17 +451,21 @@ html .mc_custom_border_hdr h2.widgettitle{
 *
 * Facebook
 */
+span.facebook-connect{
+	display: none;
+}
 iframe.header {
+	height: 72px;
+	
+
+}
+iframe.facebook{
+	opacity: 0;
 	position: absolute;
 	z-index: 3;
 	background-color: #FFD6AA;
-	height: 72px;
-	
 	border-radius : 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border: 2px solid #E7421B;
-}
-iframe{
-	opacity: 0;
 }
