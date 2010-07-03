@@ -190,7 +190,35 @@ jQuery(document).ready(function($) {
 		$(this).addClass('selected');
 		$('.page_item a').not(this).removeClass('selected');
 	});
-	
+	//facebook controls
+	/*$('#nav a.facebook').click(function(){
+		
+		$(this).fadeOut(100, function(){
+			$('#nav iframe.header').animate({ opacity: 1}, 200);
+		});
+		
+		return false;
+	});
+	$('iframe.facebook').mouseout(function(){
+		if($(this).css('opacity') == 1){
+			//$(this).animate({ opacity: 0}, 200);
+		}
+	});*/
+	$('span.facebook-connect').click(function(){
+		parent = $(this);
+		$(this).children('a.facebook').fadeOut(200, function(){
+			$(parent).children('iframe').animate({ opacity: 1}, 500);
+		});
+		
+		$(this).children('iframe').mouseout(function(){
+			if($(this).css('opacity') == 1){
+				$(this).animate({ opacity: 0}, 200, function(){
+					$(parent).children('a.facebook').fadeIn(200);
+				});
+			}
+		});
+		return false;
+	});
 });
 
 	
