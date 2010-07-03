@@ -241,7 +241,7 @@ Template Name: Holding Page
 					<img style="
 						display: block;
 						margin: 0 auto;
-					" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="780" height="1">
+					" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="900" height="1">
 			</div><!--partner-box end-->
 			
 			<?php endwhile; else:?>
