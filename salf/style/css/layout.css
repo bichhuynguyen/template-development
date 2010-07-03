@@ -74,8 +74,8 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
-#venues.post{
-	padding: 30px 0 30px 30px;
+#venues.post, #about.post{
+	padding: 30px 15px;
 	width: 930px;
 }
 .post h2 img{
@@ -303,7 +303,9 @@ div #mc_signup_form{
 	float: left;
 }
 /*about-tab style*/
-
+#about.post{
+	padding-top: 0;
+}
 #about ul{
 	margin: 24px 0 24px 80px;
 }
