@@ -241,7 +241,7 @@ Template Name: Holding Page
 					<img style="
 						display: block;
 						margin: 0 auto;
-					" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="900" height="1">
+					" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="900" height="1" />
 			</div><!--partner-box end-->
 			
 			<?php endwhile; else:?>
@@ -254,4 +254,40 @@ Template Name: Holding Page
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
 		<?php endif;?>
+		<div id="volunteer" class="post">
+			<img src="<?php echo bloginfo('template_url');?>/style/images/volunteer.png" alt="Volunteer" />
+			<div class="intro-copy">
+				<p>We are looking for volunteers with the right passion for literature and events to join our team in the busy period from now through to the Festival, which begins mid-October. Relevant experience and a degree are important, but we welcome applications of interest from anyone who believes they have the skills, energy and time to successfully carry out specific roles.</p>
+				<p>In return you get the chance to work with a brilliant team of people, meet some fantastic authors and gain some great experience working with some of the best arts venues, people and organisations in the business.</p>  
+				<p>If you have tons of initiative, are highly organised with good people skills and love working in a busy environment then get in touch by emailing <a href="mailto:volunteer@southasianlitfest.com">volunteer@southasianlitfest.com</a>, referencing which roles you would like to apply for.</p>
+				
+			</div>
+				<img style="
+					display: block;
+					margin: 0 auto;
+				" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="900" height="1" />
+			<div id="volunteer-options">
+			<?php
+			$volunteer_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
+			
+			if ( $volunteer_query->have_posts() ) : while ( $volunteer_query->have_posts() ) : $volunteer_query->the_post();?>
+				<div class="volunteer-content">
+					<h2>
+						<?php the_title(); ?>
+					</h2>
+						
+						<?php the_content(); ?>
+						<a href="mailto:volunteer@southasianlitfest.com?subject=Volunteer:<?php urlencode(the_title());?>">Contact Us</a>
+				</div>
+				
+			<?php endwhile; else:?>
+			<?php endif;
+			//Reset Query
+			wp_reset_query();
+			?>	
+			</div>	
+			</div>
+		<a class="top" href="#" title="Top">BACK TO TOP</a>
+		
+		
 <?php get_footer(); ?>

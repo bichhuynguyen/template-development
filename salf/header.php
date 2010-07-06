@@ -86,6 +86,7 @@
 					<li class="page_item"><a href="#events" title="Venues" id="events_btn">EVENTS</a></li>
 					<li class="page_item"><a href="#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
 					<li class="page_item"><a href="#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
+					<li class="page_item"><a href="#volunteer" title="Volunteer" id="volunteer_btn">VOLUNTEER</a></li>
 					<?php else:?>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#home" title="Home" id="home_btn">HOME</a></li>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#about" title="About" id="about_btn">ABOUT</a></li>
@@ -93,6 +94,7 @@
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#events" title="Venues" id="events_btn">EVENTS</a></li>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
+					<li class="page_item"><a href="<?php bloginfo('home'); ?>#volunteer" title="Volunteer" id="volunteer_btn">VOLUNTEER</a></li>
 					<?php endif;?>
 				</ul>
 				<a class="twitter" href="http://twitter.com/SthAsianLitFest" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>

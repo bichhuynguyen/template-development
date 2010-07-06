@@ -102,33 +102,14 @@ jQuery(document).ready(function($) {
 	});
 	
 	
+	/*----------
+	Navigation 
+	------------*/
+	$("#pages li a").click( function() {
+		button_action($(this).attr('href'));
+		return false;
+	});
 	
-	/*Navigation */
-	$(".home #home_btn").click( function() {
-		button_action('#home');
-		return false;
-	});
-	$(".home #about_btn").click( function() {
-		button_action('#about');
-		return false;
-	});
-		
-	$(".home #venues_btn").click( function() {
-		button_action('#venues');
-		return false;
-	});
-	$(".home #partners_btn").click( function() {
-		button_action('#partners');
-		return false;
-	});
-	$(".home #enquiries_btn").click( function() {
-		button_action('#enquiries');
-		return false;
-	});
-	$(".home #events_btn").click( function() {
-		button_action('#events');
-		return false;
-	});
 	
 	function button_action(mf_element){
 		if (active_element != mf_element){
