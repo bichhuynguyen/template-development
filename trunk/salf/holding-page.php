@@ -158,9 +158,9 @@ Template Name: Holding Page
 		<?php if(function_exists('add_custom_background')):?>
 			
 		<div id="events" class="post">
-			<div class="event-type-box">
+			
 			<img src="<?php echo bloginfo('template_url'); ?>/style/images/Events-title.png" alt="Events Title">
-			</div>
+			<div id="event-type-boxes">
 			<?php
 			query_posts( array( 'post_type' => 'Events') );
 			
@@ -180,7 +180,7 @@ Template Name: Holding Page
 			//Reset Query
 			wp_reset_query();
 			?>
-		
+			</div>
 		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
 		<?php endif;?>
