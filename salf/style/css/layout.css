@@ -74,9 +74,13 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
-#venues.post, #about.post{
+#about.post{
 	padding: 30px 15px;
 	width: 930px;
+}
+#venues.post{
+	padding: 30px 45px;
+	width: 870px;
 }
 .post h2 img{
 	float: left;
@@ -204,25 +208,28 @@ h1, h2, h3, h4,h5,h6{
 	cursor: pointer;
 }
 /*Box Layouts*/
-
-#venues div.venue-box, #venu_images{
+#venues.post{
+	margin-right: 35px;
+}
+#venues div.venue-box{
 	float: left;
+	display: inline;
+	margin-right: 120px;
+	margin-top: 30px;
 }
 #venue_images img.venue_image {
 	float: right;
 	margin: 0 7px 0 0;
 }
 #venue_images{
-	float: right;
-	width: 520px;
-	margin-right: 8px;
+	float: left;
+	
+	
 }
 .venues-sub{
 	float: right;
 }
-#venue_images img{
-	margin-right: 8px;
-}
+
 #partners img.text{
 	float: left;
 	margin-bottom: 20px;
@@ -358,6 +365,11 @@ div.partner-box{
 	width: 450px;
 	float: left;
 	margin-bottom: 24px;
+}
+#event-type-boxes{
+	float: left;
+	display: inline;
+	margin-top: 30px;
 }
 .event-type-box img{
 	float: left;
