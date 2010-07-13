@@ -50,11 +50,11 @@
 	<?php if ('open' == $post->comment_status) : ?>
 		<!-- If comments are open, but there are no comments. -->
 
-	 <?php else : // comments are closed ?>
+	 <?php else : /* comments are closed 
 		<!-- If comments are closed. -->
 		<p>Comments are closed.</p>
-
-	<?php endif; ?>
+*/
+	 endif; ?>
 <?php endif; ?>
 
 <?php if ('open' == $post->comment_status) : ?>
