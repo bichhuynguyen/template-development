@@ -542,3 +542,19 @@ background-color: #F18F21;
 border:1px solid; 
 border-color: #E8431B; 
 }
+/*
+Comments
+*/
+div.comment_detail, #commentform textarea{
+	float: left;
+	clear: left;
+	margin: 6px 0;
+	width: 395px;
+}
+div.comment_detail input{
+	float: right;
+}
+#commentform #submit{
+	float: left;
+	clear: left;
+}
