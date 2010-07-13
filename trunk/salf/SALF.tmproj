@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>scripts/salf_ui.js</string>
+	<string>holding-page.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -34,6 +34,36 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>holding-page.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>295</integer>
+				<key>line</key>
+				<integer>262</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>250</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>259</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>295</integer>
+				<key>line</key>
+				<integer>262</integer>
+			</dict>
 		</dict>
 		<key>page.php</key>
 		<dict>
@@ -140,14 +170,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>14</integer>
 				<key>line</key>
-				<integer>506</integer>
+				<integer>359</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>494</integer>
+			<integer>330</integer>
 		</dict>
 		<key>style/css/reset.css</key>
 		<dict>
@@ -182,6 +212,7 @@
 	<array>
 		<string>style.css</string>
 		<string>style/css/layout.css</string>
+		<string>holding-page.php</string>
 		<string>scripts/salf_ui.js</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>

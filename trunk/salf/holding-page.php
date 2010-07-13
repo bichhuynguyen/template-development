@@ -258,6 +258,7 @@ Template Name: Holding Page
 			<img src="<?php echo bloginfo('template_url');?>/style/images/volunteer.png" alt="Volunteer" />
 			<div class="intro-copy">
 				<p>We are looking for volunteers with the right passion for literature and events to join our team in the busy period from now through to the Festival, which begins mid-October. Relevant experience and a degree are important, but we welcome applications of interest from anyone who believes they have the skills, energy and time to successfully carry out specific roles.</p>
+				<p>We’ll also be posting up roles that will only be required during the main Festival period, if you want to help but don’t have too much time to commit. </p>
 				<p>In return you get the chance to work with a brilliant team of people, meet some fantastic authors and gain some great experience working with some of the best arts venues, people and organisations in the business.</p>  
 				<p>If you have tons of initiative, are highly organised with good people skills and love working in a busy environment then get in touch by emailing <a href="mailto:volunteer@southasianlitfest.com">volunteer@southasianlitfest.com</a>, referencing which roles you would like to apply for.</p>
 				
