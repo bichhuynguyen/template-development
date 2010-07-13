@@ -68,7 +68,7 @@
 				<iframe class="facebook" src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=360&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:360px; height:60px"></iframe class="facebook">
 				</span>
 
-				
+				<?php comments_template( '', true ); ?>
 		</div>
 
 

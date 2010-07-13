@@ -72,19 +72,22 @@
 <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Log out &raquo;</a></p>
 
 <?php else : ?>
-
-<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<div class='comment_detail'>
 <label for="author">Name <?php if ($req) echo "(required)"; ?></label>
-
-<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+</div>
+<div class='comment_detail'>
 <label for="email">Mail (will not be published) <?php if ($req) echo "(required)"; ?></label>
-
-<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+</div>
+<div class='comment_detail'>
 <label for="url">Website</label>
+<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+</div>
 
 <?php endif; ?>
 
-<p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
+<?php //<p><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags();?;> </code></p>?>
 
 <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
 
