@@ -354,9 +354,10 @@ div #mc_signup_form{
 .volunteer-content{
 	display: inline;
 	float: left;
-	
-	width: 350px;
-	margin: 50px;
+	min-height: 540px;
+	_height: 540px;
+	width: 300px;
+	padding: 25px 50px;
 	
 }
 .volunteer-content ul{

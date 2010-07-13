@@ -16,7 +16,10 @@ jQuery.extend({
 });
 jQuery(document).ready(function($) {
 	if(window.location.hash){
-	active_element = window.location.hash;
+if(window.location.hash == '#mc_signup_form'){
+active_element = '#home';
+	
+} else{active_element = window.location.hash;}
 	} else {
 		active_element = '#home';
 	};
@@ -77,7 +80,7 @@ jQuery(document).ready(function($) {
 			signUpClicked = false;	
 			
 		};
-	})
+	});
 	$('#sidebar').hover(function(){
 			
 			
@@ -105,7 +108,7 @@ jQuery(document).ready(function($) {
 	/*----------
 	Navigation 
 	------------*/
-	$("#pages li a").click( function() {
+	$(".home #pages li a").click( function() {
 		button_action($(this).attr('href'));
 		return false;
 	});
@@ -196,4 +199,5 @@ jQuery(document).ready(function($) {
 	});
 });
 
+	
 	
