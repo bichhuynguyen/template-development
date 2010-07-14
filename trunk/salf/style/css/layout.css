@@ -347,11 +347,13 @@ div #mc_signup_form{
 .volunteer-content{
 	display: inline;
 	float: left;
-	min-height: 540px;
-	_height: 540px;
-	width: 300px;
-	padding: 25px 50px;
 	
+	width: 100%;
+	padding: 25px 0;
+	border-bottom: white 1px solid;
+}
+.volunteer-content:last-child{
+	border: none;
 }
 .volunteer-content ul{
 	margin-left: 15px;
@@ -360,7 +362,7 @@ div #mc_signup_form{
 	margin-bottom: 0;
 	margin-top: 15px;
 }
-#volunteer .intro-copy{
+#volunteer .intro-copy, .volunteer-content .volunteer-text{
 	float: right;
 	display: inline;
 	width: 530px;
@@ -428,7 +430,7 @@ div.partner-box{
 .tweet_list li{
 	margin: 0 12px;
 	list-style: none;
-	
+	float: left;
 
 }
 .tweet_list li img{
@@ -494,26 +496,29 @@ html .mc_custom_border_hdr h2.widgettitle{
 span.facebook-connect{
 	display: none;
 	
+	
 }
-span .fb-iframe{
+.post span.facebook-connect{
+	float: left;
+}
+div .fb-iframe{
 	opacity: 0;
+	
+	height: 10px;
+	width: 10px;/**/
 }
-#nav span .fb-iframe{
+#nav div .fb-iframe{
 	left: -175px;
+}
+.post div .fb-iframe{
+	float: left;
 }
 #nav span.facebook-connect, #nav .facebook-connect iframe{
 	position: absolute;
 }
-iframe.header, #nav .facebook-connect iframe{
-	/*height: 74px;
-	width: 300px;*/
-	height: 10px;
-	width: 10px;/**/
-	/*background-color: #FFD6AA;
-	border-radius : 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;*/
-	border: 8px solid #E7421B;
+iframe.header, #nav .facebook-connect iframe, #nav div .fb-iframe{
+	
+
 	-webkit-box-shadow: -3px 3px 10px #807B72;
 	-moz-box-shadow: -3px 3px 10px #807B72;
 	
@@ -524,6 +529,7 @@ iframe.header, #nav .facebook-connect iframe{
 
 a.twitter img{
 	margin-right: 5px;
+	float: left
 	
 }
 
@@ -556,3 +562,24 @@ div.comment_detail input{
 	float: left;
 	clear: left;
 }
+#comment_block{
+	float: left;
+	clear: left;
+	margin: 50px 0;
+}
+/*
+Volunteer
+*/
+ul#volunteer-jump-menu{
+	margin: 24px 0 0 0;
+}
+ul#volunteer-jump-menu li{
+	list-style: none;
+	margin: 4px 0;
+	
+}
+ul#volunteer-jump-menu li a{
+	color: black;
+}
+ul#volunteer-jump-menu li a:hover{
+	text-decoration: underline;

@@ -51,8 +51,21 @@ Template Name: Holding Page
 
 						<span class="facebook-connect">
 						<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
-						<div class="fb-iframe"><fb:like action='like' colorscheme='light'
-						layout='standard' show_faces='true' width='500'/></div>
+						<div id="fb-root"></div>
+						<script>
+						window.fbAsyncInit = function() {
+						FB.init({appId: '130496703654288', status: true, cookie: true,
+						xfbml: true});
+						};
+						(function() {
+						var e = document.createElement('script'); e.async = true;
+						e.src = document.location.protocol +
+						'//connect.facebook.net/en_US/all.js';
+						document.getElementById('fb-root').appendChild(e);
+						}());
+						</script>
+						<div class="fb-iframe"><fb:like action='like' href="<?php the_permalink();?>"colorscheme='light'
+						layout='standard' show_faces='true' width='200'/></div>
 						</span>
 					</div>
 					
@@ -267,10 +280,11 @@ Template Name: Holding Page
 			
 			
 			<ul id="volunteer-jump-menu">
+				<li><h3>Opportunities Available</h3></li>
 				<?php $volunteer_menu_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
 				if ( $volunteer_menu_query->have_posts() ) : while ( $volunteer_menu_query->have_posts() ) : $volunteer_menu_query->the_post();?>
 				
-				<li><a href="#volunteer-<?php the_ID();?>"><?php the_title(); ?></a></li>
+				<li><a href="#oppurtunity-<?php the_ID();?>"><?php the_title(); ?></a></li>
 				<?php endwhile; else:?>
 				<?php endif;
 				//Reset Query
@@ -286,13 +300,16 @@ Template Name: Holding Page
 			$volunteer_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
 			
 			if ( $volunteer_query->have_posts() ) : while ( $volunteer_query->have_posts() ) : $volunteer_query->the_post();?>
-				<div class="volunteer-content" id="volunteer-<?php the_ID();?>">
+				<div class="volunteer-content" id="oppurtunity-<?php the_ID();?>">
 					<h2>
 						<?php the_title(); ?>
 					</h2>
-						
-						<?php the_content(); ?>
 						<a href="mailto:volunteer@southasianlitfest.com?subject=Volunteer:<?php urlencode(the_title());?>">Contact Us</a>
+						<div class="volunteer-text">
+						<?php the_content(); ?>
+						
+						</div>
+						
 				</div>
 				
 			<?php endwhile; else:?>
