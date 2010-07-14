@@ -30,9 +30,9 @@ active_element = '#home';
 	fadeOutSpeed = 350,
 	fadeInSpeed = 350,
 	signUpFocus = false,
-	signUpClicked = false,
+	signUpClicked = false;
 	
-	copyText = $('p.copyright').css('float','right');
+	copyText = $('span.copyright').css('float','right');
 	
 	$(active_element).after(copyText);//Move copyright text;
 	$('#footer').remove();
@@ -40,8 +40,7 @@ active_element = '#home';
 	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
 	$('.home div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
-	$('#footer').css("margin-top","25px");
-	$('#footer').css("padding-bottom","10px");
+	
 	$(active_element).show();
 	
 	/*form submission*/
