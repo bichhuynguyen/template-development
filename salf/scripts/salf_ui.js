@@ -175,25 +175,46 @@ active_element = '#home';
 		$('.page_item a').not(this).removeClass('selected');
 	});
 	//facebook controls
+	commentOpen = false;
+	commentFocus = false;
 	$('span.facebook-connect').show();
-	$('span.facebook-connect').click(function(){
+	$('#nav span.facebook-connect').click(function(){
 		parent = $(this);
 		socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
 		
 		$(socialButtons).fadeOut(200, function(){
 			$(parent).siblings('a.twitter').hide();
-			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 300, height: 74}, 500);
+			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500);
 		});
-		
-		$(this).children('div.fb-iframe').mouseout(function(){
-			if($(this).css('opacity') == 1){
-					$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
-					$(socialButtons).fadeIn(200);
-				});
-			}
-		});
+	
+			
+			$(this).children('div.fb-iframe').mouseout(function(){
+				
+					if($(this).css('opacity') == 1){
+						$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
+							$(socialButtons).fadeIn(200);
+						});
+					}
+			
+			});//*/
+			
 		return false;
 	});//*/
+	$('.post span.facebook-connect').click(function(){
+		parent = $(this);
+		socialButtons = $(this).children('a.facebook').children('img');
+		
+		$(socialButtons).fadeOut(500, function(){
+			
+			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 200, height: 34}, 500);
+		});
+	
+			
+			
+			
+		return false;
+	});//*/
+	
 });
 
 	

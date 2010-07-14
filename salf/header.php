@@ -21,8 +21,25 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		<meta property="og:title" content="DSC South Asian Literature Festival - <?php the_title_attribute( $args ); ?>" /><?php
 		}
 		?>
+		<meta property="og:site_name" content="DSC South Asian Literature Festival"/>
+		<meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/style/images/mini_logo.jpg">
+		
+		<?php if(is_single()):?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<meta property="og:description"
+		          content="<?php the_excerpt();?>"/>
+		
+		
+		
+		
+		<?php 
+		endwhile; 
+		endif;
+		wp_reset_query();
+		?>
+		<?php endif; ?>
 		<?php if (is_home())
-		echo '<meta property="og:url" content="YOUR-APP-URL" />';
+		echo '<meta property="og:url" content="'.bloginfo('siteurl').'" />';
 		else echo '<meta property="og:url" content="'.get_permalink().'" />';
 		?>
 
