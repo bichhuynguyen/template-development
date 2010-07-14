@@ -18,7 +18,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		} else {
 		?>
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="DSC South Asian Literature Festival - <?php the_title_attribute( $args ); ?>" /><?php
+		<meta property="og:title" content="<?php the_title_attribute( $args ); ?>" /><?php
 		}
 		?>
 		<meta property="og:site_name" content="DSC South Asian Literature Festival"/>
