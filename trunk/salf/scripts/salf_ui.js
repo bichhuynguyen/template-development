@@ -32,10 +32,10 @@ active_element = '#home';
 	signUpFocus = false,
 	signUpClicked = false;
 	
-	copyText = $('span.copyright').css('float','right');
+	/*copyText = $('span.copyright').css('float','right');
 	
 	$(active_element).after(copyText);//Move copyright text;
-	$('#footer').remove();
+	$('#footer').remove();*/
 	//$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ');
 	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
 	$('.home div.post, .top').hide();
@@ -108,6 +108,7 @@ active_element = '#home';
 	Navigation 
 	------------*/
 	$(".home #pages li a").click( function() {
+		
 		button_action($(this).attr('href'));
 		return false;
 	});
@@ -115,8 +116,13 @@ active_element = '#home';
 	
 	function button_action(mf_element){
 		if (active_element != mf_element){
-			/*Move Copyright Text*/	
-			$(mf_element).after(copyText);
+			/*Move Copyright Text	
+			$('span.copyright').hide(function(){
+				$(mf_element).after(copyText, function(){
+					$(this).show();
+				});
+			});*/
+			
 			
 			$(active_element).fadeOut(fadeOutSpeed, function(){
 				$(mf_element).fadeIn(fadeInSpeed, function(){
@@ -187,9 +193,7 @@ active_element = '#home';
 			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500);
 		});
 	
-			
-			$(this).children('div.fb-iframe').mouseout(function(){
-				
+		$(this).children('div.fb-iframe').mouseout(function(){
 					if($(this).css('opacity') == 1){
 						$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
 							$(socialButtons).fadeIn(200);
