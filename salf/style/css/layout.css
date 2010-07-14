@@ -79,8 +79,8 @@ a.top{
 	width: 930px;
 }
 #venues.post{
-	padding: 30px 45px;
-	width: 870px;
+	padding: 25px 25px 30px 35px;
+	width: 850px;
 }
 .post h2 img{
 	float: left;
@@ -247,30 +247,23 @@ h1, h2, h3, h4,h5,h6{
 #footer{
 	clear: both;
 	float: left;
-	bottom: 0;
+	
 	margin: 0 auto;
 	width: 100%;
 	
- 	bottom: 0;
-	background: #fff;
-	padding:10px 0 0 30px;
+ 	
+	
+	
 	
 }
-#footer img{
-	float: left;
-	padding-right: 145px;
-}
-#footer img.text{
-	padding-top: 97px;
-	padding-left: 60px;
-}
-#footer p{
-	clear: both;
-	position: absolute;
-	bottom: 0;
-	right: 15px;
-	color:#717171;
-	padding-right: 20px;
+
+
+#footer span{
+
+	
+	float: right;
+	color: white;
+	
 }
 div#mc_message.updated{
 	float: left;
