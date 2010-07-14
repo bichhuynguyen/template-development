@@ -65,12 +65,13 @@
 
 				<span class="facebook-connect">
 				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
-				<iframe class="facebook" src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=360&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:360px; height:60px"></iframe class="facebook">
+				<div class="fb-iframe"><fb:like action='like' colorscheme='light'
+				layout='standard' show_faces='true' /></div>
 				</span>
-
 				<?php comments_template( '', true ); ?>
+				
 		</div>
-
+		
 
 		
 	

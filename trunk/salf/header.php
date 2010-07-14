@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:og="http://opengraphprotocol.org/schema/"
+xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 
 	<head profile="http://gmpg.org/xfn/11">
 		
@@ -7,7 +9,24 @@
 			<?php bloginfo('name');
 			?>
 		</title>
+		<meta property="fb:admins" content="706887311"/>
+		<meta property="fb:app_id" content="130496703654288" />
+		
+		<?php if(is_home()) {?>
+		<meta property="og:type" content="blog" />
+		<meta property="og:title" content="DSC South Asian Literature Festival" /><?php
+		} else {
+		?>
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="DSC South Asian Literature Festival - <?php the_title_attribute( $args ); ?>" /><?php
+		}
+		?>
+		<?php if (is_home())
+		echo '<meta property="og:url" content="YOUR-APP-URL" />';
+		else echo '<meta property="og:url" content="'.get_permalink().'" />';
+		?>
 
+		
 	    <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 		<meta http-equiv="Content-Style-Type" content="text/css"/>
 		<meta name="description" content="<?php bloginfo('description') ?>" />
@@ -98,10 +117,12 @@
 					<?php endif;?>
 				</ul>
 				<a class="twitter" href="http://twitter.com/SthAsianLitFest" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>
+				
 				<span class="facebook-connect">
 				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
-				
-				<iframe class="facebook header" src="http://www.facebook.com/plugins/likebox.php?id=131936233494045&amp;width=292&amp;connections=0&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0"  allowTransparency="true"></iframe class="facebook">
+				<div class="fb-iframe">
+					<fb:fan name='southasianlitfest' 
+					width='500' logobar="false"/></div>
 				</span>
 				<?php get_sidebar(); ?>
 			</div>
