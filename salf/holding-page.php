@@ -51,7 +51,8 @@ Template Name: Holding Page
 
 						<span class="facebook-connect">
 						<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
-						<iframe class="facebook" src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:450px; height:60px"></iframe class="facebook">
+						<div class="fb-iframe"><fb:like action='like' colorscheme='light'
+						layout='standard' show_faces='true' width='500'/></div>
 						</span>
 					</div>
 					
@@ -263,6 +264,19 @@ Template Name: Holding Page
 				<p>If you have tons of initiative, are highly organised with good people skills and love working in a busy environment then get in touch by emailing <a href="mailto:volunteer@southasianlitfest.com">volunteer@southasianlitfest.com</a>, referencing which roles you would like to apply for.</p>
 				
 			</div>
+			
+			
+			<ul id="volunteer-jump-menu">
+				<?php $volunteer_menu_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
+				if ( $volunteer_menu_query->have_posts() ) : while ( $volunteer_menu_query->have_posts() ) : $volunteer_menu_query->the_post();?>
+				
+				<li><a href="#volunteer-<?php the_ID();?>"><?php the_title(); ?></a></li>
+				<?php endwhile; else:?>
+				<?php endif;
+				//Reset Query
+				wp_reset_query();
+				?>
+			</ul>
 				<img style="
 					display: block;
 					margin: 0 auto;
@@ -272,7 +286,7 @@ Template Name: Holding Page
 			$volunteer_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
 			
 			if ( $volunteer_query->have_posts() ) : while ( $volunteer_query->have_posts() ) : $volunteer_query->the_post();?>
-				<div class="volunteer-content">
+				<div class="volunteer-content" id="volunteer-<?php the_ID();?>">
 					<h2>
 						<?php the_title(); ?>
 					</h2>
@@ -287,7 +301,7 @@ Template Name: Holding Page
 			wp_reset_query();
 			?>	
 			</div>	
-			</div>
+		</div>
 		<a class="top" href="#" title="Top">BACK TO TOP</a>
 		
 		

@@ -183,20 +183,18 @@ active_element = '#home';
 		
 		$(socialButtons).fadeOut(200, function(){
 			$(parent).siblings('a.twitter').hide();
-			$(parent).children('iframe').animate({ opacity: 1, width: 300, height: 74}, 500);
+			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 300, height: 74}, 500);
 		});
 		
-		$(this).children('iframe').mouseout(function(){
+		$(this).children('div.fb-iframe').mouseout(function(){
 			if($(this).css('opacity') == 1){
-				/*$(this).width(300);
-				$(this).height(74);*/
-				$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
+					$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
 					$(socialButtons).fadeIn(200);
 				});
 			}
-		});//*/
+		});
 		return false;
-	});
+	});//*/
 });
 
 	
