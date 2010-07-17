@@ -82,10 +82,10 @@ Template Name: Holding Page
 					//wp_reset_query();
 					?>
 			</div><!--End news-feed-->
-			
+			<div id="stream-tweet">
 			<div class="dsc_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-from.png" width="150" height="25" alt="TWEETS FROM US"></H2></div>
 			<div class="query_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-about.png" width="150" height="25" alt="TWEETS ABOUT US"></H2></div>
-				
+			</div>	
 			</div><!--End news-feed-->	   	
 			
 			
