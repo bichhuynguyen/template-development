@@ -48,7 +48,27 @@ Template Name: Holding Page
 						document.write('<a class="twitter" href="'+twtLink+'" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /'+'><'+'/a>');
 						</script>
 						<noscript><a class="twitter" href="http://twitter.com/home?status=<?php echo getTinyUrl(get_permalink(get_the_ID()));?>" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /></a></noscript>
+					
+						<?php
+						
+							/*
+								Twitter Search -- Incomplete
+							*//*
+						//$url = urlencode(getTinyUrl(get_permalink(get_the_ID())));
+						$url = urlencode('http://fb.me/BJ7WCabv');
+						$file = file_get_contents("http://search.twitter.com/search?q=".$url);
+						$file = strip_tags($file);
 
+						echo "--"."http://search.twitter.com/search?q=".$url."--";
+						echo count($matches[0]);
+						print_r($file);
+						
+							/*
+								Twitter Search -- Incomplete
+							*/
+						?>
+						
+						
 						<span class="facebook-connect">
 						<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
 						<div id="fb-root"></div>

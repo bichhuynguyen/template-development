@@ -114,5 +114,51 @@ function getTinyUrl($url)
 }
 
 
+/*function tweetmeme(){
+?>
+<div style="float: right; margin: 5px 0 15px 15px;">
+<script type="text/javascript">
+tweetmeme_url = '<?php the_permalink(); ?>';
+</script>
+<script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script>
+</div>
+<?php
+}//*/
 
+/*
+Get Twitter Followers
+
+function curl($url)
+{
+$ch = curl_init($url);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch,CURLOPT_HEADER, 0);
+curl_setopt($ch,CURLOPT_USERAGENT,"southasianlitfest.com");
+curl_setopt($ch,CURLOPT_TIMEOUT,10);
+$data = curl_exec($ch);
+curl_close($ch);
+return $data;
+}
+function GetTwitterFollowerCount($username)
+{
+$twitter_followers = curl("http://twitter.com/statuses/user_timeline/".$username.".xml?count=1");
+$xml = new SimpleXmlElement($twitter_followers, LIBXML_NOCDATA);
+return $xml->status->user->followers_count;
+}
+
+echo GetTwitterFollowerCount("YourTwitterName");
+
+
+//Alterate Method
+
+
+$twit = file_get_contents('http://twitter.com/users/show/USERNAME.xml');
+$begin = '<followers_count>'; $end = '</followers_count>';
+$page = $twit;
+$parts = explode($begin,$page);
+$page = $parts[1];
+$parts = explode($end,$page);
+$tcount = $parts[0];
+if($tcount == '') { $tcount = '0'; }
+echo '<div class="twitter-badge"><strong>'.$tcount.' </strong> Followers</div>';//*/
 ?>
