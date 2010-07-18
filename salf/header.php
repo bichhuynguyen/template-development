@@ -101,8 +101,16 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		</script>
 		<noscript>This site works best with Javascript turned on. Certain things may look different with it turned off.</noscript>
 		<div id="header">
-		<h1><a href="<?php echo get_option('home'); ?>/"><span><?php bloginfo('name'); ?></span></a></h1>
-		<p><?php bloginfo('description'); ?></p>
+		<h1 style="float: left;">
+			<a href="<?php echo get_option('home'); ?>/" >
+				<img src="<?php echo bloginfo('template_url');?>/style/images/header_salf_main_logo.png" alt="<?php bloginfo('name'); ?>" />
+			</a>
+		</h1>
+		<h2 style="float: right;">
+			<a href="http://www.dsclimited.com/" >
+				<img src="<?php echo bloginfo('template_url');?>/style/images/header_dsc_main_logo.png" alt="DSC - Principle Sponsor" />
+			</a>
+		</h2>
 			
 				
 			

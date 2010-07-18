@@ -163,15 +163,17 @@ h1, h2, h3, h4,h5,h6{
 
 #header{
 	height: 265px;
+	width: 960px;
 	padding: 0;
 	border-bottom: 1px white solid;
+	background: url('../images/header.png') no-repeat;
+	_background: url('../images/header-IE.png') no-repeat;
 }
 #header h1{
 	float: left;
-	background: url('../images/header.png') no-repeat;
-	_background: url('../images/header-IE.png') no-repeat;
+	
 	height: 256px;
-	width: 960px;
+
 }
 #header h1 a span, #header p{
 	display: none;
