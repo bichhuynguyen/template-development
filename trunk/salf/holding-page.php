@@ -65,7 +65,16 @@ Template Name: Holding Page
 						
 							/*
 								Twitter Search -- Incomplete
-							*/
+							*//*
+								/*
+									Twitter Search -- new Method
+								*//*
+						  //require('twitter.class.php');
+						  $twitter = new twitter_class();
+						  $q = 'hello';
+						  $output = $twitter->getTweets($q, 5);
+						  echo gettype($output);//*/
+						
 						?>
 						
 						
@@ -124,21 +133,21 @@ Template Name: Holding Page
 		
 		<ul id="partner-links">
 			<li><a href="http://www.foyles.co.uk/">Foyles</a></li>
-			<li><a href="http://www.ipg.uk.com/">iipg</a></li>
+			<li><a href="http://www.ipg.uk.com/">IPG</a></li>
 			<li><a href="http://www.britishcouncil.org">British Council</a></li>
 			<li><a href="http://www.applesandsnakes.org/">Apples &amp; Snakes</a></li>
 			<li><a href="http://www.open.ac.uk/">The Open University</a></li>
 			<li><a href="http://www.amg.biz/">AMG</a></li>
 			<li><a href="http://www.nehrucentre.org.uk/">The Nehru Centre</a></li>
 			<li><a href="http://www.readingagency.org.uk/">The Reading Agency</li>
-			<li><a href="http://www.freewordonline.com/">Free Word</a></li>
+			<li><a href="http://www.freewordonline.com/">Free Word Centre</a></li>
 			<li><a href="http://www.publishers.org.uk/en/home/">The Publishers Association</a></li>
-			<li><a href="http://www.wasafiri.org/">Wasafari</a></li>
+			<li><a href="http://www.wasafiri.org/">Wasafiri</a></li>
 			<li><a href="http://www.bl.uk/">British Library</a></li>
 			<li><a href="http://www.booktrust.org.uk/Home">Booktrust</a></li>
 			<li><a href="http://www.vayunaiducompany.org.uk/">Vaya Naidu Company</a></li>
 			<li><a href="http://www.spinebreakers.co.uk/Pages/Home.aspx">Spine Breakers</a></li>
-			<li><a href="http://www.richmix.org.uk/">Richmix</a></li>
+			<li><a href="http://www.richmix.org.uk/">Rich Mix</a></li>
 			<li><a href="http://www.dipnet.org.uk/">DIPNET</a></li>
 			<li><a href="http://www.kingsplace.co.uk/">Kings Place</a></li>
 			<li><a href="http://www.artscouncil.org.uk/">Arts Council England</a></li>
