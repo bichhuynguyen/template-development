@@ -7,7 +7,58 @@ Template Name: News
 
 		
 		<div class="post" id="home">
-			
+			<div id="browse-head"><img style="float: left;" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php the_content(); ?>
+			<?php endwhile; endif; ?>
+			</div>
+			<div id="news-archive">
+				<div class="archive-type category">
+				<h3>Browse by Category</h3>
+				<ul>
+				<?php $args = array(
+					'title_li'	=> ''
+					/*
+				    'type'            => 'monthly',
+				    
+				    'format'          => 'html', 
+				    
+				    'show_post_count' => false,
+				    'echo'            => 1 */); 
+					wp_list_categories( $args );?>
+				</ul>
+				</div>
+				<div class="archive-type date">
+				<h3>Browse by Date</h3>
+				<ul>
+				<?php $args = array(
+				    'type'            => 'monthly',
+				    
+				    'format'          => 'html', 
+				    
+				    'show_post_count' => false,
+				    'echo'            => 1 ); 
+					wp_get_archives( $args );?>
+				</ul>
+				</div>
+				<div class="archive-type category">
+				<h3>Browse by Category</h3>
+				<ul>
+				<?php $args = array(
+					'exclude_admin'	=>	false
+					/*
+				    'type'            => 'monthly',
+				    
+				    'format'          => 'html', 
+				    
+				    'show_post_count' => false,
+				    'echo'            => 1 */); 
+					wp_list_authors( $args );?>
+				</ul>
+				</div>
+				
+				
+			</div>
 			
 			<div class="news">
 				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
@@ -24,34 +75,16 @@ Template Name: News
 					
 					
 					
-
+				<a href="<?php the_permalink();?>">
 					<div class="new-entry">
-						<a href="<?php the_permalink();?>"><h2><?php the_date('j-n-y');?>     <?php the_title(); ?></h2></a>
-						<?php mf_post_thumbnail('med-cropped');?>
+						<h2>     <?php the_title(); ?></h2><div class="post-details"><?php the_time('l, F jS, Y') ?></div>
+						<?php mf_post_thumbnail('small-cropped');?>
 						<?php the_excerpt(); ?>
-						<script type="text/javascript">
-						function getTinyUrl($url) {   
-						     $tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url);  
-						     return $tinyurl;  
-						}
-						var twtTitle  = "Just reading '<?php the_title(); ?>'";
-
-						var tinyUrl = "<?php 
-
-							echo getTinyUrl(get_permalink(get_the_ID()));?>";
-
-						var twtLink =  'http://twitter.com/home?status='+encodeURIComponent(twtTitle + ' ' + tinyUrl + " #salf");
-						document.write('<a class="twitter" href="'+twtLink+'" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /'+'><'+'/a>');
-						</script>
-						<noscript><a class="twitter" href="http://twitter.com/home?status=<?php echo getTinyUrl(get_permalink(get_the_ID()));?>" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /></a></noscript>
-
-						<span class="facebook-connect">
-						<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
-						<iframe class="facebook" src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_permalink($post->ID)); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="width:450px; height:60px"></iframe class="facebook">
-						</span>
+						
+						
 					</div>
 					
-					
+				</a>	
 					
 					
 
@@ -63,18 +96,37 @@ Template Name: News
 					//Reset Query
 					//wp_reset_query();
 					?>
+					
+				
 			</div><!--End news-feed-->
 			
-			
+				<div style="float: left;"class="tag-cloud">
 				
-			</div><!--End news-feed-->	   	
+					<?php $args = array(
+					    'smallest'  => 8, 
+					    'largest'   => 22,
+					    'unit'      => 'pt', 
+					    'number'    => 45,  
+					    'format'    => 'flat',
+					    //'separator' => '\n',
+					    'orderby'   => 'name', 
+					    'order'     => 'ASC',
+					    //'exclude'   => , 
+					    //'include'   => , 
+					    'link'      => 'view', 
+					    'taxonomy'  => 'post_tag', 
+					    'echo'      => true ); ?>
+					<?php wp_tag_cloud($args); ?> 
+				</div>
+				
+			</div><!--End post-->	   	
 			
 			
 			
 		
 		
 		</div>
-		<a class="top" href="#" title="Top">BACK TO TOP</a>
+	
 		
 	
 

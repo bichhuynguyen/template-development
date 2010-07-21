@@ -153,6 +153,60 @@ function getTinyUrl($url)
 	return $data;  
 }
 
+/*
+------------
+---Menus----
+------------
+*/
+
+add_action( 'template_redirect', 'mfields_redirect_custom_content_multiple' );
+function mfields_redirect_custom_content_multiple() {
+	global $mfields_template;
+	if( $mfields_template ) {
+		include_once( $mfields_template );
+		exit();
+	}
+	return false;
+}
+
+add_filter( 'status_header', 'mfields_template_404' );
+function mfields_template_404( $c ) {
+	global $mfields_template;
+	$mfields_template = mfields_locate_custom_template();
+	if( $mfields_template ) {
+		$header = '200';
+		$text = get_status_header_desc( $header );
+		$protocol = $_SERVER["SERVER_PROTOCOL"];
+		if ( 'HTTP/1.1' != $protocol && 'HTTP/1.0' != $protocol )
+			$protocol = 'HTTP/1.0';
+
+		return "$protocol $header $text";
+	}
+	else
+		return $c;
+}
+
+function mfields_locate_custom_template() {
+	global $wp_post_types, $wp;
+	if( is_404() ) {
+		if( array_key_exists( $wp->request, $wp_post_types ) ) {
+			$file = STYLESHEETPATH . '/' . $wp->request . '-multiple.php';
+			$file = ( file_exists( $file ) ) ? $file : get_index_template();
+			return $file;
+		}
+	}
+	return false;
+}
+
+
+/*
+------------
+---Menus----
+------------
+*/
+
+
+
 
 /*function tweetmeme(){
 ?>
