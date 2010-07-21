@@ -22,7 +22,7 @@ html, body{
 body{
 	width: 100%;
 	
-	background: #FBBF13 url('../images/backdrop-grate.png') repeat-x right 0px;
+	background: #D92417 url('../images/backdrop-grate.png') repeat-x right 0px;
 	
 	color: #414042;
 	
@@ -30,6 +30,23 @@ body{
 a{
 	color: #da2128;
 	text-decoration: none;
+}
+.post a:hover{
+	text-decoration: underline;
+}
+.post a:visited{
+	color:#7D140E;
+}
+a.more-link{
+	margin: 3px -3px 3px 0;
+	padding: 1px 3px;
+	background: white;
+	display: block;
+	width: 87px;
+}
+a.more-link:hover{
+	text-decoration: none;
+	color: #B04883;
 }
 #nav a{
 	color: white;
@@ -588,3 +605,4 @@ ul#volunteer-jump-menu li a:hover{
 	text-decoration: underline;
 #stream-tweet{
 	float: left;
+}
