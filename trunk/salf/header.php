@@ -137,6 +137,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 					<li class="page_item"><a href="#partners" title="Partners" id="partners_btn">PARTNERS</a></li>
 					<li class="page_item"><a href="#enquiries" title="Venues" id="enquiries_btn">ENQUIRIES</a></li>
 					<li class="page_item"><a href="#volunteer" title="Volunteer" id="volunteer_btn">VOLUNTEER</a></li>
+					
 					<?php else:?>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#home" title="Home" id="home_btn">HOME</a></li>
 					<li class="page_item"><a href="<?php bloginfo('home'); ?>#about" title="About" id="about_btn">ABOUT</a></li>
