@@ -9,7 +9,7 @@
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-			<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+			<?php //the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
 				
 				<script type="text/javascript">
@@ -27,7 +27,7 @@
 				document.write('<a class="twitter" href="'+twtLink+'" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /'+'><'+'/a>');
 				</script>
 				<noscript><a class="twitter" href="http://twitter.com/home?status=<?php echo getTinyUrl(get_permalink(get_the_ID()));?>" target="_blank"'+'><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png"  border="0" alt="Tweet This!" /></a></noscript>
-
+				 
 				<span class="facebook-connect">
 				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
 				<div id="fb-root"></div>

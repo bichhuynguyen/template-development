@@ -22,10 +22,14 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		}
 		?>
 		<meta property="og:site_name" content="DSC South Asian Literature Festival"/>
-		<meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/style/images/mini_logo.jpg">
+		
 		
 		<?php if(is_single()):?>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<meta property="og:image" content="<?php
+		
+		 get_attached_images();
+		?>">
 		<meta property="og:description"
 		          content="<?php the_excerpt();?>"/>
 		
@@ -37,6 +41,8 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		endif;
 		wp_reset_query();
 		?>
+		<?php else:?>
+		<meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/style/images/mini_logo.jpg">	
 		<?php endif; ?>
 		<?php if (is_home())
 		echo '<meta property="og:url" content="'.bloginfo('siteurl').'" />';

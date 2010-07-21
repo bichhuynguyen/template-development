@@ -26,6 +26,46 @@ if ( has_post_thumbnail() ) {
 	} 
 
 }
+
+
+function get_attached_images(){
+    // This function runs in "the_loop", you could run this out of the loop but
+    // you would need to change this to $post = $valid_post or something other than
+    // using the global post declaration.
+	/*
+	$img	[0] => url
+			[1] => width
+			[2] => height	
+	*/	
+	
+    global $post; 
+    $args = array(
+      'post_type' => 'attachment',
+      'numberposts' => 1,
+      'post_status' => null,
+      'post_parent' => $post->ID,
+      'order' => 'ASC',
+      'orderby' => 'menu_order'
+      ); 
+    $attachment = get_posts($args); // Get attachment
+    if ($attachment) {
+      $img = wp_get_attachment_image_src($attachment[0]->ID, $size = 'thumbnail'); 
+    	//echo "<img alt=\"";
+		//echo the_title();
+		//echo "\" src=\"";
+		echo $img[0];
+		//echo "\" width=\"";
+		//echo $img[1]
+		//echo "\" height=\""
+		//echo $img[2]
+		//echo "\"/>";
+		//print_r($attachment);
+  	}
+}
+
+
+
+
 /*--------------
 Sidebar Support
 ----------------*/
@@ -162,7 +202,7 @@ $tcount = $parts[0];
 if($tcount == '') { $tcount = '0'; }
 echo '<div class="twitter-badge"><strong>'.$tcount.' </strong> Followers</div>';//*/
 
-class twitter_class
+/*class twitter_class
 {
   function twitter_class()
   {
@@ -264,6 +304,5 @@ class twitter_class
     curl_close($ch);
     return $output;
   }
-}
+}//*/
 ?>
-

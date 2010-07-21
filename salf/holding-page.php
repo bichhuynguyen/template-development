@@ -32,7 +32,12 @@ Template Name: Holding Page
 					<div class="new-entry">
 						<a href="<?php the_permalink();?>"><h2><?php the_date('j-n-y');?>     <?php the_title(); ?></h2></a>
 						<?php mf_post_thumbnail('med-cropped');?>
-						<?php the_excerpt(); ?>
+						<?php 
+						global $more;    // Declare global $more (before the loop).
+						$more = 0;       // Set (inside the loop) to display content above the more tag.
+						the_content(" Read More...");
+						?>
+						
 						<script type="text/javascript">
 						function getTinyUrl($url) {   
 						     $tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url);  
@@ -310,7 +315,7 @@ Template Name: Holding Page
 			
 			<ul id="volunteer-jump-menu">
 				<li><h3>Opportunities Available</h3></li>
-				<?php $volunteer_menu_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
+				<?php $volunteer_menu_query = new WP_Query('post_type=Volunteer&orderby=menu_order&posts_per_page=-1');
 				if ( $volunteer_menu_query->have_posts() ) : while ( $volunteer_menu_query->have_posts() ) : $volunteer_menu_query->the_post();?>
 				
 				<li><a href="#oppurtunity-<?php the_ID();?>"><?php the_title(); ?></a></li>
@@ -326,7 +331,7 @@ Template Name: Holding Page
 				" src="<?php echo bloginfo('template_url'); ?>/style/images/partner-border.png" width="900" height="1" />
 			<div id="volunteer-options">
 			<?php
-			$volunteer_query = new WP_Query('post_type=Volunteer&orderby=menu_order');
+			$volunteer_query = new WP_Query('post_type=Volunteer&orderby=menu_order&posts_per_page=-1');
 			
 			if ( $volunteer_query->have_posts() ) : while ( $volunteer_query->have_posts() ) : $volunteer_query->the_post();?>
 				<div class="volunteer-content" id="oppurtunity-<?php the_ID();?>">
