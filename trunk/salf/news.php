@@ -7,7 +7,7 @@ Template Name: News Page
 
 		
 		<div class="post" id="home">
-			<div id="browse-head"><img style="float: left;" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
+			<div id="browse-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
@@ -42,7 +42,7 @@ Template Name: News Page
 				</ul>
 				</div>
 				<div class="archive-type category">
-				<h3>Browse by Category</h3>
+				<h3>Browse by Author</h3>
 				<ul>
 				<?php $args = array(
 					'exclude_admin'	=>	false
@@ -60,7 +60,7 @@ Template Name: News Page
 				
 			</div>
 			
-			<div class="news">
+			<div class="news archive-header">
 				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
 			<div id="news-feed">
 			<?php
@@ -76,7 +76,7 @@ Template Name: News Page
 					
 					
 				<a href="<?php the_permalink();?>">
-					<div class="new-entry">
+					<div class="archive-link new-entry">
 						<h2>     <?php the_title(); ?></h2><div class="post-details"><?php the_time('l, F jS, Y') ?></div>
 						<?php mf_post_thumbnail('small-cropped');?>
 						<?php the_excerpt(); ?>

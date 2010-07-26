@@ -86,6 +86,8 @@ Objects and Tax
 add_action( 'init', 'add_fitzgraham_objects_and_taxonomy' );
 function add_fitzgraham_objects_and_taxonomy(){
 	add_new_object('Volunteer');
+	add_new_object('Program');
+	add_new_object('Artists');
 	add_new_object('Events');
 	add_new_object('Venues');
 	add_new_object('Partners');

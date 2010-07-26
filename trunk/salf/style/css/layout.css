@@ -679,3 +679,15 @@ a div.new-entry p{
 	clear: both;
 	float: left;
 }
+.archive-link p:hover, .archive-link h2:hover{
+	text-decoration: none;
+}
+.archive-header img{
+	margin-top: 12px;
+}
+.archive-header h2{
+	clear: both;
+}
+.new-entry h2{
+	font-size: 14px;
+}
