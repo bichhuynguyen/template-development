@@ -1,4 +1,5 @@
 <?php
+include 'meta.php';
 /*--------------
 Thumbnail Support
 ----------------*/
@@ -206,7 +207,6 @@ function mfields_locate_custom_template() {
 ---Menus----
 ------------
 */
-
 
 
 
