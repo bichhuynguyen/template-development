@@ -30,7 +30,7 @@ Template Name: Holding Page
 					
 
 					<div class="new-entry">
-						<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a><div class="post-details"><?php the_time('F jS, Y') ?></div>
+						<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a><div class="post-details"><?php the_time('l, F jS, Y') ?></div>
 						<?php mf_post_thumbnail('med-cropped');?>
 						<?php 
 						global $more;    // Declare global $more (before the loop).
