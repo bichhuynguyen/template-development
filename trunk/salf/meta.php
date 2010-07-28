@@ -9,22 +9,20 @@
 
 function mf_get_custom_post_list($type){
 	$post_list = array();
-	//$meta_query = new WP_Query('post_type='.$type);
+	$meta_query = new WP_Query('post_type='.$type);
 	
 	
 	
-	//if ($meta_query->have_posts()):while($meta_query->have_posts()):$meta_query->the_post();
-		//$post_list[get_the_ID()] = get_the_title();
-	//endwhile; 
-	//endif;
-	//Reset Query
-	//wp_reset_query();
+	if ($meta_query->have_posts()):while($meta_query->have_posts()):$meta_query->the_post();
+		$post_list[get_the_ID()] = get_the_title();
+	endwhile; 
+	endif;
+	
 	return $post_list;
 }
 
-$prefix = 'mf_SALF_';
-$venues = mf_get_custom_post_list('Venues');
-$artists = mf_get_custom_post_list('Artists');
+$prefix = 'mf_SALF_meta_';
+
 $meta_box = array(
     'id' => 'videos',
     'title' => 'date',
@@ -36,29 +34,29 @@ $meta_box = array(
 	     array(
 	            'name' => 'Venue',
 	            'id' => $prefix . 'venue',
-	            'type' => 'select2',
-	            'options' => $venues
+	            'type' => 'select2'
+	            //'options' => mf_get_custom_post_list('Venues')
 	        ),
 		array(
 	            'name' => 'Artist',
 	            'id' => $prefix . 'artist',
-	            'type' => 'select2',
-	            'options' => $artists
+	            'type' => 'select2'
+	            //'options' => mf_get_custom_post_list('Artists')
 	        )
     	)
 );
 
 
-add_action('admin_menu','mf_SALF_vimeo_box');
+add_action('admin_menu','mf_SALF_meta_box');
 
 // Add meta box
-function mf_SALF_vimeo_box(){
+function mf_SALF_meta_box(){
     global $meta_box;
     
-    add_meta_box($meta_box['id'], $meta_box['title'], 'mf_SALF_vimeo_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
+    add_meta_box($meta_box['id'], $meta_box['title'], 'mf_SALF_meta_show_box', $meta_box['page'], $meta_box['context'], $meta_box['priority']);
 }
 // Callback function to show fields in meta box
-function mf_SALF_vimeo_show_box() {
+function mf_SALF_meta_show_box() {
     global $meta_box, $post;
     
     // Use nonce for verification
@@ -91,10 +89,10 @@ function mf_SALF_vimeo_show_box() {
     
     echo '</table>';
 }
-add_action('save_post', 'mf_SALF_vimeo_save_data');
+add_action('save_post', 'mf_SALF_meta_save_data');
 
 // Save data from meta box
-function mf_SALF_vimeo_save_data($post_id) {
+function mf_SALF_meta_save_data($post_id) {
     global $meta_box;
     
     // verify nonce
@@ -127,7 +125,5 @@ function mf_SALF_vimeo_save_data($post_id) {
         }
     }
 }
-
-
 
 ?>
