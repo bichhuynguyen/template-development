@@ -13,7 +13,9 @@
 			
 			
 			
-			<?php if(get_post_type() == 'Program'):?>
+			<?php if(get_post_type() == 'Program'):
+			// If post-type is program, then add links to relevant venue and artist
+			?>
 				
 			<?php 	$venue_ID = get_post_meta($post->ID, 'mf_SALF_meta_venue', true);
 					$venue = get_post($venue_ID);
