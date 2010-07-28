@@ -7,8 +7,31 @@
 
 ///*/
 
-function mf_get_custom_post_list($type){
+function mf_SALF_get_custom_post_list($type){
+global $wpdb;
+$meta_array = array();
+$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type'";
+//$query .= $type;
+$meta_query= $wpdb->get_results($query);
+	$count = 0;
+	foreach ($meta_query as $object){
+		$i = get_object_vars($object);
+		if ($i['post_title'] != 'Auto Draft') $meta_array[$i['ID']]=$i['post_title'];
+		$count++;
+	}//*/
+	if ($count>1) $meta_array[0]='No '.$type.' Found!';
+
+	return $meta_array;
+}
+
+
+
+
+
+/*function mf_SALF_get_custom_post_list($type){
+	global $wpdb;
 	$post_list = array();
+	
 	$meta_query = new WP_Query('post_type='.$type);
 	
 	
@@ -18,8 +41,8 @@ function mf_get_custom_post_list($type){
 	endwhile; 
 	endif;
 	
-	return $post_list;
-}
+	return $venuetitles;
+}*/
 
 $prefix = 'mf_SALF_meta_';
 
@@ -34,14 +57,14 @@ $meta_box = array(
 	     array(
 	            'name' => 'Venue',
 	            'id' => $prefix . 'venue',
-	            'type' => 'select2'
-	            //'options' => mf_get_custom_post_list('Venues')
+	            'type' => 'select2',
+	            'options' => mf_SALF_get_custom_post_list('Venues')
 	        ),
 		array(
 	            'name' => 'Artist',
 	            'id' => $prefix . 'artist',
-	            'type' => 'select2'
-	            //'options' => mf_get_custom_post_list('Artists')
+	            'type' => 'select2',
+	            'options' => mf_SALF_get_custom_post_list('Artists')
 	        )
     	)
 );
@@ -60,7 +83,8 @@ function mf_SALF_meta_show_box() {
     global $meta_box, $post;
     
     // Use nonce for verification
-    echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+    
+	echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
     
     echo '<table class="form-table">';
 
@@ -71,6 +95,7 @@ function mf_SALF_meta_show_box() {
         echo '<tr>',
                 '<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
                 '<td>';
+
         switch ($field['type']) {
             
 				case 'select2':
