@@ -10,39 +10,20 @@
 function mf_SALF_get_custom_post_list($type){
 global $wpdb;
 $meta_array = array();
-$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type'";
+$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
 //$query .= $type;
 $meta_query= $wpdb->get_results($query);
-	$count = 0;
+	
 	foreach ($meta_query as $object){
 		$i = get_object_vars($object);
-		if ($i['post_title'] != 'Auto Draft') $meta_array[$i['ID']]=$i['post_title'];
-		$count++;
+		$meta_array[$i['ID']]=$i['post_title'];
+		
 	}//*/
-	if ($count>1) $meta_array[0]='No '.$type.' Found!';
+	if (count($meta_array)<1) $meta_array[0]='No '.$type.' Found!';
 
 	return $meta_array;
 }
 
-
-
-
-
-/*function mf_SALF_get_custom_post_list($type){
-	global $wpdb;
-	$post_list = array();
-	
-	$meta_query = new WP_Query('post_type='.$type);
-	
-	
-	
-	if ($meta_query->have_posts()):while($meta_query->have_posts()):$meta_query->the_post();
-		$post_list[get_the_ID()] = get_the_title();
-	endwhile; 
-	endif;
-	
-	return $venuetitles;
-}*/
 
 $prefix = 'mf_SALF_meta_';
 
@@ -54,7 +35,18 @@ $meta_box = array(
     'priority' => 'high',
     'fields' => array(
        
-	     array(
+	    array(
+		        'name' => 'Date',
+				'desc' => "Enter in the format DD/MM/YYY",
+		        'id' => $prefix . 'date',
+		        'type' => 'text'		        
+		    ),
+		array(
+		        'name' => 'Price',
+		        'id' => $prefix . 'price',
+		        'type' => 'text'		        
+		    ), 
+		array(
 	            'name' => 'Venue',
 	            'id' => $prefix . 'venue',
 	            'type' => 'select2',
@@ -65,7 +57,13 @@ $meta_box = array(
 	            'id' => $prefix . 'artist',
 	            'type' => 'select2',
 	            'options' => mf_SALF_get_custom_post_list('Artists')
-	        )
+	        ),		
+		array(
+		        'name' => 'EventBrite',
+				'desc' => 'Enter Eventbrite Link',
+		        'id' => $prefix . 'eventbrite',
+		        'type' => 'text'		        
+		    )
     	)
 );
 
@@ -107,6 +105,10 @@ function mf_SALF_meta_show_box() {
 	                echo '</select>';
 					
 	                break;
+				case 'text':
+		            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+		', $field['desc'];
+		            break;
         }
         echo     '<td>',
             '</tr>';
@@ -140,6 +142,7 @@ function mf_SALF_meta_save_data($post_id) {
     }
     
     foreach ($meta_box['fields'] as $field) {
+		
         $old = get_post_meta($post_id, $field['id'], true);
         $new = $_POST[$field['id']];
         
