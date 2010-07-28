@@ -62,7 +62,7 @@ $meta_box = array(
 		        'name' => 'EventBrite',
 				'desc' => 'Enter Eventbrite Link',
 		        'id' => $prefix . 'eventbrite',
-		        'type' => 'text'		        
+		        'type' => 'wide-text'		        
 		    )
     	)
 );
@@ -109,6 +109,10 @@ function mf_SALF_meta_show_box() {
 		            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
 		', $field['desc'];
 		            break;
+					case 'wide-text':
+			            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:42%" />', '
+			', $field['desc'];
+			            break;
         }
         echo     '<td>',
             '</tr>';

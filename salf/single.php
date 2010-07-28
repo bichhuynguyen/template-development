@@ -16,11 +16,15 @@
 			<?php if(get_post_type() == 'Program'):
 			// If post-type is program, then add links to relevant venue and artist
 			?>
-				
+			 
 			<?php 	$venue_ID = get_post_meta($post->ID, 'mf_SALF_meta_venue', true);
 					$venue = get_post($venue_ID);
 					$artist_ID = get_post_meta($post->ID, 'mf_SALF_meta_artist', true);
-					$artist = get_post($artist_ID);?>
+					$artist = get_post($artist_ID);
+					$eventbrite_link = get_post_meta($post->ID, 'mf_SALF_meta_eventbrite', true);
+					$price = get_post_meta($post->ID, 'mf_SALF_meta_price', true);
+					$date = get_post_meta($post->ID, 'mf_SALF_meta_date', true);
+			?>
 			
 			<div class="meta">
 			<a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a>
@@ -28,7 +32,17 @@
 					
 			<div class="meta">
 			<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
-			</div>	
+			</div>
+			<div class="meta">
+			<a href="<?php echo $eventbrite_link;?>" target="_blank">Buy Tickets Online</a>
+			</div>
+			<div class="meta">
+			<p>£<?php echo $price;?></p>
+			</div>
+			<div class="meta">
+			<p><?php echo $date;?></p>
+			</div>
+				
 			<?php endif;?>	
 				
 				
