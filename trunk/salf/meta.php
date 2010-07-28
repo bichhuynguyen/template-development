@@ -4,19 +4,27 @@
 *Meta Boxes
 *
 */
+
+///*/
+
 function mf_get_custom_post_list($type){
-	query_posts( array( 'post_type' => $type) );
-	if ( have_posts() ) : while ( have_posts() ) : the_post();
-		$post_list[get_the_ID()] = get_the_title();
-	endwhile; //else:
-	endif;
+	$post_list = array();
+	//$meta_query = new WP_Query('post_type='.$type);
+	
+	
+	
+	//if ($meta_query->have_posts()):while($meta_query->have_posts()):$meta_query->the_post();
+		//$post_list[get_the_ID()] = get_the_title();
+	//endwhile; 
+	//endif;
 	//Reset Query
-	wp_reset_query();
+	//wp_reset_query();
 	return $post_list;
 }
 
 $prefix = 'mf_SALF_';
-
+$venues = mf_get_custom_post_list('Venues');
+$artists = mf_get_custom_post_list('Artists');
 $meta_box = array(
     'id' => 'videos',
     'title' => 'date',
@@ -29,13 +37,13 @@ $meta_box = array(
 	            'name' => 'Venue',
 	            'id' => $prefix . 'venue',
 	            'type' => 'select2',
-	            'options' => mf_get_custom_post_list('Venues')
+	            'options' => $venues
 	        ),
 		array(
 	            'name' => 'Artist',
 	            'id' => $prefix . 'artist',
 	            'type' => 'select2',
-	            'options' => mf_get_custom_post_list('Artists')
+	            'options' => $artists
 	        )
     	)
 );
@@ -68,11 +76,13 @@ function mf_SALF_vimeo_show_box() {
         switch ($field['type']) {
             
 				case 'select2':
+					
 	                echo '<select name="', $field['id'], '" id="', $field['id'], '">';
 	                foreach ($field['options'] as $ID => $option) {
 	                    echo '<option value="'. $ID .'" ', $meta == $ID ? ' selected="selected"' : '', '>', $option, '</option>';
 	                }
 	                echo '</select>';
+					
 	                break;
         }
         echo     '<td>',
@@ -117,4 +127,7 @@ function mf_SALF_vimeo_save_data($post_id) {
         }
     }
 }
+
+
+
 ?>
