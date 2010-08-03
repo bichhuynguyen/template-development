@@ -218,6 +218,8 @@ active_element = '#home';
 			
 		return false;
 	});//*/
+	$('.datepicker').datePicker({clickInput:true});
+	
 	
 });
 

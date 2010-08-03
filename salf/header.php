@@ -67,6 +67,8 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		<?php wp_head(); ?>
 		<script src="<?php bloginfo('template_url'); ?>/scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
 		<script src="<?php bloginfo('template_url'); ?>/scripts/salf_ui.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/scripts/date.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/scripts/datePicker.js" type="text/javascript"></script>
 		<script language="javascript" src="<?php bloginfo('template_url'); ?>/scripts/tweet/jquery.tweet.js" type="text/javascript"></script>  
 		<script type='text/javascript'>
 		    $(document).ready(function(){

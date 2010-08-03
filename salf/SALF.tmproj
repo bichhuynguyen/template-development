@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>news.php</string>
+	<string>meta.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,89 +21,59 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>archive.php</key>
+		<key>meta-backup.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>69</integer>
+				<integer>59</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>175</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>162</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>49</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>0</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>69</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>208</integer>
 			</dict>
 		</dict>
-		<key>archives.php</key>
+		<key>meta.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>14</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>34</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>news.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>69</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>style/css/layout.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>19</integer>
-				<key>line</key>
-				<integer>684</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>640</integer>
+			<integer>65</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>style/css/layout.css</string>
-		<string>news.php</string>
-		<string>archives.php</string>
-		<string>archive.php</string>
+		<string>meta.php</string>
+		<string>meta-backup.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1225, 877}}</string>
+	<string>{{4, 13}, {1038, 865}}</string>
 </dict>
 </plist>
