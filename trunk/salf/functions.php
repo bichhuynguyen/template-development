@@ -202,12 +202,19 @@ function mfields_locate_custom_template() {
 
 
 /*
-------------
----Menus----
-------------
+-----------------
+---Meta Boxes----
+-----------------
 */
-
+include('meta_box_functions.php');
 include('meta.php');
+
+include('artist_meta_box_functions.php');
+include('artist_meta.php');
+
+
+
+
 
 
 
