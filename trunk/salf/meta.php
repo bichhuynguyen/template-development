@@ -1,4 +1,11 @@
 <?php
+
+
+session_start();
+
+//Fb::log(mf_SALF_get_custom_post_list('Artists'), "artists");
+//Fb::log($_SESSION['fields'], "fields");//firephp -- metabox fields
+//Fb::log($_SESSION['new'], "new");//firephp -- to be added to database
 /*
 *
 *Meta Boxes
@@ -6,26 +13,33 @@
 */
 
 ///*/
-
-function mf_SALF_get_custom_post_list($type){
-global $wpdb;
-$meta_array = array();
-$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
-//$query .= $type;
-$meta_query= $wpdb->get_results($query);
+/*function mf_meta_javascript_launch(){
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('salf_ui', bloginfo('template_url') .'/scripts/salf_ui.js');
+	wp_enqueue_script('date', bloginfo('template_url') .'/scripts/date.js');
+	wp_enqueue_script('datepicker', bloginfo('template_url') .'/scripts/datepicker.js');
 	
-	foreach ($meta_query as $object){
-		$i = get_object_vars($object);
-		$meta_array[$i['ID']]=$i['post_title'];
-		
-	}//*/
-	if (count($meta_array)<1) $meta_array[0]='No '.$type.' Found!';
-
-	return $meta_array;
 }
+add_action('admin_head','mf_meta_javascript_launch');
+//*/
+
+
 
 
 $prefix = 'mf_SALF_meta_';
+
+$the_artists = mf_SALF_get_custom_post_list('Artists');
+Fb::log($the_artists, "Artists Call-");//firephp
+
+$artist_array = array();
+foreach ($the_artists as $artist){
+	$new_artist_array = array(
+						'name' => $artist,
+						'id' => $prefix.'_artist_'.$artist.'_check',
+						'type' => 'checkbox'
+	);
+	array_push($artist_array,$new_artist_array);
+}//*/
 
 $meta_box = array(
     'id' => 'videos',
@@ -39,7 +53,7 @@ $meta_box = array(
 		        'name' => 'Date',
 				'desc' => "Enter in the format DD/MM/YYY",
 		        'id' => $prefix . 'date',
-		        'type' => 'text'		        
+		        'type' => 'date'		        
 		    ),
 		array(
 		        'name' => 'Price',
@@ -50,14 +64,9 @@ $meta_box = array(
 	            'name' => 'Venue',
 	            'id' => $prefix . 'venue',
 	            'type' => 'select2',
-	            'options' => mf_SALF_get_custom_post_list('Venues')
+	            //'options' => mf_SALF_get_custom_post_list('Venues')
 	        ),
-		array(
-	            'name' => 'Artist',
-	            'id' => $prefix . 'artist',
-	            'type' => 'select2',
-	            'options' => mf_SALF_get_custom_post_list('Artists')
-	        ),		
+			
 		array(
 		        'name' => 'EventBrite',
 				'desc' => 'Enter Eventbrite Link',
@@ -66,8 +75,10 @@ $meta_box = array(
 		    )
     	)
 );
-
-
+foreach($artist_array as $artist){
+	array_push($meta_box['fields'], $artist);
+}
+Fb::log($meta_box['fields'], "fields");//firephp
 add_action('admin_menu','mf_SALF_meta_box');
 
 // Add meta box
@@ -106,14 +117,26 @@ function mf_SALF_meta_show_box() {
 					
 	                break;
 				case 'text':
-		            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+		            echo '<input  type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
 		', $field['desc'];
 		            break;
+					case 'date':
+			            echo '<input class="datepicker" class="type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+			', $field['desc'];
+			            break;
 					case 'wide-text':
 			            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:42%" />', '
 			', $field['desc'];
 			            break;
-        }
+						case 'checkbox':
+			                echo '<input type="checkbox" name="', $field['id'], '" id="', $field['id'], '"', $meta ? ' checked="checked"' : '', ' />';
+			                break;
+					 case 'radio':
+			                foreach ($field['options'] as $option) {
+			                    echo '<input type="radio" name="', $field['id'], '" value="', $option['value'], '"', $meta == $option['value'] ? ' checked="checked"' : '', ' />', $option['name'];
+			                }
+			                break;
+        }			
         echo     '<td>',
             '</tr>';
     }
@@ -124,8 +147,11 @@ add_action('save_post', 'mf_SALF_meta_save_data');
 
 // Save data from meta box
 function mf_SALF_meta_save_data($post_id) {
-    global $meta_box;
-    
+	global $meta_box;
+	$_SESSION['fields'] = $_POST; 
+	
+   
+   
     // verify nonce
     if (!wp_verify_nonce($_POST['mytheme_meta_box_nonce'], basename(__FILE__))) {
         return $post_id;
@@ -146,10 +172,13 @@ function mf_SALF_meta_save_data($post_id) {
     }
     
     foreach ($meta_box['fields'] as $field) {
-		
+	
         $old = get_post_meta($post_id, $field['id'], true);
         $new = $_POST[$field['id']];
-        
+	
+		$_SESSION['new'][$field['name']] = $new;//firephp
+		//var_dump($field['id']);
+        //var_dump($new);
         if ($new && $new != $old) {
             update_post_meta($post_id, $field['id'], $new);
         } elseif ('' == $new && $old) {
@@ -157,5 +186,22 @@ function mf_SALF_meta_save_data($post_id) {
         }
     }
 }
+function mf_SALF_get_custom_post_list($type){
+global $wpdb;
+$meta_array = array();
+$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
 
+
+$meta_query= $wpdb->get_results($query);
+	
+	foreach ($meta_query as $object){
+		$i = get_object_vars($object);
+		$meta_array[$i['ID']]=$i['post_title'];
+		
+	}
+	if (count($meta_array)<1) $meta_array[0]='No '.$type.' Found!';//*/
+	
+		
+	return $meta_array;
+}//*/
 ?>
