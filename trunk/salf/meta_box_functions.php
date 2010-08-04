@@ -2,7 +2,7 @@
 // Save data from meta box
 function mf_SALF_meta_save_data($post_id) {
 	global $meta_box;
-	$_SESSION['fields'] = $_POST; 
+	
 	
    
    
@@ -30,7 +30,7 @@ function mf_SALF_meta_save_data($post_id) {
         $old = get_post_meta($post_id, $field['id'], true);
         $new = $_POST[$field['id']];
 	
-		$_SESSION['new'][$field['name']] = $new;//firephp
+		
 		//var_dump($field['id']);
         //var_dump($new);
         if ($new && $new != $old) {
