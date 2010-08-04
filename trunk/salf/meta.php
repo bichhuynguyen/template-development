@@ -22,7 +22,7 @@ $meta_box = array(
 		        'name' => 'Date',
 				'desc' => "<p>Enter in the format DD/MM/YYY</p>",
 		        'id' => $prefix . 'date',
-		        'type' => 'wide-text'		        
+		        'type' => 'date'		        
 		    ),
 		array(
 		        'name' => 'Price',

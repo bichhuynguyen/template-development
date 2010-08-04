@@ -1,4 +1,4 @@
-jQuery.extend({
+/*jQuery.extend({
   getUrlVars: function(){
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -13,8 +13,12 @@ jQuery.extend({
   getUrlVar: function(name){
     return $.getUrlVars()[name];
   }
-});
+});*/
 jQuery(document).ready(function($) {
+	
+	
+
+	
 	if(window.location.hash){
 if(window.location.hash == '#mc_signup_form'){
 active_element = '#home';
@@ -218,7 +222,7 @@ active_element = '#home';
 			
 		return false;
 	});//*/
-	$('.datepicker').datePicker({clickInput:true});
+	
 	
 	
 });

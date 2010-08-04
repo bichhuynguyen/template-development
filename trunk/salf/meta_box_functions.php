@@ -94,7 +94,7 @@ function mf_SALF_meta_show_box() {
 		', $field['desc'];
 		            break;
 					case 'date':
-			            echo '<input class="datepicker" class="type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+			            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:80%" />', '
 			', $field['desc'];
 			            break;
 					case 'wide-text':
