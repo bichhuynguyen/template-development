@@ -1,6 +1,5 @@
 <?php
-session_start();//firephp
-FB::log($_SESSION['URL'],'url');
+
 function mf_meta_javascript_launch(){
 	wp_enqueue_script('jquery');
 	
@@ -234,6 +233,7 @@ include('artist_meta_box_functions.php');
 include('artist_meta.php');
 
 
+include('sort_by_meta.php');
 
 
 

@@ -12,6 +12,13 @@ Template Name: Program
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 			</div>
+			<?php
+			$venues_sort = mf_SALF_sort_by_meta('Venues');
+			$get_meta_for_ID = get_post_ID_by_meta_value(129);
+			$_SESSION['venues'] = $venues_sort;
+			$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;
+			
+			?>
 			<div id="news-archive">
 				<div class="archive-type category">
 				<h3>Browse by Category</h3>
