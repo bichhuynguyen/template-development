@@ -1,9 +1,16 @@
 <?php
+FB::log($_POST,'POST');//firephp
+FB::log($_SESSION['post_array'],'post_array');//firephp
+
 /*
 Template Name: Program
 */
 ?>
-<?php get_header(); ?>
+
+<?php 
+session_start();
+
+get_header(); ?>
 
 		
 		<div class="post" id="home">
@@ -12,29 +19,37 @@ Template Name: Program
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
 			</div>
+			
+			
 			<?php
-			$venues_sort = mf_SALF_sort_by_meta('Venues');
 			$get_meta_for_ID = get_post_ID_by_meta_value(129);
-			$_SESSION['venues'] = $venues_sort;
-			$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;
+			$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;//firephp
+			
 			
 			?>
 			<div id="news-archive">
+				<form method="post" action="<?php echo curPageURL();?>">
 				<div class="archive-type category">
-				<h3>Browse by Category</h3>
-				<ul>
-				<?php $args = array(
-					'title_li'	=> ''
-					/*
-				    'type'            => 'monthly',
-				    
-				    'format'          => 'html', 
-				    
-				    'show_post_count' => false,
-				    'echo'            => 1 */); 
-					wp_list_categories( $args );?>
-				</ul>
+				<h3>Choose Venues</h3>
+				<?php
+				
+				//Get Venue Names
+				$venues_sort = mf_SALF_sort_by_meta('Venues');
+				$_SESSION['venues'] = $venues_sort;//firephp
+				
+				
+				$post_IDs = just_array_keys($_POST);
+				// Create Check Boxes For Venue Selection
+				foreach ($venues_sort as $id => $venue_check):?>
+
+				<div style="float:left;clear:both;width: 200px;"><label for="<?php echo $id;?>"><?php echo $venue_check;?></label><input style="float:right;clear:both;" type="checkbox" name="<?php echo $id;?>" id="<?php echo $id;?>" <?php if(in_array($id, $post_IDs) OR count($_POST)<1):?>checked="checked"<?php endif;?> /></div>
+
+
+				<?php endforeach;?>
+				<input type="submit" value="submit" name="submit" />
 				</div>
+				
+				</form>
 				<div class="archive-type date">
 				<h3>Browse by Date</h3>
 				<ul>
@@ -70,17 +85,11 @@ Template Name: Program
 			<div class="news archive-header">
 				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
 			<div id="news-feed">
-			<?php
-			$news_query = new WP_Query('post_type=program');
+			<?php if(count($_POST)<1) ://if search form NOT submitted?>
+				
+			<?php $news_query = new WP_Query('post_type=program');
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
-
-
-				
-					
-						
-					
-					
 					<?php 	$venue_ID = get_post_meta(get_the_ID(), 'mf_SALF_meta_venue', true);
 							$venue = get_post($venue_ID);
 							$artist_ID = get_post_meta(get_the_ID(), 'mf_SALF_artist_meta_checks', true);
@@ -110,24 +119,31 @@ Template Name: Program
 						<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
 						<?php endforeach;?>
 						</div>
-						<?php endif;?>
-						
-					</div>
+			<?php endif;?>
+						</div>
 					
 				</a>	
 					
-					
-
-
-
-
 					<?php endwhile;
 					endif; 
 					//Reset Query
 					//wp_reset_query();
 					?>
-					
-				
+			<?php else://if search form submitted	?>	
+			
+			
+			<?php 
+			foreach($post_IDs as $ID){
+				$post_array[] = get_post_ID_by_meta_value($ID);
+			}
+			$_SESSION['post_array'] = $post_array; 
+			
+			?>
+			
+			
+			
+			
+			<?php endif;?>	
 			</div><!--End news-feed-->
 			
 				<div style="float: left;"class="tag-cloud">
