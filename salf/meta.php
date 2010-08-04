@@ -25,6 +25,12 @@ $meta_box = array(
 		        'type' => 'date'		        
 		    ),
 		array(
+		        'name' => 'Time',
+				'desc' => "<p>Enter in the format 00:00</p>",
+		        'id' => $prefix . 'time',
+		        'type' => 'wide-text'		        
+		    ),
+		array(
 		        'name' => 'Price',
 		        'id' => $prefix . 'price',
 		        'type' => 'text'		        
