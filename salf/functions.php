@@ -1,4 +1,24 @@
 <?php
+session_start();//firephp
+FB::log($_SESSION['URL'],'url');
+function mf_meta_javascript_launch(){
+	wp_enqueue_script('jquery');
+	
+	wp_enqueue_script('date', get_bloginfo('template_url') .'/scripts/date.js','jquery');
+	wp_enqueue_script('datepicker', get_bloginfo('template_url') .'/scripts/datePicker.js','date');
+	wp_enqueue_script('mf_date_picker', get_bloginfo('template_url') .'/scripts/mf_date_picker.js','datepicker');
+	
+	
+}
+function mf_datepicker_css() {//create HTML for loading Admin style sheet for table
+    
+    $url = get_bloginfo('template_url') .'/style/css/mf_datepicker_css.css';
+	$_SESSION['URL']=get_bloginfo('template_url').'/style/css/mf_datepicker_css.css';
+    echo '<link rel="stylesheet" type="text/css" href="' . $url . '" />';
+}
+add_action('admin_head', 'mf_datepicker_css');//load admin style sheet for datepicker
+add_action('admin_init','mf_meta_javascript_launch');
+//*/
 /*--------------
 Thumbnail Support
 ----------------*/

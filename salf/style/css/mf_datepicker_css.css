@@ -1,0 +1,65 @@
+a.dp-choose-date {
+	float: left;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 5px 3px 0;
+	display: block;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url('../images/calendar.png') no-repeat; 
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+/* makes the input field shorter once the date picker code
+ * has run (to allow space for the calendar icon
+ */
+input.dp-applied {
+	width: 140px;
+	float: left;
+}
+#dp-popup {
+	position: fixed;
+	z-index: 3;
+	left: -40px;
+	background: white;
+	border: 2px #999 solid;
+}
+.dp-nav-prev a, .dp-nav-next a{
+	margin: 0 6px;
+	
+}
+.dp-nav-prev-year, .dp-nav-next-year{
+	display: none;
+}
+.dp-nav-prev, .dp-nav-next{
+	float: left;
+	
+}
+.dp-calendar{
+	clear: both;
+}
+.jCalendar td{
+	border: 1px #444 dashed;
+	padding: 2px;
+}
+.jCalendar td:hover{
+	background: #aaa;
+	cursor: hand;
+	cursor: pointer;
+}
+.jCalendar td.other-month{
+	color: #ccc;
+	border-color: #ccc;
+	background: #eee;
+}
+.jCalendar td.today{
+	color: white;
+	background: #A65346;
+}
+.jCalendar td.disabled{
+	border-color: #ccc;
+	color: #666;
+}
