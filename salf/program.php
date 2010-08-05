@@ -1,6 +1,9 @@
 <?php
 FB::log($_POST,'POST');//firephp
-FB::log($_SESSION['venues_used'],'Venues Used');//firephp
+//FB::log($_SESSION['venues_used'],'Venues Used');//firephp
+FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
+FB::log($_SESSION['artist'],'Artists');//firephp
+//FB::log($_SESSION['post_array'],'Post Array');//firephp
 
 /*
 Template Name: Program
@@ -20,15 +23,7 @@ get_header(); ?>
 			<?php endwhile; endif; ?>
 			</div>
 			
-			
-			<?php
-			//create object loop
-			$get_meta_for_ID = get_post_ID_by_meta_value(129);
 		
-			//$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;//firephp
-			
-			
-			?>
 			<div id="news-archive">
 				<form method="post" action="<?php echo curPageURL();?>">
 				<div class="archive-type category">
@@ -133,19 +128,63 @@ get_header(); ?>
 					//wp_reset_query();
 					?>
 			<?php else://if search form submitted	?>	
+				
+				<?php
+				
+				//create object loop from venue search
+				foreach($_POST as $id => $status){
+					if($status == 'on'){
+						$post_array[$id] = get_post_ID_by_meta_value($id);
+					}
+				}
+				
+				
+				//Create array of post objects
+				foreach($post_array as $id=>$object){
+					$get_posts[$id]=$object[0];
+				}
+				
+			//The Loop!!
+			foreach ($get_posts as $venue_id => $the_post):?>
+				<div class="event">
+					<?php 	
+							//Get the meta data
+							$venue_ID = get_post_meta($the_post->ID, 'mf_SALF_meta_venue', true);
+							$venue = get_post($venue_ID);
+							$artist_ID = get_post_meta($the_post->ID, 'mf_SALF_artist_meta_checks', true);
+
+							$artist = array();
+						if ($artist_ID !=""){
+							foreach ($artist_ID as $artist_post){
+								array_push($artist, get_post($artist_post));
+							}
+						} 
+
+							$eventbrite_link = get_post_meta($the_post->ID, 'mf_SALF_meta_eventbrite', true);
+							$price = get_post_meta($the_post->ID, 'mf_SALF_meta_price', true);
+							$date = get_post_meta($the_post->ID, 'mf_SALF_meta_date', true);
+					?>
+					
+					
+					<h2><?php echo $the_post->post_title;?></h2><div class="post-details"><?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
+					<p><?php echo $the_post->post_content;?></p>
+					
+					<p class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></p>
+					
+					<?php if (count($artist)>0):?>		
+					<div class="meta">
+					<?$_SESSION['artist'] = $artist;//firephp?>
+					<?php //foreach($artist as $artist):?>
+
+					<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
+					<?php //endforeach;?>
+					</div>
+					</div>
+					<?php endif;?>
 			
 			
-			<?php 
-			foreach($post_IDs as $ID){
-				$post_array[] = get_post_ID_by_meta_value($ID);
-			}
-			$_SESSION['post_array'] = $post_array; 
-			
-			?>
-			
-			
-			
-			
+				</div>
+			<? endforeach;?>
 			<?php endif;?>	
 			</div><!--End news-feed-->
 			
