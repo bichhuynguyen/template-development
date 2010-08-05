@@ -1,6 +1,6 @@
 <?php
 FB::log($_POST,'POST');//firephp
-FB::log($_SESSION['post_array'],'post_array');//firephp
+FB::log($_SESSION['venues_used'],'Venues Used');//firephp
 
 /*
 Template Name: Program
@@ -22,8 +22,10 @@ get_header(); ?>
 			
 			
 			<?php
+			//create object loop
 			$get_meta_for_ID = get_post_ID_by_meta_value(129);
-			$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;//firephp
+		
+			//$_SESSION['get_post_ID_by_meta_value'] = $get_meta_for_ID;//firephp
 			
 			
 			?>
@@ -35,12 +37,13 @@ get_header(); ?>
 				
 				//Get Venue Names
 				$venues_sort = mf_SALF_sort_by_meta('Venues');
-				$_SESSION['venues'] = $venues_sort;//firephp
+				$venues_used = match_venues_to_used_meta($venues_sort);
+				$_SESSION['venues_used'] = $venues_used;//firephp
 				
 				
 				$post_IDs = just_array_keys($_POST);
 				// Create Check Boxes For Venue Selection
-				foreach ($venues_sort as $id => $venue_check):?>
+				foreach ($venues_used as $id => $venue_check):?>
 
 				<div style="float:left;clear:both;width: 200px;"><label for="<?php echo $id;?>"><?php echo $venue_check;?></label><input style="float:right;clear:both;" type="checkbox" name="<?php echo $id;?>" id="<?php echo $id;?>" <?php if(in_array($id, $post_IDs) OR count($_POST)<1):?>checked="checked"<?php endif;?> /></div>
 

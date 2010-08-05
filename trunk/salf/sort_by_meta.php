@@ -44,5 +44,34 @@ function get_post_ID_by_meta_value($value){
 	
 	return $post_object_array;
 }
-
+//returns $id->$title array for used venues, according to post_meta
+function match_venues_to_used_meta($venue_array){
+	global $wpdb;
+	//build query array
+	foreach($venue_array as $id => $title){
+		$query[$id] = "SELECT post_id FROM $wpdb->postmeta WHERE meta_value='$id'";
+	}
+	//run queries
+	foreach ($query as $id => $query){
+		$post_ID_query[$id]= $wpdb->get_results($query);
+	}
+	//find lengths of arrays(to establish if they have been used in posts)
+	foreach ($post_ID_query as $id=>$count){
+		$counted[$id]=count($count);
+	}
+	//remove all elements that equal 0, and place key's as value
+	foreach ($counted as $id=>$count){
+		if($count>0){
+			$used_venue[]=$id;
+		};
+	}
+	//get final $id=>$title array of used venues
+	foreach ($venue_array as $id=>$title){
+		if(in_array($id,$used_venue)){
+			$final_used_venue_list[$id]=$title;
+		}
+	}
+	
+	return $final_used_venue_list;
+}
 ?>
