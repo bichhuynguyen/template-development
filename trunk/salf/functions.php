@@ -252,7 +252,7 @@ include('meta.php');
 include('artist_meta_box_functions.php');
 include('artist_meta.php');
 
-
+//functions for sorting the program events
 include('sort_by_meta.php');
 
 
