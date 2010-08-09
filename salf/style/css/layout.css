@@ -691,3 +691,6 @@ a div.new-entry p{
 .new-entry h2{
 	font-size: 14px;
 }
+.single .post h2{
+	width: 375px;
+}

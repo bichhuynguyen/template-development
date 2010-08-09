@@ -1,8 +1,8 @@
 <?php
-FB::log($_POST,'POST');//firephp
+//FB::log($_POST,'POST');//firephp
 //FB::log($_SESSION['venues_used'],'Venues Used');//firephp
-FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
-FB::log($_SESSION['artist'],'Artists');//firephp
+//FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
+//FB::log($_SESSION['artist'],'Artists');//firephp
 //FB::log($_SESSION['post_array'],'Post Array');//firephp
 
 /*
