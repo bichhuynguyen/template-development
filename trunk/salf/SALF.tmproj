@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>meta.php</string>
+	<string>program.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -16,52 +16,44 @@
 			<key>sourceDirectory</key>
 			<string></string>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>program.txt</string>
+			<key>lastUsed</key>
+			<date>2010-08-04T14:53:17Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>functions.php</key>
+		<key>program.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>34</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>8</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>meta.php</key>
+		<key>program.txt</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>48</integer>
 				<key>line</key>
-				<integer>30</integer>
+				<integer>66</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>9</integer>
-		</dict>
-		<key>meta_box_functions.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>159</integer>
-				<key>line</key>
-				<integer>96</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>83</integer>
+			<integer>47</integer>
 		</dict>
 		<key>scripts/jquery-1.4.2.min.js</key>
 		<dict>
@@ -105,6 +97,20 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>sort_by_meta.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>style/css/mf_datepicker_css.css</key>
 		<dict>
 			<key>caret</key>
@@ -138,17 +144,12 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>meta_box_functions.php</string>
-		<string>meta.php</string>
-		<string>style/css/mf_datepicker_css.css</string>
-		<string>scripts/salf_ui.js</string>
-		<string>functions.php</string>
-		<string>scripts/mf_date_picker.js</string>
-		<string>scripts/jquery-1.4.2.min.js</string>
+		<string>program.php</string>
+		<string>sort_by_meta.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 0}, {718, 878}}</string>
+	<string>{{4, 0}, {1226, 878}}</string>
 </dict>
 </plist>

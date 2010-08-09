@@ -1,7 +1,7 @@
 <?php
 session_start();//firephp
-FB::log($_SESSION['venues'],'Venues');//firephp
-FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
+//FB::log($_SESSION['venues'],'Venues');//firephp
+//FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 function mf_SALF_sort_by_meta($type){
 global $wpdb;
