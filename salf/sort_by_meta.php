@@ -74,4 +74,15 @@ function match_venues_to_used_meta($venue_array){
 	
 	return $final_used_venue_list;
 }
+
+
+//Date Sorting
+//Functions for sorting program info by date
+
+
+//Get Days/Month/Year Values of available program events. Return an object array.
+function get_program_dates(){
+	
+}
+
 ?>
