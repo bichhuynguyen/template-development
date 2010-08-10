@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>program.php</string>
+	<string>sort_by_meta.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -32,14 +32,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>71</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>47</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>21</integer>
 		</dict>
 		<key>program.txt</key>
 		<dict>
@@ -102,14 +102,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>90</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>82</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>68</integer>
 		</dict>
 		<key>style/css/mf_datepicker_css.css</key>
 		<dict>
@@ -144,12 +144,12 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>program.php</string>
 		<string>sort_by_meta.php</string>
+		<string>program.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{4, 0}, {1226, 878}}</string>
+	<string>{{4, 0}, {1436, 878}}</string>
 </dict>
 </plist>
