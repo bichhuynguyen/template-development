@@ -5,6 +5,8 @@
 //FB::log($_SESSION['artist'],'Artists');//firephp
 
 FB::log($_SESSION['get_program_dates'],'get_program_dates');//firephp
+FB::log($_SESSION['calendar_build'],'calendar build');//firephp
+FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
 
 /*
 Template Name: Program
@@ -41,11 +43,30 @@ get_header(); ?>
 				// Create Check Boxes For Venue Selection
 				foreach ($venues_used as $id => $venue_check):?>
 
-				<div style="float:left;clear:both;width: 200px;"><label for="<?php echo $id;?>"><?php echo $venue_check;?></label><input style="float:right;clear:both;" type="checkbox" name="<?php echo $id;?>" id="<?php echo $id;?>" <?php if(in_array($id, $post_IDs) OR count($_POST)<1):?>checked="checked"<?php endif;?> /></div>
+				<div style="float:left;clear:both;width: 200px;"><label for="<?php echo $id;?>"><?php echo $venue_check;?></label><input style="float:right;clear:both;" type="checkbox" name="<?php echo $id;?>" id="<?php echo $id;?>" <?php if(in_array($id, $post_IDs) OR count($_POST)<1):?>checked="checked"<?php endif;?> />
+				</div>
 
 
-				<?php endforeach;?>
+				<?php endforeach;
+				//---------------
+				// Dates
+				//---------------
+				?>
+				
+				
+				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();?>
+				<?php
+				 
+				$program_dates_array = create_all_program_dates_array(); 
+				$full_calendar_array = create_calendar_array($program_dates_array);
+				echo create_html_calendar($full_calendar_array);	$_SESSION['calendar_build']=$full_calendar_array;?>
+				
+				
+				
+				
 				<input type="submit" value="submit" name="submit" />
+				
+				
 				</div>
 				
 				</form>
