@@ -3,16 +3,18 @@ session_start();
 /*
 Template Name: Program
 */
-/*FB::log($_POST,'POST');//firephp
-//FB::log($_SESSION['venues_used'],'Venues Used');//firephp
-//FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
-//FB::log($_SESSION['artist'],'Artists');//firephp
+/*
+FB::log($_POST,'POST');//firephp
+FB::log($_SESSION['venues_used'],'Venues Used');//firephp
+FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
+FB::log($_SESSION['artist'],'Artists');//firephp
 
 FB::log($_SESSION['get_program_dates'],'get_program_dates');//firephp
 FB::log($_SESSION['calendar_build'],'calendar build');//firephp
-FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
+
 FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
+FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
 //*/
 
 
@@ -23,17 +25,24 @@ if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array()
 if ($_SESSION['date_search']!=TRUE){
 	$_SESSION['venue_post_vars'] = $_POST;
 }
+//process date search variables with functions from sort_by_meta, so we can use wordpress global vars
+if (isset($_SESSION['date_posts'])){
+	$date_search_objects = mf_get_posts_by_ID_array($_SESSION['date_posts']);
+}
+
+
+FB::log($date_search_objects,'Posts after processing');//firephp
 
 
 
 
-FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
+
 // If Venue search has been used
 //get post ID's from from venue search
 if (count($_SESSION['venue_post_vars'])>1){
 	$get_posts = get_program_ids_from_selected_venues($_SESSION['venue_post_vars']);
 	$get_post_id_array = get_just_post_ids($get_posts);
-
+	
 }
 
 get_header(); 

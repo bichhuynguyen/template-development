@@ -26,6 +26,16 @@ $meta_query= $wpdb->get_results($query);
 	return $meta_array;
 }//*/
 
+//Build Object Array of Posts from an array of ID's
+function mf_get_posts_by_ID_array($post_ID_array){
+	
+	
+	foreach ($post_ID_array as $post_ID){
+		$post_object_array[]=get_post($post_ID);
+	}
+	
+	return $post_object_array;
+}
 function get_post_ID_by_meta_value($value){
 	global $wpdb;
 	
@@ -41,10 +51,9 @@ function get_post_ID_by_meta_value($value){
 	}  
 	
 	//Build Object Array of Posts
-	$post_object_array = array();
-	foreach ($post_ID_array as $post_ID){
-		$post_object_array[]=get_post($post_ID);
-	}
+	
+	$post_object_array=mf_get_posts_by_ID_array($post_ID_array);
+	
 	
 	return $post_object_array;
 }
@@ -80,8 +89,9 @@ function match_venues_to_used_meta($venue_array){
 }
 
 //create post id array from post variable/venue search
-function get_program_ids_from_selected_venues($post_var){
-	foreach($post_var as $id => $status){
+function get_program_ids_from_selected_venues($venue_var = FALSE){
+	
+	foreach($venue_var as $id => $status){
 		if($status == 'on'){
 			$post_array[$id] = get_post_ID_by_meta_value($id);
 		}
@@ -90,8 +100,6 @@ function get_program_ids_from_selected_venues($post_var){
 	
 	//Create array of post objects
 	foreach($post_array as $id=>$object){
-		$ids[]=$id;//firephp
-		$_SESSION['ids']= $ids;//firephp
 		$get_posts[$id]=$object[0];
 	}
 	return $get_posts;
