@@ -16,13 +16,12 @@ FB::log($_SESSION['venue_check'],'venue check');//firephp
 //*/
 
 
-
+//set session for venue posts
+if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array();
 
 //if date search has not been used, reset session to post
 if ($_SESSION['date_search']!=TRUE){
 	$_SESSION['venue_post_vars'] = $_POST;
-} else{
-	$_SESSION['venue_post_vars'] = array();
 }
 
 
@@ -31,8 +30,8 @@ if ($_SESSION['date_search']!=TRUE){
 FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
 // If Venue search has been used
 //get post ID's from from venue search
-if (count($_POST)>1){
-	$get_posts = get_program_ids_from_selected_venues($_POST);
+if (count($_SESSION['venue_post_vars'])>1){
+	$get_posts = get_program_ids_from_selected_venues($_SESSION['venue_post_vars']);
 	$get_post_id_array = get_just_post_ids($get_posts);
 
 }
@@ -62,7 +61,7 @@ get_header();
 				//$_SESSION['venues_used'] = $venues_used;//firephp
 				
 				
-				$post_IDs = just_array_keys($_POST);
+				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
 				// Create Check Boxes For Venue Selection
 				foreach ($venues_used as $id => $venue_check):
 				$full_slug_string = preg_replace('/[\s]/','-',$venue_check);//produce slug for title and name in checkbox series.
@@ -98,7 +97,7 @@ get_header();
 			<div class="news archive-header">
 				<img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top" />
 			<div id="news-feed">
-			<?php if(count($_POST)<1) ://if search form NOT submitted?>
+			<?php if(count($_SESSION['venue_post_vars'])<1) ://if search form NOT submitted?>
 				
 			<?php $news_query = new WP_Query('post_type=program');
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
@@ -142,7 +141,7 @@ get_header();
 					//Reset Query
 					//wp_reset_query();
 					?>
-			<?php elseif(count($_POST)>1)://if search form submitted, and a venue selected
+			<?php elseif(count($_SESSION['venue_post_vars'])>1)://if search form submitted, and a venue selected
 			?>	
 				
 				<?php
