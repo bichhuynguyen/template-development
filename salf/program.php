@@ -14,6 +14,7 @@ FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
 FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
 //*/
+FB::log($_SESSION['find_the_loop'],'Loop Tracker');//firephp
 ?>
 
 <?php 
@@ -122,7 +123,8 @@ get_header(); ?>
 					//Reset Query
 					//wp_reset_query();
 					?>
-			<?php elseif(count($_POST)>1)://if search form submitted, and a venue selected?>	
+			<?php elseif(count($_POST)>1)://if search form submitted, and a venue selected
+			?>	
 				
 				<?php
 				
@@ -140,13 +142,23 @@ get_header(); ?>
 				}
 				
 			//The Loop!!
-			foreach ($get_posts as $venue_id => $the_post):?>
+			/*----------
+			Start Problem
+			---------*/
+			
+			foreach ($get_posts as $venue_id => $current_post):
+
+			$loop_vars_array['this_post']=$current_post;//firephp
+			?>
+
 				<div class="event">
 					<?php 	
 							//Get the meta data
-							$venue_ID = get_post_meta($the_post->ID, 'mf_SALF_meta_venue', true);
+							$venue_ID = get_post_meta($current_post->ID, 'mf_SALF_meta_venue', true);
+							$loop_vars_array['post_meta'][]=$venue_ID;//firephp
 							$venue = get_post($venue_ID);
-							$artist_ID = get_post_meta($the_post->ID, 'mf_SALF_artist_meta_checks', true);
+							$loop_vars_array['venue'][]=$venue;//firephp
+							$artist_ID = get_post_meta($current_post->ID, 'mf_SALF_artist_meta_checks', true);
 
 							$artist = array();
 						if ($artist_ID !=""){
@@ -155,17 +167,18 @@ get_header(); ?>
 							}
 						} 
 
-							$eventbrite_link = get_post_meta($the_post->ID, 'mf_SALF_meta_eventbrite', true);
-							$price = get_post_meta($the_post->ID, 'mf_SALF_meta_price', true);
-							$date = get_post_meta($the_post->ID, 'mf_SALF_meta_date', true);
+							$eventbrite_link = get_post_meta($current_post->ID, 'mf_SALF_meta_eventbrite', true);
+							$price = get_post_meta($current_post->ID, 'mf_SALF_meta_price', true);
+							$date = get_post_meta($current_post->ID, 'mf_SALF_meta_date', true);
 					?>
-					
-					
-					<h2><?php echo $the_post->post_title;?></h2><div class="post-details"><?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
-					<p><?php echo $the_post->post_content;?></p>
-					
+
+					<div class="post-details">
+					<h2><?php echo $current_post->post_title;?></h2>
+					<?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
+					<p><?php echo $current_post->post_content;?></p>
+
 					<p class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></p>
-					
+
 					<?php if (count($artist)>0):?>		
 					<div class="meta">
 					<? //$_SESSION['artist'] = $artist;//firephp?>
@@ -174,14 +187,21 @@ get_header(); ?>
 					<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
 					<?php //endforeach;?>
 					</div>
-					</div>
-					
-					
 					<?php endif;?>
+					</div>
+
+
+
+
+
+				
+			<? endforeach;
+			/*----------
+			End Problem
+			---------*/
+			$_SESSION['find_the_loop']= $loop_vars_array;//firephp
+			?>
 			
-			
-				</div>
-			<? endforeach;?>
 			<?php else: ?>
 			<h3>No Results</h3>
 			<p>Please make sure you have selected a venue.</p>
