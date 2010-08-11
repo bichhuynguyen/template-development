@@ -130,19 +130,30 @@ function create_all_program_dates_array($valid_post_array = FALSE){
 		//create $post_id->$date array
 		$dates[$post_dates->post_id]=$post_dates->meta_value;
 		
+		//unset invalid posts (program dates from unselected venues)
+		if($valid_post_array){//if have valid posts
+			foreach ($dates as $post_id=>$post_date){
+				if(!in_array($post_id,$valid_post_array)) unset($dates[$post_id]);
+			}
+		}
 		//explode dates within array as day/month/year
 		foreach ($dates as $post_id=>$post_date){
-			$exploded_post_date_array[$post_id] = explode('/',$post_date);
 			
-			//Create Key Values, Day, Month, Year
-			$exploded_post_date_array[$post_id]['day']= $exploded_post_date_array[$post_id][0];
-			$exploded_post_date_array[$post_id]['month']= $exploded_post_date_array[$post_id][1];
-			$exploded_post_date_array[$post_id]['year']= $exploded_post_date_array[$post_id][2];
 			
-			//remove old key values
-			unset($exploded_post_date_array[$post_id][0]);
-			unset($exploded_post_date_array[$post_id][1]);
-			unset($exploded_post_date_array[$post_id][2]);
+				$exploded_post_date_array[$post_id] = explode('/',$post_date);
+			
+			
+				
+			
+				//Create Key Values, Day, Month, Year
+				$exploded_post_date_array[$post_id]['day']= $exploded_post_date_array[$post_id][0];
+				$exploded_post_date_array[$post_id]['month']= $exploded_post_date_array[$post_id][1];
+				$exploded_post_date_array[$post_id]['year']= $exploded_post_date_array[$post_id][2];
+			
+				//remove old key values
+				unset($exploded_post_date_array[$post_id][0]);
+				unset($exploded_post_date_array[$post_id][1]);
+				unset($exploded_post_date_array[$post_id][2]);
 		}
 	
 	}
