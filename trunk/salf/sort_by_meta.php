@@ -116,7 +116,8 @@ function get_just_post_ids($object_array = false){
 
 
 //Creates an array with all program dates, with program post id, as multidimensional array 
-function create_all_program_dates_array(){
+function create_all_program_dates_array($valid_post_array = FALSE){
+	$_SESSION['function_recieving']=$valid_post_array;//firephp
 	global $wpdb;
 	
 	//Build Query. Fetch all post id's and dates from Post Meta
