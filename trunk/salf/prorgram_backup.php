@@ -1,5 +1,4 @@
 <?php
-session_start();
 /*
 Template Name: Program
 */
@@ -17,7 +16,7 @@ FB::log($_SESSION['venue_check'],'venue check');//firephp
 ?>
 
 <?php 
-
+session_start();
 
 get_header(); ?>
 
@@ -39,7 +38,7 @@ get_header(); ?>
 				//Get Venue Names
 				$venues_sort = mf_SALF_sort_by_meta('Venues');
 				$venues_used = match_venues_to_used_meta($venues_sort);
-				//$_SESSION['venues_used'] = $venues_used;//firephp
+				$_SESSION['venues_used'] = $venues_used;//firephp
 				
 				
 				$post_IDs = just_array_keys($_POST);
@@ -65,18 +64,55 @@ get_header(); ?>
 				// Dates
 				//---------------
 				?>
-			<div class="archive-type calendar">	
+				
 				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();?>
 				<?php
 				 
 				$program_dates_array = create_all_program_dates_array(); 
 				$full_calendar_array = create_calendar_array($program_dates_array);
 				echo create_html_calendar($full_calendar_array);	$_SESSION['calendar_build']=$full_calendar_array;?>
-			</div>	
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="archive-type date">
+				<h3>Browse by Date</h3>
+				<ul>
+				<?php $args = array(
+				    'type'            => 'monthly',
+				    
+				    'format'          => 'html', 
+				    
+				    'show_post_count' => false,
+				    'echo'            => 1 ); 
+					wp_get_archives( $args );?>
+				</ul>
+				</div>
+				<div class="archive-type category">
+				<h3>Browse by Author</h3>
+				<ul>
+				<?php $args = array(
+					'exclude_admin'	=>	false
+					/*
+				    'type'            => 'monthly',
+				    
+				    'format'          => 'html', 
+				    
+				    'show_post_count' => false,
+				    'echo'            => 1 */); 
+					wp_list_authors( $args );?>
+				</ul>
+				</div>
+				
+				
 			</div>
 			
 			<div class="news archive-header">
-				<img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top" />
+				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
 			<div id="news-feed">
 			<?php if(count($_POST)<1) ://if search form NOT submitted?>
 				
@@ -115,7 +151,7 @@ get_header(); ?>
 			<?php endif;?>
 						</div>
 					
-					
+				</a>	
 					
 					<?php endwhile;
 					endif; 
@@ -168,7 +204,7 @@ get_header(); ?>
 					
 					<?php if (count($artist)>0):?>		
 					<div class="meta">
-					<? //$_SESSION['artist'] = $artist;//firephp?>
+					<?$_SESSION['artist'] = $artist;//firephp?>
 					<?php //foreach($artist as $artist):?>
 
 					<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>

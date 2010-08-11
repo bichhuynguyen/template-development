@@ -144,7 +144,7 @@ function create_calendar_array($used_dates){
 // creates grid calendar
 function create_html_calendar($october){
 	//create HTML output
-	$html_output = '<table id="calendar_search">';
+	$html_output = '<table id="calendar_search" summary="Calendar Selector for Program.">';
 	$html_output .= '<thead>';
 	$html_output .= '<tr>';
 	$html_output .= '<th class="weekday" scope="col" abbr="Monday" title="Monday">M</th>';
