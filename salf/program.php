@@ -40,10 +40,14 @@ FB::log($date_search_objects,'Posts after processing');//firephp
 // If Venue search has been used
 //get post ID's from from venue search
 if (count($_SESSION['venue_post_vars'])>1){
+	
 	$get_posts = get_program_ids_from_selected_venues($_SESSION['venue_post_vars']);
 	$get_post_id_array = get_just_post_ids($get_posts);
 	
 }
+// if $date_search_objects exists, use that for post object instead.
+if(isset($date_search_objects)) $get_posts = $date_search_objects;
+
 
 get_header(); 
 
@@ -106,7 +110,7 @@ get_header();
 			<div class="news archive-header">
 				<img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top" />
 			<div id="news-feed">
-			<?php if(count($_SESSION['venue_post_vars'])<1) ://if search form NOT submitted?>
+			<?php if(!isset($get_posts)) ://no search submitted?>
 				
 			<?php $news_query = new WP_Query('post_type=program');
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
@@ -150,7 +154,7 @@ get_header();
 					//Reset Query
 					//wp_reset_query();
 					?>
-			<?php elseif(count($_SESSION['venue_post_vars'])>1)://if search form submitted, and a venue selected
+			<?php elseif(count($_SESSION['venue_post_vars'])>1 OR $_SESSION['date_search'])://if search form submitted, and a venue selected OR date search performed
 			?>	
 				
 				<?php
@@ -243,4 +247,5 @@ get_header();
 		
 <?php 
 $_SESSION['date_search']=FALSE;//resets date search
+unset($_SESSION['date_posts']);//unset date search
 get_footer(); ?>
