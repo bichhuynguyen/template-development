@@ -14,13 +14,13 @@ FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
 FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
 //*/
-FB::log($_SESSION['ids'],'ids');//firephp
+FB::log($_SESSION['function_recieving'],'function recieving');//firephp
 // If Venue search has been used
 //get post ID's from from venue search
 if (count($_POST)>1){
 	$get_posts = get_program_ids_from_selected_venues($_POST);
 	$get_post_id_array = get_just_post_ids($get_posts);
-	FB::log($get_post_id_array,'Post ID Array');//firephp
+
 }
 
 get_header(); 
@@ -72,10 +72,10 @@ get_header();
 				//---------------
 				?>
 			<div class="archive-type calendar">	
-				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();?>
+				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();//firephp?>
 				<?php
-				 
-				$program_dates_array = create_all_program_dates_array(); 
+				if (!isset($get_post_id_array)) $get_post_id_array = FALSE; 
+				$program_dates_array = create_all_program_dates_array($get_post_id_array); 
 				$full_calendar_array = create_calendar_array($program_dates_array);
 				echo create_html_calendar($full_calendar_array);	$_SESSION['calendar_build']=$full_calendar_array;?>
 			</div>	
