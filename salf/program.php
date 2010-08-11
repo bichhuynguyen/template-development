@@ -14,13 +14,18 @@ FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
 FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
 //*/
-FB::log($_SESSION['find_the_loop'],'Loop Tracker');//firephp
+FB::log($_SESSION['ids'],'ids');//firephp
+// If Venue search has been used
+//get post ID's from from venue search
+if (count($_POST)>1){
+	$get_posts = get_program_ids_from_selected_venues($_POST);
+	$get_post_id_array = get_just_post_ids($get_posts);
+	FB::log($get_post_id_array,'Post ID Array');//firephp
+}
+
+get_header(); 
+
 ?>
-
-<?php 
-
-
-get_header(); ?>
 
 		
 		<div class="post" id="home">
@@ -128,36 +133,22 @@ get_header(); ?>
 				
 				<?php
 				
-				//create object loop from venue search
-				foreach($_POST as $id => $status){
-					if($status == 'on'){
-						$post_array[$id] = get_post_ID_by_meta_value($id);
-					}
-				}
 				
-				
-				//Create array of post objects
-				foreach($post_array as $id=>$object){
-					$get_posts[$id]=$object[0];
-				}
-				
-			//The Loop!!
-			/*----------
-			Start Problem
-			---------*/
 			
+			
+			//The Loop!!
 			foreach ($get_posts as $venue_id => $current_post):
 
-			$loop_vars_array['this_post']=$current_post;//firephp
+			
 			?>
 
 				<div class="event">
 					<?php 	
 							//Get the meta data
 							$venue_ID = get_post_meta($current_post->ID, 'mf_SALF_meta_venue', true);
-							$loop_vars_array['post_meta'][]=$venue_ID;//firephp
+							
 							$venue = get_post($venue_ID);
-							$loop_vars_array['venue'][]=$venue;//firephp
+							
 							$artist_ID = get_post_meta($current_post->ID, 'mf_SALF_artist_meta_checks', true);
 
 							$artist = array();
@@ -196,10 +187,8 @@ get_header(); ?>
 
 				
 			<? endforeach;
-			/*----------
-			End Problem
-			---------*/
-			$_SESSION['find_the_loop']= $loop_vars_array;//firephp
+			
+			
 			?>
 			
 			<?php else: ?>
@@ -208,24 +197,7 @@ get_header(); ?>
 			<?php endif;?>	
 			</div><!--End news-feed-->
 			
-				<div style="float: left;"class="tag-cloud">
 				
-					<?php $args = array(
-					    'smallest'  => 8, 
-					    'largest'   => 22,
-					    'unit'      => 'pt', 
-					    'number'    => 45,  
-					    'format'    => 'flat',
-					    //'separator' => '\n',
-					    'orderby'   => 'name', 
-					    'order'     => 'ASC',
-					    //'exclude'   => , 
-					    //'include'   => , 
-					    'link'      => 'view', 
-					    'taxonomy'  => 'post_tag', 
-					    'echo'      => true ); ?>
-					<?php wp_tag_cloud($args); ?> 
-				</div>
 				
 			</div><!--End post-->	   	
 			

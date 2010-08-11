@@ -79,6 +79,36 @@ function match_venues_to_used_meta($venue_array){
 	return $final_used_venue_list;
 }
 
+//create post id array from post variable/venue search
+function get_program_ids_from_selected_venues($post_var){
+	foreach($post_var as $id => $status){
+		if($status == 'on'){
+			$post_array[$id] = get_post_ID_by_meta_value($id);
+		}
+	}
+	
+	
+	//Create array of post objects
+	foreach($post_array as $id=>$object){
+		$ids[]=$id;//firephp
+		$_SESSION['ids']= $ids;//firephp
+		$get_posts[$id]=$object[0];
+	}
+	return $get_posts;
+}
+
+//break down array of post objects into an array of ID's
+function get_just_post_ids($object_array = false){
+	if($object_array){
+		foreach ($object_array as $object){
+			$id_array[]=$object->ID;
+		}
+		return $id_array;
+	} else {
+		return FALSE;
+	}
+}
+
 //---------------
 //Date Sorting
 //---------------
@@ -122,8 +152,6 @@ function create_all_program_dates_array(){
 
 //create an array containing all dates in a month, with post id's 
 //attached to dates, and FALSE on days with no date.
-
-
 function create_calendar_array($used_dates){
 
 	//create array of dates for October with false attributes
