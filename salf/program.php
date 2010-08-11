@@ -14,7 +14,21 @@ FB::log($_SESSION['date_posts'],'Posts after processing');//firephp
 FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
 //*/
-FB::log($_SESSION['function_recieving'],'function recieving');//firephp
+
+
+
+
+//if date search has not been used, reset session to post
+if ($_SESSION['date_search']!=TRUE){
+	$_SESSION['venue_post_vars'] = $_POST;
+} else{
+	$_SESSION['venue_post_vars'] = array();
+}
+
+
+
+
+FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
 // If Venue search has been used
 //get post ID's from from venue search
 if (count($_POST)>1){
@@ -219,4 +233,6 @@ get_header();
 	
 		
 		
-<?php get_footer(); ?>
+<?php 
+$_SESSION['date_search']=FALSE;//resets date search
+get_footer(); ?>
