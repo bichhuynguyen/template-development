@@ -1,4 +1,28 @@
 <?php
+//input santizing
+
+function clean($str = '', $html = false) {
+	//is String Empty?
+	if (empty($str)) return false;
+	
+	//is String an array? If so, run clean with each item.
+	if (is_array($str)) {
+		foreach($str as $key => $value) $str[$key] = clean($value, $html);
+	} else {
+		// get magic quotes
+		if (get_magic_quotes_gpc()) $str = stripslashes($str);
+		//is HTML an Array?
+		if (is_array($html)) $str = strip_tags($str, implode('', $html));
+		//is html a valid html tag?
+		elseif (preg_match('|&lt;([a-z]+)&gt;|i', $html)) $str = strip_tags($str, $html);
+		//is html false?
+		elseif ($html !== true) $str = strip_tags($str);
+		$str = trim($str);
+	}
+	return $str;
+}
+
+
 //reverseout PHP key value
 function just_array_keys($array = array()){
 	$switched_array = array();
