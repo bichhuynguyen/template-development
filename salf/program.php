@@ -23,7 +23,7 @@ if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array()
 
 //if date search has not been used, reset session to post
 if ($_SESSION['date_search']!=TRUE){
-	$_SESSION['venue_post_vars'] = $_POST;
+	$_SESSION['venue_post_vars'] = clean($_POST);
 }
 //process date search variables with functions from sort_by_meta, so we can use wordpress global vars
 if (isset($_SESSION['date_posts'])){
