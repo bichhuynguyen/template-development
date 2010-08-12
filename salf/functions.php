@@ -25,6 +25,7 @@ function clean($str = '', $html = false) {
 
 //reverseout PHP key value
 function just_array_keys($array = array()){
+	if(!is_array($array)) return array();
 	$switched_array = array();
 	foreach ($array as $key => $value){
 		$switched_array[]=$key;

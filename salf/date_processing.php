@@ -28,7 +28,8 @@ $selected_date_post_ids = explode(',',$_GET['posts']);//make array from get vari
 //convert strings in array to integers
 foreach ($selected_date_post_ids as $string_to_int){
 	$string_to_int = clean($string_to_int);
-	$processed_selected_date_post_ids[] = intval($string_to_int);
+	$string_to_int = intval($string_to_int);
+	if(is_int($string_to_int)) $processed_selected_date_post_ids[] = intval($string_to_int);
 }
 
 
