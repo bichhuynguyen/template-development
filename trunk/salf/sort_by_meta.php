@@ -191,6 +191,7 @@ function create_calendar_array($used_dates){
 
 // creates grid calendar
 function create_html_calendar($october){
+	$festival_days = range(15,31);//get festival dates.
 	//create HTML output
 	$html_output = '<table id="calendar_search" summary="Calendar Selector for Program.">';
 	$html_output .= '<thead>';
@@ -212,6 +213,13 @@ function create_html_calendar($october){
 	$firstweek = TRUE;
 	$_SESSION['date_process_url'] = curPageURL();//Set Current Location for form processing
 	foreach ($october as $id => $post){
+		//checks to see if date  is in festival days.
+		if (in_array($id, $festival_days)){
+			$in_fest = ' festival_day';
+		} else {
+			$in_fest = '';
+		}
+		
 		if ($weekday == 0){
 			$html_output .= "<tr>";
 		} 
@@ -224,9 +232,11 @@ function create_html_calendar($october){
 						$posts_string .= $post_id;
 					} else {$posts_string .=','.$post_id;}
 				}
-				$html_output .= "<td class='has_posts'><a href='".get_bloginfo('template_url')."/date_processing.php?posts=".$posts_string."'>".$id."</a></td>";
+				$html_output .= "<td class='has_posts".$in_fest;
+				
+				$html_output .= "'><a href='".get_bloginfo('template_url')."/date_processing.php?posts=".$posts_string."'>".$id."</a></td>";
 			} else{
-				$html_output .= "<td class='no_posts'>".$id."</td>";
+				$html_output .= "<td class='no_posts ".$in_fest."'>".$id."</td>";
 			}
 		
 		$weekday++;
