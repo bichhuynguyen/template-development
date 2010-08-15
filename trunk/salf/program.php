@@ -16,7 +16,7 @@ FB::log($_SESSION['venue_slug'],'venue slug');//firephp
 FB::log($_SESSION['venue_check'],'venue check');//firephp
 FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
 //*/
-
+FB::log($_SESSION['news_query'],'News Query');//firephp
 
 //set session for venue posts
 if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array();
@@ -113,6 +113,7 @@ get_header();
 			<?php if(!isset($get_posts)) ://no search submitted?>
 				
 			<?php $news_query = new WP_Query('post_type=program');
+			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
 					<?php 	$venue_ID = get_post_meta(get_the_ID(), 'mf_SALF_meta_venue', true);
