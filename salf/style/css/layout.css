@@ -689,8 +689,42 @@ a div.new-entry p{
 	clear: both;
 }
 .new-entry h2{
-	font-size: 14px;
+	font-size: 14px;#FEC2B4
 }
 .single .post h2{
 	width: 375px;
+}
+/*
+* Program Styles
+* --Calendar
+*/
+div.calendar_search{
+	border: 2px #F8C79F solid;
+	padding: 1px;
+	float: left;
+	
+}
+.calendar_search td{
+	background: #FDF6E0;
+	color: #C2937F;
+}
+.calendar_search th{
+	background: #fff;
+	color: #770909;
+}
+.calendar_search td, .calendar_search th{
+	padding: 3px;
+
+	text-align: center;
+}
+.calendar_search td.festival_day{
+	background: #FBD3A6;
+	color: #E66F3D;
+	
+}
+.calendar_search td a{
+	color: #AA1071;
+}
+.calendar_search td a:visited{
+	color: #AA1071;
 }

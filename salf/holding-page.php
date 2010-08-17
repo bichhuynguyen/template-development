@@ -151,7 +151,7 @@ Template Name: Holding Page
 			<li><a href="http://www.publishers.org.uk/en/home/">The Publishers Association</a></li>
 			<li><a href="http://www.wasafiri.org/">Wasafiri</a></li>
 			<li><a href="http://www.bl.uk/">British Library</a></li>
-			<li><a href="http://www.booktrust.org.uk/Home">Booktrust</a></li>
+			<li><a href="http://www.granta.com/">Granta</a></li>
 			<li><a href="http://www.vayunaiducompany.org.uk/">Vaya Naidu Company</a></li>
 			<li><a href="http://www.spinebreakers.co.uk/Pages/Home.aspx">Spine Breakers</a></li>
 			<li><a href="http://www.richmix.org.uk/">Rich Mix</a></li>
@@ -160,6 +160,9 @@ Template Name: Holding Page
 			<li><a href="http://www.artscouncil.org.uk/">Arts Council England</a></li>
 			<li><a href="http://www.livity.co.uk/">Livity</a></li>
 			<li><a href="http://www.booksellers.org.uk/">The Booksellers Association</a></li>
+			<li><a href="http://www.cii.in/">CII</a></li>
+			<li><a href="http://www.saadhak.co.uk/">Saadhak</a></li>
+			<li><a href="http://www.thesyp.org.uk/">SYP</a></li>
 		</ul>
 		
 		</div>

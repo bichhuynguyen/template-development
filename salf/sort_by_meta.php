@@ -193,7 +193,8 @@ function create_calendar_array($used_dates){
 function create_html_calendar($october){
 	$festival_days = range(15,31);//get festival dates.
 	//create HTML output
-	$html_output = '<table id="calendar_search" summary="Calendar Selector for Program.">';
+	$html_output = "<div class='calendar_search'>";
+	$html_output .= '<table class="calendar_search" summary="Calendar Selector for Program.">';
 	$html_output .= '<thead>';
 	$html_output .= '<tr>';
 	$html_output .= '<th class="weekday" scope="col" abbr="Monday" title="Monday">M</th>';
@@ -251,7 +252,7 @@ function create_html_calendar($october){
 	
 	$html_output .= '</tbody>';
 	$html_output .= '</table>';
-	
+	$html_output .= '</div>';
 	return $html_output;
 }	
 	
