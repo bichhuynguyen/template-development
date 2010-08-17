@@ -728,3 +728,30 @@ div.calendar_search{
 .calendar_search td a:visited{
 	color: #AA1071;
 }
+#program_search{
+	float: left;
+	clear: left;
+}
+.search_element{
+	float: left;
+	width: 220px;
+	margin-bottom: 24px;
+}
+.program_content .new-entry{
+	width: 500px;
+}
+#program_feed{
+	float: left;
+	
+}
+.event p{
+	display: none;
+}
+.event h2{
+	display: inline;
+}
+.event{
+	clear: both;
+	float: left;
+	width: 670px;
+}

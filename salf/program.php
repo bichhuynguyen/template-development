@@ -62,9 +62,9 @@ get_header();
 			</div>
 			
 		
-			<div id="news-archive">
+			<div id="program_search">
 				<form method="post" action="<?php echo curPageURL();?>">
-				<div class="archive-type venue">
+				<div class="search_element venue">
 				<h3>Choose Venues</h3>
 				<?php
 				
@@ -97,7 +97,8 @@ get_header();
 				// Dates
 				//---------------
 				?>
-			<div class="archive-type calendar">	
+			<div class="search_element calendar">
+				<h3>Select a Day</h3>	
 				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();//firephp?>
 				<?php
 				if (!isset($get_post_id_array)) $get_post_id_array = FALSE; 
@@ -107,9 +108,9 @@ get_header();
 			</div>	
 			</div>
 			
-			<div class="news archive-header">
-				<img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top" />
-			<div id="news-feed">
+			<div class="program_content">
+			
+			<div id="program_feed">
 			<?php if(!isset($get_posts)) ://no search submitted?>
 				
 			<?php $news_query = new WP_Query('post_type=program');
@@ -132,11 +133,11 @@ get_header();
 							$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);
 					?>	
 				<?php //<a href="<?php the_permalink();">?>
-					<div class="archive-link new-entry">
+					<div class="event">
 						<h2>     <?php the_title(); ?></h2><div class="post-details"><?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
 						<?php mf_post_thumbnail('small-cropped');?>
 						<?php the_excerpt(); ?>
-						<p class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></p>
+						<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
 						
 						<?php if (count($artist)>0):?>		
 						<div class="meta">
@@ -195,7 +196,7 @@ get_header();
 					<?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
 					<p><?php echo $current_post->post_content;?></p>
 
-					<p class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></p>
+					<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
 
 					<?php if (count($artist)>0):?>		
 					<div class="meta">
