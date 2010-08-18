@@ -78,16 +78,57 @@ add_image_size( 'partner-titles', 395, 49);
 add_image_size( 'venue-images', 165, 115, true);
 
 
-function mf_post_thumbnail($style){
-if ( has_post_thumbnail() ) {
-	echo "<div class='news-thumb'>";
-	the_post_thumbnail($style);
-	echo "</div>";
+function mf_post_thumbnail($style=false, $id=false, $class='news-thumb', $echo = true){
+/*
+* Echo's thumbnail, given style
+* Accepts ID for manual method (outside the loop)
+* accepts class attribute for surrounding div tag
+* $echo attribute used to block echoing, if you only need true or false returned.
+*/
+//is post ID provided?
+//if not, use wordpress template tags
+if(!$id){
+	if ( has_post_thumbnail() ) {
+		if ($echo) echo "<div class='$class'>";
+		if (!$style){
+			if ($echo) the_post_thumbnail();
+			return true;
+		} else{
+			if ($echo) the_post_thumbnail($style);
+			return true;
+		}
+		if ($echo) echo "</div>";
+		}
+	else{
+		return false;
+	}
+} else {
+	//if ID provided, use manual method
+	global $wpdb;
+	//build query
+	$query = "SELECT meta_value FROM $wpdb->postmeta WHERE post_id='$id' AND meta_key = '_thumbnail_id'";
+	
+	//run query
+	$query_results = $wpdb->get_results($query);
+	//fetch thumbnail details
+	if(!$style){
+		$thumnail_array = wp_get_attachment_image_src($query_results[0]->meta_value);
 	} else {
-		/*echo "<div class='news-thumb'><img width='200' height='200'   src='";
-		echo bloginfo('template_directory'); 
-		echo"/images/teacher_no_thumb.png'></div>";*/
-	} 
+		$thumnail_array = wp_get_attachment_image_src($query_results[0]->meta_value,$style);
+	}
+	//break out of function if no thumbnail found
+	if(!$thumnail_array) return false;
+	//get featured image with img tags
+	$thumbnail_url ="<div class='$class'>";
+	$thumbnail_url .= "<img src='";
+	$thumbnail_url .= $thumnail_array[0];
+	$thumbnail_url .= "' />";
+	$thumbnail_url .= "</div>";
+	
+	
+	if ($echo) echo $thumbnail_url;
+	return true;
+} 
 
 }
 
