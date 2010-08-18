@@ -1,5 +1,6 @@
 <?php
 session_start();//firephp
+
 //FB::log($_SESSION['venues'],'Venues');//firephp
 //FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
@@ -193,7 +194,9 @@ function create_calendar_array($used_dates){
 function create_html_calendar($october){
 	$festival_days = range(15,31);//get festival dates.
 	//create HTML output
-	$html_output = "<div class='calendar_search'>";
+	$html_output = "<h4>October</h4>";
+	$html_output .= "<div class='calendar_search'>";
+	
 	$html_output .= '<table class="calendar_search" summary="Calendar Selector for Program.">';
 	$html_output .= '<thead>';
 	$html_output .= '<tr>';
@@ -256,5 +259,46 @@ function create_html_calendar($october){
 	return $html_output;
 }	
 	
+//build HTML output for program meta data on program page
+function program_meta_display($date = false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$id=false){
+	$return = '<div class="post-details">';
+	$return .= '<div class="date"><h4>Date:&nbsp;</h4><span>'.$date.'</span></div>';
+	$return .= '<div class="venue"><h4>Venue:&nbsp;</h4><a href="'. get_permalink($venue->ID).'">'.$venue->post_title.'</a></div>';
+	if (count($artist)>0):		
+		$return .= '<ul class="meta artist"><h4>Artists:</h4>';
+		foreach($artist as $artist):
+			$return .= '<li><a href="'.get_permalink($artist->ID).'">'.$artist->post_title.'</a></li>';
+		endforeach;
+	$return .= '</ul>';
+	endif;
+	//Start
+	//Get Toxonomy
+	$return .= '<ul class="elements">';
+	$return .= '<h4>Elements</h4>';
+	$meta_list = array();
+	$args = array(
+				'type' => 'Elements',
+		);
+	$meta = get_the_term_list($id,'Elements','<li>','','</li>');
+	$meta_stripped = strip_tags($meta,'<li>'); 
+	
+	
+	$_SESSION['meta'] = $meta_stripped;
+	$return .= $meta_stripped;
+	//Get Toxonomy
+	//End
+	$return .= '<ul class="price">';
+	$return .= '<h4>Price</h4>';
+	 	if ($price != "") $return .='<li><span>£'.$price.'</span></li>'; 
+		if ($eventbrite_link != "") $return .='<li class="tickets"><a href="'. $eventbrite_link.'" target="_blank"> Buy Tickets</a></li>'; 
+	$return .='</ul>';
+	
+	
+	$return .= '</ul>';
+	$return .= '</div>';
+	
+	return $return;
+	
+}
 
 ?>
