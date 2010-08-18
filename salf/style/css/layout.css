@@ -758,7 +758,7 @@ div.calendar_search{
 	/*display: none;
 	*/
 	float: left;
-	clear: left;
+	
 	width: 360px;
 }
 .event h2{
@@ -797,6 +797,7 @@ div.calendar_search{
 }
 .event h2{
 	font-size: 18px;
+	margin-bottom: 10px;
 }
 .event div.price{
 	clear: both;
@@ -836,4 +837,11 @@ div.calendar_search{
 }
 .program_content{
 	float: left;
+}
+div.program-thumb{
+	float: left;
+	clear: left;
+	margin: 0 12px 12px 0;
+	padding: 1px;
+	border: 1px dashed #D39550;
 }

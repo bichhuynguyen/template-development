@@ -258,6 +258,8 @@ function create_html_calendar($october){
 	$html_output .= '</div>';
 	return $html_output;
 }	
+
+
 	
 //build HTML output for program meta data on program page
 function program_meta_display($date = false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$id=false){

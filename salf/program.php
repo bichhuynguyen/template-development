@@ -4,10 +4,10 @@ session_start();
 Template Name: Program
 */
 /*
-
-//*/
 FB::log($_SESSION['current_post'], 'Current Post');
 
+//*/
+FB::log($_SESSION['current_thumb'], 'Extract Thumb OutPut');
 //set session for venue posts
 if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array();
 
@@ -180,6 +180,7 @@ get_header();
 					<div class="event">
 					<h2><?php echo $current_post->post_title;?></h2>
 					<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
+					<?php $_SESSION['current_thumb'] = mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
 					<p><?php echo $current_post->post_content;?></p>
 
 					
