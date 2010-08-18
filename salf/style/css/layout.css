@@ -789,7 +789,7 @@ div.calendar_search{
 	list-style: none;
 	float: left;
 	width: 99px;
-	margin: 4px 0;
+	
 
 }
 .event div{
@@ -797,7 +797,8 @@ div.calendar_search{
 }
 .event h2{
 	font-size: 18px;
-	margin-bottom: 10px;
+	margin:0 0 10px 0;
+	width: 490px;
 }
 .event div.price{
 	clear: both;
@@ -812,6 +813,7 @@ div.calendar_search{
 	padding-bottom: 2px;
 	border-bottom: dashed 1px #B84D3B;
 	width: 99px;
+	margin-bottom:4px;
 	
 }
 
