@@ -140,12 +140,12 @@ get_header();
 						<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
 						
 						<?php if (count($artist)>0):?>		
-						<div class="meta">
+						<ul class="meta">
 						<?php foreach($artist as $artist):?>
 
-						<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
+						<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
 						<?php endforeach;?>
-						</div>
+						</ul>
 			<?php endif;?>
 						</div>
 					
@@ -199,13 +199,13 @@ get_header();
 					<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
 
 					<?php if (count($artist)>0):?>		
-					<div class="meta">
+					<ul class="meta artist">
 					<? //$_SESSION['artist'] = $artist;//firephp?>
-					<?php //foreach($artist as $artist):?>
+					<?php foreach($artist as $artist):?>
 
-					<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
-					<?php //endforeach;?>
-					</div>
+					<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
+					<?php endforeach;?>
+					</ul>
 					<?php endif;?>
 					</div>
 

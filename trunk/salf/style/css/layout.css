@@ -699,7 +699,9 @@ a div.new-entry p{
 * --Calendar
 */
 div.calendar_search{
-	border: 2px #F8C79F solid;
+	border: 2px solid;
+	border-color: #F8C79F #F8C79F #E6AE7E #E6AE7E;
+	
 	padding: 1px;
 	float: left;
 	
@@ -731,6 +733,12 @@ div.calendar_search{
 #program_search{
 	float: left;
 	clear: left;
+	
+}
+#program_search h3{
+	margin-bottom: 24px;
+	width: 100%;
+	border-bottom: dashed 1px #B84D3B;
 }
 .search_element{
 	float: left;
@@ -742,16 +750,35 @@ div.calendar_search{
 }
 #program_feed{
 	float: left;
-	
+	padding-left: 30px;
+	border-left: dashed 1px #B84D3B;
 }
 .event p{
 	display: none;
+	
 }
 .event h2{
 	display: inline;
+	
 }
 .event{
 	clear: both;
 	float: left;
-	width: 670px;
+	width: 600px;
+	padding: 0 12px;
+	margin: 4px 0;
+	background: #F9E9CE;
+	
+	border-radius : 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+}
+.event ul{
+	float: right;
+}
+.event div{
+	float: left;
+}
+.event div.price{
+	clear: both;
 }
