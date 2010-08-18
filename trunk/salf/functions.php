@@ -89,15 +89,16 @@ function mf_post_thumbnail($style=false, $id=false, $class='news-thumb', $echo =
 //if not, use wordpress template tags
 if(!$id){
 	if ( has_post_thumbnail() ) {
-		if ($echo) echo "<div class='$class'>";
+		if ($echo) echo "<div class='".$class."'>";
 		if (!$style){
 			if ($echo) the_post_thumbnail();
-			return true;
+			
 		} else{
 			if ($echo) the_post_thumbnail($style);
-			return true;
+			
 		}
 		if ($echo) echo "</div>";
+		return true;
 		}
 	else{
 		return false;
