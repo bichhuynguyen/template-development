@@ -752,6 +752,7 @@ div.calendar_search{
 	float: left;
 	padding-left: 30px;
 	border-left: dashed 1px #B84D3B;
+	min-height: 600px;
 }
 .event p{
 	/*display: none;
@@ -769,8 +770,8 @@ div.calendar_search{
 	clear: both;
 	float: left;
 	width: 600px;
-	padding: 0 12px;
-	margin: 4px 0;
+	padding: 15px 12px 0 12px;
+	margin: 0 0 8px 0;
 	background: #F9E9CE;
 	
 	border-radius : 15px;
@@ -789,10 +790,13 @@ div.calendar_search{
 	float: left;
 	width: 99px;
 	margin: 4px 0;
-	border-top: dashed 1px #B84D3B;
+
 }
 .event div{
 	float: left;
+}
+.event h2{
+	font-size: 18px;
 }
 .event div.price{
 	clear: both;
@@ -809,9 +813,27 @@ div.calendar_search{
 	width: 99px;
 	
 }
-.event div.post-details ul.artist h4{
-	border-bottom: none;
-}
-.event div.post-details a,.event div.post-details span{
+
+
+.event div.post-details a,.event div.post-details span,.event div.post-details .elements li{
 	float: right;
+	color: #111D73;
+	text-align: right;
+}
+.event div.post-details div.tickets a{
+	float: right;
+	clear: both;
+}
+.page-template-program-php #browse-head{
+	width: 875px;
+	position: relative;
+	float: left;
+	border-bottom: solid 1px #B84D3B;
+	
+}
+#program_search, .program_content{
+	padding-top: 24px;
+}
+.program_content{
+	float: left;
 }

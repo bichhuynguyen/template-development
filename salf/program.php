@@ -4,19 +4,9 @@ session_start();
 Template Name: Program
 */
 /*
-FB::log($_POST,'POST');//firephp
-FB::log($_SESSION['venues_used'],'Venues Used');//firephp
-FB::log($_SESSION['get_post_ID_by_meta_value'],'Search Results');//firephp
-FB::log($_SESSION['artist'],'Artists');//firephp
 
-FB::log($_SESSION['get_program_dates'],'get_program_dates');//firephp
-FB::log($_SESSION['calendar_build'],'calendar build');//firephp
-
-FB::log($_SESSION['venue_slug'],'venue slug');//firephp
-FB::log($_SESSION['venue_check'],'venue check');//firephp
-FB::log($_SESSION['venue_post_vars'],'venue post vars');//firephp
 //*/
-FB::log($_SESSION['news_query'],'News Query');//firephp
+FB::log($_SESSION['current_post'], 'Current Post');
 
 //set session for venue posts
 if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array();
@@ -31,7 +21,7 @@ if (isset($_SESSION['date_posts'])){
 }
 
 
-FB::log($date_search_objects,'Posts after processing');//firephp
+
 
 
 
@@ -136,22 +126,11 @@ get_header();
 					<div class="event">
 						<h2><?php the_title(); ?></h2>
 						
+						
+						<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
 						<?php mf_post_thumbnail('small-cropped');?>
 						<?php the_content(); ?>
 						
-						<div class="post-details">
-						<div class="date"><h4>Date:&nbsp;</h4><span><?php echo $date;?></span></div>
-						<div class="venue"><h4>Venue:&nbsp;</h4><a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
-						<?php if (count($artist)>0):?>		
-						<ul class="meta artist"><h4>Artists:</h4>
-						<?php foreach($artist as $artist):?>
-
-						<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
-						<?php endforeach;?>
-						</ul>
-						<?php endif;?>
-						<div class="price"><?php if ($price != ""):?><span>£<?php echo $price;?></span><?php endif; if ($eventbrite_link != ""):?><span><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a></span><?php endif;?></div>
-						</div>
 						</div>
 			
 						
@@ -174,7 +153,7 @@ get_header();
 			
 			//The Loop!!
 			foreach ($get_posts as $venue_id => $current_post):
-
+			$_SESSION['current_post'] = $current_post;
 			
 			?>
 
@@ -200,25 +179,11 @@ get_header();
 					?>
 					<div class="event">
 					<h2><?php echo $current_post->post_title;?></h2>
+					<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
 					<p><?php echo $current_post->post_content;?></p>
 
 					
-					<div class="post-details">
 					
-					<div class="date"><h4>Date:&nbsp;</h4><span><?php echo $date;?></span></div>
-					<div class="venue"><h4>Venue:&nbsp;</h4><a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
-					<?php if (count($artist)>0):?>		
-					<ul class="meta artist"><h4>Artists:</h4>
-					
-					<?php foreach($artist as $artist):?>
-
-					<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
-					<?php endforeach;?>
-					</ul>
-					<div class="price"><?php if ($price != ""):?><span>£<?php echo $price;?></span><?php endif; if ($eventbrite_link != ""):?><span><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a></span><?php endif;?></div>
-					
-					<?php endif;?>
-					</div>
 					</div>
 
 
