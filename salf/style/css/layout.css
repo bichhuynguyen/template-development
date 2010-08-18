@@ -754,11 +754,15 @@ div.calendar_search{
 	border-left: dashed 1px #B84D3B;
 }
 .event p{
-	display: none;
-	
+	/*display: none;
+	*/
+	float: left;
+	clear: left;
+	width: 360px;
 }
 .event h2{
-	display: inline;
+	float: left;
+	margin-right: 6px;
 	
 }
 .event{
@@ -772,13 +776,42 @@ div.calendar_search{
 	border-radius : 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
+	-webkit-box-shadow: -3px 3px 3px #EBDAC1;  
+	-moz-box-shadow: -3px 3px 3px #EBDAC1;
 }
-.event ul{
-	float: right;
+.event:hover{
+	-webkit-box-shadow: -1px 1px 2px #C6AD86;  
+	-moz-box-shadow: -1px 1px 2px #C6AD86;
+}
+
+.event ul li{
+	list-style: none;
+	float: left;
+	width: 99px;
+	margin: 4px 0;
+	border-top: dashed 1px #B84D3B;
 }
 .event div{
 	float: left;
 }
 .event div.price{
 	clear: both;
+}
+.event div.post-details{
+	float: right;
+	width: 100px;
+	border-left: dashed 1px #B84D3B;
+	padding-left: 4px;
+}
+.event div.post-details h4{
+	padding-bottom: 2px;
+	border-bottom: dashed 1px #B84D3B;
+	width: 99px;
+	
+}
+.event div.post-details ul.artist h4{
+	border-bottom: none;
+}
+.event div.post-details a,.event div.post-details span{
+	float: right;
 }

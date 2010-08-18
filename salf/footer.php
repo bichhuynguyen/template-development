@@ -3,7 +3,7 @@
 
 	
 	
-	
+	</div><!--END WRAPPER???-->
 	<div id="footer">
 		
 		<span class="copyright">
@@ -13,6 +13,7 @@
 		
 		<?php wp_footer(); ?>
 	</div>
+	
 	</div><!--END WRAPPER-->
 	
 </body>

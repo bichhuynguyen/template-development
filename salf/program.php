@@ -132,23 +132,30 @@ get_header();
 							$price = get_post_meta(get_the_ID(), 'mf_SALF_meta_price', true);
 							$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);
 					?>	
-				<?php //<a href="<?php the_permalink();">?>
+				
 					<div class="event">
-						<h2>     <?php the_title(); ?></h2><div class="post-details"><?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
-						<?php mf_post_thumbnail('small-cropped');?>
-						<?php the_excerpt(); ?>
-						<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
+						<h2><?php the_title(); ?></h2>
 						
+						<?php mf_post_thumbnail('small-cropped');?>
+						<?php the_content(); ?>
+						
+						<div class="post-details">
+						<div class="date"><h4>Date:&nbsp;</h4><span><?php echo $date;?></span></div>
+						<div class="venue"><h4>Venue:&nbsp;</h4><a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
 						<?php if (count($artist)>0):?>		
-						<ul class="meta">
+						<ul class="meta artist"><h4>Artists:</h4>
 						<?php foreach($artist as $artist):?>
 
 						<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
 						<?php endforeach;?>
 						</ul>
-			<?php endif;?>
+						<?php endif;?>
+						<div class="price"><?php if ($price != ""):?><span>£<?php echo $price;?></span><?php endif; if ($eventbrite_link != ""):?><span><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a></span><?php endif;?></div>
 						</div>
-					
+						</div>
+			
+						
+						
 					
 					
 					<?php endwhile;
@@ -156,6 +163,7 @@ get_header();
 					//Reset Query
 					//wp_reset_query();
 					?>
+					
 			<?php elseif(count($_SESSION['venue_post_vars'])>1 OR $_SESSION['date_search'])://if search form submitted, and a venue selected OR date search performed
 			?>	
 				
@@ -170,7 +178,7 @@ get_header();
 			
 			?>
 
-				<div class="event">
+				
 					<?php 	
 							//Get the meta data
 							$venue_ID = get_post_meta($current_post->ID, 'mf_SALF_meta_venue', true);
@@ -190,25 +198,28 @@ get_header();
 							$price = get_post_meta($current_post->ID, 'mf_SALF_meta_price', true);
 							$date = get_post_meta($current_post->ID, 'mf_SALF_meta_date', true);
 					?>
-
-					<div class="post-details">
+					<div class="event">
 					<h2><?php echo $current_post->post_title;?></h2>
-					<?php echo $date;?>  <a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
 					<p><?php echo $current_post->post_content;?></p>
 
-					<div class="price"><?php if ($price != ""):?>£<?php echo $price; endif; if ($eventbrite_link != ""):?><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a><?php endif;?></div>
-
+					
+					<div class="post-details">
+					
+					<div class="date"><h4>Date:&nbsp;</h4><span><?php echo $date;?></span></div>
+					<div class="venue"><h4>Venue:&nbsp;</h4><a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a></div>
 					<?php if (count($artist)>0):?>		
-					<ul class="meta artist">
-					<? //$_SESSION['artist'] = $artist;//firephp?>
+					<ul class="meta artist"><h4>Artists:</h4>
+					
 					<?php foreach($artist as $artist):?>
 
 					<li><a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a></li>
 					<?php endforeach;?>
 					</ul>
+					<div class="price"><?php if ($price != ""):?><span>£<?php echo $price;?></span><?php endif; if ($eventbrite_link != ""):?><span><a href="<?php echo $eventbrite_link;?>" target="_blank"> Buy Tickets Online</a></span><?php endif;?></div>
+					
 					<?php endif;?>
 					</div>
-
+					</div>
 
 
 
