@@ -238,12 +238,13 @@ active_element = '#home';
 		if (clicked != this){
 			clicked = this;
 			program_elements.hide();
+			$('#program_feed .event h2').css('width', '100%');
 			$(this).children('h2').css('width', current_header_width);
 			$(this).children('div').add($(this).children('p')).fadeIn();
 		} else {
 			clicked = false;
 			$(this).children('h2').css('width', '100%');
-			$(this).children('div').add($(this).children('p')).fadeOut();
+			$(this).children('div').add($(this).children('p')).hide();
 		}
 	});
 	

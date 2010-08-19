@@ -274,20 +274,20 @@ function program_meta_display($date = false,$venue=false, $artist=false,$price=f
 	$return .= '</ul>';
 	endif;
 	//Start
-	//Get Toxonomy
+	//Get Taxonomy
 	$return .= '<ul class="elements">';
 	$return .= '<h4>Elements</h4>';
 	$meta_list = array();
 	$args = array(
 				'type' => 'Elements',
 		);
-	$meta = get_the_term_list($id,'Elements','<li>','','</li>');
+	$meta = get_the_term_list($id,'Elements','<li>','</li><li>','</li>');
 	$meta_stripped = strip_tags($meta,'<li>'); 
 	
 	
 	$_SESSION['meta'] = $meta_stripped;
 	$return .= $meta_stripped;
-	//Get Toxonomy
+	//Get Taxonomy
 	//End
 	$return .= '<ul class="price">';
 	$return .= '<h4>Price</h4>';
