@@ -1,4 +1,9 @@
 <?php
+/*function update_website_url(){
+global $post;
+if(isset($_POST["website_url"]))
+update_post_meta($post->ID, "website_url", $_POST["website_url"]);
+}*/
 //input santizing
 
 function clean($str = '', $html = false) {

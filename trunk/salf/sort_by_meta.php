@@ -1,18 +1,23 @@
 <?php
 session_start();//firephp
 
-//FB::log($_SESSION['venues'],'Venues');//firephp
+FB::log($_SESSION['maps_debug'],'maps_debug');//firephp
 //FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
 //-------------
 //Venue Sorting
 //-------------
-function mf_SALF_sort_by_meta($type){
+function mf_get_post_titles($type = false){
+	//returns list of published post titles, with ID's
+	//$type used to speciify post type, if empty defaults to ALL published posts
 global $wpdb;
 $meta_array = array();
-$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
-
+if (!$type){
+	$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_status ='publish'";
+} else {
+	$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
+}
 
 $meta_query= $wpdb->get_results($query);
 	
@@ -28,6 +33,7 @@ $meta_query= $wpdb->get_results($query);
 }//*/
 
 //Build Object Array of Posts from an array of ID's
+//used to recreate the Loop
 function mf_get_posts_by_ID_array($post_ID_array){
 	
 	
@@ -302,5 +308,14 @@ function program_meta_display($date = false,$venue=false, $artist=false,$price=f
 	return $return;
 	
 }
-
+/*
+*-----MAPS
+*/
+//fetches MAP url from meta table, and converts it into an HTML iframe.
+function mf_render_google_maps($post_id = false){
+	//if (!$post) return false;
+	
+	fb::log('hello world maps');//firephp
+	return "hello world";
+}
 ?>

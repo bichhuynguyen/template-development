@@ -29,31 +29,24 @@ function mf_SALF_maps_meta_save_data($post_id) {
     
     foreach ($maps_meta_box['fields'] as $field) {
 		
-		if($field['type']!='checkbox'){
-        $old = get_post_meta($post_id, $field['id'], true);
-        $new = $_POST[$field['id']];
 		 
 		
-        if ($new && $new != $old) {
-            update_post_meta($post_id, $field['id'], $new);
-        } elseif ('' == $new && $old) {
-            delete_post_meta($post_id, $field['id'], $old);
-        }
-
-		} else {
+		$old = get_post_meta($post_id, 'mf_SALF_maps_meta_map', true);
 		
-		$old = get_post_meta($post_id, 'mf_SALF_maps_meta_checks', true);
-		$new = $_POST['mf_SALF_maps_meta_checks'];
+		$new = $_POST['mf_SALF_maps_meta_map'];
 		
+		
+		$remove_amps = str_replace('&','&amp;',$new);//replace HTML character ref# with ampersands 
 		
 		if ($new && $new != $old) {
-            update_post_meta($post_id, 'mf_SALF_maps_meta_checks', $new);
+            update_post_meta($post_id, 'mf_SALF_maps_meta_map', $remove_amps);
         } elseif ('' == $new && $old) {
-            delete_post_meta($post_id, 'mf_SALF_maps_meta_checks', $old);
+            delete_post_meta($post_id, 'mf_SALF_maps_meta_map', $old);
         }	
-		}
+		
 		
     }
+	
 }
 // Callback function to get list of $type custom post titles and ID's
 function mf_SALF_maps_get_custom_post_list($type){
@@ -91,6 +84,7 @@ function mf_SALF_maps_meta_show_box() {
         switch ($field['type']) {
             
 				case 'wide-text':
+					
 		            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:95%" />', '
 		', $field['desc'];
 		            break;
