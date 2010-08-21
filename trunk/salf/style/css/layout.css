@@ -718,7 +718,7 @@ a div.new-entry p{
 }
 /*
 * Program Styles
-* --Calendar
+* 
 */
 div.calendar_search{
 	border: 2px solid;
@@ -868,4 +868,15 @@ div.program-thumb{
 	margin: 0 12px 12px 0;
 	padding: 1px;
 	border: 1px dashed #D39550;
+}
+/*
+* Venue Single Styles
+* 
+*/
+div#content-wrapper div.post div.google-map{
+	overflow: hidden;
+}
+
+div#content-wrapper div.post iframe.google-map{
+	margin-top: -300px;
 }

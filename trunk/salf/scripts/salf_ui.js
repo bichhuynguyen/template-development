@@ -250,7 +250,22 @@ active_element = '#home';
 			$(this).children('div').add($(this).children('p')).hide();
 		}
 	});
-	
+	/*
+	* JS for Venue Map
+	*/
+	map_open = false;
+	$('a.google-map').click(function(){
+		if (!map_open){
+			$(this).html('Close');
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '0px'}, 250);
+			map_open = true;
+		} else {
+			$(this).html('View Map');
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '-300px'}, 250);
+			map_open = false;
+		}
+	return false;	
+	});
 });
 
 	
