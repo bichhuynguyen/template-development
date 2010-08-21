@@ -2,7 +2,7 @@
 session_start();
 //FB::log($_SESSION['checks'],'checks');
 //FB::log($_SESSION['maps_meta'],'maps meta');
-//FB::log($_SESSION['meta'],'meta');
+FB::log($_SESSION['MAPS'],'Maps');
 
 
 

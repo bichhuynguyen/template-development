@@ -44,6 +44,7 @@ active_element = '#home';
 	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
 	$('.home div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
+	$('#sidebar').show();
 	
 	$(active_element).show();
 	
@@ -58,7 +59,7 @@ active_element = '#home';
 	
 	
 	/*Interface editing for mail sign up form*/
-	//buttonHTML = '<input type="image" name="mc_signup_submit" src="'+ templateDir + '/style/images/submit-button.png" id="mc_signup_submit" value="Subscribe" />';
+	
 	buttonHTML = '<input class="chimp" type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" />';
 	messageLength = $("div#mc_message.updated").html().length;//checks to see if there is a status message on the input form.
 	$('div.mc_signup_submit').html(buttonHTML);
@@ -68,8 +69,14 @@ active_element = '#home';
 	} else{
 		signUpClicked = true;
 	}
+	$('input.mc_input').blur(function(){
+		signUpFocus = false;		
+	});
+	$('input.mc_input').focus(function(){
+		signUpFocus = true;
+	});
 	
-	$('.mc_custom_border_hdr h2').click(function(){//toggle for touchscreens
+	/*$('.mc_custom_border_hdr h2').click(function(){//toggle for touchscreens
 		if(!signUpClicked){
 			
 			rotatePointer('down');
@@ -83,12 +90,13 @@ active_element = '#home';
 			signUpClicked = false;	
 			
 		};
-	});
-	$('#sidebar').hover(function(){
+	});*/
+	$('#sidebar').add($('#mc_signup_container')).hover(function(){
 			
-			
-			$('#mc_signup_container').fadeIn(300);
-			rotatePointer('down');
+			if(!signUpFocus){//check to see if form is focused
+				$('#mc_signup_container').fadeIn(300);
+				rotatePointer('down');
+			};
 			}, function(){
 					if(!signUpFocus){
 					if(messageLength==0){
@@ -100,12 +108,7 @@ active_element = '#home';
 			};
 		});
 	//*/
-	$('input#mc_mv_EMAIL').focus(function(){
-		signUpFocus = true;
-	});
-	$('input#mc_mv_EMAIL').blur(function(){
-		signUpFocus = false;		
-	});
+	
 	
 	
 	/*----------

@@ -37,7 +37,7 @@ get_header(); ?>
 				<?php
 				
 				//Get Venue Names
-				$venues_sort = mf_SALF_sort_by_meta('Venues');
+				$venues_sort =  mf_get_post_titles(('Venues');
 				$venues_used = match_venues_to_used_meta($venues_sort);
 				//$_SESSION['venues_used'] = $venues_used;//firephp
 				

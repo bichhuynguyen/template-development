@@ -65,6 +65,8 @@ a.more-link:hover{
 }
 #sidebar h2, #sidebar label{
 	color: white;
+	/*New SIdebar*/
+	color: #C40F0F;
 }
 a.top{
 	float:left;
@@ -85,7 +87,7 @@ a.top{
 	_width: 900px;
 	min-height: 300px;
 	_height: 320px;
-	margin: 50px 0 20px 0;
+	margin: 0 0 20px 0;
 
 	padding: 30px;
 	float: left;
@@ -199,6 +201,7 @@ h1, h2, h3, h4,h5,h6{
 	float: right;
 }
 #sidebar{
+	display: none;
 	float: right;
 	width: 145px;
 }
@@ -206,6 +209,8 @@ h1, h2, h3, h4,h5,h6{
 	padding-top: 15px;
 	width: 960px;
 	float: left;
+	min-height: 57px;
+	_height: 57px;
 }
 
 #nav ul#pages{
@@ -220,8 +225,22 @@ h1, h2, h3, h4,h5,h6{
 	padding-right: 0;
 }
 #mc_signup_container{
+	
 	float: left;
 	_float: right;
+	/*Styles for floating*/
+	display: none;
+	position: absolute;
+	z-index: 3;
+	background: white;
+	color: black;
+	padding: 5px;
+	border: 2px solid #DB1A14;
+	border-radius : 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px #8F8675;  
+	-moz-box-shadow: 0px 0px 10px #8F8675;
 }
 .mc_custom_border_hdr h2{
 	cursor: pointer;
@@ -300,7 +319,10 @@ div.mc_signup_submit{
 }
 div #mc_signup_form{
 	_float: right;
+	
 	margin-left: -10px;
+	/*Styles for floating*/
+	margin: 0;
 }
 #sidebar li div{
 	_float: right;
@@ -498,7 +520,7 @@ span.subscribe-hint{
 	width: 730px;
 	clear: both;
 }
-.single h2{
+.single .post h2{
 	font-size: 20px;
 	margin-bottom: 10px;
 }
