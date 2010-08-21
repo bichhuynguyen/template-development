@@ -312,10 +312,43 @@ function program_meta_display($date = false,$venue=false, $artist=false,$price=f
 *-----MAPS
 */
 //fetches MAP url from meta table, and converts it into an HTML iframe.
-function mf_render_google_maps($post_id = false){
-	//if (!$post) return false;
+function mf_render_google_maps($post_id, $width=395,$height=395){
 	
-	fb::log('hello world maps');//firephp
-	return "hello world";
+	
+	//get map meta data from datbase, based on ID
+	$meta_from_id = get_post_meta($post_id, 'mf_SALF_maps_meta_map');
+	$map_link = trim($meta_from_id[0]);
+	
+	$html_return =  '<iframe class="google-map" width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="';
+	//$html_return .= $map_link;
+	$html_return .= 'http://maps.google.com/?ie=UTF8&amp;hq=&amp;hnear=&amp;ll=51.565266,-1.747813&amp;spn=0.007736,0.022638&amp;t=h&amp;z=16';
+	$html_return .= '&amp;output=embed"></iframe>';
+	
+	
+	
+	$_SESSION['maps_debug']= $html_return;
+	return $html_return;
 }
+
+//returns an array of post ID's connected to a certain 
+//meta object, based on meta value
+function mf_get_posts_connected_to_meta($meta_value){
+	global $wpdb;
+
+	$query = "SELECT post_id FROM $wpdb->postmeta WHERE meta_value='$meta_value'";
+	
+	//run query, get list of post ID's connected to this meta
+	$post_ID_query = $wpdb->get_results($query);
+	
+	//create array $post_ID -> $permalink
+	foreach($post_ID_query as $post){
+		$posts[$post->post_id]['link'] = get_permalink($post->post_id);
+		$posts[$post->post_id]['title'] = get_the_title($post->post_id);
+	}
+	
+	
+	fb::log($posts, 'meta posts function');//firephp
+	return $final_used_venue_list;
+}
+
 ?>
