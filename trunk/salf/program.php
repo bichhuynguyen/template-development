@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 /*
 Template Name: Program
@@ -107,21 +108,12 @@ get_header();
 			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
-					<?php 	$venue_ID = get_post_meta(get_the_ID(), 'mf_SALF_meta_venue', true);
-							$venue = get_post($venue_ID);
-							$artist_ID = get_post_meta(get_the_ID(), 'mf_SALF_artist_meta_checks', true);
+						<?php 	
+								//Include program-meta-include
+								$template = get_function_directory_extension();
+								include($template.'/program-meta-include.php');
 
-							$artist = array();
-						if ($artist_ID !=""){
-							foreach ($artist_ID as $artist_post){
-								array_push($artist, get_post($artist_post));
-							}
-						} 
-
-							$eventbrite_link = get_post_meta(get_the_ID(), 'mf_SALF_meta_eventbrite', true);
-							$price = get_post_meta(get_the_ID(), 'mf_SALF_meta_price', true);
-							$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);
-					?>	
+						?>
 				
 					<div class="event">
 						<h2><?php the_title(); ?></h2>
@@ -159,23 +151,12 @@ get_header();
 
 				
 					<?php 	
-							//Get the meta data
-							$venue_ID = get_post_meta($current_post->ID, 'mf_SALF_meta_venue', true);
-							
-							$venue = get_post($venue_ID);
-							
-							$artist_ID = get_post_meta($current_post->ID, 'mf_SALF_artist_meta_checks', true);
+							//Include program-meta-include
+							$custom_loop = true; //tell include file to render custom loop vars
+							$template = get_function_directory_extension();
+							include($template.'/program-meta-include.php');
+							$custom_loop = false;//reset custom loop var
 
-							$artist = array();
-						if ($artist_ID !=""){
-							foreach ($artist_ID as $artist_post){
-								array_push($artist, get_post($artist_post));
-							}
-						} 
-
-							$eventbrite_link = get_post_meta($current_post->ID, 'mf_SALF_meta_eventbrite', true);
-							$price = get_post_meta($current_post->ID, 'mf_SALF_meta_price', true);
-							$date = get_post_meta($current_post->ID, 'mf_SALF_meta_date', true);
 					?>
 					<div class="event">
 					<h2><?php echo $current_post->post_title;?></h2>
