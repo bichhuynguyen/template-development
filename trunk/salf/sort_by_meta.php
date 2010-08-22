@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();//firephp
 
 FB::log($_SESSION['artist_query'],'artist_debug');//firephp
@@ -273,7 +274,7 @@ function program_meta_display($date = false,$time=false,$venue=false, $artist=fa
 	$return .= '<div class="date"><h4>Date:&nbsp;</h4><span>'.$date.'</span></div>';
 	$return .= '<div class="time"><h4>Time:&nbsp;</h4><span>'.$time.'</span></div>';
 	$return .= '<div class="venue"><h4>Venue:&nbsp;</h4><a href="'. get_permalink($venue->ID).'">'.$venue->post_title.'</a></div>';
-	if (count($artist)>0):		
+	if ($artist && count($artist)>0):		
 		$return .= '<ul class="meta artist"><h4>Artists:</h4>';
 		foreach($artist as $artist):
 			$return .= '<li><a href="'.get_permalink($artist->ID).'">'.$artist->post_title.'</a></li>';
@@ -294,6 +295,7 @@ function program_meta_display($date = false,$time=false,$venue=false, $artist=fa
 	
 	$_SESSION['meta'] = $meta_stripped;
 	$return .= $meta_stripped;
+	$return .= '</ul>';
 	//Get Taxonomy
 	//End
 	$return .= '<ul class="price">';
@@ -357,10 +359,12 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 	
 	//run query, get list of post ID's connected to this meta
 	$post_ID_query = $wpdb->get_results($query);
+	
 	$_SESSION['artist_query'] = $post_ID_query;
 	//create array $post_ID -> $permalink
 	foreach($post_ID_query as $post){
 		if(!$artists || in_array($post_id,$post_ID_query->meta_value)){
+			
 			$posts[$post->post_id]['link'] = get_permalink($post->post_id);
 			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
 		} 
@@ -370,8 +374,9 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 	
 	
 	if($return_array){
-		
-		return $posts;}
+		return $posts;
+	}
+	
 	foreach ($posts as $list_element){
 		$html_list .= '<li><a href="';
 		$html_list .= $list_element['link'];
@@ -379,7 +384,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 		$html_list .= $list_element['title'];
 		$html_list .= '</a></li>';
 	}
-	
+	fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
 
