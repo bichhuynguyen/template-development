@@ -807,7 +807,7 @@ div.calendar_search{
 	-moz-box-shadow: -1px 1px 2px #C6AD86;
 }
 
-.event ul li,.single-Program ul li{
+.event ul li,.single-Program .post ul li{
 	list-style: none;
 	float: left;
 	width: 99px;
@@ -885,4 +885,21 @@ div#content-wrapper div.post iframe.google-map{
 	margin-left: -300px;
 	
 	z-index: 10;
+}
+ul.meta-list{
+	width: 380px;
+	
+	
+}
+ul.meta-list a,ul.meta-list a:hover,ul.meta-list a:visited{
+	color: #111D73;
+}
+ul.meta-list li{
+	
+	clear: left;
+	list-style: none;
+}
+ul.meta-list h4{
+	float: left;
+	border-bottom: 1px dashed #D39550;
 }
