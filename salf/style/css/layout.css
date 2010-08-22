@@ -807,7 +807,7 @@ div.calendar_search{
 	-moz-box-shadow: -1px 1px 2px #C6AD86;
 }
 
-.event ul li{
+.event ul li,.single-Program ul li{
 	list-style: none;
 	float: left;
 	width: 99px;
@@ -822,16 +822,19 @@ div.calendar_search{
 	margin:0 0 10px 0;
 	width: 490px;
 }
-.event div.price{
+.event div.price, .single-Program div.price{
 	clear: both;
 }
-.event div.post-details{
+.event div.post-details, .single-Program div.post-details{
 	float: right;
 	width: 100px;
 	border-left: dashed 1px #B84D3B;
 	padding-left: 4px;
 }
-.event div.post-details h4{
+.single-Program div.post-details{
+	padding: 0 6px;
+}
+.event div.post-details h4, .single-Program div.post-details h4{
 	padding-bottom: 2px;
 	border-bottom: dashed 1px #B84D3B;
 	width: 99px;
@@ -840,12 +843,12 @@ div.calendar_search{
 }
 
 
-.event div.post-details a,.event div.post-details span,.event div.post-details .elements li{
+.event div.post-details a,.event div.post-details span,.event div.post-details .elements li,.single-Program div.post-details a,.single-Program div.post-details span,.single-Program div.post-details .elements li{
 	float: right;
 	color: #111D73;
 	text-align: right;
 }
-.event div.post-details div.tickets a{
+.event div.post-details div.tickets a,.single-Program div.post-details div.tickets a{
 	float: right;
 	clear: both;
 }
