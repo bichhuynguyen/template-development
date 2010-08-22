@@ -14,49 +14,7 @@
 			
 			
 			
-			<?php if(get_post_type() == 'Program'):
-			// If post-type is program, then add links to relevant venue and artist
-			?>
-			 
-			<?php 	$venue_ID = get_post_meta($post->ID, 'mf_SALF_meta_venue', true);
-					$venue = get_post($venue_ID);
-					$artist_ID = get_post_meta($post->ID, 'mf_SALF_artist_meta_checks', true);
-					
-					$artist = array();
-				if ($artist_ID !=""){
-					foreach ($artist_ID as $artist_post){
-						array_push($artist, get_post($artist_post));
-					}
-				} 
-					
-					$eventbrite_link = get_post_meta($post->ID, 'mf_SALF_meta_eventbrite', true);
-					$price = get_post_meta($post->ID, 'mf_SALF_meta_price', true);
-					$date = get_post_meta($post->ID, 'mf_SALF_meta_date', true);
-			?>
 			
-			<div class="meta">
-			<a href="<?php echo get_permalink($venue->ID);?>"><?php echo $venue->post_title; ?></a>
-			</div>
-			
-			<?php if (count($artist)<1):?>		
-			<div class="meta">
-			<?php foreach($artist as $artist):?>
-				
-			<a href="<?php echo get_permalink($artist->ID);?>"><?php echo $artist->post_title; ?></a>
-			<?php endforeach;?>
-			</div>
-			<?php endif;?>
-			<div class="meta">
-			<a href="<?php echo $eventbrite_link;?>" target="_blank">Buy Tickets Online</a>
-			</div>
-			<div class="meta">
-			<p>£<?php echo $price;?></p>
-			</div>
-			<div class="meta">
-			<p><?php echo $date;?></p>
-			</div>
-				
-			<?php endif;?>	
 				
 				
 				
