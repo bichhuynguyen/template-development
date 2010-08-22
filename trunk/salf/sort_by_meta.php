@@ -1,7 +1,7 @@
 <?php
 session_start();//firephp
 
-FB::log($_SESSION['maps_debug'],'maps_debug');//firephp
+FB::log($_SESSION['artist_query'],'artist_debug');//firephp
 //FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
@@ -330,25 +330,56 @@ function mf_render_google_maps($post_id, $width=395,$height=395){
 	return $html_return;
 }
 
-//returns an array of post ID's connected to a certain 
-//meta object, based on meta value
-function mf_get_posts_connected_to_meta($meta_value){
+function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $artist = false){
+/*
+* returns an array of post ID's connected to a certain 
+* meta object, based on meta value
+* 
+* if $return_array remains false, function will continue and produce a HTML 
+* unordered list,
+* sans UL elements (this is so it is easier to add classes, ID's and other attributes)
+* otherwise returns multidimensional array, 	id 	-> 'link' 
+*													-> 'title'
+*
+*
+* runs different query for Artist is 3rd $arg true (hack: very specific to SALF)
+*/
 	global $wpdb;
 
 	$query = "SELECT post_id FROM $wpdb->postmeta WHERE meta_value='$meta_value'";
 	
+	if($artist){
+		$query = "SELECT post_id, meta_value FROM $wpdb->postmeta WHERE meta_key= 'mf_SALF_artist_meta_checks'";
+		
+		
+	}
+	
 	//run query, get list of post ID's connected to this meta
 	$post_ID_query = $wpdb->get_results($query);
-	
+	$_SESSION['artist_query'] = $post_ID_query;
 	//create array $post_ID -> $permalink
 	foreach($post_ID_query as $post){
-		$posts[$post->post_id]['link'] = get_permalink($post->post_id);
-		$posts[$post->post_id]['title'] = get_the_title($post->post_id);
+		if(!$artists || in_array($post_id,$post_ID_query->meta_value)){
+			$posts[$post->post_id]['link'] = get_permalink($post->post_id);
+			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
+		} 
 	}
 	
 	
-	fb::log($posts, 'meta posts function');//firephp
-	return $final_used_venue_list;
+	
+	
+	if($return_array){
+		
+		return $posts;}
+	foreach ($posts as $list_element){
+		$html_list .= '<li><a href="';
+		$html_list .= $list_element['link'];
+		$html_list .= '">';
+		$html_list .= $list_element['title'];
+		$html_list .= '</a></li>';
+	}
+	
+	return $html_list;
 }
 
 ?>
