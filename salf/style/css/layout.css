@@ -875,8 +875,11 @@ div.program-thumb{
 */
 div#content-wrapper div.post div.google-map{
 	overflow: hidden;
+	position: absolute;
 }
 
 div#content-wrapper div.post iframe.google-map{
-	margin-top: -300px;
+	margin-left: -300px;
+	
+	z-index: 10;
 }

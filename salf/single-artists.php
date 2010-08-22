@@ -12,14 +12,10 @@ get_header(); ?>
 			<h2><?php the_title(); ?></h2>
 			
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-			<a class="google-map" classhref=#>View Map</a>
-			<div class="google-map">
 			
-			<?php echo mf_render_google_maps(get_the_ID(),300,300);?>
 			
-			</div>
 			<ul class='related-program-links'>
-			<?php echo mf_get_posts_connected_to_meta(get_the_ID());?>
+			<?php echo mf_get_posts_connected_to_meta(get_the_ID(),false,true);?>
 			</ul>
 			
 			

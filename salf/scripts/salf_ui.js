@@ -257,11 +257,11 @@ active_element = '#home';
 	$('a.google-map').click(function(){
 		if (!map_open){
 			$(this).html('Close');
-			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '0px'}, 250);
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-left': '0px'}, 250);
 			map_open = true;
 		} else {
 			$(this).html('View Map');
-			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '-300px'}, 250);
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-left': '-300px'}, 250);
 			map_open = false;
 		}
 	return false;	
