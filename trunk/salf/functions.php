@@ -28,6 +28,24 @@ function clean($str = '', $html = false) {
 }
 
 
+function mf_get_time($time,$format=false){
+	/*Get 12hour time, based on
+	* input 00:00 in 24 hour format
+	* Can accept alternative formats
+	*/
+	//remove colon
+	$time = str_replace(':','',$time);
+	//get unix time	
+	$time = strtotime($time);
+	//
+	
+	if(!$format){
+		$time = date('g:ia',$time);
+	} else {
+		$time = date($format,$time);
+	}
+	return $time;
+}
 //reverseout PHP key value
 function just_array_keys($array = array()){
 	if(!is_array($array)) return array();

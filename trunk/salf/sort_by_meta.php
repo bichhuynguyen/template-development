@@ -268,9 +268,10 @@ function create_html_calendar($october){
 
 	
 //build HTML output for program meta data on program page
-function program_meta_display($date = false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$id=false){
+function program_meta_display($date = false,$time=false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$id=false){
 	$return = '<div class="post-details">';
 	$return .= '<div class="date"><h4>Date:&nbsp;</h4><span>'.$date.'</span></div>';
+	$return .= '<div class="time"><h4>Time:&nbsp;</h4><span>'.$time.'</span></div>';
 	$return .= '<div class="venue"><h4>Venue:&nbsp;</h4><a href="'. get_permalink($venue->ID).'">'.$venue->post_title.'</a></div>';
 	if (count($artist)>0):		
 		$return .= '<ul class="meta artist"><h4>Artists:</h4>';

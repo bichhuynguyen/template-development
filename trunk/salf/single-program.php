@@ -12,7 +12,7 @@ get_header(); ?>
 					
 			?>
 			<?php mf_post_thumbnail('large-uncropped');?>
-			<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
+			<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
 			<h2><?php the_title(); ?></h2>
 			
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
