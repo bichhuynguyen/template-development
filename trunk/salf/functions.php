@@ -332,8 +332,77 @@ include('sort_by_meta.php');
 
 
 
+/*---
+* Get Full Extentions
+*/
+/*
+FUNCTIONS for automatically including php documents from the functions folder.
+*/
+//if running on php4, make a scandir functions
+if(!function_exists('scandir')){
+     function scandir($directory, $sorting_order = 0) {
+         $dh  = opendir($directory);
+         while( false !== ($filename = readdir($dh)) ) {
+             $files[] = $filename;
+         }
+         if( $sorting_order == 0 ) {
+             sort($files);
+         } else {
+             rsort($files);
+         }
+         return($files);
+     }
+}
+/*
+* this function returns the path to the funtions folder.
+* If the folder does not exist, it creates it.
+*/
+function get_function_directory_extension($template_url = FALSE){
+     //get template url if not passed
+     if(!$template_url)$template_url = get_bloginfo('template_directory');
 
+    
+     //replace slashes with dashes for explode
+     $template_url_no_slash = str_replace('/','.',$template_url);
 
+     //create array from URL
+     $template_url_array = explode('.',$template_url_no_slash);
+    
+     //--splice array
+
+     //Calculate offset(we only need the last three levels)
+     //We need to do this to get the proper directory, not the one passed by the server, as scandir doesn't work when aliases get involved.
+     $offset = count($template_url_array)-3;
+    
+     //splice array, only keeping back to the root WP install folder (where wp-config.php lives, where the front end runs from)
+     $template_url_array = array_splice($template_url_array,$offset,3);
+     //put back togther as string
+     $template_url_return_string = implode('/',$template_url_array);
+     fb::log($template_url_return_string,'Template');//firephp
+    
+     //creates current working directory with template extention and functions directory    
+     //if admin, change out of admin folder before storing working dir, then change back again.
+     if (is_admin()){
+          $admin_directory = getcwd();
+          chdir("..");
+          $current_working_directory = getcwd();
+          chdir($admin_directory);
+     } else {
+          $current_working_directory = getcwd();
+     }
+     fb::log($current_working_directory,'Directory');//firephp
+    
+     //alternate method is chdir method doesn't work on your server (some windows servers might not like it)
+     //if (is_admin()) $current_working_directory = str_replace('/wp-admin','',$current_working_directory);
+    
+     $function_folder = $current_working_directory.'/'.$template_url_return_string;
+    
+    
+     
+     //return path
+     return $function_folder;
+
+}
 
 
 
