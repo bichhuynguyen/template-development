@@ -814,7 +814,7 @@ div.calendar_search{
 	
 
 }
-.event div{
+.event div,.post-details div{
 	float: left;
 }
 .event h2{

@@ -16,7 +16,9 @@ if($custom_loop != true)://checks to see if the vars needed are for a normal loo
 						array_push($artist, get_post($artist_post));
 					}
 				} 
-
+					$time = get_post_meta(get_the_ID(), 'mf_SALF_meta_time', true);
+					$time =  mf_get_time($time);
+					fb::log($time,'time');
 					$eventbrite_link = get_post_meta(get_the_ID(), 'mf_SALF_meta_eventbrite', true);
 					$price = get_post_meta(get_the_ID(), 'mf_SALF_meta_price', true);
 					$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);

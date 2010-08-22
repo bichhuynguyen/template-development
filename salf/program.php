@@ -111,7 +111,7 @@ get_header();
 						<?php 	
 								//Include program-meta-include
 								$template = get_function_directory_extension();
-								include($template.'/program-meta-include.php');
+								include($template.'/program-meta-include.php');
 
 						?>
 				
@@ -119,7 +119,7 @@ get_header();
 						<h2><?php the_title(); ?></h2>
 						
 						
-						<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
+						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
 						<?php mf_post_thumbnail('small-cropped',false,'program-thumb');?>
 						<?php the_content(); ?>
 						
@@ -160,7 +160,7 @@ get_header();
 					?>
 					<div class="event">
 					<h2><?php echo $current_post->post_title;?></h2>
-					<?php echo program_meta_display($date,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
+					<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
 					<?php mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
 					<p><?php echo $current_post->post_content;?></p>
 
