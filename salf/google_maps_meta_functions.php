@@ -1,4 +1,6 @@
 <?php
+ob_start();
+fb::log($_SESSION['SAVE_DATA'],'save me!!');
 // Save data from meta box 
 function mf_SALF_maps_meta_save_data($post_id) {
 	global $maps_meta_box;
@@ -29,19 +31,20 @@ function mf_SALF_maps_meta_save_data($post_id) {
     
     foreach ($maps_meta_box['fields'] as $field) {
 		
-		 
-		
-		$old = get_post_meta($post_id, 'mf_SALF_maps_meta_map', true);
-		
-		$new = $_POST['mf_SALF_maps_meta_map'];
 		
 		
-		$remove_amps = str_replace('&','&amp;',$new);//replace HTML character ref# with ampersands 
+		$old = get_post_meta($post_id, $field['id'], true);
+		
+		$new = $_POST[$field['id']];
+		//replace HTML character ref# with ampersands for maps
+		if ($field['id']=='mf_SALF_maps_meta_map') {
+			$new = str_replace('&','&amp;',$new);
+		}
 		
 		if ($new && $new != $old) {
-            update_post_meta($post_id, 'mf_SALF_maps_meta_map', $remove_amps);
+            update_post_meta($post_id, $field['id'], $new);
         } elseif ('' == $new && $old) {
-            delete_post_meta($post_id, 'mf_SALF_maps_meta_map', $old);
+            delete_post_meta($post_id, $field['id'], $old);
         }	
 		
 		
@@ -77,10 +80,12 @@ function mf_SALF_maps_meta_show_box() {
 	echo '<input type="hidden" name="maps_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
     
     echo '<table class="form-table">';
-
+	
     foreach ($maps_meta_box['fields'] as $field) {
         // get current post meta data
         $meta = get_post_meta($post->ID, $field['id'], true);
+		
+
         switch ($field['type']) {
             
 				case 'wide-text':
@@ -88,10 +93,15 @@ function mf_SALF_maps_meta_show_box() {
 		            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:95%" />', '
 		', $field['desc'];
 		            break;
+					case 'text':
+						echo '<label for="'.$field['id'].'">'.$field['name'].'</label>';
+			            echo '<input  type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+			', $field['desc'];
+			            break;
 		}			 
        
     }
-    
+   
     echo '</table>';
 }
 // Add meta box
