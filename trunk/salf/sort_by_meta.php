@@ -2,8 +2,8 @@
 ob_start();
 session_start();//firephp
 
-FB::log($_SESSION['artist_query'],'artist_debug');//firephp
-//FB::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
+//fb::log($_SESSION['artist_query'],'artist_debug');//firephp
+////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
 //-------------
@@ -320,7 +320,13 @@ function mf_render_google_maps($post_id, $width=395,$height=395){
 	
 	//get map meta data from datbase, based on ID
 	$meta_from_id = get_post_meta($post_id, 'mf_SALF_maps_meta_map');
+	//if nothing found, return false. End Function.
+	if(count($meta_from_id)<1) return false; 
+	
+	//get link element and trim it
 	$map_link = trim($meta_from_id[0]);
+	
+	
 	
 	$html_return =  '<iframe class="google-map" width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="';
 	//$html_return .= $map_link;
@@ -384,7 +390,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 		$html_list .= $list_element['title'];
 		$html_list .= '</a></li>';
 	}
-	fb::log($html_list,'Venue Debug');
+	//fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
 
