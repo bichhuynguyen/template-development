@@ -369,7 +369,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
 		} 
 	}
-	
+	if($posts===null) return '<li>No Event</li>';
 	
 	
 	

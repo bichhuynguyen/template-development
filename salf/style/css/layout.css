@@ -882,7 +882,9 @@ div#content-wrapper div.post div.google-map{
 }
 
 div#content-wrapper div.post iframe.google-map{
-	margin-left: -300px;
+	margin-top: -306px;
+	padding: 1px;
+	border: #D39550 2px solid;
 	
 	z-index: 10;
 }
@@ -902,4 +904,12 @@ ul.meta-list li{
 ul.meta-list h4{
 	float: left;
 	border-bottom: 1px dashed #D39550;
+}
+a.venue,a.venue:hover,a.venue:visited{
+	float: left;
+	color: black;
+	text-decoration: none;
+}
+a.venue:hover{
+	color:#D92417;	
 }
