@@ -94,9 +94,11 @@ function mf_SALF_maps_meta_show_box() {
 		', $field['desc'];
 		            break;
 					case 'text':
+						echo '<div>'; 
 						echo '<label for="'.$field['id'].'">'.$field['name'].'</label>';
 			            echo '<input  type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
 			', $field['desc'];
+						echo '</div>';
 			            break;
 		}			 
        
