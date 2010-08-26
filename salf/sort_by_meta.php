@@ -2,8 +2,8 @@
 ob_start();
 session_start();//firephp
 
-//fb::log($_SESSION['artist_query'],'artist_debug');//firephp
-////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
+////fb::log($_SESSION['artist_query'],'artist_debug');//firephp
+//////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
 //-------------
@@ -36,13 +36,22 @@ $meta_query= $wpdb->get_results($query);
 //Build Object Array of Posts from an array of ID's
 //used to recreate the Loop
 function mf_get_posts_by_ID_array($post_ID_array){
+	global $wpdb;
+	foreach ($post_ID_array as $post_ID){
+	$query[] = "SELECT post_title, ID FROM $wpdb->posts WHERE post_status ='publish' AND post_id = '$post_ID'";
+	}
 	
 	
 	foreach ($post_ID_array as $post_ID){
 		$post_object_array[]=get_post($post_ID);
 	}
+	foreach ($post_object_array as $post_object){
+		if ($post_object->post_status == 'publish'){
+			$published_objects[]=$post_object;
+		}
+	}
 	
-	return $post_object_array;
+	return $published_objects;
 }
 function get_post_ID_by_meta_value($value){
 	global $wpdb;
@@ -133,13 +142,42 @@ function get_just_post_ids($object_array = false){
 
 //Creates an array with all program dates, with program post id, as multidimensional array 
 function create_all_program_dates_array($valid_post_array = FALSE){
-	$_SESSION['function_recieving']=$valid_post_array;//firephp
+	
 	global $wpdb;
 	
 	//Build Query. Fetch all post id's and dates from Post Meta
 	$query = "SELECT post_id, meta_value FROM $wpdb->postmeta WHERE meta_key='mf_SALF_meta_date'";
 	// Run Query
 	$post_ID_query= $wpdb->get_results($query);
+	$date_object = count($post_ID_query);
+	
+	//build query to find is posts within the results are not published
+	$post_query .= "SELECT ID FROM $wpdb->posts WHERE post_status != 'publish' AND (";
+	for($i=0; $i<$date_object;$i++){
+		$current_object = $post_ID_query[$i];
+		$post_query .= "ID='$current_object->post_id'";
+		if ($i<($date_object-1)){//add or at the end of each query, expect the last one
+			$post_query .= " OR ";
+		} else{
+			$post_query .= ");";
+		}
+	}
+	$trashed_post_id = $wpdb->get_results($post_query);
+	//make array of id's of trashed posts
+	$trashed_post_id = get_just_post_ids($trashed_post_id);
+	//cycle though results or date query, unsetting trashed id's
+	foreach($post_ID_query as $key=>$post){
+		//is post id in trashed list?
+		if(in_array($post->post_id,$trashed_post_id)){
+			unset($post_ID_query[$key]);
+		}
+	}
+	
+	
+	
+	
+	
+	
 	//seperate days/months/years
 	foreach ($post_ID_query as $post_dates){
 		
@@ -283,25 +321,31 @@ function program_meta_display($date = false,$time=false,$venue=false, $artist=fa
 	endif;
 	//Start
 	//Get Taxonomy
-	$return .= '<ul class="elements">';
-	$return .= '<h4>Elements</h4>';
+	
 	$meta_list = array();
 	$args = array(
 				'type' => 'Elements',
 		);
 	$meta = get_the_term_list($id,'Elements','<li>','</li><li>','</li>');
-	$meta_stripped = strip_tags($meta,'<li>'); 
 	
-	
-	$_SESSION['meta'] = $meta_stripped;
-	$return .= $meta_stripped;
-	$return .= '</ul>';
+	if ($meta){//check if there is any meta data returns (get_the_term_list returns false if empty)
+		$return .= '<ul class="elements">';
+		$return .= '<h4>Elements</h4>';
+		$meta_stripped = strip_tags($meta,'<li>'); 
+		$_SESSION['meta'] = $meta_stripped;
+		$return .= $meta_stripped;
+		$return .= '</ul>';
+	}
 	//Get Taxonomy
 	//End
 	$return .= '<ul class="price">';
 	$return .= '<h4>Price</h4>';
-	 	if ($price != "") $return .='<li><span>£'.$price.'</span></li>'; 
-		if ($eventbrite_link != "") $return .='<li class="tickets"><a href="'. $eventbrite_link.'" target="_blank"> Buy Tickets</a></li>'; 
+		if (strtolower($price) == "free"){ 
+			$return .='<li><span>'.$price.'</span></li>'; 
+		} elseif ($price != "") {
+			$return .='<li><span>£'.$price.'</span></li>'; 
+		}
+		if ($eventbrite_link != "") $return .='<li class="tickets"><a  style="margin: 10px;" href="'. $eventbrite_link.'" target="_blank"><img src="'.get_bloginfo('template_url').'/style/images/tickets.png" /></a></li>'; 
 	$return .='</ul>';
 	
 	
@@ -375,7 +419,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
 		} 
 	}
-	if($posts===null) return '<li>No Event</li>';
+	if($posts===null) return false;
 	
 	
 	
@@ -390,8 +434,32 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 		$html_list .= $list_element['title'];
 		$html_list .= '</a></li>';
 	}
-	//fb::log($html_list,'Venue Debug');
+	////fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
 
+function get_venue_address($id, $list=true){
+	//list form elemtents
+	$address_lines = array('address1','address2','address3','address4','postcode');
+	//get meta from datbase
+	foreach ($address_lines as $addressline){
+		$meta = get_post_meta($id,'mf_SALF_maps_meta_'.$addressline, true);
+		//test if each element exists (some address are longer than others)
+		if ($meta){
+			$address[]=$meta;
+		}else{
+			return false;
+		}
+	}
+	//return array if list is false
+	if(!$list) return $address;
+	//else create HTML list
+	foreach ($address as $list_address){
+		$html .= '<li>';
+		$html .= $list_address;
+		$html .= '</li>';
+	}
+	
+	return $html; 
+}
 ?>
