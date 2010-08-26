@@ -828,7 +828,7 @@ div.calendar_search{
 .event div.post-details, .single-Program div.post-details{
 	float: right;
 	width: 100px;
-	border-left: dashed 1px #B84D3B;
+	/*border-left: dashed 1px #B84D3B;*/
 	padding-left: 4px;
 }
 .single-Program div.post-details{
@@ -847,6 +847,13 @@ div.calendar_search{
 	float: right;
 	color: #111D73;
 	text-align: right;
+}
+div.post-details ul.price li span{
+	color: #DB2417;
+	font-size: 1em;
+	float: left;
+	width: 100%;
+	text-align: center;
 }
 .event div.post-details div.tickets a,.single-Program div.post-details div.tickets a{
 	float: right;

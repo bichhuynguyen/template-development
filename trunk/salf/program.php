@@ -4,11 +4,7 @@ session_start();
 /*
 Template Name: Program
 */
-/*
-FB::log($_SESSION['current_post'], 'Current Post');
 
-//*/
-FB::log($_SESSION['current_thumb'], 'Extract Thumb OutPut');
 //set session for venue posts
 if (!isset($_SESSION['venue_post_vars'])) $_SESSION['venue_post_vars'] = array();
 
@@ -46,7 +42,7 @@ get_header();
 
 		
 		<div class="post" id="home">
-			<div id="browse-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
+			<div id="program-head"><a href="<?php curPageURL();?>"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Program-title.png"  alt="Program" /></a>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>

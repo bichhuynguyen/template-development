@@ -21,11 +21,17 @@ get_header(); ?>
 			
 			</div>
 			<?php endif;?>
+			
+			<?php $events_list = mf_get_posts_connected_to_meta(get_the_ID());?>
+			<?php if($events_list):?>
 			<ul class='meta-list'>
 				<h4>Events at this Venue</h4>
-			<?php echo mf_get_posts_connected_to_meta(get_the_ID());?>
+				<?php echo $events_list;?>
 			</ul>
-			
+			<?php endif;?>
+			<ul id='address'>
+				<?php echo get_venue_address(get_the_ID());?>
+			</ul>
 			
 			
 			
