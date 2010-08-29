@@ -42,6 +42,8 @@ get_header();
 
 		
 		<div class="post" id="home">
+			 
+			<script src="<?php bloginfo('template_url');?>/scripts/program.js"></script>
 			<div id="program-head"><a href="<?php curPageURL();?>"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Program-title.png"  alt="Program" /></a>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>

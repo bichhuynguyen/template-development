@@ -19,22 +19,15 @@ jQuery(document).ready(function($) {
 	
 
 	
-	if(window.location.hash){
-if(window.location.hash == '#mc_signup_form'){
-active_element = '#home';
-	
-} else{active_element = window.location.hash;}
-	} else {
-		active_element = '#home';
-	};
+
 	/*init*/
 	
 
-	var form_submitted = false,
-	fadeOutSpeed = 350,
-	fadeInSpeed = 350,
-	signUpFocus = false,
-	signUpClicked = false;
+	var 	form_submitted = false,
+			fadeOutSpeed = 350,
+			fadeInSpeed = 350,
+			signUpFocus = false,
+			signUpClicked = false;
 	
 	/*copyText = $('span.copyright').css('float','right');
 	
@@ -42,11 +35,10 @@ active_element = '#home';
 	$('#footer').remove();*/
 	//$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ');
 	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
-	$('.home div.post, .top').hide();
 	$('div.post').css("margin-top","5px");
 	$('#sidebar').show();
 	
-	$(active_element).show();
+	
 	
 	/*form submission*/
 	$("#mc_signup_submit").click(function(){
@@ -76,21 +68,7 @@ active_element = '#home';
 		signUpFocus = true;
 	});
 	
-	/*$('.mc_custom_border_hdr h2').click(function(){//toggle for touchscreens
-		if(!signUpClicked){
-			
-			rotatePointer('down');
-			$('#mc_signup_container').fadeIn(300);
-			signUpClicked = true;
-			
-			} else {
-			
-			rotatePointer();
-			$('#mc_signup_container').fadeOut(300);
-			signUpClicked = false;	
-			
-		};
-	});*/
+
 	$('#sidebar').add($('#mc_signup_container')).hover(function(){
 			
 			if(!signUpFocus){//check to see if form is focused
@@ -108,12 +86,114 @@ active_element = '#home';
 			};
 		});
 	//*/
+
+	/*
+	* JS for Venue Map
+	*/
+	map_open = false;
+	$('a.google-map').click(function(){
+		if (!map_open){
+			$(this).html('Close');
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '0px'}, 250);
+			map_open = true;
+		} else {
+			$(this).html('View Map');
+			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '-306px'}, 250);
+			map_open = false;
+		}
+	return false;	
+	});
 	
 	
+	/*----------------------------------------------------------------
+	------------------START AJAX NAVIGATION
+	//----------------------------------------------------------------*/
 	
-	/*----------
-	Navigation 
-	------------*/
+	var hash = window.location.hash.substring(1),
+		host = window.location.hostname;
+	
+	
+	$("#pages li a").each(function(){
+		//identify and store URL
+		direct_url = $(this).attr('href');
+		$(this).data('direct_url', direct_url);
+		
+		//convert to paths we can use in the jQuery,
+		path = $(this).html().toLowerCase();
+		$(this).addClass(path);
+		new_path = 'http://'+host+'/'+'#'+path;//this is the correct usage
+		new_path = 'http://'+host+'/wordpress-3-beta/'+'#'+path;//REMOVE BEFORE LAUNCH
+		//change href
+		$(this).attr('href', new_path);//has return FALSE; effect.
+		
+		//on click function---->
+		}).click( function() {
+		//remove selected class from all elements
+		$("#pages li a").removeClass('selected');
+		//add selected class to this element
+		$(this).addClass('selected');
+		//call original href and use it to define a load area	
+		direct_url = $(this).data('direct_url');
+		to_load = direct_url+' #main-content-area';
+		
+		//load content into main content area
+		mf_ajax_load_new_content();
+		
+		
+		
+		
+	});
+	//if direct linked from hash tag
+	if (hash){
+		selected = "#pages li a."+hash
+		direct_url = $(selected).data('direct_url');
+		$(selected).addClass('selected');
+		to_load = direct_url+' #main-content-area';
+		//load content into main content area
+		mf_ajax_load_new_content();
+	}
+	function mf_ajax_load_new_content(){
+		$('#ajax_loader').clone().prependTo('#main-content-area').show();
+		$('#main-content-area .post').animate({opacity:0.1},500,function(){
+			$(this).parent().load(to_load, function() {
+				program_js();
+			  	hash = window.location.hash;
+				$('.post').attr('id','current');
+				$(this).animate({opacity:1},500);
+				$('#main-content-area #ajax_loader').animate({opacity:0},1000,function(){
+					$(this).remove();
+				});
+			});
+		})
+		
+		
+	}
+	
+	function program_js(){
+		program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
+		program_elements.hide();
+		current_header_width = $('#program_feed .event h2').css('width');
+		$('#program_feed .event h2').css('width', '100%');
+		clicked = false
+
+		//show/hide function
+		$('#program_feed .event').click(function(){
+			if (clicked != this){
+				clicked = this;
+				program_elements.hide();
+				$('#program_feed .event h2').css('width', '100%');
+				$(this).children('h2').css('width', current_header_width);
+				$(this).children('div').add($(this).children('p')).fadeIn();
+			} else {
+				clicked = false;
+				$(this).children('h2').css('width', '100%');
+				$(this).children('div').add($(this).children('p')).hide();
+			}
+		});
+	};
+	/*----------------------------------------------------------------
+	------------------END AJAX NAVIGATION
+	//----------------------------------------------------------------*//*
 	$(".home #pages li a").click( function() {
 		
 		button_action($(this).attr('href'));
@@ -123,24 +203,18 @@ active_element = '#home';
 	
 	function button_action(mf_element){
 		if (active_element != mf_element){
-			/*Move Copyright Text	
-			$('span.copyright').hide(function(){
-				$(mf_element).after(copyText, function(){
-					$(this).show();
-				});
-			});*/
-			
+		
 			
 			$(active_element).fadeOut(fadeOutSpeed, function(){
 				$(mf_element).fadeIn(fadeInSpeed, function(){
 					
-					/*Switch Active Element*/
+					//Switch Active Element
 					active_element = mf_element;
 					
 					});
 				});
 			}
-		}
+		}*/
 		
 	function rotatePointer(where){
 		if (where == 'down'){
@@ -175,13 +249,7 @@ active_element = '#home';
 		$('span.subscribe-hint').animate({ opacity: 0}, 100);
 	}
 	);
-	//Hover/click classes nav menu
-	$('.page_item a').each(function(){
-		if($(this).attr('href')==active_element){
-			$(this).addClass('selected');
-			$('.page_item a').not(this).removeClass('selected');
-		}
-	});
+	
 	
 	$('.page_item a').click(function(){
 		$(this).addClass('selected');
@@ -226,46 +294,7 @@ active_element = '#home';
 		return false;
 	});//*/
 	
-	/*
-	* JS for Program Page
-	*/
-	//init
-	program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
-	program_elements.hide();
-	current_header_width = $('#program_feed .event h2').css('width');
-	$('#program_feed .event h2').css('width', '100%');
-	clicked = false
 	
-	//show/hide function
-	$('#program_feed .event').click(function(){
-		if (clicked != this){
-			clicked = this;
-			program_elements.hide();
-			$('#program_feed .event h2').css('width', '100%');
-			$(this).children('h2').css('width', current_header_width);
-			$(this).children('div').add($(this).children('p')).fadeIn();
-		} else {
-			clicked = false;
-			$(this).children('h2').css('width', '100%');
-			$(this).children('div').add($(this).children('p')).hide();
-		}
-	});
-	/*
-	* JS for Venue Map
-	*/
-	map_open = false;
-	$('a.google-map').click(function(){
-		if (!map_open){
-			$(this).html('Close');
-			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '0px'}, 250);
-			map_open = true;
-		} else {
-			$(this).html('View Map');
-			$('div#content-wrapper div.post iframe.google-map').animate({'margin-top': '-306px'}, 250);
-			map_open = false;
-		}
-	return false;	
-	});
 });
 
 	
