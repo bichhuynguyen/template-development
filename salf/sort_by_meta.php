@@ -177,7 +177,6 @@ function create_all_program_dates_array($valid_post_array = FALSE){
 	
 	
 	
-	
 	//seperate days/months/years
 	foreach ($post_ID_query as $post_dates){
 		

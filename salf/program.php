@@ -100,7 +100,7 @@ get_header();
 			<div id="program_feed">
 			<?php if(!isset($get_posts)) ://no search submitted?>
 				
-			<?php $news_query = new WP_Query('post_type=program');
+			<?php $news_query = new WP_Query('post_type=program&nopaging=true');
 			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
