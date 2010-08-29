@@ -12,7 +12,7 @@ Template Name: About Page
 
 		
 			
-		<div id="about" class="post">
+		<div id="about" class="post about">
 			<?php
 			$about_query = new WP_Query('post_type=Partners&pages=about&orderby=menu_order');
 			

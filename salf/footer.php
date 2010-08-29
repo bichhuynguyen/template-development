@@ -3,7 +3,7 @@
 
 	
 	
-	
+</div><!--CLOSE main-content-area - USED FOR AJAX LOADING-->	
 	<div id="footer">
 		
 		<span class="copyright">

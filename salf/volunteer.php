@@ -9,7 +9,7 @@ Template Name: Volunteer Page
 
 		
 	
-		<div id="volunteer" class="post">
+		<div id="volunteer" class="post volunteer">
 			<img src="<?php echo bloginfo('template_url');?>/style/images/volunteer.png" alt="Volunteer" />
 			<div class="intro-copy">
 				<p>We are looking for volunteers with the right passion for literature and events to join our team in the busy period from now through to the Festival, which begins mid-October. Relevant experience and a degree are important, but we welcome applications of interest from anyone who believes they have the skills, energy and time to successfully carry out specific roles.</p>

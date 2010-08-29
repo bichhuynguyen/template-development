@@ -52,7 +52,10 @@ a.more-link:hover{
 	color: white;
 	text-decoration: none;
 }
-#nav a.selected:hover{
+#nav a.selected, #nav li.current-menu-item a{
+	color: #DD2522;
+}
+#nav a.selected:hover, #nav li.current-menu-item a:hover{
 	
 	text-decoration: none;
 }
@@ -60,9 +63,7 @@ a.more-link:hover{
 	color: #DD2522;
 	text-decoration: underline;
 }
-#nav a.selected{
-	color: #DD2522;
-}
+
 #sidebar h2, #sidebar label{
 	color: white;
 	/*New SIdebar*/
@@ -93,7 +94,7 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
-#about.post{
+.about.post{
 	padding: 30px 15px;
 	width: 930px;
 }
@@ -171,11 +172,11 @@ h1, h2, h3, h4,h5,h6{
 .post p{
 	margin-bottom: 1.2em;
 }
-#enquiries.post img{
+.enquiries.post img{
 	float: left;
 }
 
-#enquiries.post form{
+.enquiries.post form{
 	float: right;
 	
 }
@@ -216,6 +217,17 @@ h1, h2, h3, h4,h5,h6{
 #nav ul#pages{
 	float: left;
 }
+#nav ul#pages li{
+	text-transform: uppercase;
+	float: left;
+}
+#nav ul#pages li .sub-menu{
+	display: none;
+}
+ #nav ul#pages li ul li{
+	display: inline;
+}
+
 #nav ul li{
 	display: inline;
 	
@@ -327,12 +339,12 @@ div #mc_signup_form{
 #sidebar li div{
 	_float: right;
 }
-#enquiries input, #enquiries textarea, #enquiries p{
+.enquiries input, .enquiries textarea, .enquiries p{
 	float: left;
 	clear: both;
 }
 
-#enquiries div form{
+.enquiries div form{
 	float: right;
 	width: 400px;
 }
@@ -344,13 +356,13 @@ div #mc_signup_form{
 	float: left;
 }
 /*about-tab style*/
-#about.post{
+.about.post{
 	padding-top: 0;
 }
-#about ul{
+.about ul{
 	margin: 24px 0 24px 80px;
 }
-#about div.partner-box{
+.about div.partner-box{
 	float: left;
 	clear: both;
 	position: relative;
@@ -360,16 +372,16 @@ div #mc_signup_form{
 .partner-box h2{
 	float: left;
 }
-#about div.people-bio-content p{
+.about div.people-bio-content p{
 	width: 230px;
 }
-#about div h3{
+.about div h3{
 	margin: 24px 0 4px;
 }
-#about div h2{
+.about div h2{
 	font-size: 150%;
 }
-#about div.people-bio-content{
+.about div.people-bio-content{
 	display: inline;
 	position: relative;
 	width: 230px;
@@ -403,7 +415,7 @@ div #mc_signup_form{
 	margin-bottom: 0;
 	margin-top: 15px;
 }
-#volunteer .intro-copy, .volunteer-content .volunteer-text{
+.volunteer .intro-copy, .volunteer-content .volunteer-text{
 	float: right;
 	display: inline;
 	width: 530px;
@@ -412,7 +424,7 @@ div #mc_signup_form{
 	float: left;
 	clear: both;
 }
-#about ul li{
+.about ul li{
 	margin: 5px 0;
 }
 
@@ -919,4 +931,11 @@ a.venue,a.venue:hover,a.venue:visited{
 }
 a.venue:hover{
 	color:#D92417;	
+}
+#ajax_loader{
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	width: 100%;
+	z-index: 3;
 }
