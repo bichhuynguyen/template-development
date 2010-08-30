@@ -32,7 +32,6 @@ jQuery(document).ready(function($) {
 	
 	//Prepend > onto sign up form and submenus
 	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span class="pulldown">&#62;</span> ');
-	$('#nav #pages li ul.sub-menu').parent().addClass('has_submenu').prepend('<span class="pulldown">&#62;</span> ');
 	
 	
 	$('div.post').css("margin-top","5px");
@@ -71,20 +70,60 @@ jQuery(document).ready(function($) {
 
 	$('#sidebar').add($('#mc_signup_container')).hover(function(){
 			
+			pointer = $(this).children('li').children('h2');
+			
 			if(!signUpFocus){//check to see if form is focused
 				$('#mc_signup_container').fadeIn(300);
-				rotatePointer('down');
+				rotatePointer(pointer,'down');
 			};
 			}, function(){
 					if(!signUpFocus){
 					if(messageLength==0){
 						
 						$('#mc_signup_container').delay(1000).fadeOut(300, function(){
-							rotatePointer();
+							rotatePointer(pointer, 'up');
 						});
 				};
 			};
 		});
+		
+		//function for hover submenus
+		menu_items = $('#nav #pages li');
+		submenus = $('#nav #pages li ul.sub-menu');
+		submenu_pointers = $(submenus).siblings('a');
+		submenus_parents = $(submenus).parent();
+		
+		console.log(submenus_parents);
+		
+		
+		$(submenus_parents).hover(function(){
+				hovered = $(this).data('hovered');
+				pointer = $(this).children('a');
+				menu = $(this).children('.sub-menu');
+				
+				
+				
+				if(!hovered){
+					
+					$(this).data('hovered', true);
+					if(!$(this).parent().hasClass('sub-menu')){
+						$(submenus).hide().data('hovered', false);
+					}
+					rotatePointer(submenu_pointers,'up');
+					$(menu).slideDown(300);
+					rotatePointer(pointer,'down');
+								
+					
+				} else {
+					$(this).data('hovered', false);
+					$(menu).delay(1000).slideUp(300);
+					rotatePointer(pointer,'up');
+					
+				}
+							
+				
+			
+			});
 	//*/
 
 	/*
@@ -122,7 +161,10 @@ jQuery(document).ready(function($) {
 		path = $(this).html().toLowerCase();
 		$(this).addClass(path);
 		new_path = 'http://'+host+'/'+'#'+path;//this is the correct usage
-		new_path = 'http://'+host+'/wordpress-3-beta/'+'#'+path;//REMOVE BEFORE LAUNCH
+		if(host=='localhost'){
+			new_path = 'http://'+host+'/wordpress-3-beta/'+'#'+path;//REMOVE BEFORE LAUNCH
+		}
+		
 		//change href
 		$(this).attr('href', new_path);//has return FALSE; effect.
 		
@@ -143,6 +185,14 @@ jQuery(document).ready(function($) {
 		
 		
 	});
+	//add classes and pointer and hover dats
+	$('#nav #pages li ul.sub-menu').addClass('jquery').parent().addClass('has_submenu').data('hovered', false);
+	$('#nav #pages li ul.sub-menu').siblings('a').each(function(){
+		text = $(this).html();
+		$(this).html('<span class="pulldown">&#62;</span> '+text);
+		
+	
+	});
 	//if direct linked from hash tag
 	if (hash){
 		selected = "#pages li a."+hash
@@ -155,6 +205,7 @@ jQuery(document).ready(function($) {
 	function mf_ajax_load_new_content(){
 		$('#ajax_loader').clone().prependTo('#main-content-area').show();
 		$('#main-content-area .post').animate({opacity:0.1},500,function(){
+			$(this).children().remove();
 			$(this).parent().load(to_load, function() {
 				program_js();
 			  	hash = window.location.hash;
@@ -196,13 +247,13 @@ jQuery(document).ready(function($) {
 	//----------------------------------------------------------------*/
 		
 		
-	function rotatePointer(where){
+	function rotatePointer(what, where){
 		if (where == 'down'){
-			$('span.pulldown').addClass("pointDown");
-			$('span.pulldown').removeClass("pointRight");
+			$(what).children('span.pulldown').addClass("pointDown");
+			$(what).children('span.pulldown').removeClass("pointRight");
 		} else {
-			$('span.pulldown').removeClass("pointDown");
-			$('span.pulldown').addClass("pointRight");
+			$(what).children('span.pulldown').removeClass("pointDown");
+			$(what).children('span.pulldown').addClass("pointRight");
 		}
 	}
 	$(function(){
