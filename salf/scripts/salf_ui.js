@@ -93,7 +93,7 @@ jQuery(document).ready(function($) {
 		submenu_pointers = $(submenus).siblings('a');
 		submenus_parents = $(submenus).parent();
 		
-		console.log(submenus_parents);
+		
 		
 		
 		$(submenus_parents).hover(function(){
@@ -101,14 +101,17 @@ jQuery(document).ready(function($) {
 				pointer = $(this).children('a');
 				menu = $(this).children('.sub-menu');
 				
+				this_parent = $(this).parent();
+				if($(this_parent).hasClass('sub-menu')){
+					$(submenus).filter(this_parent).hide().data('hovered', false);
+				} else {
+					$(submenus).hide().data('hovered', false);
+				}
 				
 				
 				if(!hovered){
-					
+							
 					$(this).data('hovered', true);
-					if(!$(this).parent().hasClass('sub-menu')){
-						$(submenus).hide().data('hovered', false);
-					}
 					rotatePointer(submenu_pointers,'up');
 					$(menu).slideDown(300);
 					rotatePointer(pointer,'down');
