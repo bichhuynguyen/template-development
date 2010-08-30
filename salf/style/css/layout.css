@@ -61,7 +61,7 @@ a.more-link:hover{
 }
 #nav a:hover{
 	color: #DD2522;
-	text-decoration: underline;
+	
 }
 
 #sidebar h2, #sidebar label{
@@ -235,6 +235,36 @@ h1, h2, h3, h4,h5,h6{
 	z-index: 3;
 	display: none;
 }
+#nav ul#pages li .sub-menu li a:hover{
+	color: #DD2522;
+	
+}
+#nav ul#pages li .jquery.sub-menu{
+	border-radius : 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-bottom-left-radius : 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-box-shadow: -1px 1px 2px #8F8675;  
+	-moz-box-shadow: -1px 1px 2px #8F8675;
+	margin-left: 3px;
+	border-top: none;
+	border-right: none;
+	
+	background: #F19422;
+	
+}
+#nav ul#pages li .jquery.sub-menu li{
+	float: left;
+	clear: none;
+}
+#nav ul#pages li .jquery.sub-menu li a{
+	color: #fff;
+}
+#nav ul#pages li .jquery.sub-menu li a.selected{
+	color: #DD2522;
+}
 #nav ul#pages li.has_submenu:hover ul, #nav ul#pages li.has_submenu .sub-menu:hover{
 	display: none;
 }
@@ -242,9 +272,7 @@ h1, h2, h3, h4,h5,h6{
 	display: block;
 	
 }
-#nav li span.pulldown{
-	color: white;
-}
+
  #nav ul#pages li ul li{
 	clear: left;
 }
