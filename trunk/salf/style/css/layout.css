@@ -222,12 +222,34 @@ h1, h2, h3, h4,h5,h6{
 	float: left;
 }
 #nav ul#pages li .sub-menu{
+
+	padding: 0 3px;
+	border: 1px solid #DB1A14;
+	-webkit-box-shadow: 0px 0px 10px #8F8675;  
+	-moz-box-shadow: 0px 0px 10px #8F8675;
+	border-radius : 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: white;
+	position: absolute;
+	z-index: 3;
 	display: none;
 }
- #nav ul#pages li ul li{
-	display: inline;
-}
 
+#nav ul#pages li:hover ul, #nav ul#pages li .sub-menu:hover{
+	display: block;
+	
+}
+ #nav ul#pages li ul li{
+	clear: left;
+}
+#nav ul#pages li ul li a{
+	color: #5B6384;
+}
+#nav ul#pages li ul li a:hover{
+	text-decoration: none;
+	color: black;
+}
 #nav ul li{
 	display: inline;
 	
