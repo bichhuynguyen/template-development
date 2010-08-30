@@ -29,12 +29,12 @@ jQuery(document).ready(function($) {
 			signUpFocus = false,
 			signUpClicked = false;
 	
-	/*copyText = $('span.copyright').css('float','right');
 	
-	$(active_element).after(copyText);//Move copyright text;
-	$('#footer').remove();*/
-	//$('.mc_custom_border_hdr h2').prepend('<span id="pulldown">&#62;</span> ');
-	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span id="pulldown">&#62;</span> ');
+	//Prepend > onto sign up form and submenus
+	$('.mailchimpSF_display_widget h2.widgettitle').prepend('<span class="pulldown">&#62;</span> ');
+	$('#nav #pages li ul.sub-menu').parent().addClass('has_submenu').prepend('<span class="pulldown">&#62;</span> ');
+	
+	
 	$('div.post').css("margin-top","5px");
 	$('#sidebar').show();
 	
@@ -193,36 +193,16 @@ jQuery(document).ready(function($) {
 	};
 	/*----------------------------------------------------------------
 	------------------END AJAX NAVIGATION
-	//----------------------------------------------------------------*//*
-	$(".home #pages li a").click( function() {
+	//----------------------------------------------------------------*/
 		
-		button_action($(this).attr('href'));
-		return false;
-	});
-	
-	
-	function button_action(mf_element){
-		if (active_element != mf_element){
-		
-			
-			$(active_element).fadeOut(fadeOutSpeed, function(){
-				$(mf_element).fadeIn(fadeInSpeed, function(){
-					
-					//Switch Active Element
-					active_element = mf_element;
-					
-					});
-				});
-			}
-		}*/
 		
 	function rotatePointer(where){
 		if (where == 'down'){
-			$('span#pulldown').addClass("pointDown");
-			$('span#pulldown').removeClass("pointRight");
+			$('span.pulldown').addClass("pointDown");
+			$('span.pulldown').removeClass("pointRight");
 		} else {
-			$('span#pulldown').removeClass("pointDown");
-			$('span#pulldown').addClass("pointRight");
+			$('span.pulldown').removeClass("pointDown");
+			$('span.pulldown').addClass("pointRight");
 		}
 	}
 	$(function(){

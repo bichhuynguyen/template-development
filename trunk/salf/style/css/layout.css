@@ -235,10 +235,15 @@ h1, h2, h3, h4,h5,h6{
 	z-index: 3;
 	display: none;
 }
-
+#nav ul#pages li.has_submenu:hover ul, #nav ul#pages li.has_submenu .sub-menu:hover{
+	display: none;
+}
 #nav ul#pages li:hover ul, #nav ul#pages li .sub-menu:hover{
 	display: block;
 	
+}
+#nav li span.pulldown{
+	color: white;
 }
  #nav ul#pages li ul li{
 	clear: left;
@@ -341,10 +346,10 @@ div#mc_message.updated{
 	float: left;
 	margin-left: 6px;
 }
-span#pulldown.pointRight{
+span.pulldown.pointRight{
 	-moz-transform:rotate(0deg);
 }
-span#pulldown.pointDown{
+span.pulldown.pointDown{
 	-moz-transform:rotate(90deg);
 }
 /*IE6 FIXES*/
