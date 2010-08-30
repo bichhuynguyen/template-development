@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
 					if(!signUpFocus){
 					if(messageLength==0){
 						
-						$('#mc_signup_container').delay(1000).fadeOut(300, function(){
+						$('#mc_signup_container').delay(2500).fadeOut(300, function(){
 							rotatePointer(pointer, 'up');
 						});
 				};
@@ -175,6 +175,12 @@ jQuery(document).ready(function($) {
 		}).click( function() {
 		//remove selected class from all elements
 		$("#pages li a").removeClass('selected');
+		$("#pages li").removeClass('sub_selected');
+		//add class for submenus
+		great_grandparent = $(this).parent().parent().parent();
+		if ($(great_grandparent).hasClass('menu-item')){
+			$(great_grandparent).addClass('sub_selected');
+		}
 		//add selected class to this element
 		$(this).addClass('selected');
 		//call original href and use it to define a load area	
@@ -201,6 +207,11 @@ jQuery(document).ready(function($) {
 		selected = "#pages li a."+hash
 		direct_url = $(selected).data('direct_url');
 		$(selected).addClass('selected');
+		great_grandparent = $(selected).parent().parent().parent();
+		
+		if ($(great_grandparent).hasClass('menu-item')){
+			$(great_grandparent).addClass('sub_selected');
+		}
 		to_load = direct_url+' #main-content-area';
 		//load content into main content area
 		mf_ajax_load_new_content();
@@ -212,6 +223,8 @@ jQuery(document).ready(function($) {
 			$(this).parent().load(to_load, function() {
 				program_js();
 			  	hash = window.location.hash;
+				current_id = $('.post').attr('id');
+				$('.post').addClass(current_id);
 				$('.post').attr('id','current');
 				$(this).animate({opacity:1},500);
 				$('#main-content-area #ajax_loader').animate({opacity:0},500,function(){
@@ -224,26 +237,29 @@ jQuery(document).ready(function($) {
 	}
 	
 	function program_js(){
-		program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
-		program_elements.hide();
-		current_header_width = $('#program_feed .event h2').css('width');
-		$('#program_feed .event h2').css('width', '100%');
-		clicked = false
+		
+			program_titles = $('#program_feed .event h3');
+			program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
+			program_elements.hide();
+			current_header_width = $('#program_feed .event h3').css('width');
+			$('#program_feed .event h3').css('width', '70%');
+			clicked = false
+			$(program_titles).append("<span style='display: inline;color: #D92417;' class='action-call'>more</span>");
 
-		//show/hide function
-		$('#program_feed .event').click(function(){
-			if (clicked != this){
-				clicked = this;
-				program_elements.hide();
-				$('#program_feed .event h2').css('width', '100%');
-				$(this).children('h2').css('width', current_header_width);
-				$(this).children('div').add($(this).children('p')).fadeIn();
-			} else {
-				clicked = false;
-				$(this).children('h2').css('width', '100%');
-				$(this).children('div').add($(this).children('p')).hide();
-			}
-		});
+			//show/hide function
+			$('#program_feed .event').click(function(){
+				if (clicked != this){
+					clicked = this;
+					program_elements.hide();
+					$('#program_feed .event h3').css('width', '70%');
+					$(this).children('h3').children('span').html('less');
+					$(this).children('div').add($(this).children('p')).fadeIn();
+				} else {
+					clicked = false;
+					$(this).children('h3').children('span').html('more');
+					$(this).children('div').add($(this).children('p')).hide();
+				}
+			});
 	};
 	/*----------------------------------------------------------------
 	------------------END AJAX NAVIGATION

@@ -149,29 +149,7 @@ function create_all_program_dates_array($valid_post_array = FALSE){
 	$query = "SELECT post_id, meta_value FROM $wpdb->postmeta WHERE meta_key='mf_SALF_meta_date'";
 	// Run Query
 	$post_ID_query= $wpdb->get_results($query);
-	$date_object = count($post_ID_query);
-	
-	//build query to find is posts within the results are not published
-	$post_query .= "SELECT ID FROM $wpdb->posts WHERE post_status != 'publish' AND (";
-	for($i=0; $i<$date_object;$i++){
-		$current_object = $post_ID_query[$i];
-		$post_query .= "ID='$current_object->post_id'";
-		if ($i<($date_object-1)){//add or at the end of each query, expect the last one
-			$post_query .= " OR ";
-		} else{
-			$post_query .= ");";
-		}
-	}
-	$trashed_post_id = $wpdb->get_results($post_query);
-	//make array of id's of trashed posts
-	$trashed_post_id = get_just_post_ids($trashed_post_id);
-	//cycle though results or date query, unsetting trashed id's
-	foreach($post_ID_query as $key=>$post){
-		//is post id in trashed list?
-		if(in_array($post->post_id,$trashed_post_id)){
-			unset($post_ID_query[$key]);
-		}
-	}
+	$post_ID_query = remove_unpublished_posts($post_ID_query);
 	
 	
 	
@@ -408,6 +386,14 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 	
 	//run query, get list of post ID's connected to this meta
 	$post_ID_query = $wpdb->get_results($query);
+	$post_ID_query = remove_unpublished_posts($post_ID_query);
+	
+	
+	
+	
+	
+	
+	
 	
 	$_SESSION['artist_query'] = $post_ID_query;
 	//create array $post_ID -> $permalink
@@ -436,7 +422,36 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 	////fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
-
+function remove_unpublished_posts($post_ID_query){
+	/*
+	* Take's array of post objects, removes unpublished posts, returns array of objects
+	*/
+	global $wpdb;
+	$date_object = count($post_ID_query);
+	
+	//build query to find is posts within the results are not published
+	$post_query .= "SELECT ID FROM $wpdb->posts WHERE post_status != 'publish' AND (";
+	for($i=0; $i<$date_object;$i++){
+		$current_object = $post_ID_query[$i];
+		$post_query .= "ID='$current_object->post_id'";
+		if ($i<($date_object-1)){//add or at the end of each query, expect the last one
+			$post_query .= " OR ";
+		} else{
+			$post_query .= ");";
+		}
+	}
+	$trashed_post_id = $wpdb->get_results($post_query);
+	//make array of id's of trashed posts
+	$trashed_post_id = get_just_post_ids($trashed_post_id);
+	//cycle though results or date query, unsetting trashed id's
+	foreach($post_ID_query as $key=>$post){
+		//is post id in trashed list?
+		if(in_array($post->post_id,$trashed_post_id)){
+			unset($post_ID_query[$key]);
+		}
+	}
+	return $post_ID_query;
+}
 function get_venue_address($id, $list=true){
 	//list form elemtents
 	$address_lines = array('address1','address2','address3','address4','postcode');

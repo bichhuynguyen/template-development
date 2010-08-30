@@ -98,7 +98,7 @@ a.top{
 	padding: 30px 15px;
 	width: 930px;
 }
-#venues.post{
+.venues.post{
 	padding: 25px 25px 30px 35px;
 	width: 850px;
 }
@@ -163,7 +163,7 @@ h1, h2, h3, h4,h5,h6{
 	margin: 0 auto;
 }
 
-#partners.post{
+.partners.post{
 	width: 900px;
 }
 #home.post p{
@@ -252,8 +252,12 @@ h1, h2, h3, h4,h5,h6{
 	border-top: none;
 	border-right: none;
 	
-	background: #F19422;
 	
+	background: transparent;
+	
+}
+#nav ul#pages li .jquery.sub-menu .submenu{
+	background: #F19422;
 }
 #nav ul#pages li .jquery.sub-menu li{
 	float: left;
@@ -265,6 +269,10 @@ h1, h2, h3, h4,h5,h6{
 #nav ul#pages li .jquery.sub-menu li a.selected{
 	color: #DD2522;
 }
+#nav ul#pages li.sub_selected a{
+	color: #EA583A;
+}
+
 #nav ul#pages li.has_submenu:hover ul, #nav ul#pages li.has_submenu .sub-menu:hover{
 	display: none;
 }
@@ -313,10 +321,10 @@ h1, h2, h3, h4,h5,h6{
 	cursor: pointer;
 }
 /*Box Layouts*/
-#venues.post{
+.venues.post{
 	margin-right: 35px;
 }
-#venues div.venue-box{
+.venues div.venue-box{
 	float: left;
 	display: inline;
 	margin-right: 120px;
@@ -335,11 +343,11 @@ h1, h2, h3, h4,h5,h6{
 	float: right;
 }
 
-#partners img.text{
+.partners img.text{
 	float: left;
 	margin-bottom: 20px;
 }
-#partners img.logos{
+.partners img.logos{
 	float: right;
 	margin-right: 10px;
 }
@@ -884,10 +892,15 @@ div.calendar_search{
 .event div,.post-details div{
 	float: left;
 }
-.event h2{
-	font-size: 18px;
+.event h3{
+	
 	margin:0 0 10px 0;
-	width: 490px;
+	float: left;
+}
+.event h3 span{
+	font-size: 11px;
+	text-decoration: underline;
+	margin-left: 12px;
 }
 .event div.price, .single-Program div.price{
 	clear: both;
