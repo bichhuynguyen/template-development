@@ -54,7 +54,7 @@ get_header();
 			<div id="program_search">
 				<form method="post" action="<?php echo curPageURL();?>">
 				<div class="search_element venue">
-				<h3>Choose Venues</h3>
+				<h3>Search by Venue</h3>
 				<?php
 				
 				//Get Venue Names
@@ -87,7 +87,7 @@ get_header();
 				//---------------
 				?>
 			<div class="search_element calendar">
-				<h3>Select a Day</h3>	
+				<h3>Search by Day</h3>	
 				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();//firephp?>
 				<?php
 				if (!isset($get_post_id_array)) $get_post_id_array = FALSE; 
@@ -114,7 +114,7 @@ get_header();
 						?>
 				
 					<div class="event">
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						
 						
 						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
@@ -157,7 +157,7 @@ get_header();
 
 					?>
 					<div class="event">
-					<h2><?php echo $current_post->post_title;?></h2>
+					<h3><?php echo $current_post->post_title;?></h3>
 					<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
 					<?php mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
 					<p><?php echo $current_post->post_content;?></p>
