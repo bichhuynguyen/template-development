@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
 			  	hash = window.location.hash;
 				$('.post').attr('id','current');
 				$(this).animate({opacity:1},500);
-				$('#main-content-area #ajax_loader').animate({opacity:0},1000,function(){
+				$('#main-content-area #ajax_loader').animate({opacity:0},500,function(){
 					$(this).remove();
 				});
 			});
