@@ -173,22 +173,26 @@ jQuery(document).ready(function($) {
 		
 		//on click function---->
 		}).click( function() {
-		//remove selected class from all elements
-		$("#pages li a").removeClass('selected');
-		$("#pages li").removeClass('sub_selected');
-		//add class for submenus
-		great_grandparent = $(this).parent().parent().parent();
-		if ($(great_grandparent).hasClass('menu-item')){
-			$(great_grandparent).addClass('sub_selected');
-		}
-		//add selected class to this element
-		$(this).addClass('selected');
-		//call original href and use it to define a load area	
-		direct_url = $(this).data('direct_url');
-		to_load = direct_url+' #main-content-area';
+		//check if not selected item
+		if(!$(this).hasClass('selected')){	
 		
-		//load content into main content area
-		mf_ajax_load_new_content();
+			//remove selected class from all elements
+			$("#pages li a").removeClass('selected');
+			$("#pages li").removeClass('sub_selected');
+			//add class for submenus, so parent menu item can be styled.
+			great_grandparent = $(this).parent().parent().parent();
+			if ($(great_grandparent).hasClass('menu-item')){
+				$(great_grandparent).addClass('sub_selected');
+			}
+			//add selected class to this element
+			$(this).addClass('selected');
+			//call original href and use it to define a load area	
+			direct_url = $(this).data('direct_url');
+			to_load = direct_url+' #main-content-area';
+		
+			//load content into main content area
+			mf_ajax_load_new_content();
+		}
 		
 		
 		
@@ -237,29 +241,32 @@ jQuery(document).ready(function($) {
 	}
 	
 	function program_js(){
-		
-			program_titles = $('#program_feed .event h3');
-			program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
-			program_elements.hide();
-			current_header_width = $('#program_feed .event h3').css('width');
-			$('#program_feed .event h3').css('width', '70%');
-			clicked = false
-			$(program_titles).append("<span style='display: inline;color: #D92417;' class='action-call'>more</span>");
+		program_titles = $('#program_feed .event h3');
+		program_elements = $('#program_feed .event').children('div').add('#program_feed .event p');
+		program_elements.hide();
+		current_header_width = $('#program_feed .event h3').css('width');
+		$('#program_feed .event h3').css('width', '70%');
+		clicked = false
+		$(program_titles).append("<span class='action-call'>more</span>");
 
-			//show/hide function
-			$('#program_feed .event').click(function(){
-				if (clicked != this){
-					clicked = this;
-					program_elements.hide();
-					$('#program_feed .event h3').css('width', '70%');
-					$(this).children('h3').children('span').html('less');
-					$(this).children('div').add($(this).children('p')).fadeIn();
-				} else {
-					clicked = false;
-					$(this).children('h3').children('span').html('more');
-					$(this).children('div').add($(this).children('p')).hide();
-				}
-			});
+		//show/hide function
+		$('#program_feed .event').click(function(){
+			if (clicked != this){
+				clicked = this;
+				program_elements.hide();
+				$('#program_feed .event').removeClass('active');
+				$(this).addClass('active');
+				$('#program_feed .event h3').css('width', '70%');
+				$('#program_feed .event h3 span').not($(this).children('h3').children('span')).html('more');
+				$(this).children('h3').children('span').html('less');
+				$(this).children('div').add($(this).children('p')).slideDown();
+			} else {
+				clicked = false;
+				$(this).removeClass('active');
+				$(this).children('h3').children('span').html('more');
+				$(this).children('div').add($(this).children('p')).slideUp();
+			}
+		});
 	};
 	/*----------------------------------------------------------------
 	------------------END AJAX NAVIGATION
