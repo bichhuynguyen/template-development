@@ -61,7 +61,7 @@ Template Name: News Page
 			</div>
 			
 			<div class="news archive-header">
-				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
+				
 			<div id="news-feed">
 			<?php
 			$news_query = new WP_Query('post_type=post');
@@ -100,32 +100,32 @@ Template Name: News Page
 				
 			</div><!--End news-feed-->
 			
-				<div style="float: left;"class="tag-cloud">
 				
-					<?php $args = array(
-					    'smallest'  => 8, 
-					    'largest'   => 22,
-					    'unit'      => 'pt', 
-					    'number'    => 45,  
-					    'format'    => 'flat',
-					    //'separator' => '\n',
-					    'orderby'   => 'name', 
-					    'order'     => 'ASC',
-					    //'exclude'   => , 
-					    //'include'   => , 
-					    'link'      => 'view', 
-					    'taxonomy'  => 'post_tag', 
-					    'echo'      => true ); ?>
-					<?php wp_tag_cloud($args); ?> 
-				</div>
 				
 			</div><!--End post-->	   	
+			<div style="float: left;"class="tag-cloud">
 			
+				<?php $args = array(
+				    'smallest'  => 8, 
+				    'largest'   => 22,
+				    'unit'      => 'pt', 
+				    'number'    => 45,  
+				    'format'    => 'flat',
+				    //'separator' => '\n',
+				    'orderby'   => 'name', 
+				    'order'     => 'ASC',
+				    //'exclude'   => , 
+				    //'include'   => , 
+				    'link'      => 'view', 
+				    'taxonomy'  => 'post_tag', 
+				    'echo'      => true ); ?>
+				<?php wp_tag_cloud($args); ?> 
+			</div>
 			
 			
 		
 		
-		</div>
+		
 	
 		
 	
