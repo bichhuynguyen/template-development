@@ -858,28 +858,46 @@ div.calendar_search{
 	
 	width: 360px;
 }
-.event h2{
+.event h3{
+	color: #333;
+	margin:0 0 10px 0;
 	float: left;
-	margin-right: 6px;
+}
+.event:hover h3, .event.active h3{
+	color: #000;
+}
+div.event h3 span{
+	margin-left: 12px;
+	text-decoration: none;
+	font-size: 11px;
+	display: inline;
+	color: #D92417;
+	color: rgba(217,36,23,0.6);
+	
+}
+.event:hover h3 span, .event.active h3 span{
+	color: rgba(217,36,23,1);
 	
 }
 .event{
 	clear: both;
 	float: left;
 	width: 600px;
-	padding: 15px 12px 0 12px;
+	padding: 0 12px 0 12px;
 	margin: 0 0 8px 0;
-	background: #F9E9CE;
 	
-	border-radius : 15px;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
+	
+	
+	-moz-border-radius-bottomleft: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	border-bottom-left-radius : 15px;
 	-webkit-box-shadow: -3px 3px 3px #EBDAC1;  
 	-moz-box-shadow: -3px 3px 3px #EBDAC1;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
 }
-.event:hover{
-	-webkit-box-shadow: -1px 1px 2px #C6AD86;  
-	-moz-box-shadow: -1px 1px 2px #C6AD86;
+.event:hover, .event.active{
+	border-color: #EEA8A8;
 }
 
 .event ul li,.single-Program .post ul li{
@@ -892,16 +910,7 @@ div.calendar_search{
 .event div,.post-details div{
 	float: left;
 }
-.event h3{
-	
-	margin:0 0 10px 0;
-	float: left;
-}
-.event h3 span{
-	font-size: 11px;
-	text-decoration: underline;
-	margin-left: 12px;
-}
+
 .event div.price, .single-Program div.price{
 	clear: both;
 }
