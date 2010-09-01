@@ -7,6 +7,7 @@ Template Name: News Page
 
 		
 		<div class="post archive-page">
+			<script src="<?php bloginfo('template_url');?>/scripts/news.js"></script>
 			<div id="browse-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>

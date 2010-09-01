@@ -739,7 +739,7 @@ news-page, archives
 	width: 250px;
 	
 }
-.archive-page .new-entry:hover,.archive .new-entry:hover{
+.archive-page .new-entry.active,.archive .new-entry.active{
 	/*background-color: rgba(255,255,255,0.2);
 	border-color: #EEA8A8;*/
 	background-image: -moz-linear-gradient(100% 100% 225deg, transparent, rgba(255,255,255,0.2));
@@ -907,7 +907,7 @@ div.calendar_search{
 	-webkit-box-shadow: -4px 4px 5px #DBCCB5;  
 	-moz-box-shadow: -4px 4px 5px #DBCCB5;
 }
-div.event h3 span{
+div.event h3 span, .archive-page h2 span{
 	margin-left: 12px;
 	text-decoration: none;
 	font-size: 11px;
@@ -916,7 +916,7 @@ div.event h3 span{
 	color: rgba(217,36,23,0.6);
 	
 }
-.event:hover h3 span, .event.active h3 span{
+.event:hover h3 span, .event.active h3 span, .archive-page .active h2 span, .archive-page .new-entry:hover h2 span{
 	color: rgba(217,36,23,1);
 	
 }
@@ -937,7 +937,7 @@ div.event h3 span{
 	border-left: 1px solid white;
 	border-bottom: 1px solid white;
 }
-.event:hover{
+.event:hover, .archive-page .new-entry:hover{
 	border-color: #EEA8A8;
 }
 .event.active:hover{
