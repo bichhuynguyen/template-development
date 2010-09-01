@@ -8,7 +8,7 @@ Template Name: Partners Page
 <?php get_header(); ?>
 
 		
-	<div id="partners" class="post">		
+	<div class="post partners">		
 		<h2><img class="text" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-blurb.png" alt="the list of partners continues to grow" ></img></h2>
 		
 		<img class="logos" src="<?php echo bloginfo('template_url'); ?>/style/images/partners-logo.png" alt="Partners Logo" ></img>

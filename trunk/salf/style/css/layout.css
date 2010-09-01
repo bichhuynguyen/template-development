@@ -581,10 +581,10 @@ a.news-top{
 	margin-top: 40px;
 	
 }
-div.news{
+div.archive-page{
 	float: left;
 	padding-left: 35px;
-	border-left: dashed 1px #B84D3B;
+	
 	
 }
 span.subscribe-hint{
@@ -713,11 +713,11 @@ ul#volunteer-jump-menu li a:hover{
 /*
 news-page, archives
 */
-.news .new-entry, .archive .new-entry{
+.archive-page .new-entry, .archive .new-entry{
 	clear: none;
 	width: 280px;
 	padding: 0 15px 15px 15px;
-	margin: 12px;
+	margin: 0 12px 24px 12px;
 	min-height: 260px;
 	_height: 260px;
 	-webkit-box-shadow: -3px 3px 3px #EBDAC1;  
@@ -730,11 +730,16 @@ news-page, archives
 	
 	
 }
-.news .new-entry p, .archive .new-entry p{
+.archive-page #news-feed{
+	clear: none;
+	border-left: dashed 1px #B84D3B;
+	
+}
+.archive-page .new-entry p, .archive .new-entry p{
 	width: 250px;
 	
 }
-.news .new-entry:hover,.archive .new-entry:hover{
+.archive-page .new-entry:hover,.archive .new-entry:hover{
 	/*background-color: rgba(255,255,255,0.2);
 	border-color: #EEA8A8;*/
 	background-image: -moz-linear-gradient(100% 100% 225deg, transparent, rgba(255,255,255,0.2));
@@ -747,13 +752,13 @@ news-page, archives
 
 	
 }
-div.news a:hover ,div.archive a:hover{
+div.archive-page a:hover ,div.archive a:hover{
 	text-decoration: none;
 }
-div.news #news-feed div.news-thumb img, div.news #news-feed div.news-thumb, body.archive #news-feed div.news-thumb{
+div.archive-page #news-feed div.news-thumb img, div.archive-page #news-feed div.news-thumb, body.archive #news-feed div.news-thumb{
 	float: left;
 }
-div.news #news-feed div.news-thumb img, body.archive #news-feed div.news-thumb img{
+div.archive-page #news-feed div.news-thumb img, body.archive #news-feed div.news-thumb img{
 	margin: 0 6px 0 0;
 }
 .post-details{
@@ -794,7 +799,7 @@ div.news #news-feed div.news-thumb img, body.archive #news-feed div.news-thumb i
 .archive-type ul li{
 	list-style: none;
 }
-.news a.news-top{
+.archive-page a.news-top{
 	float: left;
 	clear: both;
 }
