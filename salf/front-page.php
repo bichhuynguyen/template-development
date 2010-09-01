@@ -1,6 +1,5 @@
 <?php
 ob_start();
-
 /*
 Template Name: Front Page
 */
@@ -18,10 +17,22 @@ Template Name: Front Page
 			
 
 
-<?php query_posts("post_type=post&paged=$paged");?>
-<?php 	fb::log($wp_query);?>
-<?php while (have_posts()) : the_post(); ?>
+				<?php
 
+				$temp = $wp_query;
+
+				$wp_query= null;
+
+				$wp_query = new WP_Query();
+
+				$wp_query->query('post_type=post&paged='.$paged);
+
+
+
+
+
+				if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
+				
 				
 								
 
@@ -85,16 +96,36 @@ Template Name: Front Page
 
 
 
-					<div class="custom-pagination">
-					<span class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></span>
-					<span class="alignright"><?php next_posts_link('More &raquo;') ?></span>
-</div>
+					
 
-					<?php endwhile; ?>  
-	
-                	<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+							<?php	
 
-									
+								endwhile;
+
+							?>
+
+							<!--><div class="custom-pagination">
+
+							<div class="alignleft"><?php //previous_posts_link('&laquo; Previous') ?></div>
+
+							<div class="alignright"><?php //next_posts_link('More &raquo;') ?></div><-->
+
+
+
+
+							<?php					
+
+							endif; 
+
+							//Reset Query
+
+							rewind_posts();
+
+							?>
+
+							<?php $wp_query = null; $wp_query = $temp;?>
+
+							<a href="<?php get_permalink(294)?>">See More News</a>		
 					
 					
 					
