@@ -301,12 +301,12 @@ jQuery(document).ready(function($) {
 			news.removeClass('active');
 			$(this).addClass('active');
 			$(this).children().slideDown();
-			news.children('span').not($(this).children('span')).html('more');
-			$(this).children('span').html('less');
+			news.children('h2').children('span').not($(this).children('h2').children('span')).html('more');
+			$(this).children('h2').children('span').html('less');
 		} else {
 			clicked = false;
 			$(this).removeClass('active');
-			$(this).children('h3').children('span').html('more');
+			$(this).children('h2').children('span').html('more');
 			$(this).children().not('h2').slideUp();
 			$(this).children('span').html('more');
 		}
