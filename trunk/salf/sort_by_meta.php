@@ -444,11 +444,16 @@ function remove_unpublished_posts($post_ID_query){
 	//make array of id's of trashed posts
 	$trashed_post_id = get_just_post_ids($trashed_post_id);
 	//cycle though results or date query, unsetting trashed id's
-	foreach($post_ID_query as $key=>$post){
-		//is post id in trashed list?
-		if(in_array($post->post_id,$trashed_post_id)){
-			unset($post_ID_query[$key]);
+	if (is_array($trashed_post_id)){//check to see $trashed_post_id has results
+		foreach($post_ID_query as $key=>$post){
+			//is post id in trashed list?
+		
+			if(in_array($post->post_id,$trashed_post_id)){
+				unset($post_ID_query[$key]);
+			}
 		}
+	} else{
+		fb::log($trashed_post_id, 'trashed posts');
 	}
 	return $post_ID_query;
 }
