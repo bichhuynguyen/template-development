@@ -115,7 +115,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 			</a>
 		</h1>
 		<h2 style="float: right;">
-			<a href="http://www.dsclimited.com/" >
+			<a href="http://www.dsclimited.com/" target="_blank" >
 				<img src="<?php echo bloginfo('template_url');?>/style/images/header_dsc_main_logo.png" alt="DSC - Principle Sponsor" />
 			</a>
 		</h2>

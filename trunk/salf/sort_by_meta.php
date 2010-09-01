@@ -481,4 +481,5 @@ function get_venue_address($id, $list=true){
 	
 	return $html; 
 }
+
 ?>
