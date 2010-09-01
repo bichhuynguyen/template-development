@@ -6,7 +6,7 @@ Template Name: News Page
 <?php get_header(); ?>
 
 		
-		<div class="post" id="home">
+		<div class="post archive-page">
 			<div id="browse-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Browse.png"  alt="Browse" />
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>

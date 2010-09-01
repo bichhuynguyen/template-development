@@ -8,7 +8,7 @@ Template Name: Venues Page
 <?php get_header(); ?>
 
 		
-		<div id="venues" class="post">		
+		<div class="post venues">		
 					
 					
 		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/venues_blurb.png"  alt="Events taking place across London" ></img></h2>
