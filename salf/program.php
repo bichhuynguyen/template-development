@@ -82,7 +82,7 @@ get_header();
 				</form>
 				<form method="post" action="<?php echo remove_post_vars(curPageURL());?>?search=venue">
 				<div class="search_element venue">
-				<h3>Search by Venue</h3>
+				<h3>or Search by Venue</h3>
 				<?php
 				
 				//Get Venue Names
@@ -116,7 +116,7 @@ get_header();
 				//---------------
 				?>
 			<div class="search_element calendar">
-				<h3>Search by Day</h3>	
+				<h3>Filter Results by Day</h3>	
 				<?php $_SESSION['get_program_dates']=create_all_program_dates_array();//firephp?>
 				<?php
 				if (!isset($get_post_id_array)) $get_post_id_array = FALSE; 
