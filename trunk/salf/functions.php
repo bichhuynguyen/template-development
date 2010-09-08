@@ -359,6 +359,9 @@ include('google_maps_meta.php');
 //functions for sorting the program events
 include('sort_by_meta.php');
 
+//classes
+include('classes.php');
+
 
 
 /*---
