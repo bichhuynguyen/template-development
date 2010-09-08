@@ -39,6 +39,25 @@ class VimeoObject{
 		
 		return $player;
 	}
+	function get_video_player_array_by_username(){
+		$entries = $this->get_video_array();
+		foreach ($entries['video'] as $video){
+			$player = $this->create_video_player_by_ID($video['id']);
+			$player_array[]= $player;			
+		}
+		return $player_array;
+	}
+	function video_players_by_ID(){
+		$videos = $this->get_video_player_array_by_username();
+		$player_list = "<ul class='video_list>";
+		foreach($videos as $video){
+				$player_list .= "<li class='video'>";
+				$player_list .= $video;
+				$player_list .= "<li>";
+		}
+		$player_list .= "</ul>";
+		echo $player_list;
+	}
 }
 
 ?>
