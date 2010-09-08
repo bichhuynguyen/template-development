@@ -40,7 +40,13 @@ $meta_box = array(
 	            'id' => $prefix . 'venue',
 	            'type' => 'select2',
 	            'options' => mf_SALF_get_custom_post_list('Venues')
-	        ),
+	        ), 
+		array(
+		        'name' => 'Event Type',
+		        'id' => $prefix . 'type',
+		        'type' => 'select2',
+		        'options' => mf_SALF_get_custom_post_list('Events')
+		    ),
 			
 		array(
 		        'name' => 'EventBrite',
