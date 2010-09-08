@@ -1,5 +1,6 @@
 <?php
 ob_start();
+
 session_start();
 /*
 Template Name: Program
@@ -16,7 +17,6 @@ if ($_SESSION['date_search']!=TRUE){
 if (isset($_SESSION['date_posts'])){
 	$date_search_objects = mf_get_posts_by_ID_array($_SESSION['date_posts']);
 }
-fb::log($_POST);
 
 
 
@@ -52,7 +52,7 @@ get_header();
 			
 		
 			<div id="program_search">
-				<form method="post" action="<?php echo curPageURL();?>">
+				<form method="post" action="<?php echo remove_post_vars(curPageURL());?>?search=event">
 				<div class="search_element events">
 				<h3>Search by Event Type</h3>
 				<?php
@@ -80,7 +80,7 @@ get_header();
 				
 				</div>
 				</form>
-				<form method="post" action="<?php echo curPageURL();?>">
+				<form method="post" action="<?php echo remove_post_vars(curPageURL());?>?search=venue">
 				<div class="search_element venue">
 				<h3>Search by Venue</h3>
 				<?php
