@@ -404,10 +404,11 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
 		} 
 	}
+	
 	if($posts===null) return false;
 	
 	
-	
+	// returns just an array, rather than a list, if selected in the $args
 	if($return_array){
 		return $posts;
 	}
@@ -452,9 +453,7 @@ function remove_unpublished_posts($post_ID_query){
 				unset($post_ID_query[$key]);
 			}
 		}
-	} else{
-		fb::log($trashed_post_id, 'trashed posts');
-	}
+	} 
 	return $post_ID_query;
 }
 function get_venue_address($id, $list=true){
