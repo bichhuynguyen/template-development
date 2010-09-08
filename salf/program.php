@@ -16,7 +16,7 @@ if ($_SESSION['date_search']!=TRUE){
 if (isset($_SESSION['date_posts'])){
 	$date_search_objects = mf_get_posts_by_ID_array($_SESSION['date_posts']);
 }
-
+fb::log($_POST);
 
 
 
@@ -53,6 +53,34 @@ get_header();
 		
 			<div id="program_search">
 				<form method="post" action="<?php echo curPageURL();?>">
+				<div class="search_element events">
+				<h3>Search by Event Type</h3>
+				<?php
+				
+				//Get Venue Names
+				$events_sort = mf_get_post_titles('Events');//get's names of events
+				$events_used = match_venues_to_used_meta($events_sort);
+				
+				
+				
+				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
+				// Create Check Boxes For Venue Selection
+				foreach ($events_used as $id => $venue_check):
+				$full_slug_string = preg_replace('/[\s]/','-',$venue_check);//produce slug for title and name in checkbox series.
+				
+				
+				?>
+				
+				<div style="float:left;clear:both;width: 200px;"><input style="float:right;clear:both;" type="checkbox" name="<?php echo $id;?>" id="<?php echo $full_slug_string.$id;?>" <?php if(in_array($id, $post_IDs)):?>checked="checked"<?php endif;?> /><label for="<?php echo $full_slug_string.$id;?>"><?php echo $venue_check;?></label>
+				</div>
+
+
+				<?php endforeach; ?>
+				<input type="submit" value="submit" name="submit" />
+				
+				</div>
+				</form>
+				<form method="post" action="<?php echo curPageURL();?>">
 				<div class="search_element venue">
 				<h3>Search by Venue</h3>
 				<?php
@@ -80,6 +108,7 @@ get_header();
 				
 				</div>
 				</form>
+				
 				
 				<?php 
 				//---------------
