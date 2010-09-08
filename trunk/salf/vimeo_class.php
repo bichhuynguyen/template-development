@@ -3,7 +3,8 @@ class VimeoObject{
 	var $id;//vimeo username
 	var $video_code;//individual video code
 	var $api_endpoint = 'http://vimeo.com/api/v2/';//start URL for VIMEO simple API
-	
+	var $width = 400;//default video width
+	var $height = 230;//default video width
 	
 			
 	function curl_get($url) {
@@ -27,6 +28,16 @@ class VimeoObject{
 	}
 	return $videos_array;
 	
+	}
+	
+	function create_video_player_by_ID($video_id){
+		$player = '<iframe src="http://player.vimeo.com/video/';
+		$player .= $video_id.'" ';
+		$player .= 'width="'.$this->width.'" ';
+		$player .= 'height="'.$this->height.'" ';
+		$player .=  'frameborder="0"></iframe>';
+		
+		return $player;
 	}
 }
 
