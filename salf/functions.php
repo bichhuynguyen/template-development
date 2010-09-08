@@ -73,7 +73,12 @@ function curPageURL() {
  }
  return $pageURL;
 }
-
+function remove_post_vars($url){
+	//crude function for removing anything after the first ? in a string
+	$url_split = explode('?', $url);
+	
+	return $url_split[0];
+}
 function mf_meta_javascript_launch(){
 	wp_enqueue_script('jquery');
 	
