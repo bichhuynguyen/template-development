@@ -268,6 +268,13 @@ jQuery(document).ready(function($) {
 				$(this).children('div').add($(this).children('p')).slideUp();
 			}
 		});
+		//hide checks when different search criteria used (for usablity, makes it obvious only one can be used at once)
+		$('#program_search .events input').click(function(){
+			$('#program_search .venue input').removeAttr('checked');
+		})
+		$('#program_search .venue input').click(function(){
+			$('#program_search .events input').removeAttr('checked');
+		})
 	};
 	function archives_js(){
 	news = $('.archive-page .new-entry');
