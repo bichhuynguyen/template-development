@@ -481,4 +481,25 @@ function get_venue_address($id, $list=true){
 	return $html; 
 }
 
+function sort_by_sub_element($array,$element){
+	/*takes an multidimension array and an label of an element within a sub array
+	* returns an sorted array by the value of the propertie in the sub array
+	*/
+	foreach($array as $id => $sub_array){
+		if(is_object($sub_array)) $sub_array = get_object_vars($sub_array);
+		$sorting_array[$id]=$sub_array[$element];
+	}
+	asort($sorting_array);
+	$sorting_array = array_reverse($sorting_array, true);
+	
+	foreach ($sorting_array as $id=>$next_post){
+		$sorted_posts[] = $array[$id];
+	}
+	
+	return $sorted_posts;
+	
+}
+
+
+
 ?>
