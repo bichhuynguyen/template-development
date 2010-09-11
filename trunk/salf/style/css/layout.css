@@ -1065,3 +1065,13 @@ a.venue:hover{
 	width: 100%;
 	z-index: 3;
 }
+/*
+* Multimedia
+*/
+.multimedia div.multimedia{
+	float: left;
+	width: 40%;
+}
+.multimedia div#videos {
+	margin-right: 10%;
+}

@@ -78,7 +78,7 @@ Template Name: News Page
 					
 				<a href="<?php the_permalink();?>">
 					<div class="archive-link new-entry">
-						<h2>     <?php the_title(); ?></h2><div class="post-details"><?php the_time('l, F jS, Y') ?></div>
+						<h2>     <?php the_title(); ?></h2><?php comments_number('','1 comment','% comments'); ?><div class="post-details"><?php the_time('l, F jS, Y') ?></div>
 						<?php mf_post_thumbnail('small-cropped');?>
 						<?php the_excerpt(); ?>
 						

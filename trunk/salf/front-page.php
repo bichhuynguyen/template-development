@@ -26,7 +26,7 @@ Template Name: Front Page
 				$wp_query = new WP_Query();
 
 				$wp_query->query('post_type=post&paged='.$paged);
-
+				
 
 
 

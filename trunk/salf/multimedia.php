@@ -24,10 +24,8 @@ Template Name: Multimedia Page
 		<div id='videos' class="multimedia">
 		<h2>Images</h2>
 		<?php
-		$params = array(
-				'user_id'	=> 	'32895227@N00',
-				'per_page'	=>	'5');
-		$flickr = new FlickrObject($params);
+		
+		$flickr = new FlickrObject();
 		$flickr->params = array(
 				'user_id'	=> 	'32895227@N00',
 				'per_page'	=>	'5');
