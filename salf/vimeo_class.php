@@ -1,4 +1,6 @@
 <?php
+
+
 class VimeoObject{
 	var $id;//vimeo username
 	var $video_code;//individual video code
@@ -59,5 +61,117 @@ class VimeoObject{
 		echo $player_list;
 	}
 }
+
+add_action('admin_menu','vimeo_setup');
+
+function vimeo_setup(){
+
+add_settings_field('vimeo_id','Vimeo ID','display_vimeo','general');
+add_option("vimeo_id");
+}
+
+function display_vimeo(){
+	$options = get_option('vimeo_id');
+	fb::log($_POS);
+	echo '<input id="vimeo_id" class="regular-text" type="text" name="vimeo_id" value="" size="30" style="width:85%" />';
+	echo '<p><small> Enter your Vimeo ID here.</small></p>';
+}
+
+
+
+
+add_action('admin_init', 'multimedia_options_init' );
+
+add_action('admin_menu', 'multimedia_options_add_page');
+
+
+
+// Init plugin options to white list our options
+
+function multimedia_options_init(){
+
+    register_setting( 'multimedia_options_options', 'multimedia_', 'multimedia_options_validate' );
+
+}
+
+
+
+// Add menu page
+
+function multimedia_options_add_page() {
+
+    add_options_page('Vimeo Sample Options', 'Sample Options', 'manage_options', 'multimedia_options', 'multimedia_options_do_page');
+
+}
+
+
+
+// Draw the menu page itself
+
+function multimedia_options_do_page() {
+	
+    ?>
+
+    <div class="wrap">
+
+        <h2>Multimedia</h2>
+
+        <form method="post" action="options.php">
+
+            <?php settings_fields('multimedia_options_options'); ?>
+
+            <?php $options = get_option('multimedia_'); ?>
+
+            <table class="form-table">
+
+                <tr valign="top"><th scope="row">Vimeo ID</th>
+
+                    <td><input type="text" name="multimedia_[vimeo_id]" value="<?php echo $options['vimeo_id']; ?>" /></td>
+
+                </tr>
+				<tr valign="top"><th scope="row">Flickr ID</th>
+
+                    <td><input type="text" name="multimedia_[flickr_id]" value="<?php echo $options['flickr_id']; ?>" /></td>
+
+                </tr>
+            </table>
+
+            <p class="submit">
+
+            <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+
+            </p>
+
+        </form>
+
+    </div>
+
+    <?php    
+
+}
+
+
+
+// Sanitize and validate input. Accepts an array, return a sanitized array.
+
+function multimedia_options_validate($input) {
+	
+    
+
+    // Say our option must be safe text with no HTML tags
+
+    $input['vimeo_id'] =  wp_filter_nohtml_kses($input['vimeo_id']);
+
+    
+
+    return $input;
+
+}
+
+
+
+
+
+
 
 ?>
