@@ -34,6 +34,7 @@ if (count($_SESSION['venue_post_vars'])>1){
 }
 // if $date_search_objects exists, use that for post object instead.
 if(isset($date_search_objects)) $get_posts = $date_search_objects;
+if (isset($get_posts)) $get_posts = sort_by_sub_element($get_posts,'menu_order');
 
 
 get_header(); 
@@ -131,7 +132,7 @@ get_header();
 			<div id="program_feed">
 			<?php if(!isset($get_posts)) ://no search submitted?>
 				
-			<?php $news_query = new WP_Query('post_type=program&nopaging=true');
+			<?php $news_query = new WP_Query('post_type=program&nopaging=true&orderby=menu_order');
 			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
