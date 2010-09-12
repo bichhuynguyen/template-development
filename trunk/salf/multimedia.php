@@ -13,7 +13,7 @@ Template Name: Multimedia Page
 		<?php the_content(); ?>
 		<?php endwhile; endif; ?>
 		
-		<div id='videos' class="multimedia">
+		<div id='vimeo' class="multimedia">
 		<h2>Videos</h2>
 		<?php/*
 		$vimeo = new VimeoObject();
@@ -21,7 +21,7 @@ Template Name: Multimedia Page
 		$vimeo->video_players_by_ID();*/
 		?>
 		</div>
-		<div id='videos' class="multimedia">
+		<div id='flickr' class="multimedia">
 		<h2>Images</h2>
 		<?php
 		
@@ -30,9 +30,9 @@ Template Name: Multimedia Page
 		$flickr->params = array(
 				
 				'per_page'	=>	'10');
-		//$flickr->echo_ul_images();
+		
 		$flickr->images_and_links();
-		//fb::log($flickr->param_string);
+		$flickr->get_image_by_id('cock');
 		?>
 		</div>
 		

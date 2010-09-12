@@ -98,6 +98,8 @@
 
 				?>
 				<?php mf_post_thumbnail('large-uncropped');?>
+				
+				
 				<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
 				<h2><?php the_title(); ?></h2>
 
@@ -169,12 +171,26 @@
 
 	<?php endif; ?>
 		
-	<?php else :?>
+	<?php else:// if single post ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
 			
 			<?php mf_post_thumbnail('large-uncropped');?>
+			<?php
+			$image_id = get_post_meta(get_the_ID(), 'mf_SALF_multimedia_meta_flickr_image', true);
+			if ($image_id):
+			?>
+			<div style="float: right; clear: right;" id='flickr' class="multimedia">
+			<h3>Flickr Image</h3>
+			<?php
+				
+			$flickr = new FlickrObject();
+			
+			$flickr->get_image_by_id($image_id);
+			?>
+			</div>
+			<?php endif;?>
 			<h2><?php the_title(); ?></h2>
 			
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>

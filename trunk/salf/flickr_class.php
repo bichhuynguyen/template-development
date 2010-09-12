@@ -29,7 +29,7 @@ class FlickrObject{
 		return $img_tag;
 	}
 	
-	function anchor_tag($photo){
+	function anchor_tag($photo, $inc_end=true){
 		//build link to view image on flickr
 		
 		$img_tag = "<a target='_blank' href='";
@@ -37,7 +37,12 @@ class FlickrObject{
 		$img_tag .= $photo['owner'];
 		$img_tag .= '/';
 		$img_tag .= $photo['id'];
-		$img_tag .= "'>View on Flickr</a>";
+		if ($inc_end):
+			$img_tag .= "'>View on Flickr</a>";
+		else: //cut off close tag and text
+			$img_tag .= "'>";
+		endif;
+			
 		
 		return $img_tag;
 	}
@@ -95,34 +100,66 @@ class FlickrObject{
 			
 	}
 	
-	function convert_XML(){
+	function convert_XML($single = false){
 		//converts returned API call into associative array
 		$this->api_call();
 		if ($this->stat!='ok') return false; //Kills function if API call failed.
 		
-		foreach ($this->callback_array['photos'] as $photo){
-			$photos[]=get_object_vars($photo);
-		}
+		if(!$single):
+			foreach ($this->callback_array['photos'] as $photo){
+				$photos[]=get_object_vars($photo);
+			}
+		else://single is true
+			$photos=get_object_vars($this->callback_array['photo']);
+		endif;
 		$this->photo_array = $photos;
-		fb::log($this->photo_array);
+		
 	}
 	
 	function images_and_links(){
 		$this->convert_XML();
-		
-	$ul_images = '<ul class="flickr_feed">';	
-		foreach ($this->photo_array as $photo){
-			$photo = $photo['@attributes'];
+	if ($this->stat != 'fail'): //check API call was success	
+		$ul_images = '<ul class="flickr_feed">';	
+			foreach ($this->photo_array as $photo){
+				$photo = $photo['@attributes'];
 			
-			$ul_images .= '<li class="flickr_image">';
-			$ul_images .= $this->image_tag($photo);
-			$ul_images .= $this->anchor_tag($photo);
-			$ul_images .= '</li>';
-		}
-	$ul_images .= '</ul>';
-	echo $ul_images;	
+			
+				$ul_images .= '<li class="flickr_image">';
+				$ul_images .= $this->anchor_tag($photo, false);
+				$ul_images .= $this->image_tag($photo);
+				$ul_images .= '</a>';
+				$ul_images .= '</li>';
+			}
+			$ul_images .= '</ul>';
+			
+			echo $ul_images;	
+	else: //if API call failed
+			echo "Flickr Call Failed - Please Check Details";
+	endif;
 	}
 	
+	function get_image_by_id($id){
+		$this->method = 'flickr.photos.getInfo';
+		$this->params = array('photo_id' => $id);
+		$this->convert_XML(true);
+		
+		if ($this->stat != 'fail'): //check API call was success
+			$link = get_object_vars($this->photo_array['urls']);
+			$link = $link['url'];
+			$photo = $this->photo_array['@attributes'];
+			$photo = array_merge(array(
+				'owner'	=> 	$this->photo_array['owner']->attributes['nsid']			
+				),$photo);
+		
+			echo "<a href='$link'>";
+			echo $this->image_tag($photo);
+			echo "</a>";
+		else: //if API call failed
+			echo "Flickr Call Failed - Please Check Photo ID";
+		endif;
+		fb::log($this->stat, 'status');
+		
+	}
 	
 	
 
