@@ -8,6 +8,15 @@ class VimeoObject{
 	var $width = 400;//default video width
 	var $height = 230;//default video width
 	
+	function __construct($id = false){
+		if($id){
+			$this->id=$id;
+			
+		} else {
+			$multimedia = get_option('multimedia_');
+			$this->id = $multimedia['vimeo_id'];
+		}
+	}
 			
 	function curl_get($url) {
 			$curl = curl_init($url);
@@ -62,20 +71,6 @@ class VimeoObject{
 	}
 }
 
-add_action('admin_menu','vimeo_setup');
-
-function vimeo_setup(){
-
-add_settings_field('vimeo_id','Vimeo ID','display_vimeo','general');
-add_option("vimeo_id");
-}
-
-function display_vimeo(){
-	$options = get_option('vimeo_id');
-	fb::log($_POS);
-	echo '<input id="vimeo_id" class="regular-text" type="text" name="vimeo_id" value="" size="30" style="width:85%" />';
-	echo '<p><small> Enter your Vimeo ID here.</small></p>';
-}
 
 
 
@@ -100,7 +95,7 @@ function multimedia_options_init(){
 
 function multimedia_options_add_page() {
 
-    add_options_page('Vimeo Sample Options', 'Sample Options', 'manage_options', 'multimedia_options', 'multimedia_options_do_page');
+    add_options_page('Vimeo Sample Options', 'Multimedia Settings', 'manage_options', 'multimedia_options', 'multimedia_options_do_page');
 
 }
 
@@ -129,9 +124,15 @@ function multimedia_options_do_page() {
                     <td><input type="text" name="multimedia_[vimeo_id]" value="<?php echo $options['vimeo_id']; ?>" /></td>
 
                 </tr>
-				<tr valign="top"><th scope="row">Flickr ID</th>
+				
+				<tr valign="top"><th scope="row">Flickr Api Key</th>
 
-                    <td><input type="text" name="multimedia_[flickr_id]" value="<?php echo $options['flickr_id']; ?>" /></td>
+                    <td><input type="text" name="multimedia_[flickr_api_key]" value="<?php echo $options['flickr_api_key']; ?>" /></td>
+
+                </tr>
+				<tr valign="top"><th scope="row">Flickr User ID</th>
+
+                    <td><input type="text" name="multimedia_[flickr_user_id]" value="<?php echo $options['flickr_user_id']; ?>" /></td>
 
                 </tr>
             </table>
@@ -159,8 +160,11 @@ function multimedia_options_validate($input) {
     
 
     // Say our option must be safe text with no HTML tags
-
+	
     $input['vimeo_id'] =  wp_filter_nohtml_kses($input['vimeo_id']);
+	$input['flickr_api_key'] =  wp_filter_nohtml_kses($input['flickr_api_key']);
+	//$input['flickr_user_id'] =  wp_filter_nohtml_kses($input['flickr_user_id']);
+	
 
     
 
