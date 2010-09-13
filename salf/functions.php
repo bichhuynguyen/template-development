@@ -438,7 +438,11 @@ function get_function_directory_extension($template_url = FALSE){
      return $function_folder;
 
 }
-
-
+/*--------------
+Custom Template Tags
+---------------*/
+function mf_voting_form(){
+	include('voter_form.php');
+}
 
 ?>
