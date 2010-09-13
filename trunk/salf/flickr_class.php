@@ -100,13 +100,13 @@ class FlickrObject{
 			
 	}
 	
-	function convert_XML($single = false){
+	function convert_XML($relevant_array, $single = false){
 		//converts returned API call into associative array
 		$this->api_call();
 		if ($this->stat!='ok') return false; //Kills function if API call failed.
 		
 		if(!$single):
-			foreach ($this->callback_array['photos'] as $photo){
+			foreach ($this->callback_array[$relevant_array] as $photo){
 				$photos[]=get_object_vars($photo);
 			}
 		else://single is true
@@ -116,8 +116,12 @@ class FlickrObject{
 		
 	}
 	
-	function images_and_links(){
-		$this->convert_XML();
+	function images_and_links($photoset=false){
+		if (!$photoset):
+			$this->convert_XML('photos');
+		else: 
+			$this->convert_XML($photoset);
+		endif;
 	if ($this->stat != 'fail'): //check API call was success	
 		$ul_images = '<ul class="flickr_feed">';	
 			foreach ($this->photo_array as $photo){
@@ -141,7 +145,7 @@ class FlickrObject{
 	function get_image_by_id($id){
 		$this->method = 'flickr.photos.getInfo';
 		$this->params = array('photo_id' => $id);
-		$this->convert_XML(true);
+		$this->convert_XML('photo', true);
 		
 		if ($this->stat != 'fail'): //check API call was success
 			$link = get_object_vars($this->photo_array['urls']);
@@ -161,6 +165,13 @@ class FlickrObject{
 		
 	}
 	
+	function get_photoset($id){
+		$this->method = 'flickr.photosets.getPhotos';
+		$this->params = array('photoset_id' => $id, 'per_page' => 5);
+		
+		$this->images_and_links('photoset');
+		fb::log($this->photo_array,'get_photoset');
+	}
 	
 
 }

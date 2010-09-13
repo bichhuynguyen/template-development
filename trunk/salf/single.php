@@ -177,20 +177,27 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 			
 			<?php mf_post_thumbnail('large-uncropped');?>
+			
 			<?php
+			$flickr = new FlickrObject();
 			$image_id = get_post_meta(get_the_ID(), 'mf_SALF_multimedia_meta_flickr_image', true);
 			if ($image_id):
 			?>
 			<div style="float: right; clear: right;" id='flickr' class="multimedia">
 			<h3>Flickr Image</h3>
-			<?php
-				
-			$flickr = new FlickrObject();
-			
-			$flickr->get_image_by_id($image_id);
-			?>
+			<?php $flickr->get_image_by_id($image_id); ?>
 			</div>
 			<?php endif;?>
+			<?php
+			$set_id = get_post_meta(get_the_ID(), 'mf_SALF_multimedia_meta_flickr_set', true);
+			if ($set_id):
+			?>
+			<div style="float: right; clear: right;" id='flickr' class="multimedia">
+			<h3>Flickr Set</h3>
+			<?php $flickr->get_photoset($set_id); ?>
+			</div>
+			<?php endif;?>
+			
 			<h2><?php the_title(); ?></h2>
 			
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
@@ -239,9 +246,10 @@
 				<div class="fb-iframe"><fb:like action='like' colorscheme='light'
 				layout='standard' show_faces='true' /></div>
 				</span>
-				<div id="comment_block">
-				<?php comments_template( '', true ); ?>
-				</div>
+				<?php mf_voting_form();?>
+				
+				
+				
 		</div>
 		
 
