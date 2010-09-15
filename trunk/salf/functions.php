@@ -227,6 +227,8 @@ add_action( 'init', 'add_fitzgraham_objects_and_taxonomy' );
 function add_fitzgraham_objects_and_taxonomy(){
 	add_new_object('Volunteer');
 	add_new_object('Program');
+	add_new_object('Books');
+	
 	add_new_taxonomy('Elements', 'Program');
 	add_new_object('Artists');
 	add_new_object('Events');

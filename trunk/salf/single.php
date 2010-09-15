@@ -247,7 +247,9 @@
 				layout='standard' show_faces='true' /></div>
 				</span>
 				<?php mf_voting_form();?>
-				
+				<div id="comment_block">
+					<?php comments_template( '', true ); ?>
+				</div>
 				
 				
 		</div>
