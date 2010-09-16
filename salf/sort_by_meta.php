@@ -465,9 +465,8 @@ function get_venue_address($id, $list=true){
 		//test if each element exists (some address are longer than others)
 		if ($meta){
 			$address[]=$meta;
-		}else{
-			return false;
 		}
+		if (count($address)<1) return false; //kills function if no address provided.
 	}
 	//return array if list is false
 	if(!$list) return $address;
