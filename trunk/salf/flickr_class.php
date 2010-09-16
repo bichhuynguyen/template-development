@@ -161,7 +161,7 @@ class FlickrObject{
 		else: //if API call failed
 			echo "Flickr Call Failed - Please Check Photo ID";
 		endif;
-		fb::log($this->stat, 'status');
+		
 		
 	}
 	

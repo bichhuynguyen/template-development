@@ -15,10 +15,10 @@ Template Name: Multimedia Page
 		
 		<div id='vimeo' class="multimedia">
 		<h2>Videos</h2>
-		<?php/*
+		<?php
 		$vimeo = new VimeoObject();
 		
-		$vimeo->video_players_by_ID();*/
+		$vimeo->video_players_by_ID();//*/
 		?>
 		</div>
 		<div id='flickr' class="multimedia">

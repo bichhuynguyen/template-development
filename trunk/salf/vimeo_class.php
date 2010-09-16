@@ -41,6 +41,29 @@ class VimeoObject{
 	
 	}
 	
+	function get_single_video_player($id){
+		$return .= '<object width="'.$this->width.'" height="'.$this->height.'"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=';
+		$return .= $id;
+		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=';
+		$return .= $id;
+		$return .= '&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="225"></embed></object>';
+		
+		return $return;
+		
+	}
+	
+	
+	
+	function get_universal_player_object($id){
+		$url = $this->curl_get('http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/'.$id);
+		$xml_video = simplexml_load_string($url);//get XML
+
+		//convert XML objects to array elements
+		$video = get_object_vars($xml_video);
+		
+		return $video;
+	}
+	
 	function create_video_player_by_ID($video_id){
 		$player = '<iframe src="http://player.vimeo.com/video/';
 		$player .= $video_id.'" ';
@@ -48,11 +71,17 @@ class VimeoObject{
 		$player .= 'height="'.$this->height.'" ';
 		$player .=  'frameborder="0"></iframe>';
 		
+		
+		
 		return $player;
 	}
 	function get_video_player_array_by_username(){
 		$entries = $this->get_video_array();
 		foreach ($entries['video'] as $video){
+			
+			//$props = $this->get_universal_player_object($video['id']); need to control width!!
+		
+			
 			$player = $this->create_video_player_by_ID($video['id']);
 			$player_array[]= $player;			
 		}
