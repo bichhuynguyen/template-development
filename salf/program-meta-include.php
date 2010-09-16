@@ -20,6 +20,7 @@ if($custom_loop != true)://checks to see if the vars needed are for a normal loo
 					$time =  mf_get_time($time);
 					//fb::log($time,'time');
 					$eventbrite_link = get_post_meta(get_the_ID(), 'mf_SALF_meta_eventbrite', true);
+					$concession_link = get_post_meta(get_the_ID(), 'mf_SALF_meta_concession', true);
 					$price = get_post_meta(get_the_ID(), 'mf_SALF_meta_price', true);
 					$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);
 					
@@ -39,6 +40,7 @@ else:// if custom_loop set to true, fetch the vars with different methods
 				} 
 
 					$eventbrite_link = get_post_meta($current_post->ID, 'mf_SALF_meta_eventbrite', true);
+					$concession_link = get_post_meta($current_post->ID, 'mf_SALF_meta_concession', true);
 					$price = get_post_meta($current_post->ID, 'mf_SALF_meta_price', true);
 					$date = get_post_meta($current_post->ID, 'mf_SALF_meta_date', true);
 endif;//end custom loop check

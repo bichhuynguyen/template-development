@@ -1081,4 +1081,6 @@ ul#address li{
 ul#address{
 	margin-bottom: 16px;
 }
-
+li.tickets a{
+	margin: 0 10px;
+}
