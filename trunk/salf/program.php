@@ -133,6 +133,7 @@ get_header();
 			<?php if(!isset($get_posts)) ://no search submitted?>
 				
 			<?php $news_query = new WP_Query('post_type=program&nopaging=true&orderby=menu_order');
+			$news_query->posts = array_reverse($news_query->posts);//reverse posts
 			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
@@ -147,7 +148,7 @@ get_header();
 						<h3><?php the_title(); ?></h3>
 						
 						
-						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
+						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link, $concession_link,get_the_ID())?>
 						<?php mf_post_thumbnail('small-cropped',false,'program-thumb');?>
 						<?php the_content(); ?>
 						
@@ -188,7 +189,7 @@ get_header();
 					?>
 					<div class="event">
 					<h3><?php echo $current_post->post_title;?></h3>
-					<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,$current_post->ID)?>
+					<?php echo program_meta_display($date,$time,$venue, $artist, $price, $eventbrite_link, $concession_link, $current_post->ID)?>
 					<?php mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
 					<p><?php echo $current_post->post_content;?></p>
 

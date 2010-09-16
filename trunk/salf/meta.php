@@ -53,6 +53,13 @@ $meta_box = array(
 				'desc' => '<p>Enter Eventbrite Link</p>',
 		        'id' => $prefix . 'eventbrite',
 		        'type' => 'wide-text'		        
+		    ),
+			
+		array(
+		        'name' => 'Concession',
+				'desc' => '<p>Enter Concession Link</p>',
+		        'id' => $prefix . 'concession',
+		        'type' => 'wide-text'		        
 		    )
     	)
 );

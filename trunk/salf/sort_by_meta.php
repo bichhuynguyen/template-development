@@ -284,7 +284,7 @@ function create_html_calendar($october){
 
 	
 //build HTML output for program meta data on program page
-function program_meta_display($date = false,$time=false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$id=false){
+function program_meta_display($date = false,$time=false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$concession_link=false,$id=false){
 	$return = '<div class="post-details">';
 	$return .= '<div class="date"><h4>Date:&nbsp;</h4><span>'.$date.'</span></div>';
 	$return .= '<div class="time"><h4>Time:&nbsp;</h4><span>'.$time.'</span></div>';
@@ -322,7 +322,12 @@ function program_meta_display($date = false,$time=false,$venue=false, $artist=fa
 		} elseif ($price != "") {
 			$return .='<li><span>£'.$price.'</span></li>'; 
 		}
-		if ($eventbrite_link != "") $return .='<li class="tickets"><a  style="margin: 10px;" href="'. $eventbrite_link.'" target="_blank"><img src="'.get_bloginfo('template_url').'/style/images/tickets.png" /></a></li>'; 
+		if ($eventbrite_link != "")
+		{ $return .='<li class="tickets"><a  href="'. $eventbrite_link.'" target="_blank"><img src="'.get_bloginfo('template_url').'/style/images/tickets.png" /></a></li>';
+		}
+		if ($concession_link != "") 
+		{$return .='<li class="tickets"><a  href="'. $concession_link .'" target="_blank">Concessions</a></li>'; 
+		} 
 	$return .='</ul>';
 	
 	
@@ -495,6 +500,7 @@ function sort_by_sub_element($array,$element){
 		$sorted_posts[] = $array[$id];
 	}
 	
+	$sorted_posts = array_reverse($sorted_posts);
 	return $sorted_posts;
 	
 }

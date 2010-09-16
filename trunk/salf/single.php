@@ -206,7 +206,7 @@
 				
 				
 				<?php mf_socialise_post();?>
-				<?php mf_voting_form();?>
+				<?php //mf_voting_form();?>
 				<div id="comment_block">
 					<?php comments_template( '', true ); ?>
 				</div>
