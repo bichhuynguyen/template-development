@@ -161,7 +161,7 @@ get_header();
 						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link, $concession_link,get_the_ID())?>
 						<?php mf_post_thumbnail('small-cropped',false,'program-thumb');?>
 						<?php the_content(); ?>
-						
+						<?php mf_socialise_post('Can\'t wait for');?>
 						</div>
 			
 						
@@ -201,8 +201,8 @@ get_header();
 					<h3><?php echo $current_post->post_title;?></h3>
 					<?php echo program_meta_display($date,$time,$venue, $artist, $price, $eventbrite_link, $concession_link, $current_post->ID)?>
 					<?php mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
-					<p><?php echo $current_post->post_content;?></p>
-
+					<p><?php echo $current_post->post_content;?><?php mf_socialise_post('Can\'t wait for');?></p>
+					
 					
 					
 					</div>

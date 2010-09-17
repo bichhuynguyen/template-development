@@ -446,7 +446,8 @@ Custom Template Tags
 function mf_voting_form(){
 	include('voter_form.php');
 }
-function mf_socialise_post(){
+function mf_socialise_post($tweet_leader = false){
+	//$tweet_leader = $tweet_leader;
 	include('social_posts.php');
 }
 ?>

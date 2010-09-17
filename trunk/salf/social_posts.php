@@ -1,10 +1,15 @@
-<?php ?>
+<?php
+if (!$tweet_leader) $tweet_leader = "Just reading";
+
+?>
+
+<div class="social_posts clear">
 <script type="text/javascript">
 function getTinyUrl($url) {   
      $tinyurl = file_get_contents("http://tinyurl.com/api-create.php?url=".$url);  
      return $tinyurl;  
 }
-var twtTitle  = "Just reading '<?php the_title(); ?>'";
+var twtTitle  = "<?php echo $tweet_leader;?> '<?php the_title(); ?>'";
 
 var tinyUrl = "<?php 
 
@@ -33,4 +38,5 @@ document.getElementById('fb-root').appendChild(e);
 <div class="fb-iframe"><fb:like action='like' colorscheme='light'
 layout='standard' show_faces='true' /></div>
 </span>
+</div>
 <?php ?>
