@@ -355,8 +355,8 @@ function mf_render_google_maps($post_id, $width=395,$height=395){
 	
 	
 	$html_return =  '<iframe class="google-map" width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="';
-	//$html_return .= $map_link;
-	$html_return .= 'http://maps.google.com/?ie=UTF8&amp;hq=&amp;hnear=&amp;ll=51.565266,-1.747813&amp;spn=0.007736,0.022638&amp;t=h&amp;z=16';
+	$html_return .= $map_link;
+	
 	$html_return .= '&amp;output=embed"></iframe>';
 	
 	

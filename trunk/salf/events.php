@@ -13,7 +13,7 @@ Template Name: Events Page
 			<img src="<?php echo bloginfo('template_url'); ?>/style/images/Events-title.png" alt="Events Title">
 			<div id="event-type-boxes">
 			<?php
-			query_posts( array( 'post_type' => 'Events') );
+			query_posts( array( 'post_type' => 'Events', 'orderby' => 'title', 'order'=>'asc') );
 			
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			<div class="event-type-box">
