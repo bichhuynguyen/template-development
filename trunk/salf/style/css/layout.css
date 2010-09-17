@@ -659,7 +659,7 @@ a.twitter img{
 /*
 Chimp Submit
 */
-input.chimp { 
+.chimp { 
 display: inline;
 float: left;
 margin: 3px;
@@ -1083,4 +1083,7 @@ ul#address{
 }
 li.tickets a{
 	margin: 0 10px;
+}
+.clear{
+	clear: both;
 }

@@ -46,18 +46,19 @@ get_header();
 			 
 			<script src="<?php bloginfo('template_url');?>/scripts/program.js"></script>
 			<div id="program-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Program-title.png"  alt="Program" />
+			
+			
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="clear"><?php the_content(); ?></div>
+			<?php endwhile; endif; ?>
 			<?php if(count($_POST)>0) :
 			$url = curPageURL();
 			$url = explode('?search', $url);
 			$url = $url[0];
 			
 			?>
-				<p style="clear: both;"><a href="<?php echo $url;?>">Clear Results</a></p>
+				<p class="chimp" style="clear: both;"><a style="color: #ffffff;" href="<?php echo $url;?>">Clear Results</a></p>
 			<?php endif;?>
-			
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<?php the_content(); ?>
-			<?php endwhile; endif; ?>
 			</div>
 			
 		
