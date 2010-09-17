@@ -14,7 +14,7 @@ Template Name: Venues Page
 		<h2><img src="<?php echo bloginfo('template_url'); ?>/style/images/venues_blurb.png"  alt="Events taking place across London" ></img></h2>
 		<div id="venue_images">
 			<?php
-			query_posts( array( 'post_type' => 'Venues') );
+			query_posts( array( 'post_type' => 'Venues', 'orderby' => 'title', 'order'=>'asc') );
 			
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 			

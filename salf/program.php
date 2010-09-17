@@ -45,7 +45,16 @@ get_header();
 		<div class="post" id="home">
 			 
 			<script src="<?php bloginfo('template_url');?>/scripts/program.js"></script>
-			<div id="program-head"><a href="<?php curPageURL();?>"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Program-title.png"  alt="Program" /></a>
+			<div id="program-head"><img style="float: left; margin-bottom: 12px" src="<?php bloginfo('template_url');?>/style/images/Program-title.png"  alt="Program" />
+			<?php if(count($_POST)>0) :
+			$url = curPageURL();
+			$url = explode('?search', $url);
+			$url = $url[0];
+			
+			?>
+				<p style="clear: both;"><a href="<?php echo $url;?>">Clear Results</a></p>
+			<?php endif;?>
+			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>
 			<?php endwhile; endif; ?>
