@@ -146,8 +146,9 @@ get_header();
 			$news_query->posts = array_reverse($news_query->posts);//reverse posts
 			$_SESSION['news_query'] = $news_query;
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
-
+						
 						<?php 	
+								fb::log($post,'post');
 								//Include program-meta-include
 								$template = get_function_directory_extension();
 								include($template.'/program-meta-include.php');
