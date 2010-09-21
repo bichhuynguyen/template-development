@@ -415,7 +415,7 @@ function get_function_directory_extension($template_url = FALSE){
      $template_url_array = array_splice($template_url_array,$offset,3);
      //put back togther as string
      $template_url_return_string = implode('/',$template_url_array);
-     //fb::log($template_url_return_string,'Template');//firephp
+     ////fb::log($template_url_return_string,'Template');//firephp
     
      //creates current working directory with template extention and functions directory    
      //if admin, change out of admin folder before storing working dir, then change back again.
@@ -427,7 +427,7 @@ function get_function_directory_extension($template_url = FALSE){
      } else {
           $current_working_directory = getcwd();
      }
-     //fb::log($current_working_directory,'Directory');//firephp
+     ////fb::log($current_working_directory,'Directory');//firephp
     
      //alternate method is chdir method doesn't work on your server (some windows servers might not like it)
      //if (is_admin()) $current_working_directory = str_replace('/wp-admin','',$current_working_directory);

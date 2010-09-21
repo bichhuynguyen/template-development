@@ -12,7 +12,7 @@ get_header(); ?>
 			<h2><?php the_title(); ?></h2>
 			
 			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-			<?php $map = mf_render_google_maps(get_the_ID(),300,300);?>
+			<?php $map = ////fb::log(get_the_ID(),300,300);?>
 			<?php if($map)://if map element not false.?>
 			<a class="google-map" classhref=#>View Map</a>
 			<div class="google-map">
