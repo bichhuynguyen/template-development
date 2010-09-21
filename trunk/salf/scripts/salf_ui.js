@@ -366,19 +366,22 @@ jQuery(document).ready(function($) {
 	//facebook controls
 	commentOpen = false;
 	commentFocus = false;
-	$('span.facebook-connect').show();
-	$('#nav span.facebook-connect').click(function(){
+	$('div.facebook-connect').show();
+	$('#nav div.facebook-connect').click(function(){
 		parent = $(this);
 		socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
 		
 		$(socialButtons).fadeOut(200, function(){
 			$(parent).siblings('a.twitter').hide();
-			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500);
+			$('#nav div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500, function(){
+				$(this).css('z-index','3');
+			});
 		});
 	
 		$(this).children('div.fb-iframe').mouseout(function(){
 					if($(this).css('opacity') == 1){
 						$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
+							$(this).css('z-index','0');
 							$(socialButtons).fadeIn(200);
 						});
 					}
@@ -387,7 +390,7 @@ jQuery(document).ready(function($) {
 			
 		return false;
 	});//*/
-	$('.post span.facebook-connect').click(function(){
+	$('.post div.facebook-connect').click(function(){
 		parent = $(this);
 		socialButtons = $(this).children('a.facebook').children('img');
 		

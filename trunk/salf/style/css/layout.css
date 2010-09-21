@@ -203,7 +203,9 @@ h1, h2, h3, h4,h5,h6{
 }
 #sidebar{
 	display: none;
-	float: right;
+	position: absolute;
+	right: 0;
+	top: 15px;
 	width: 150px;
 }
 #nav{
@@ -616,40 +618,37 @@ html .mc_custom_border_hdr h2.widgettitle{
 *
 * Facebook
 */
-span.facebook-connect{
+div.facebook-connect{
 	display: none;
-	
-	
-}
-.post span.facebook-connect{
+	width: 10px;
 	float: left;
+	
+	
 }
-div .fb-iframe{
+
+div.fb-iframe{
 	opacity: 0;
 	
 	height: 10px;
 	width: 10px;/**/
 }
-#nav div .fb-iframe{
-	left: -175px;
-}
+
 .post div .fb-iframe{
 	float: left;
 }
-#nav span.facebook-connect, #nav .facebook-connect iframe{
+#nav .facebook-connect iframe{
 	position: absolute;
 }
 iframe.header, #nav .facebook-connect iframe, #nav div .fb-iframe{
-	
-
-	-webkit-box-shadow: -3px 3px 10px #807B72;
-	-moz-box-shadow: -3px 3px 10px #807B72;
-	
 	position: absolute;
 	z-index: 3;
+	
 
 }
-
+iframe.header, #nav .facebook-connect iframe{
+	-webkit-box-shadow: -3px 3px 10px #807B72;
+	-moz-box-shadow: -3px 3px 10px #807B72;
+}
 a.twitter img{
 	margin-right: 5px;
 	float: left
