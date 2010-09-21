@@ -140,15 +140,24 @@ get_header();
 			<div class="program_content">
 			
 			<div id="program_feed">
-			<?php if(!isset($get_posts)) ://no search submitted?>
+			
 				
 			<?php $news_query = new WP_Query('post_type=program&nopaging=true&orderby=menu_order');
-			$news_query->posts = array_reverse($news_query->posts);//reverse posts
-			$_SESSION['news_query'] = $news_query;
-			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
+			if(isset($get_posts)) :// search submitted
+				$news_query->posts = $get_posts;
+				$news_query->post_count = count($news_query->posts);
+				//fb::log($news_query);
+			else:
+				$news_query->posts = array_reverse($news_query->posts);//reverse posts
+			endif;
+			
+			
+			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); 
+			
+			?>
 						
 						<?php 	
-								fb::log($post,'post');
+								//fb::log($post,'post');
 								//Include program-meta-include
 								$template = get_function_directory_extension();
 								include($template.'/program-meta-include.php');
@@ -175,52 +184,9 @@ get_header();
 					//wp_reset_query();
 					?>
 					
-			<?php elseif(count($_SESSION['venue_post_vars'])>1 OR $_SESSION['date_search'])://if search form submitted, and a venue selected OR date search performed
-			?>	
-				
-				<?php
-				
-				
 			
 			
-			//The Loop!!
-			foreach ($get_posts as $venue_id => $current_post):
-			$_SESSION['current_post'] = $current_post;
 			
-			?>
-
-				
-					<?php 	
-							//Include program-meta-include
-							$custom_loop = true; //tell include file to render custom loop vars
-							$template = get_function_directory_extension();
-							include($template.'/program-meta-include.php');
-							$custom_loop = false;//reset custom loop var
-
-					?>
-					<div class="event">
-					<h3><?php echo $current_post->post_title;?></h3>
-					<?php echo program_meta_display($date,$time,$venue, $artist, $price, $eventbrite_link, $concession_link, $current_post->ID)?>
-					<?php mf_post_thumbnail('small-cropped', $current_post->ID, 'program-thumb' );?>
-					<p><?php echo $current_post->post_content;?><?php mf_socialise_post('Can\'t wait for');?></p>
-					
-					
-					
-					</div>
-
-
-
-
-				
-			<? endforeach;
-			
-			
-			?>
-			
-			<?php else: ?>
-			<h3>No Results</h3>
-			<p>Please make sure you have selected a venue.</p>
-			<?php endif;?>	
 			</div><!--End news-feed-->
 			
 				

@@ -2,8 +2,8 @@
 ob_start();
 session_start();//firephp
 
-////fb::log($_SESSION['artist_query'],'artist_debug');//firephp
-//////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
+//////fb::log($_SESSION['artist_query'],'artist_debug');//firephp
+////////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
 //-------------
@@ -425,7 +425,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 		$html_list .= $list_element['title'];
 		$html_list .= '</a></li>';
 	}
-	////fb::log($html_list,'Venue Debug');
+	//////fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
 function remove_unpublished_posts($post_ID_query){

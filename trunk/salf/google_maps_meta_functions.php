@@ -1,6 +1,6 @@
 <?php
 ob_start();
-////fb::log($_SESSION['SAVE_DATA']////fb::log!!');
+//////fb::log($_SESSION['SAVE_DATA']//////fb::log!!');
 // Save data from meta box 
 function mf_SALF_maps_meta_save_data($post_id) {
 	global $maps_meta_box;
