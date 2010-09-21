@@ -13,7 +13,7 @@
 		
 		<?php wp_footer(); ?>
 	</div>
-	</div><!--END WRAPPER???-->
+	
 	</div><!--END WRAPPER-->
 	<script src="http://assets.vimeo.com/js/embedinator.min.js"></script>
 </body>

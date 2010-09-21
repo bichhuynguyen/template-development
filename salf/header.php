@@ -141,16 +141,17 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 				
 				<a class="twitter" href="http://twitter.com/SthAsianLitFest" target="_blank"><img src="<?php echo bloginfo('template_url')?>/style/images/social/twitter.png" width="16" height="16" alt="Twitter" /></a>
 				
-				<span class="facebook-connect">
+				<div class="facebook-connect">
 				<a href=# target="_blank" class="facebook"><img src="<?php echo bloginfo('template_url')?>/style/images/social/facebook.png" width="16" height="16" alt="Facebook" /></a>
 				<div class="fb-iframe">
 					<fb:fan name='southasianlitfest' 
-					width='500' logobar="false"/></div>
-				</span>
+					width='500' logobar="false"/>
+				</div>
+				</div>
 				<?php get_sidebar(); ?>
 			</div>
 			<!--Ajax Loader-->
 			<div id="ajax_loader" style="display: none;">
-				<img src="<?php echo bloginfo('template_url')?>/style/images/ajax-loader.gif" width="32" height="32" alt="Ajax Loader">
+				<img src="<?php echo bloginfo('template_url')?>/style/images/ajax-loader.gif" width="32" height="32" alt="Ajax Loader" />
 			</div>
 <div id="main-content-area"><!--USED FOR AJAX LOADING-->
