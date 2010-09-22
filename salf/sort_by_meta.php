@@ -281,7 +281,14 @@ function create_html_calendar($october){
 	return $html_output;
 }	
 
-
+//date formatting
+function mf_date_format($date){
+	$date = explode('/',$date);
+	$months = array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+	$formatted_date = $date[0].' '.$months[$date[1]].' '.$date[2];
+	
+	return $formatted_date;
+}
 	
 //build HTML output for program meta data on program page
 function program_meta_display($date = false,$time=false,$venue=false, $artist=false,$price=false,$eventbrite_link=false,$concession_link=false,$id=false){

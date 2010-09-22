@@ -613,6 +613,9 @@ span.subscribe-hint{
 .single p{
 	width: 380px;
 }
+.wp-caption p{
+	width: 100%;
+}
 html .mc_custom_border_hdr h2.widgettitle{
 	font-size: 12px;
 	margin: 0;

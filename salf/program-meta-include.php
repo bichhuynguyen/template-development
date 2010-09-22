@@ -23,6 +23,7 @@ if($custom_loop != true)://checks to see if the vars needed are for a normal loo
 					$concession_link = get_post_meta(get_the_ID(), 'mf_SALF_meta_concession', true);
 					$price = get_post_meta(get_the_ID(), 'mf_SALF_meta_price', true);
 					$date = get_post_meta(get_the_ID(), 'mf_SALF_meta_date', true);
+					$date = mf_date_format($date);
 					
 else:// if custom_loop set to true, fetch the vars with different methods					
 					

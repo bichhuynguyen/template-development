@@ -8,10 +8,11 @@ Template Name: Multimedia Page
 
 		
 	<div class="post multimedia">
-		
+		<img src="<?php echo bloginfo('template_url'); ?>/style/images/media_title.png" alt="Media">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<?php the_content(); ?>
+		<div class="clear"><?php the_content(); ?></div>
 		<?php endwhile; endif; ?>
+		
 		
 		<div id='vimeo' class="multimedia">
 		<h2>Videos</h2>
