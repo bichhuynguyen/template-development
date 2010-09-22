@@ -73,14 +73,14 @@ jQuery(document).ready(function($) {
 			pointer = $(this).children('li').children('h2');
 			
 			if(!signUpFocus){//check to see if form is focused
-				$('#mc_signup_container').fadeIn(300);
+				$('#mc_signup_container').stop(true,true).fadeIn(300);
 				rotatePointer(pointer,'down');
 			};
 			}, function(){
 					if(!signUpFocus){
 					if(messageLength==0){
 						
-						$('#mc_signup_container').delay(2500).fadeOut(300, function(){
+						$('#mc_signup_container').delay(2500).stop(true,true).fadeOut(300, function(){
 							rotatePointer(pointer, 'up');
 						});
 				};
@@ -103,7 +103,7 @@ jQuery(document).ready(function($) {
 				
 				this_parent = $(this).parent();
 				if($(this_parent).hasClass('sub-menu')){
-					$(submenus).filter(this_parent).hide().data('hovered', false);
+					$(submenus).filter(this_parent).stop(true,true).hide().data('hovered', false);
 				} else {
 					$(submenus).hide().data('hovered', false);
 				}
@@ -113,13 +113,13 @@ jQuery(document).ready(function($) {
 							
 					$(this).data('hovered', true);
 					rotatePointer(submenu_pointers,'up');
-					$(menu).slideDown(300);
+					$(menu).stop(true,true).slideDown(300);
 					rotatePointer(pointer,'down');
 								
 					
 				} else {
 					$(this).data('hovered', false);
-					$(menu).delay(1000).slideUp(300);
+					$(menu).delay(1000).stop(true,true).slideUp(300);
 					rotatePointer(pointer,'up');
 					
 				}
@@ -373,17 +373,17 @@ jQuery(document).ready(function($) {
 		var socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
 		
 		$(socialButtons).fadeOut(200, function(){
-			$(parent).siblings('a.twitter').hide();
-			$('#nav div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500, function(){
+			$(parent).siblings('a.twitter').stop(true,true).hide();
+			$('#nav div.fb-iframe').stop(true,true).animate({ opacity: 1, width: 250, height: 74}, 500, function(){
 				//$(this).css('z-index','3');
 			});
 		});
 	
 		$(this).children('div.fb-iframe').mouseout(function(){
 					if($(this).css('opacity') == 1){
-						$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
+						$(this).stop(true,true).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
 							//$(this).css('z-index','0');
-							$(socialButtons).fadeIn(200);
+							$(socialButtons).stop(true,true).fadeIn(200);
 						});
 					}
 			
@@ -395,9 +395,9 @@ jQuery(document).ready(function($) {
 		var parent = $(this);
 		var socialButtons = $(this).children('a.facebook').children('img');
 		
-		$(socialButtons).fadeOut(500, function(){
+		$(socialButtons).stop(true,true).fadeOut(500, function(){
 			
-			$(parent).children('div.fb-iframe').animate({ opacity: 1, width: 200, height: 34}, 500);
+			$(parent).children('div.fb-iframe').stop(true,true).animate({ opacity: 1, width: 200, height: 34}, 500);
 		});
 	
 			
