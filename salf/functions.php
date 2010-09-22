@@ -450,4 +450,22 @@ function mf_socialise_post($tweet_leader = false){
 	//$tweet_leader = $tweet_leader;
 	include('social_posts.php');
 }
+
+//set comments off as default
+/*function default_comments_off( $data ) {
+	fb::log($data);
+	$current_ips = get_post_meta($post['post_id'],'thumbsup');
+    if( $data['post_type'] == 'page' && $data['post_status'] == 'auto-draft' ) {
+        $data['comment_status'] = 'closed';
+    }
+
+    return $data;
+}
+
+add_filter( 'wp_insert_post_data', 'default_comments_off' );//*/
+
+
+
+
+
 ?>

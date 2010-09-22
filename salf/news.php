@@ -14,21 +14,15 @@ Template Name: News Page
 			<?php endwhile; endif; ?>
 			</div>
 			<div id="news-archive">
-				<!--><div class="archive-type category">
+				<?php /*<div class="archive-type category">
 				<h3>Browse by Category</h3>
 				<ul>
 				<?php $args = array(
 					'title_li'	=> ''
-					/*
-				    'type'            => 'monthly',
-				    
-				    'format'          => 'html', 
-				    
-				    'show_post_count' => false,
-				    'echo'            => 1 */); 
+					); 
 					wp_list_categories( $args );?>
 				</ul>
-				</div>-->
+				</div>*/?>
 				<div class="archive-type date">
 				<h3>Browse by Date</h3>
 				<ul>
@@ -42,21 +36,16 @@ Template Name: News Page
 					wp_get_archives( $args );?>
 				</ul>
 				</div>
-				<!--><div class="archive-type category">
+				<?php /*
+				<div class="archive-type category">
 				<h3>Browse by Author</h3>
 				<ul>
 				<?php $args = array(
 					'exclude_admin'	=>	false
-					/*
-				    'type'            => 'monthly',
-				    
-				    'format'          => 'html', 
-				    
-				    'show_post_count' => false,
-				    'echo'            => 1 */); 
+					); 
 					wp_list_authors( $args );?>
 				</ul>
-				</div>-->
+				</div>*/?>
 				
 				
 			</div>

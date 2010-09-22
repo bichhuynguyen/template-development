@@ -707,7 +707,7 @@ ul#volunteer-jump-menu li a:hover{
 	text-decoration: underline;
 }
 #stream-tweet{
-	float: left;
+	/*float: left;*/
 }
 /*
 news-page, archives
@@ -873,6 +873,7 @@ div.calendar_search{
 }
 .search_element{
 	float: left;
+	clear: left;
 	width: 220px;
 	margin-bottom: 24px;
 }

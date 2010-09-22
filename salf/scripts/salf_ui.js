@@ -164,7 +164,7 @@ jQuery(document).ready(function($) {
 		path = $(this).html().toLowerCase();
 		$(this).addClass(path);
 		new_path = 'http://'+host+'/'+'#'+path;//this is the correct usage
-		if(host=='localhost'){
+		if(host=='fuzzy.local'){
 			new_path = 'http://'+host+'/wordpress-3-beta/'+'#'+path;//REMOVE BEFORE LAUNCH
 		}
 		
@@ -367,21 +367,22 @@ jQuery(document).ready(function($) {
 	commentOpen = false;
 	commentFocus = false;
 	$('div.facebook-connect').show();
+	$('div.fb-iframe').hide();
 	$('#nav div.facebook-connect').click(function(){
-		parent = $(this);
-		socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
+		var parent = $(this);
+		var socialButtons = $(this).children('a.facebook').children('img').add($(this).siblings('a.twitter'));
 		
 		$(socialButtons).fadeOut(200, function(){
 			$(parent).siblings('a.twitter').hide();
 			$('#nav div.fb-iframe').animate({ opacity: 1, width: 250, height: 74}, 500, function(){
-				$(this).css('z-index','3');
+				//$(this).css('z-index','3');
 			});
 		});
 	
 		$(this).children('div.fb-iframe').mouseout(function(){
 					if($(this).css('opacity') == 1){
 						$(this).animate({ opacity: 0, width: 10, height: 10}, 200, function(){
-							$(this).css('z-index','0');
+							//$(this).css('z-index','0');
 							$(socialButtons).fadeIn(200);
 						});
 					}
@@ -391,8 +392,8 @@ jQuery(document).ready(function($) {
 		return false;
 	});//*/
 	$('.post div.facebook-connect').click(function(){
-		parent = $(this);
-		socialButtons = $(this).children('a.facebook').children('img');
+		var parent = $(this);
+		var socialButtons = $(this).children('a.facebook').children('img');
 		
 		$(socialButtons).fadeOut(500, function(){
 			
