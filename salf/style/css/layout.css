@@ -94,6 +94,9 @@ a.top{
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
 }
+.post .the_content{
+	width: 400px;
+}
 .about.post{
 	padding: 30px 15px;
 	width: 930px;
@@ -907,7 +910,7 @@ div.calendar_search{
 	-webkit-box-shadow: -4px 4px 5px #DBCCB5;  
 	-moz-box-shadow: -4px 4px 5px #DBCCB5;
 }
-div.event h3 span, .archive-page h2 span{
+div.event h3 span, .archive-page h2 span, .action-call{
 	margin-left: 12px;
 	text-decoration: none;
 	font-size: 11px;
@@ -916,6 +919,10 @@ div.event h3 span, .archive-page h2 span{
 	color: rgba(217,36,23,0.6);
 	
 }
+.speakers h2{
+	display: inline;
+}
+
 .event:hover h3 span, .event.active h3 span, .archive-page .active h2 span, .archive-page .new-entry:hover h2 span{
 	color: rgba(217,36,23,1);
 	

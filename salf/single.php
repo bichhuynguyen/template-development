@@ -10,9 +10,9 @@
 
 					
 					
-					
+					<div class='the_content'>
 					<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-					
+					</div>
 					
 					<?php $map = mf_render_google_maps(get_the_ID(),300,300);?>
 					<?php if($map)://if map element not false.?>
@@ -65,15 +65,15 @@
 
 				<?php mf_post_thumbnail('large-cropped');?>
 				<h2><?php the_title(); ?></h2>
-
-				<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-
+				<div class='the_content'>
+					<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+				</div>
 
 				<ul class='meta-list'>
 					<h4>Events With This Artist</h4>
 						<?php echo mf_get_posts_connected_to_meta(get_the_ID(),false,true);?>
 				</ul>
-
+				<?php mf_socialise_post('Just reading about ')?>
 
 
 
@@ -109,9 +109,9 @@
 				
 				<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link,get_the_ID())?>
 				<h2><?php the_title(); ?></h2>
-
+				<div class='the_content'>
 				<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-
+				</div>
 				<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				<?php //the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
@@ -129,7 +129,7 @@
 
 
 
-					<?php mf_socialise_post();?>
+					<?php mf_socialise_post('I will be attending ');?>
 					<div id="comment_block">
 					<?php comments_template( '', true ); ?>
 					</div>
@@ -190,9 +190,9 @@
 				<?php endif;?>
 			</div>
 			<h2><?php the_title(); ?></h2>
-			
-			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
-
+			<div class='the_content'>
+				<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+			</div>
 			<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 			<?php //the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 			

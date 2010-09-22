@@ -11,6 +11,9 @@ Template Name: Events Page
 		<div id="events" class="post">
 			
 			<img src="<?php echo bloginfo('template_url'); ?>/style/images/Events-title.png" alt="Events Title">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="clear"><?php the_content(); ?></div>
+			<?php endwhile; endif; ?>
 			<div id="event-type-boxes">
 			<?php
 			query_posts( array( 'post_type' => 'Events', 'orderby' => 'title', 'order'=>'asc') );
