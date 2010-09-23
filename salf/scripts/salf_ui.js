@@ -150,7 +150,41 @@ jQuery(document).ready(function($) {
 	/*----------------------------------------------------------------
 	------------------START AJAX NAVIGATION
 	//----------------------------------------------------------------*/
-	
+	function in_array (needle, haystack, argStrict) {
+	    // http://kevin.vanzonneveld.net
+	    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+	    // +   improved by: vlado houba
+	    // +   input by: Billy
+	    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
+	    // *     example 1: in_array('van', ['Kevin', 'van', 'Zonneveld']);
+	    // *     returns 1: true
+	    // *     example 2: in_array('vlado', {0: 'Kevin', vlado: 'van', 1: 'Zonneveld'});
+	    // *     returns 2: false
+	    // *     example 3: in_array(1, ['1', '2', '3']);
+	    // *     returns 3: true
+	    // *     example 3: in_array(1, ['1', '2', '3'], false);
+	    // *     returns 3: true
+	    // *     example 4: in_array(1, ['1', '2', '3'], true);
+	    // *     returns 4: false
+
+	    var key = '', strict = !!argStrict;
+
+	    if (strict) {
+	        for (key in haystack) {
+	            if (haystack[key] === needle) {
+	                return true;
+	            }
+	        }
+	    } else {
+	        for (key in haystack) {
+	            if (haystack[key] == needle) {
+	                return true;
+	            }
+	        }
+	    }
+
+	    return false;
+	}
 	var hash = window.location.hash.substring(1),
 		host = window.location.hostname,
 		pages = new Array(),
@@ -164,11 +198,16 @@ jQuery(document).ready(function($) {
 		$(this).data('direct_url', direct_url);
 		
 		//convert to paths we can use in the jQuery,
-		split_url = direct_url.split('/');
-		path = this.pathname;
-		console.log(path);
-		//path = $(this).html().toLowerCase();
+		
+		path = this.pathname;//get pathname for element
+		if(host=='fuzzy.local'){//hack -- makes work on localserver. Should not effect production
+		path = path.split('/wordpress-3-beta/');
+		path = path[1];
+		}
+		//console.log(path);
+		
 		pages[pages_inc] = path;
+		$(this).data('hash', path);
 		pages_inc++;
 		
 		$(this).addClass(path);
@@ -216,8 +255,14 @@ jQuery(document).ready(function($) {
 	
 	});
 	//if direct linked from hash tag
-	if (hash){
-		selected = "#pages li a."+hash
+	if (hash && in_array(hash,pages)){
+		console.log(hash,'Window Hash');
+		$("#pages li a").each(function(){
+			if ($(this).data('hash') == hash){
+				selected = $(this);
+			}
+		});
+		//selected = "#pages li a."+hash
 		direct_url = $(selected).data('direct_url');
 		$(selected).addClass('selected');
 		great_grandparent = $(selected).parent().parent().parent();
