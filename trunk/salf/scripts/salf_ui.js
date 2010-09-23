@@ -152,22 +152,31 @@ jQuery(document).ready(function($) {
 	//----------------------------------------------------------------*/
 	
 	var hash = window.location.hash.substring(1),
-		host = window.location.hostname;
+		host = window.location.hostname,
+		pages = new Array(),
+		pages_inc = 0;//increment for creating array
 	
 	
 	$("#pages li a").each(function(){
 		//identify and store URL
 		direct_url = $(this).attr('href');
+		
 		$(this).data('direct_url', direct_url);
 		
 		//convert to paths we can use in the jQuery,
-		path = $(this).html().toLowerCase();
+		split_url = direct_url.split('/');
+		path = this.pathname;
+		console.log(path);
+		//path = $(this).html().toLowerCase();
+		pages[pages_inc] = path;
+		pages_inc++;
+		
 		$(this).addClass(path);
 		new_path = 'http://'+host+'/'+'#'+path;//this is the correct usage
 		if(host=='fuzzy.local'){
 			new_path = 'http://'+host+'/wordpress-3-beta/'+'#'+path;//REMOVE BEFORE LAUNCH
 		}
-		
+	
 		//change href
 		$(this).attr('href', new_path);//has return FALSE; effect.
 		
