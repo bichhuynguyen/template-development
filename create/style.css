@@ -1,0 +1,13 @@
+/*
+Theme Name: Create Studios
+Theme URI: http://createstudios.org.uk
+Description: theme for create studios.org.uk
+Version: 2.0
+Author: John Farrow
+Author URI: http://mildfuzz.com
+
+*/
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";
