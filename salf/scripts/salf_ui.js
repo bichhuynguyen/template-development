@@ -150,6 +150,9 @@ jQuery(document).ready(function($) {
 	/*----------------------------------------------------------------
 	------------------START AJAX NAVIGATION
 	//----------------------------------------------------------------*/
+	
+
+	
 	function in_array (needle, haystack, argStrict) {
 	    // http://kevin.vanzonneveld.net
 	    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
@@ -199,14 +202,20 @@ jQuery(document).ready(function($) {
 		
 		//convert to paths we can use in the jQuery,
 		
-		path = this.pathname;//get pathname for element
+		var path = this.pathname;//get pathname for element
+		
 		if(host=='fuzzy.local'){//hack -- makes work on localserver. Should not effect production
 		path = path.split('/wordpress-3-beta/');
-		path = path[1];
-		}
-		//console.log(path);
 		
+		path = path[1];
+		
+		} else {
+			path=path.substring(1);
+		}
+		
+		path = path.replace(/(\s+)?.$/, "");
 		pages[pages_inc] = path;
+		
 		$(this).data('hash', path);
 		pages_inc++;
 		

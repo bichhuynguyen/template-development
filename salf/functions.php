@@ -110,7 +110,7 @@ add_image_size( 'large-uncropped', 500, 500);
 add_image_size( 'large-cropped', 500, 500, true);
 add_image_size( 'partner-titles', 395, 49);
 add_image_size( 'venue-images', 165, 115, true);
-add_image_size( 'partners-image', 512, 512);
+add_image_size( 'partners-image', 458, 573);
 
 
 function mf_post_thumbnail($style=false, $id=false, $class='news-thumb', $echo = true){
