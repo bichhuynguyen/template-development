@@ -398,9 +398,14 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 	
 	//run query, get list of post ID's connected to this meta
 	$post_ID_query = $wpdb->get_results($query);
+	
 	$post_ID_query = remove_unpublished_posts($post_ID_query);
 	
-	
+	if($artist){//removes unwanted artist events (leaves only events with artist connection)
+		foreach ($post_ID_query as $k=>$v){
+			if (!in_array($meta_value, unserialize($v->meta_value))) unset($post_ID_query[$k]);
+		}
+	}
 	
 	
 	
@@ -416,7 +421,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 			$posts[$post->post_id]['title'] = get_the_title($post->post_id);
 		} 
 	}
-	fb::log($posts);
+	
 	if($posts===null) return false;
 	
 	

@@ -409,9 +409,12 @@ div #mc_signup_form{
 }
 .enquiries input, .enquiries textarea, .enquiries p{
 	float: left;
-	clear: both;
+	
 }
-
+.enquiries input, .enquiries textarea, .enquiries p.no-clear{
+	clear: none;
+	margin-left: 8px;
+}
 .enquiries div form{
 	float: right;
 	width: 400px;
@@ -1099,4 +1102,11 @@ li.tickets a{
 }
 .social_posts{
 	margin-bottom: 12px;
+}
+div.enquiries form.wpcf7-form div.wpcf7-response-output{
+margin: 0 80px 0 0;
+}
+div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
+	top: -13px;
+	left: -145px;
 }
