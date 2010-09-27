@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>partners.php</string>
+	<string>program.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -33,36 +33,6 @@
 	<integer>321</integer>
 	<key>metaData</key>
 	<dict>
-		<key>events.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>26</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>3</integer>
-				<key>line</key>
-				<integer>22</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>26</integer>
-			</dict>
-		</dict>
 		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
@@ -76,36 +46,6 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>functions.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>112</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>81</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>17</integer>
-				<key>line</key>
-				<integer>112</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>112</integer>
-			</dict>
 		</dict>
 		<key>header.php</key>
 		<dict>
@@ -135,21 +75,29 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>partners.php</key>
+		<key>program.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
+<<<<<<< .mine
+				<integer>6</integer>
+=======
 				<integer>22</integer>
+>>>>>>> .r316
 				<key>line</key>
+<<<<<<< .mine
+				<integer>174</integer>
+=======
 				<integer>10</integer>
+>>>>>>> .r316
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>150</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -240,9 +188,13 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
+<<<<<<< .mine
+		<string>program.php</string>
+=======
 		<string>partners.php</string>
 		<string>functions.php</string>
 		<string>events.php</string>
+>>>>>>> .r316
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
