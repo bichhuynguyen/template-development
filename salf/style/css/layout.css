@@ -1110,3 +1110,16 @@ div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
 	top: -13px;
 	left: -145px;
 }
+.partners ul{
+	list-style: none;
+	width: 400px;
+	float: left;
+}
+.partners ul li{
+	float: left;
+	width: 50%;
+}
+.partners ul li:first-child{
+	width: 100%;
+	clear: left;
+}
