@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 	current_header_width = $('#program_feed .event h3').css('width');
 	$('#program_feed .event h3').css('width', '70%');
 	clicked = false
-	$(program_titles).append("<span class='action-call'>more</span>");
+	$(program_titles).append("<span class='action-call'>more info / buy tickets</span>");
 	
 	//show/hide function
 	$('#program_feed .event').click(function(){
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		} else {
 			
 			$(this).removeClass('active');
-			$(this).children('h3').children('span').html('more');
+			$(this).children('h3').children('span').html('more info / buy tickets');
 			$(this).children('div').add($(this).children('p')).slideUp();
 		}
 	});
