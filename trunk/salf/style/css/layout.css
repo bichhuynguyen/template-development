@@ -1123,3 +1123,6 @@ div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
 	width: 100%;
 	clear: left;
 }
+#nav a[title='red']{
+	color: #DA1319;
+}
