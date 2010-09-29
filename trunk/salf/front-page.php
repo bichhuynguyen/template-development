@@ -21,24 +21,55 @@ Template Name: Front Page
 				
 				$category = choose_one_category(get_the_category());
 				
-				fb::log($category,"Category");
+				switch ($category){
+					case "Festival News":
+						$left[] = $post;
+						break;
+					case "Industry News":
+						$centre[] = $post;
+						break;
+					case "Other":
+						$right[] = $post;
+						break;
+				}
+				
+				
+				endwhile; endif;
+				
+				
+				
 				?>
-			<?php /*
+				
+				
+			
 				
 			<div class="centre-left">
-				<div class="cnl columns left"> <?php include('front_page_loop.php'); ?></div>
-				<?php
-				if
-				?>
-				<div class="cnl columns centre"><?php include('front_page_loop.php'); ?></div>
+				<div class="cnl columns left"> 
+				<?php 
+				foreach ($left as $post){
+					setup_postdata($post);
+					include('front_page_loop.php');
+				} ?>
+				</div>
+				
+				<div class="cnl columns centre">
+					<?php 
+					foreach ($centre as $post){
+						setup_postdata($post);
+						include('front_page_loop.php');
+					} ?>	
+				</div>
 			</div>
-			<div class="columns right"><?php include('front_page_loop.php'); ?></div>
-			*/?>
-			<?php endwhile; endif;
-					//Reset Query
-					rewind_posts();
-			?>
-			<a href="<?php get_permalink(294)?>">See More News</a>					
+			<div class="columns right">
+				<?php 
+				foreach ($right as $post){
+					setup_postdata($post);
+					include('front_page_loop.php');
+				} ?>
+			</div>
+			<?php //*/ ?>
+		
+			<a class="clear" href="<?php get_permalink(294)?>">See More News</a>					
 			
 			
 			</div><!--End news-feed-->
