@@ -1171,26 +1171,44 @@ div.paypal form td{
 NEW Homepage
 */
 .home .right{
-	width: 30%;
+	width: 32%;
 	float: right;
 }
 .home .centre-left{
-	width: 64%;
+	width: 66%;
 	float: left;
+	
+}
+.columns{
+	padding: 0 8px 4000px 8px;
+	margin-bottom: -4000px;
 	
 }
 .home .centre-left .cnl{
-	width: 48%;
+	width: 46%;
 	float: left;
+	border-right: solid white 2px;
+}
+.home .centre-left .centre{
+	
+	float: right;
 	
 }
-
+.home .new-entry .post-details{
+	font-size: 10px;
+}
 .home .new-entry{
 	width: 100%;
 }
+.home .new-entry img{
+	padding: 0 0 8px 8px;
+}
 .home .new-entry p{
-	width: 80%
+	width: 100%;
+	text-align: justify; 
+	text-justify: newspaper;
 }
 .home #news-feed {
 	width: 100%;
+	overflow-y: hidden;
 }
