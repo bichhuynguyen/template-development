@@ -53,14 +53,14 @@ a.more-link:hover{
 	text-decoration: none;
 }
 #nav a.selected, #nav li.current-menu-item a{
-	color: #DD2522;
+	color: #B71D23;
 }
 #nav a.selected:hover, #nav li.current-menu-item a:hover{
 	
 	text-decoration: none;
 }
 #nav a:hover{
-	color: #DD2522;
+	color: #B71D23;
 	
 }
 
@@ -524,6 +524,9 @@ div.partner-box{
 	position: relative;
 	
 	width: 360px;
+}
+.event_content{
+	width: 200px;
 }
 /*
 *
@@ -1123,6 +1126,44 @@ div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
 	width: 100%;
 	clear: left;
 }
-#nav a[title='red']{
-	color: #DA1319;
+#nav a[title='Buy Tickets']{
+	color: #B71D23;
+	border: 1px solid #C65413;
+	padding: 0 3px;
+	background: #FFEFBB;
+	-webkit-box-shadow: 0px 0px 10px #FFF96C;  
+	-moz-box-shadow: 0px 0px 10px #FFF96C;
+	
+}
+#nav a[title='Buy Tickets']:hover{
+	color: #FFEFBB;
+	background: #B71D23;
+	border: 1px solid transparent;
+	
+	
+}
+div.paypal{
+	float: right;
+	clear: right;
+	width: 500px;
+	padding: 24px 0;
+}
+div.paypal > *{
+	float: left;
+}
+div.paypal form{
+	-webkit-box-shadow: 0 0 15px #F5BA62;  
+	-moz-box-shadow: 0 0 15px #F5BA62;
+	padding: 0 4px;
+	background: #F7F4EA;
+	border: #923232 dashed 1px;
+}
+div.paypal form > * {
+	margin: 4px 0;
+}
+div.paypal form td{
+	color: #923232;
+}
+.page-template-friends-php .the_content{
+	width: 380px;
 }
