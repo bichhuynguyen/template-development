@@ -102,6 +102,7 @@ Thumbnail Support
 ----------------*/
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 100, 100, true);
+add_image_size( 'micro-cropped', 50, 50);
 add_image_size( 'small-uncropped', 100, 100);
 add_image_size( 'small-cropped', 100, 100, true);
 add_image_size( 'med-uncropped', 200, 200);
@@ -465,7 +466,20 @@ function mf_socialise_post($tweet_leader = false){
 
 add_filter( 'wp_insert_post_data', 'default_comments_off' );//*/
 
-
+function choose_one_category($get_categorys){
+	//takes in value from get_the_category() and outputs a single category. If element has multiple categories, outputs a random category from list
+	
+	$categories = array();
+	foreach ($get_categorys as $category){
+		$categories[] = $category->name;
+	}
+	if (count($categories)>1){
+		$chosen_category = $categories[array_rand($categories, 1)];
+	} else {
+		$chosen_category = $categories[0];
+	}
+	return $chosen_category;
+}
 
 
 
