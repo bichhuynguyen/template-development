@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>program.php</string>
+	<string>friends.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>salf-v4</string>
 			<key>regexFolderFilter</key>
@@ -18,57 +16,301 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>program.txt</string>
-			<key>lastUsed</key>
-			<date>2010-08-04T14:53:17Z</date>
+			<string>_flickr_class.php</string>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>prorgram_backup.php</string>
+			<string>404.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>about.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>archive-backup.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>archive.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>archives.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>artist_meta_box_functions.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>artist_meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>classes.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>comments.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>date_processing.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>enquiries.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>events.php</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>FirePHPCore</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>FirePHPCore</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>flickr_class.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>footer.php</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>form_scripts</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>form_scripts</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>friends.php</string>
 			<key>lastUsed</key>
-			<date>2010-08-11T11:17:41Z</date>
+			<date>2010-09-29T11:19:47Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>front-page.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>full_meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>function-include.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>functions.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>google_maps_meta_functions.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>google_maps_meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>header.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>image.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>index.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>links.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>maps_experiment.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>meta_box_functions.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>meta-backup.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>meta-working.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>multimedia_meta_functions.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>multimedia_meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>multimedia.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>news.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>objects_and_tax.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>page-custom.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>page.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>partners.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>program-meta-include.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>program.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-29T10:48:54Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>SALF.tmproj</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>screenshot.png</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>scripts</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>scripts</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>search.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>searchform.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sidebar.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>single.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>social_posts.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>sort_by_meta.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>speakers.php</string>
+		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>style</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>style</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>style.css</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>team.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>templatepath.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test-single-artists.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test-single-program.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>test-single-venues.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>twitter_stuff.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>venues.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>vimeo_class.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>volunteer.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>voter_form.php</string>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>321</integer>
+	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>footer.php</key>
+		<key>friends.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>22</integer>
 				<key>line</key>
-				<integer>15</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>header.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>maps_experiment.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>2</integer>
+				<integer>23</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -80,125 +322,84 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-<<<<<<< .mine
-				<integer>6</integer>
-=======
-				<integer>22</integer>
->>>>>>> .r316
+				<integer>21</integer>
 				<key>line</key>
-<<<<<<< .mine
-				<integer>174</integer>
-=======
-				<integer>10</integer>
->>>>>>> .r316
+				<integer>172</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>150</integer>
+			<integer>151</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
 				<integer>18</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>172</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>10</integer>
+				<integer>172</integer>
 			</dict>
 		</dict>
-		<key>program.txt</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>47</integer>
-		</dict>
-		<key>scripts/mf_date_picker.js</key>
+		<key>scripts/program.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>3</integer>
 				<key>line</key>
-				<integer>7</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>social_posts.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>14</integer>
-				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>style/css/mf_datepicker_css.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>59</integer>
+				<integer>35</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>17</integer>
+			<integer>0</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>13</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>59</integer>
+				<integer>5</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>59</integer>
+				<integer>35</integer>
 			</dict>
+		</dict>
+		<key>style/css/layout.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>1142</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>1096</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-<<<<<<< .mine
-		<string>program.php</string>
-=======
-		<string>partners.php</string>
-		<string>functions.php</string>
-		<string>events.php</string>
->>>>>>> .r316
+		<string>friends.php</string>
+		<string>style/css/layout.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1104, 877}}</string>
+	<string>{{13, 0}, {1223, 878}}</string>
 </dict>
 </plist>

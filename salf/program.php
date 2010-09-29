@@ -170,9 +170,9 @@ get_header();
 						
 						<?php echo program_meta_display($date,$time,$venue, $artist,$price,$eventbrite_link, $concession_link,get_the_ID())?>
 						<?php mf_post_thumbnail('small-cropped',false,'program-thumb');?>
-						
+						<div class="event_content">
 						<?php the_content(); ?>
-						
+						</div>
 						<?php mf_socialise_post('Can\'t wait for');?>
 						</div>
 			
