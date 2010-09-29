@@ -1167,3 +1167,27 @@ div.paypal form td{
 .page-template-friends-php .the_content{
 	width: 380px;
 }
+/*
+NEW Homepage
+*/
+.home .right{
+	width: 33%;
+	float: right;
+}
+.home .centre-left{
+	width: 66%;
+	float: left;
+}
+.home .centre-left .cnl{
+	width: 50%;
+	float: left;
+}
+.home .new-entry{
+	width: 100%;
+}
+.home .new-entry p{
+	width: 80%
+}
+.home #news-feed {
+	width: 100%;
+}
