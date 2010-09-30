@@ -1212,3 +1212,6 @@ NEW Homepage
 	width: 100%;
 	overflow-y: hidden;
 }
+.home .new-entry a h2{
+	min-height: 37px;
+}
