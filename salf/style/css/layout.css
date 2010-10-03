@@ -1128,9 +1128,9 @@ div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
 }
 #nav a[title='Buy Tickets']{
 	color: #B71D23;
-	border: 1px solid #C65413;
+	
 	padding: 0 3px;
-	background: #FFEFBB;
+	background: #fff;
 	-webkit-box-shadow: 0px 0px 10px #FFF96C;  
 	-moz-box-shadow: 0px 0px 10px #FFF96C;
 	
@@ -1138,7 +1138,9 @@ div.enquiries form.wpcf7-form span.wpcf7-not-valid-tip{
 #nav a[title='Buy Tickets']:hover{
 	color: #FFEFBB;
 	background: #B71D23;
-	border: 1px solid transparent;
+	-webkit-box-shadow: 0px 0px 10px #EB6227;  
+	-moz-box-shadow: 0px 0px 10px #EB6227;
+	
 	
 	
 }

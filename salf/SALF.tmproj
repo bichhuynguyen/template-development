@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>friends.php</string>
+	<string>front_page_loop.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -49,6 +49,8 @@
 		<dict>
 			<key>filename</key>
 			<string>classes.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-29T13:53:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -94,13 +96,19 @@
 			<key>filename</key>
 			<string>friends.php</string>
 			<key>lastUsed</key>
-			<date>2010-09-29T11:19:47Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-09-29T13:27:53Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>front_page_loop.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-30T12:18:38Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>front-page.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-29T22:23:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -113,6 +121,10 @@
 		<dict>
 			<key>filename</key>
 			<string>functions.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-29T14:19:07Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -129,6 +141,12 @@
 		<dict>
 			<key>filename</key>
 			<string>image.php</string>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>meta_class.php</string>
+			<key>lastUsed</key>
+			<date>2010-09-29T14:17:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -303,19 +321,121 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>classes.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>3</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>4</integer>
+			</dict>
+		</dict>
 		<key>friends.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>22</integer>
+				<integer>10</integer>
 				<key>line</key>
-				<integer>23</integer>
+				<integer>33</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>front-page.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>83</integer>
+				<key>line</key>
+				<integer>76</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>42</integer>
+		</dict>
+		<key>front_page_loop.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>60</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>functions.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>44</integer>
+				<key>line</key>
+				<integer>468</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>439</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>468</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>44</integer>
+				<key>line</key>
+				<integer>468</integer>
+			</dict>
+		</dict>
+		<key>meta_class.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>15</integer>
+				<key>line</key>
+				<integer>182</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>3</integer>
 		</dict>
 		<key>program.php</key>
 		<dict>
@@ -382,19 +502,21 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>13</integer>
+				<integer>17</integer>
 				<key>line</key>
-				<integer>1142</integer>
+				<integer>1215</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1096</integer>
+			<integer>1170</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>friends.php</string>
+		<string>front-page.php</string>
+		<string>functions.php</string>
+		<string>front_page_loop.php</string>
 		<string>style/css/layout.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
