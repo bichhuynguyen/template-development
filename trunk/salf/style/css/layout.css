@@ -1158,7 +1158,7 @@ div.paypal form{
 	-moz-box-shadow: 0 0 15px #F5BA62;
 	padding: 0 4px;
 	background: #F7F4EA;
-	border: #923232 dashed 1px;
+	border: #923232 solid 1px;
 }
 div.paypal form > * {
 	margin: 4px 0;
