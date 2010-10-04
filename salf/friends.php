@@ -13,7 +13,7 @@ Template Name: Freinds Page
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<?php mf_post_thumbnail('large-cropped');?>
-				<h2><?php the_title(); ?></h2>
+			
 				<div class="paypal">
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_s-xclick">
@@ -26,7 +26,7 @@ Template Name: Freinds Page
 					</select> </td></tr>
 					</table>
 					<input type="hidden" name="currency_code" value="GBP">
-					<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_buynow_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+					<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
 					<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 					</form>
 
