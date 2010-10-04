@@ -481,6 +481,12 @@ function choose_one_category($get_categorys){
 	return $chosen_category;
 }
 
+function mf_get_cat_permalink($category){
+	$cat_object = get_term_by('name',$category,'category');
+	
+	$mf_link = get_category_link($cat_object->term_id);
+	return $mf_link;
+}
 
 
 ?>
