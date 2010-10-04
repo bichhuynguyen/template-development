@@ -33,7 +33,6 @@ Template Name: Front Page
 						break;
 				}
 				
-				
 				endwhile; endif;
 				
 				
@@ -50,6 +49,11 @@ Template Name: Front Page
 					setup_postdata($post);
 					include('front_page_loop.php');
 				} ?>
+				<p><a href="<?php 
+							$cat_object = get_term_by('name','Festival News','category');
+							$mf_link = get_category_link($cat_object->term_id);
+							echo $mf_link;
+							?>">More in this Category</a></p>	
 				</div>
 				
 				<div class="cnl columns centre">
@@ -57,15 +61,25 @@ Template Name: Front Page
 					foreach ($centre as $post){
 						setup_postdata($post);
 						include('front_page_loop.php');
-					} ?>	
+					} ?>
+					<p><a href="<?php 
+								$cat_object = get_term_by('name','Industry News','category');
+								$mf_link = get_category_link($cat_object->term_id);
+								echo $mf_link;
+								?>">More in this Category</a></p>		
 				</div>
 			</div>
 			<div class="columns right">
 				<?php 
 				foreach ($right as $post){
 					setup_postdata($post);
-					include('front_page_loop.php');
+					include('front_page_loop.php');					
 				} ?>
+				<p><a href="<?php 
+							$cat_object = get_term_by('name','Other','category');
+							$mf_link = get_category_link($cat_object->term_id);
+							echo $mf_link;
+							?>">More in this Category</a></p>	
 			</div>
 			<?php //*/ ?>
 		
