@@ -3,7 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
+<<<<<<< .mine
+<<<<<<< .mine
+	<string>style/css/layout.css</string>
+=======
+	<string>front_page_loop.php</string>
+=======
 	<string>front-page.php</string>
+>>>>>>> .r329
+>>>>>>> .r327
 	<key>documents</key>
 	<array>
 		<dict>
@@ -325,7 +333,41 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+<<<<<<< .mine
+		<key>events.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>22</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>5</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+		</dict>
+		<key>footer.php</key>
+=======
 		<key>classes.php</key>
+>>>>>>> .r327
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -355,7 +397,41 @@
 				<integer>4</integer>
 			</dict>
 		</dict>
+<<<<<<< .mine
+		<key>functions.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>112</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>81</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>112</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>112</integer>
+			</dict>
+		</dict>
+		<key>header.php</key>
+=======
 		<key>friends.php</key>
+>>>>>>> .r327
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -413,21 +489,49 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+<<<<<<< .mine
+		<key>partners.php</key>
+=======
 		<key>functions.php</key>
+>>>>>>> .r327
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
+<<<<<<< .mine
+<<<<<<< .mine
+				<integer>22</integer>
+=======
+				<integer>44</integer>
+=======
 				<integer>52</integer>
+>>>>>>> .r329
+>>>>>>> .r327
 				<key>line</key>
+<<<<<<< .mine
+<<<<<<< .mine
+				<integer>10</integer>
+=======
+				<integer>468</integer>
+=======
 				<integer>486</integer>
+>>>>>>> .r329
+>>>>>>> .r327
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
+<<<<<<< .mine
+<<<<<<< .mine
+			<integer>0</integer>
+=======
+			<integer>439</integer>
+=======
 			<integer>445</integer>
+>>>>>>> .r329
+>>>>>>> .r327
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
@@ -517,7 +621,25 @@
 				<integer>172</integer>
 			</dict>
 		</dict>
+<<<<<<< .mine
+		<key>style/css/layout.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>1125</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>1081</integer>
+		</dict>
+		<key>style/css/mf_datepicker_css.css</key>
+=======
 		<key>scripts/program.js</key>
+>>>>>>> .r327
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -578,13 +700,38 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
+<<<<<<< .mine
+		<string>partners.php</string>
+=======
 		<string>front-page.php</string>
+<<<<<<< .mine
+>>>>>>> .r327
+		<string>style/css/layout.css</string>
+=======
 		<string>front_page_loop.php</string>
+>>>>>>> .r329
 		<string>functions.php</string>
+<<<<<<< .mine
+<<<<<<< .mine
+		<string>events.php</string>
+=======
+		<string>front_page_loop.php</string>
+		<string>style/css/layout.css</string>
+=======
+>>>>>>> .r329
+>>>>>>> .r327
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
+<<<<<<< .mine
+<<<<<<< .mine
+	<string>{{13, 9}, {1104, 877}}</string>
+=======
+	<string>{{13, 0}, {1223, 878}}</string>
+=======
 	<string>{{4, 0}, {1225, 878}}</string>
+>>>>>>> .r329
+>>>>>>> .r327
 </dict>
 </plist>
