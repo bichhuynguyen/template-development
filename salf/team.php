@@ -29,7 +29,7 @@ Template Name: Team Page
 							<h2>     <?php the_title(); ?><?php echo $job_title;?></h2>
 								
 							<?php mf_post_thumbnail('small-cropped');?>
-							<?php the_excerpt(); ?>
+							<?php the_content(); ?>
 							<?php
 							$name = get_the_title();
 							$name = explode(" ", $name);
