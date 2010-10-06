@@ -22,10 +22,23 @@ Template Name: Team Page
 			if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 					
 						<div class="archive-link new-entry">
-							<h2>     <?php the_title(); ?></h2>	
+							<?php
+							$job_title = " - ".get_post_meta(get_the_ID(),'mf_job_title', true);
+							
+							?>
+							<h2>     <?php the_title(); ?><?php echo $job_title;?></h2>
+								
 							<?php mf_post_thumbnail('small-cropped');?>
 							<?php the_excerpt(); ?>
-
+							<?php
+							$name = get_the_title();
+							$name = explode(" ", $name);
+							$first_name = $name[0];
+							$email = get_post_meta(get_the_ID(),'mf_email', true);
+							if ($email):
+							?>
+							<a href="mailto:<?php echo get_post_meta(get_the_ID(),'mf_email', true);?>" title="Contact <?php echo $first_name; ?>">Contact <?php echo $first_name; ?></a>
+							<?php endif; ?>
 
 						</div>
 

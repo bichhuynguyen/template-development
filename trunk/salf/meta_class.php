@@ -161,29 +161,29 @@ function create_new_meta_boxes(){
 	
 	
 							
-	$new_metabox = new MetaBox();
+	$books_metabox = new MetaBox();
 	
-	$new_metabox->id="book_details";//
-	$new_metabox->title = "Book Details";//Box Title
-	$new_metabox->page = array('Books');//Section to attach metbox to (page, post or custom)
-	$new_metabox->context = 'side';
-	$new_metabox->priority = 'high';
-	$new_metabox->prefix = 'mf_';
-	$new_metabox->fields = array(
+	$books_metabox->id="book_details";//
+	$books_metabox->title = "Book Details";//Box Title
+	$books_metabox->page = array('Books');//Section to attach metbox to (page, post or custom)
+	$books_metabox->context = 'side';
+	$books_metabox->priority = 'high';
+	$books_metabox->prefix = 'mf_';
+	$books_metabox->fields = array(
 	        
 	   		array(
            		'name' => 'Author',
-           		'id' => $new_metabox->prefix . 'author',
+           		'id' => $books_metabox->prefix . 'author',
            		'type' => 'wide-text'
         	),     
 			array(
 	            'name' => 'Publisher',
-	            'id' => $new_metabox->prefix . 'publisher',
+	            'id' => $books_metabox->prefix . 'publisher',
 	            'type' => 'wide-text'
 	            ),
 			array(
 	            'name' => 'ISBN',
-	            'id' => $new_metabox->prefix . 'ISBN',
+	            'id' => $books_metabox->prefix . 'ISBN',
 	            'type' => 'wide-text'	            
 	            )
 	        
@@ -191,9 +191,34 @@ function create_new_meta_boxes(){
 	
 													
 	
-	add_action('admin_menu', $new_metabox->add());
+	add_action('admin_menu', $books_metabox->add());
 	
+	$team_metabox = new MetaBox();
 	
+	$team_metabox->id="team_details";//
+	$team_metabox->title = "Team Details";//Box Title
+	$team_metabox->page = array('People');//Section to attach metbox to (page, post or custom)
+	$team_metabox->context = 'side';
+	$team_metabox->priority = 'high';
+	$team_metabox->prefix = 'mf_';
+	$team_metabox->fields = array(
+	        
+	   		array(
+           		'name' => 'Job Title',
+           		'id' => $team_metabox->prefix . 'job_title',
+           		'type' => 'wide-text'
+        	),     
+			array(
+	            'name' => 'eMail',
+	            'id' => $team_metabox->prefix . 'email',
+	            'type' => 'wide-text'
+	            )
+	        
+								);
+	
+													
+	
+	add_action('admin_menu', $team_metabox->add());
 	
 	
 }
