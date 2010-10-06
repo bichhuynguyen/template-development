@@ -70,6 +70,7 @@ Template Name: Front Page
 							$mf_link = get_category_link($cat_object->term_id);
 							echo $mf_link;
 							?>">More in this Category</a></p>	
+							<span class="clear"><a href="<?php get_permalink(294)?>">See More News</a></span>	
 				</div>
 				
 				<div class="cnl columns centre">
@@ -108,7 +109,7 @@ Template Name: Front Page
 			
 			</div><!--End news-feed-->
 			
-			<div class="clear"><a href="<?php get_permalink(294)?>">See More News</a></div>	
+			
 			<div id="stream-tweet">
 			<div class="dsc_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-from.png" width="150" height="25" alt="TWEETS FROM US"></H2></div>
 			<div class="query_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-about.png" width="150" height="25" alt="TWEETS ABOUT US"></H2></div>

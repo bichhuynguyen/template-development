@@ -349,14 +349,14 @@ function mfields_locate_custom_template() {
 ---Meta Boxes----
 -----------------
 */
-include('meta_box_functions.php');
-include('meta.php');
+//include('meta_box_functions.php');
+//include('meta.php');
 
 include('artist_meta_box_functions.php');
 include('artist_meta.php');
 
-include('google_maps_meta_functions.php');
-include('google_maps_meta.php');
+//include('google_maps_meta_functions.php');
+//include('google_maps_meta.php');
 
 include('multimedia_meta_functions.php');
 include('multimedia_meta.php');

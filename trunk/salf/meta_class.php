@@ -73,14 +73,15 @@ class MetaBox{
 			                echo '</select>';
 
 			                break;
-						case 'text':
-				            echo '<input  type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
-				', $field['desc'];
-				            break;
 							case 'date':
 					            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:80%" />', '
 					', $field['desc'];
 					            break;
+						case 'text':
+				            echo '<input  type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:15%" />', '
+				', $field['desc'];
+				            break;
+							
 							case 'wide-text':
 					            echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:95%" />', '
 					', $field['desc'];
@@ -148,7 +149,24 @@ class MetaBox{
 	    }
 	}
 	
-	
+	function connect_to_post_type($type){
+		global $wpdb;
+		$meta_array = array();
+		$query = "SELECT post_title, ID FROM $wpdb->posts WHERE post_type='$type' AND post_status ='publish'";
+
+
+		$meta_query= $wpdb->get_results($query);
+
+			foreach ($meta_query as $object){
+				$i = get_object_vars($object);
+				$meta_array[$i['ID']]=$i['post_title'];
+
+			}
+			if (count($meta_array)<1) $meta_array[0]='No '.$type.' Found!';//*/
+
+
+			return $meta_array;
+	}
 	
 }
 
@@ -185,13 +203,12 @@ function create_new_meta_boxes(){
 	            'name' => 'ISBN',
 	            'id' => $books_metabox->prefix . 'ISBN',
 	            'type' => 'wide-text'	            
-	            )
-	        
-								);
+	            )        
+					);
 	
-													
+	fb::log($books_metabox->connect_to_post_type('Events'));												
 	
-	add_action('admin_menu', $books_metabox->add());
+
 	
 	$team_metabox = new MetaBox();
 	
@@ -216,8 +233,109 @@ function create_new_meta_boxes(){
 	        
 								);
 	
-													
+	$program_metabox = new MetaBox();
+
+	$program_metabox->id="program_meta";//
+	$program_metabox->title = "Program Meta";//Box Title
+	$program_metabox->page = array('Program');//Section to attach metbox to (page, post or custom)
+	$program_metabox->context = 'side';
+	$program_metabox->priority = 'high';
+	$program_metabox->prefix = 'mf_SALF_meta_';
+	$program_metabox->fields = array(
+						   		array(
+								        'name' => 'Date',
+										'desc' => "<p>Enter in the format DD/MM/YYY</p>",
+								        'id' => $program_metabox->prefix . 'date',
+								        'type' => 'date'		        
+								    ),
+								array(
+								        'name' => 'Time',
+										'desc' => "<p>Enter in the format 00:00</p>",
+								        'id' => $program_metabox->prefix . 'time',
+								        'type' => 'wide-text'		        
+								    ),
+								array(
+								        'name' => 'Price',
+								        'id' => $program_metabox->prefix . 'price',
+								        'type' => 'text'		        
+								    ), 
+								array(
+							            'name' => 'Venue',
+							            'id' => $program_metabox->prefix . 'venue',
+							            'type' => 'select2',
+							            'options' => $program_metabox->connect_to_post_type('Venues')
+							        ), 
+								array(
+								        'name' => 'Event Type',
+								        'id' => $program_metabox->prefix . 'type',
+								        'type' => 'select2',
+								        'options' => $program_metabox->connect_to_post_type('Events')
+								    ),
+
+								array(
+								        'name' => 'EventBrite',
+										'desc' => '<p>Enter Eventbrite Link</p>',
+								        'id' => $program_metabox->prefix . 'eventbrite',
+								        'type' => 'wide-text'		        
+								    ),
+
+								array(
+								        'name' => 'Concession',
+										'desc' => '<p>Enter Concession Link</p>',
+								        'id' => $program_metabox->prefix . 'concession',
+								        'type' => 'wide-text'		        
+								    )
+
+														);
+$google_metabox = new MetaBox();
+
+$google_metabox->id="program_maps";//
+$google_metabox->title = "Address and Map";//Box Title
+$google_metabox->page = array('Venues');//Section to attach metbox to (page, post or custom)
+$google_metabox->context = 'normal';
+$google_metabox->priority = 'high';
+$google_metabox->prefix = 'mf_SALF_maps_meta_';
+$google_metabox->fields = array(
+					   		array(
+								'name' => 'Google Map',
+								'id' => $google_metabox->prefix.'map',
+								'type' => 'wide-text',
+								'desc' => '<p>Enter Google Maps Share URL</p>'
+								),
+							array(
+								'name' => 'Address 1',
+								'id' => $google_metabox->prefix.'address1',
+								'type' => 'text'
+								),
+							array(
+								'name' => 'Address 2',
+								'id' => $google_metabox->prefix.'address2',
+								'type' => 'text'
+								),
+							array(
+								'name' => 'Address 3',
+								'id' => $google_metabox->prefix.'address3',
+								'type' => 'text'
+								),
+							array(
+								'name' => 'Address 4',
+								'id' => $google_metabox->prefix.'address4',
+								'type' => 'text'
+								),
+							array(
+								'name' => 'Post Code',
+								'id' => $google_metabox->prefix.'postcode',
+								'type' => 'text'
+								)
+);
+
+																														
 	
+	
+	
+	add_action('admin_menu', $google_metabox->add());
+	add_action('admin_menu', $program_metabox->add());
+	add_action('admin_menu', $books_metabox->add());
 	add_action('admin_menu', $team_metabox->add());
 	
 	
