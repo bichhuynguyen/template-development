@@ -15,9 +15,14 @@ Template Name: Front Page
 				<a class="news-top" href="<?php bloginfo('rss_url'); ?>"><img  src="<?php echo bloginfo('template_url'); ?>/style/images/news-top.png"  alt="News Top"></a><span style="opacity: 0;"class="subscribe-hint">Get RSS Feed&nbsp;<img style="float: right;"src="<?php echo bloginfo('template_url'); ?>/style/images/social/feed.png" width="16" height="16" alt="Feed"></span>
 			<div id="news-feed">
 				<?php
-				$column_query = new WP_Query();
-				$column_query->query('post_type=post&paged='.$paged);
-				if ( $column_query->have_posts() ) : while ( $column_query->have_posts() ) : $column_query->the_post();
+				
+				global $query_string;
+				parse_str( $query_string, $my_query_array );
+				$paged = ( isset( $my_query_array['paged'] ) && !empty( $my_query_array['paged'] ) ) ? $my_query_array['paged'] : 1;
+				query_posts('post_type=post&posts_per_page=3&paged='.$paged);
+				
+				
+				if ( have_posts() ) : while ( have_posts() ) : the_post();
 				
 				$category = choose_one_category(get_the_category());
 				
@@ -33,7 +38,16 @@ Template Name: Front Page
 						break;
 				}
 				
-				endwhile; endif;
+				
+				endwhile; 
+				?>
+				<div class="custom-pagination">
+
+				<div ><?php previous_posts_link('&laquo; Previous') ?></div>
+
+				<div ><?php next_posts_link('Next &raquo;') ?></div>
+				</div>
+				<?php endif;
 				
 				
 				
@@ -46,8 +60,10 @@ Template Name: Front Page
 				<div class="cnl columns left"> 
 				<?php 
 				foreach ($left as $post){
+					if($post):
 					setup_postdata($post);
 					include('front_page_loop.php');
+					endif;
 				} ?>
 				<p><a href="<?php 
 							$cat_object = get_term_by('name','Festival News','category');
@@ -59,8 +75,10 @@ Template Name: Front Page
 				<div class="cnl columns centre">
 					<?php 
 					foreach ($centre as $post){
+						if($post):
 						setup_postdata($post);
 						include('front_page_loop.php');
+						endif;
 					} ?>
 					<p><a href="<?php 
 								$cat_object = get_term_by('name','Industry News','category');
@@ -72,8 +90,10 @@ Template Name: Front Page
 			<div class="columns right">
 				<?php 
 				foreach ($right as $post){
+					if($post):
 					setup_postdata($post);
-					include('front_page_loop.php');					
+					include('front_page_loop.php');
+					endif;				
 				} ?>
 				<p><a href="<?php 
 							$cat_object = get_term_by('name','Other','category');
