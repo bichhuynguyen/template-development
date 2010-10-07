@@ -173,19 +173,7 @@ ul#sidebar{
 	font-size: 10px;
 	color: #888;
 }
-/*
-* Video
-*/
-.video{
-	width: 300px;
-}
-.video p{
-	margin-top: 12px;text-align: justify; text-justify: newspaper;color: #555;font-size: 11px;
-	
-}
-.video a{
-	font-size: 11px;
-}
+
 /*
 * Footer
 */

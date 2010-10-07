@@ -1,0 +1,13 @@
+.wpcf7-form p{
+	margin: 0 0 12px 0;
+}
+.wpcf7-form p > span{
+	display: block;
+	margin: 4px 0 0 0;
+}
+.wpcf7-form p span.checkbox-638{
+	display: inline;
+}
+.wpcf7-form p span.checkbox-638 span span input{
+	margin: 0 12px 0 0;
+}
