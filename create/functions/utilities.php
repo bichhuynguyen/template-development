@@ -124,5 +124,12 @@ function default_comments_off( $data ) {
 }
 add_filter( 'wp_insert_post_data', 'default_comments_off' );
 
-
+function mf_customised_pages(){
+	if (is_page('Videos')){
+		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/videos.css" type="text/css" media="screen" /><?php
+	}
+	if (is_page('Contact')){
+		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/contact.css" type="text/css" media="screen" /><?php
+	}
+}
 ?>

@@ -16,7 +16,16 @@
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_enqueue_script('jquery');?>
 		<?php wp_enqueue_script('voter', get_bloginfo('template_url').'/voter.js', array('jquery'));?>
+		<?php if (is_page('Contact')):?>
+			<?php
+				if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+					wpcf7_enqueue_scripts();
+					//wpcf7_enqueue_styles();
+				}
+			?>
 		
+		<?php endif;?>
+		<?php mf_customised_pages();?>
 		<?php wp_head(); ?>
 	</head>
 	
