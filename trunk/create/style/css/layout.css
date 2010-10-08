@@ -81,7 +81,7 @@ a:visited{
 	position: relative;
 	height: 50px;
 }
-#menu-main-navigation li{
+.menu li{
 	
 	display: inline;
 	

@@ -98,9 +98,7 @@ function get_attached_images($id, $size = 'thumbnail'){
 		//echo $img[2]
 		echo "\"/>";
 		//print_r($attachment);
-  	} else {
-	echo "no side image";
-	}
+  	} 
 }
 
 function mf_get_extension(){
