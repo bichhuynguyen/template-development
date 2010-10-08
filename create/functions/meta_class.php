@@ -161,28 +161,33 @@ function create_new_meta_boxes(){
 	
 	
 							
-	$new_metabox = new MetaBox();
+	$vimeo_metabox = new MetaBox();
 	
-	$new_metabox->id="vimeo_box";//
-	$new_metabox->title = "Vimeo Box";//Box Title
-	$new_metabox->page = array('post','page');//Section to attach metbox to (page, post or custom)
-	$new_metabox->context = 'side';
-	$new_metabox->priority = 'high';
-	$new_metabox->prefix = 'mf_';
-	$new_metabox->fields = array(
-	        
-	        array(
-	            'name' => 'Vimeo Video',
-	            'id' => $new_metabox->prefix . 'vimeo',
-	            'type' => 'wide-text',
-	            'desc' => "<p>Place Vimeo Video ID here (digits on the end of the URL)</p>"
-	            )
-	        
-								);
+	$vimeo_metabox->id="vimeo_box";//
+	$vimeo_metabox->title = "Vimeo Box";//Box Title
+	$vimeo_metabox->page = array('post','page');//Section to attach metbox to (page, post or custom)
+	$vimeo_metabox->context = 'side';
+	$vimeo_metabox->priority = 'high';
+	$vimeo_metabox->prefix = 'mf_';
+	$vimeo_metabox->fields = array( array('name' => 'Vimeo Video','id' => $vimeo_metabox->prefix . 'vimeo','type' => 'wide-text','desc' => "<p>Place Vimeo Video ID here (digits on the end of the URL)</p>"));
+
+	$admin_metabox = new MetaBox();
 	
+	$admin_metabox->id="admin_box";//
+	$admin_metabox->title = "Admin Box";//Box Title
+	$admin_metabox->page = array('post','page');//Section to attach metbox to (page, post or custom)
+	$admin_metabox->context = 'side';
+	$admin_metabox->priority = 'high';
+	$admin_metabox->prefix = 'mf_';
+	$admin_metabox->fields = array( array('name' => 'Remove Date','id' => $admin_metabox->prefix . 'date_display','type' => 'checkbox','options' => "Do not display date on this page"));	
 													
 	
-	add_action('admin_menu', $new_metabox->add());
+	
+	
+	
+	
+	add_action('admin_menu', $admin_metabox->add());
+	add_action('admin_menu', $vimeo_metabox->add());
 	
 	
 	

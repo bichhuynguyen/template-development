@@ -33,11 +33,12 @@
 	<div id="site-wrapper">	
 		<?php 
 		$args = array(
-			'menu' => 'main-navigation',
-			'container_id' => 'navigation',
-			'fallback_cb' => 'wp_page_menu'
-			);
-		wp_nav_menu($args); ?> 
+		        'theme-location' => 'main-navigation',
+		        'container_id' => 'navigation',
+		        'fallback_cb' => 'wp_page_menu'
+		        );
+		    wp_nav_menu($args);
+		 ?> 
 	<div id="header">	
 		<h1><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>"><span class="hidden-text"><?php bloginfo('name'); ?></span></a></h1>
 	</div>
