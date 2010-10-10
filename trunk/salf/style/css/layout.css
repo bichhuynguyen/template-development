@@ -1217,3 +1217,23 @@ NEW Homepage
 .home .new-entry a h2{
 	min-height: 37px;
 }
+/*
+Messages
+*/
+.top-message{
+	position: fixed;
+	width: 100%;
+	font-size: 15px;
+	background: #FFF097;
+	background: rgba(255,255,255,0.4);
+	padding: 4px 0;
+	text-align: center;
+	border-bottom: solid 1px #A90900;
+	z-index: 3;
+	
+}
+.hide{
+	color: black;
+	font-size: 11px;
+	margin: 0 0 0 12px;
+}

@@ -467,8 +467,13 @@ jQuery(document).ready(function($) {
 			
 		return false;
 	});//*/
-	
-	
+	/*
+	Messages
+	*/
+	$(".top-message .hide").click(function(){
+		$(this).parent().animate({'top': '-50px'}, 750);
+		return false;
+	})
 });
 
 	
