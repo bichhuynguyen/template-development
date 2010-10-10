@@ -119,6 +119,7 @@ function get_program_ids_from_selected_venues($venue_var = FALSE){
 	foreach($post_array as $id=>$object){
 		$get_posts[$id]=$object[0];
 	}
+	fb::log($get_posts,'get posts');
 	return $get_posts;
 }
 

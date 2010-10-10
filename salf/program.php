@@ -75,6 +75,7 @@ get_header();
 				
 				
 				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
+				fb::log($events_used,'Posts for check boxes');
 				// Create Check Boxes For Venue Selection
 				foreach ($events_used as $id => $venue_check):
 				$full_slug_string = preg_replace('/[\s]/','-',$venue_check);//produce slug for title and name in checkbox series.
@@ -100,7 +101,7 @@ get_header();
 				$venues_sort = mf_get_post_titles('Venues');//get's names of venues
 				$venues_used = match_venues_to_used_meta($venues_sort);
 				//$_SESSION['venues_used'] = $venues_used;//firephp
-				
+				fb::log($venues_used,'Venues for check boxes');
 				
 				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
 				// Create Check Boxes For Venue Selection
