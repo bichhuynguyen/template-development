@@ -6,7 +6,7 @@
  */
 
 get_header();?>
-<?get_sidebar();?>
+<?php get_sidebar();?>
 <?php mf_loop();?>
 	
 <?php get_footer(); ?>

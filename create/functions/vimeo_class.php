@@ -7,6 +7,7 @@ class VimeoObject{
 	var $api_endpoint = 'http://vimeo.com/api/v2/';//start URL for VIMEO simple API
 	var $width = 400;//default video width
 	var $height = 230;//default video width
+	var $call;//oembed call results 
 	private $curl; //current URL WITH additional symbol for correct GET var addition
 	private $all_vids;//array containing all videos - created in construct
 	function __construct($id = false){
@@ -48,10 +49,14 @@ class VimeoObject{
 	return $videos_array;
 	
 	}
-	
-	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
+	function oembed_single_video_by_id($id){
 		$url = $this->curl_get("http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/".$id);
 		$call = simplexml_load_string($url);//get XML
+		$this->call = $call;
+		return $call;
+	}
+	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
+		$call = $this->oembed_single_video_by_id($id);//get XML
 		
 		if(isset($call->title)){
 			return true;

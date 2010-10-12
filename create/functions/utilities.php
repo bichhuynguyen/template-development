@@ -85,19 +85,15 @@ function get_attached_images($id, $size = 'thumbnail'){
       'orderby' => 'menu_order'
       ); 
     $attachment = get_posts($args); // Get attachment
-	fb::log(count($attachment));
+	
     if (count($attachment)>0) {
-      $img = wp_get_attachment_image_src($attachment[0]->ID, $size); 
+      	$img = wp_get_attachment_image_src($attachment[0]->ID, $size); 
     	echo "<img alt=\"";
 		echo the_title();
 		echo "\" src=\"";
 		echo $img[0];
-		//echo "\" width=\"";
-		//echo $img[1]
-		//echo "\" height=\""
-		//echo $img[2]
 		echo "\"/>";
-		//print_r($attachment);
+		
   	} 
 }
 
@@ -133,6 +129,7 @@ function mf_customised_pages(){
 
 function ID_ouside_loop() {
 global $wp_query;
+
 $thePostID = $wp_query->post->ID;
 return $thePostID;
 }
