@@ -58,14 +58,17 @@ class VimeoObject{
 	}
 	
 	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
-		$call = $this->oembed_single_video_by_id($id);//get XML
+		if($id):
+			$call = $this->oembed_single_video_by_id($id);//get XML
 		
-		if(isset($call->title)){
-			return true;
-		} else {
-			return false;
-		}
+			if(isset($call->title)){
+				return true;
+			} else {
+				return false;
+			}
+		endif;
 		
+		return false;
 	}
 	
 	function get_single_video_player($id){
@@ -78,8 +81,6 @@ class VimeoObject{
 		return $return;
 		
 	}
-	
-	
 	
 	function get_universal_player_object($id){
 		$url = $this->curl_get('http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/'.$id);
