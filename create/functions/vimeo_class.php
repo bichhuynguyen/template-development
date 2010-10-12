@@ -35,7 +35,6 @@ class VimeoObject{
 			return $return;
 	}
 	
-	
 	function get_video_array(){
 	$url = $this->curl_get($this->api_endpoint.$this->id. '/videos.xml');
 	$videos = simplexml_load_string($url);//get XML
@@ -49,12 +48,15 @@ class VimeoObject{
 	return $videos_array;
 	
 	}
+	
 	function oembed_single_video_by_id($id){
-		$url = $this->curl_get("http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/".$id);
+		$url = $this->curl_get("http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/".$id."&width=".$this->width);
+		
 		$call = simplexml_load_string($url);//get XML
 		$this->call = $call;
 		return $call;
 	}
+	
 	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
 		$call = $this->oembed_single_video_by_id($id);//get XML
 		

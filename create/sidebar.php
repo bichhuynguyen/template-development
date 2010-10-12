@@ -21,7 +21,12 @@
 						$single_video = get_post_meta(ID_ouside_loop(), 'mf_vimeo', true);
 						
 						if ($single_video) $vimeo_exists = $side_vid->id_is_video($single_video);
-						if (!$vimeo_exists || !$single_video) $single_video = false;//prevents sidebar from displaying video if no video exists 
+						
+						if (!$vimeo_exists || !$single_video) {
+							$single_video = false;//prevents sidebar from displaying video if no video exists 
+						} else {
+							$single_video = $side_vid->call; //places video object inside single video
+						}
 						
 						
 						?>
@@ -50,14 +55,14 @@
 							
 							<?php 
 														
-							$player = $side_vid->get_requested_video($single_video);
-							
-							
-							
-							
-							
+							/*$player = $side_vid->get_requested_video($single_video);
 							echo $player['video'];
-							echo '<p>'.$player['desc'].'</p>';?>
+							echo '<p>'.$player['desc'].'</p>';*/
+							
+							echo $single_video->html;
+							echo '<p>'.$single_video->description.'</p>';
+							
+							?>
 							</div>
 							</li>
 								

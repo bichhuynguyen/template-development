@@ -133,5 +133,17 @@ global $wp_query;
 $thePostID = $wp_query->post->ID;
 return $thePostID;
 }
+function post_has_video($id){
+	$side_vid = new VimeoObject();
+	$single_video = get_post_meta($id, 'mf_vimeo', true);
+	
+	if (!$single_video || !$side_vid->id_is_video($single_video)) {
+		return false;
+	} else {
+		return true;
+	}
+	
 
+	
+}
 ?>
