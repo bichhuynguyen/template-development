@@ -130,4 +130,11 @@ function mf_customised_pages(){
 		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/contact.css" type="text/css" media="screen" /><?php
 	}
 }
+
+function ID_ouside_loop() {
+global $wp_query;
+$thePostID = $wp_query->post->ID;
+return $thePostID;
+}
+
 ?>

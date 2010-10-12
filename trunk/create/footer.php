@@ -12,12 +12,16 @@
 		<div class="push"></div><!--Push for sticky Footer-->
 		</div><!--End site-wrapper -->
 		<div id="footer">
-			<?php /* MENU*/
-				$footer_args = array(
-				'theme-location' => 'footer',
-				'container_id' => false
-				);
-			//wp_nav_menu($footer_args); ?>
+			<?php 
+			$args = array(
+			        'theme_location' => 'footer',
+			        'container_id' => 'navigation',
+			        'fallback_cb' => 'wp_page_menu',
+					'link_before'		=> '/ ',
+					'link_after'		=> ' /  '
+			        );
+			    wp_nav_menu($args);
+			 ?>
 			<p></p>
 		</div>
 	</body>

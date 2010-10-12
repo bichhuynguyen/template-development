@@ -33,9 +33,9 @@
 	<div id="site-wrapper">	
 		<?php 
 		$args = array(
-		        'theme-location' => 'main-navigation',
-		        'container_id' => 'navigation',
-		        'fallback_cb' => 'wp_page_menu'
+		        'theme_location'=> 'main-navigation',
+		        'container_id' 	=> 'navigation',
+		        'fallback_cb'	=> 'wp_page_menu'
 		        );
 		    wp_nav_menu($args);
 		 ?> 
