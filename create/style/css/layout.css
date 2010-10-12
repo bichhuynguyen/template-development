@@ -74,9 +74,11 @@ a:visited{
 }
 
 /*
-*Main Navigation
+*Navigation
 */
-
+#navigation{
+	height: 45px;
+}
 #menu-main-navigation{
 	position: relative;
 	height: 50px;
@@ -85,6 +87,17 @@ a:visited{
 	
 	display: inline;
 	
+}
+#footer #navigation{
+	margin-top: 12px;
+	font-size: 12px;
+	
+}
+#footer #navigation a{
+	color: #75B938;
+}
+#footer #navigation a:hover{
+	color: #64A02F;
 }
 /*
 *Header

@@ -41,11 +41,24 @@ class VimeoObject{
 	
 	//convert XML objects to array elements
 	$videos_array = get_object_vars($videos);
+	
 	foreach ($videos_array['video'] as $id=>$video){
 		$videos_array['video'][$id]=get_object_vars($video);
 	}
 	return $videos_array;
 	
+	}
+	
+	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
+		$url = $this->curl_get("http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/".$id);
+		$call = simplexml_load_string($url);//get XML
+		
+		if(isset($call->title)){
+			return true;
+		} else {
+			return false;
+		}
+		
 	}
 	
 	function get_single_video_player($id){
@@ -82,6 +95,7 @@ class VimeoObject{
 		
 		return $player;
 	}
+	
 	function get_video_player_array_by_username(){
 		$entries = $this->all_vids;
 		
@@ -108,6 +122,7 @@ class VimeoObject{
 			} 
 		}
 	}
+	
 	function title_by_id($id){
 		
 		$array = $this->all_vids;
@@ -120,6 +135,7 @@ class VimeoObject{
 			} 
 		}
 	}
+	
 	function next_video_by_id($id){
 	$curl = $this->curl;	
 		$array = $this->all_vids;
@@ -140,6 +156,7 @@ class VimeoObject{
 		}
 		
 	}
+	
 	function prev_video_by_id($id){
 	$curl = $this->curl;	
 		$array = $this->all_vids;
@@ -208,6 +225,7 @@ class VimeoObject{
 		
 		return $return;
 	}
+	
 	function video_players_by_ID(){
 		$videos = $this->get_video_player_array_by_username();
 		$player_list = "<ul class='video_list>";

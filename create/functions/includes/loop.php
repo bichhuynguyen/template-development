@@ -1,12 +1,23 @@
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php 
+global $wp_query;
+
+if (have_posts()) : while (have_posts()) : the_post(); 
+if($wp_query->is_posts_page) $post_page = true;
+?>
 
 <div <?php post_class('post') ?> id="post-<?php the_ID(); ?>">
 	<div class='post_details'>
-		<h2><?php the_title(); ?></h2>
+		<?php if($post_page):?>
+			<a href="<? the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+		<?php else: ?>
+			<h2><?php the_title(); ?></h2>
+		<?php endif; ?>
+			
+		
 		<?php
 		$date_display = get_post_meta(get_the_ID(), 'mf_date_display', true);//checks to see if date should be displayed based on meta box
-		if ($date_display !== 'on'):?>
+		if ($date_display !== 'on' || $post_page):?>
 		<span class='date'><?php the_date('j F, Y');?></span>
 		<?php endif?>
 	</div>
