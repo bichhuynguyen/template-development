@@ -119,7 +119,7 @@ function default_comments_off( $data ) {
 add_filter( 'wp_insert_post_data', 'default_comments_off' );
 
 function mf_customised_pages(){
-	if (is_page('Videos')){
+	if (is_page('Videos')||post_has_video(ID_ouside_loop())){
 		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/videos.css" type="text/css" media="screen" /><?php
 	}
 	if (is_page('Contact')){
@@ -133,11 +133,13 @@ global $wp_query;
 $thePostID = $wp_query->post->ID;
 return $thePostID;
 }
-function post_has_video($id){
-	$side_vid = new VimeoObject();
-	$single_video = get_post_meta($id, 'mf_vimeo', true);
+function post_has_video($id, $meta_results = "not_set"){
+	if ($meta_results=="not_set") $meta_results = get_post_meta($id, 'mf_vimeo', true);
 	
-	if (!$single_video || !$side_vid->id_is_video($single_video)) {
+	$test_object = new VimeoObject();
+		
+	
+	if (!$meta_results || !$test_object->id_is_video($meta_results)) {
 		return false;
 	} else {
 		return true;

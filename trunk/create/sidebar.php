@@ -15,17 +15,20 @@
 					<?php if(is_page()||is_single()):?>
 						<?php
 						$side_vid = new VimeoObject();
+						$post_id = ID_ouside_loop();
+						$video_id = get_post_meta($post_id, 'mf_vimeo', true);
+						
 						$side_vid->width = 304;
 						$side_vid->height = 171;
 						
-						$single_video = get_post_meta(ID_ouside_loop(), 'mf_vimeo', true);
 						
-						if ($single_video) $vimeo_exists = $side_vid->id_is_video($single_video);
-						
-						if (!$vimeo_exists || !$single_video) {
+						if (post_has_video($post_id, $video_id)==false){
 							$single_video = false;//prevents sidebar from displaying video if no video exists 
+							fb::log($post_id, $video_id);
 						} else {
-							$single_video = $side_vid->call; //places video object inside single video
+							
+							$single_video = $side_vid->oembed_single_video_by_id($video_id); //places video object inside single video
+							
 						}
 						
 						
