@@ -89,7 +89,7 @@ a.top{
 	min-height: 300px;
 	_height: 320px;
 	margin: 0 0 20px 0;
-
+	
 	padding: 30px;
 	float: left;
 	background: #FDEFD4 url('../images/paper-pattern.png') repeat;
@@ -210,10 +210,12 @@ h1, h2, h3, h4,h5,h6{
 	right: 0;
 	top: 15px;
 	width: 150px;
+	
 }
 #nav{
 	padding-top: 15px;
 	width: 960px;
+	z-index: 4000;
 	float: left;
 	min-height: 57px;
 	_height: 57px;
@@ -397,13 +399,18 @@ span.pulldown.pointDown{
 div.mc_signup_submit{
 	_text-align: right;
 }
-div #mc_signup_form{
-	_float: right;
+
+div #mc_signup_form {
+	
+	z-index: 1000;
 	
 	margin-left: -10px;
 	/*Styles for floating*/
 	margin: 0;
+	
+	
 }
+
 #sidebar li div{
 	_float: right;
 }

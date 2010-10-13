@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>program.php</string>
+	<string>meta_class.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -124,7 +124,7 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-10T19:32:13Z</date>
+			<date>2010-10-13T13:09:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -152,7 +152,9 @@
 			<key>filename</key>
 			<string>meta_class.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-06T10:21:43Z</date>
+			<date>2010-10-13T14:29:27Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -194,9 +196,7 @@
 			<key>filename</key>
 			<string>program.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-11T19:10:31Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-10-13T09:32:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -384,14 +384,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>101</integer>
+				<integer>30</integer>
 				<key>line</key>
-				<integer>111</integer>
+				<integer>113</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>94</integer>
+			<integer>117</integer>
 		</dict>
 		<key>meta_box_functions.php</key>
 		<dict>
@@ -435,7 +435,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>291</integer>
+			<integer>269</integer>
 		</dict>
 		<key>program.php</key>
 		<dict>
@@ -451,19 +451,33 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>scripts/program.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>39</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>scripts/salf_ui.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>50</integer>
+				<integer>52</integer>
 				<key>line</key>
-				<integer>473</integer>
+				<integer>477</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>433</integer>
+			<integer>252</integer>
 		</dict>
 		<key>sort_by_meta.php</key>
 		<dict>
@@ -527,6 +541,10 @@
 	<key>openDocuments</key>
 	<array>
 		<string>program.php</string>
+		<string>header.php</string>
+		<string>scripts/program.js</string>
+		<string>scripts/salf_ui.js</string>
+		<string>meta_class.php</string>
 		<string>sort_by_meta.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
