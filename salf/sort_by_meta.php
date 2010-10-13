@@ -117,10 +117,15 @@ function get_program_ids_from_selected_venues($venue_var = FALSE){
 	
 	//Create array of post objects
 	foreach($post_array as $id=>$object){
-		$get_posts[$id]=$object[0];
+		$get_posts[$id]=$object[0];//old, broken function (only returned one post)
+		foreach($object as $new_post){//new function, to return many posts
+			$true[$new_post->ID]=$new_post;
+		}
+		
 	}
-	fb::log($get_posts,'get posts');
-	return $get_posts;
+	
+	return $true;//new function return.
+	//return $get_posts;//old return, see above
 }
 
 //break down array of post objects into an array of ID's

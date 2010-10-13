@@ -9,6 +9,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 			<?php bloginfo('name');
 			?>
 		</title>
+		<?php // Hide Facebook---?>
 		<meta property="fb:admins" content="706887311"/>
 		<meta property="fb:app_id" content="130496703654288" />
 		
@@ -18,7 +19,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		} else {
 		?>
 		<meta property="og:type" content="article" />
-		<meta property="og:title" content="<?php the_title_attribute( $args ); ?>" /><?php
+		<meta property="og:title" content="<?php the_title_attribute(); ?>" /><?php
 		}
 		?>
 		<meta property="og:site_name" content="DSC South Asian Literature Festival"/>
@@ -41,6 +42,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		endif;
 		wp_reset_query();
 		?>
+	
 		<?php else:?>
 		<meta property="og:image" content="<?php echo bloginfo('template_url'); ?>/style/images/mini_logo.jpg">	
 		<?php endif; ?>
@@ -48,7 +50,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		echo '<meta property="og:url" content="'.bloginfo('siteurl').'" />';
 		else echo '<meta property="og:url" content="'.get_permalink().'" />';
 		?>
-
+		<?php /* Hide Facebook---*/?>
 		
 	    <meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 		<meta http-equiv="Content-Style-Type" content="text/css"/>

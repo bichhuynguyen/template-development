@@ -29,7 +29,10 @@ if (isset($_SESSION['date_posts'])){
 if (count($_SESSION['venue_post_vars'])>1){
 	
 	$get_posts = get_program_ids_from_selected_venues($_SESSION['venue_post_vars']);
-	$get_post_id_array = get_just_post_ids($get_posts);
+	
+	foreach($get_posts as $this_post){
+	$get_post_id_array[] = get_just_post_ids($this_post);
+	}
 	
 }
 // if $date_search_objects exists, use that for post object instead.
@@ -75,7 +78,7 @@ get_header();
 				
 				
 				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
-				fb::log($events_used,'Posts for check boxes');
+				
 				// Create Check Boxes For Venue Selection
 				foreach ($events_used as $id => $venue_check):
 				$full_slug_string = preg_replace('/[\s]/','-',$venue_check);//produce slug for title and name in checkbox series.
@@ -101,7 +104,7 @@ get_header();
 				$venues_sort = mf_get_post_titles('Venues');//get's names of venues
 				$venues_used = match_venues_to_used_meta($venues_sort);
 				//$_SESSION['venues_used'] = $venues_used;//firephp
-				fb::log($venues_used,'Venues for check boxes');
+			
 				
 				$post_IDs = just_array_keys($_SESSION['venue_post_vars']);
 				// Create Check Boxes For Venue Selection
@@ -144,10 +147,11 @@ get_header();
 			
 				
 			<?php $news_query = new WP_Query('post_type=program&nopaging=true&orderby=menu_order');
+			
 			if(isset($get_posts)) :// search submitted
-				$news_query->posts = $get_posts;
+				$news_query->posts = $get_posts[0];
 				$news_query->post_count = count($news_query->posts);
-				//fb::log($news_query);
+				
 			else:
 				$news_query->posts = array_reverse($news_query->posts);//reverse posts
 			endif;
@@ -158,7 +162,7 @@ get_header();
 			?>
 						
 						<?php 	
-								//fb::log($post,'post');
+								
 								//Include program-meta-include
 								$template = get_function_directory_extension();
 								include($template.'/program-meta-include.php');
