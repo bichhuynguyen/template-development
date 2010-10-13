@@ -3,15 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-<<<<<<< .mine
-<<<<<<< .mine
-	<string>style/css/layout.css</string>
-=======
-	<string>front_page_loop.php</string>
-=======
-	<string>front-page.php</string>
->>>>>>> .r329
->>>>>>> .r327
+	<string>program.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -53,12 +45,12 @@
 		<dict>
 			<key>filename</key>
 			<string>artist_meta.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-06T14:35:04Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>classes.php</string>
-			<key>lastUsed</key>
-			<date>2010-09-29T13:53:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -103,22 +95,16 @@
 		<dict>
 			<key>filename</key>
 			<string>friends.php</string>
-			<key>lastUsed</key>
-			<date>2010-10-04T19:55:38Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>front_page_loop.php</string>
-			<key>lastUsed</key>
-			<date>2010-10-04T20:44:45Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>front-page.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-04T20:55:04Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-10-06T13:58:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -132,29 +118,17 @@
 			<key>filename</key>
 			<string>functions.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-04T20:48:32Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>google_maps_meta_functions.php</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>google_maps_meta.php</string>
+			<date>2010-10-10T19:02:34Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>header.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-10T19:32:13Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>image.php</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>meta_class.php</string>
-			<key>lastUsed</key>
-			<date>2010-09-29T14:17:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -171,18 +145,14 @@
 		<dict>
 			<key>filename</key>
 			<string>meta_box_functions.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-06T14:10:53Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>meta-backup.php</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>meta-working.php</string>
-		</dict>
-		<dict>
-			<key>filename</key>
-			<string>meta.php</string>
+			<string>meta_class.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-06T10:21:43Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -199,8 +169,6 @@
 		<dict>
 			<key>filename</key>
 			<string>news.php</string>
-			<key>lastUsed</key>
-			<date>2010-10-04T20:37:46Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -226,7 +194,9 @@
 			<key>filename</key>
 			<string>program.php</string>
 			<key>lastUsed</key>
-			<date>2010-09-29T10:48:54Z</date>
+			<date>2010-10-11T19:10:31Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -237,6 +207,8 @@
 			<string>screenshot.png</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>scripts</string>
 			<key>regexFolderFilter</key>
@@ -267,16 +239,14 @@
 		<dict>
 			<key>filename</key>
 			<string>sort_by_meta.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-10T21:17:28Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>speakers.php</string>
-			<key>lastUsed</key>
-			<date>2010-10-04T20:04:27Z</date>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -291,6 +261,8 @@
 		<dict>
 			<key>filename</key>
 			<string>team.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-06T13:59:04Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -333,218 +305,122 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-<<<<<<< .mine
-		<key>events.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>26</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>3</integer>
-				<key>line</key>
-				<integer>22</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>5</integer>
-				<key>line</key>
-				<integer>26</integer>
-			</dict>
-		</dict>
-		<key>footer.php</key>
-=======
-		<key>classes.php</key>
->>>>>>> .r327
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>3</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>4</integer>
-			</dict>
-		</dict>
-<<<<<<< .mine
-		<key>functions.php</key>
+		<key>artist_meta.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>31</integer>
 				<key>line</key>
-				<integer>112</integer>
+				<integer>42</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>81</integer>
+			<integer>6</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>30</integer>
 				<key>line</key>
-				<integer>112</integer>
+				<integer>42</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>36</integer>
 				<key>line</key>
-				<integer>112</integer>
+				<integer>42</integer>
 			</dict>
-		</dict>
-		<key>header.php</key>
-=======
-		<key>friends.php</key>
->>>>>>> .r327
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>75</integer>
-				<key>line</key>
-				<integer>28</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
 		<key>front-page.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>10</integer>
+				<integer>6</integer>
 				<key>line</key>
-				<integer>68</integer>
+				<integer>53</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>38</integer>
+			<integer>27</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>4</integer>
 				<key>line</key>
-				<integer>64</integer>
+				<integer>16</integer>
 			</dict>
 			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>10</integer>
-				<key>line</key>
-				<integer>68</integer>
-			</dict>
-		</dict>
-		<key>front_page_loop.php</key>
-		<dict>
-			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>6</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>53</integer>
 			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
 		</dict>
-<<<<<<< .mine
-		<key>partners.php</key>
-=======
 		<key>functions.php</key>
->>>>>>> .r327
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-<<<<<<< .mine
-<<<<<<< .mine
-				<integer>22</integer>
-=======
-				<integer>44</integer>
-=======
-				<integer>52</integer>
->>>>>>> .r329
->>>>>>> .r327
+				<integer>2</integer>
 				<key>line</key>
-<<<<<<< .mine
-<<<<<<< .mine
-				<integer>10</integer>
-=======
-				<integer>468</integer>
-=======
-				<integer>486</integer>
->>>>>>> .r329
->>>>>>> .r327
+				<integer>220</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>205</integer>
+		</dict>
+		<key>header.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>101</integer>
+				<key>line</key>
+				<integer>111</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>94</integer>
+		</dict>
+		<key>meta_box_functions.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>21</integer>
+				<key>line</key>
+				<integer>98</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-<<<<<<< .mine
-<<<<<<< .mine
-			<integer>0</integer>
-=======
-			<integer>439</integer>
-=======
-			<integer>445</integer>
->>>>>>> .r329
->>>>>>> .r327
+			<integer>77</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>5</integer>
 				<key>line</key>
-				<integer>484</integer>
+				<integer>95</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>52</integer>
+				<integer>21</integer>
 				<key>line</key>
-				<integer>486</integer>
+				<integer>98</integer>
 			</dict>
 		</dict>
 		<key>meta_class.php</key>
@@ -552,186 +428,110 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>15</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>182</integer>
+				<integer>328</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>3</integer>
-		</dict>
-		<key>news.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>132</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>86</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>132</integer>
-			</dict>
+			<integer>291</integer>
 		</dict>
 		<key>program.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>21</integer>
-				<key>line</key>
-				<integer>172</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>151</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
-				<integer>172</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>31</integer>
-				<key>line</key>
-				<integer>172</integer>
-			</dict>
-		</dict>
-<<<<<<< .mine
-		<key>style/css/layout.css</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
-				<integer>1125</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>1081</integer>
-		</dict>
-		<key>style/css/mf_datepicker_css.css</key>
-=======
-		<key>scripts/program.js</key>
->>>>>>> .r327
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>3</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
 				<integer>1</integer>
 				<key>line</key>
-				<integer>5</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>3</integer>
-				<key>line</key>
-				<integer>35</integer>
-			</dict>
-		</dict>
-		<key>speakers.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>28</integer>
-				<key>line</key>
-				<integer>15</integer>
+				<integer>34</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>scripts/salf_ui.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>50</integer>
+				<key>line</key>
+				<integer>473</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>433</integer>
+		</dict>
+		<key>sort_by_meta.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>37</integer>
+				<key>line</key>
+				<integer>464</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>441</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>20</integer>
+				<key>line</key>
+				<integer>464</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>37</integer>
+				<key>line</key>
+				<integer>464</integer>
+			</dict>
 		</dict>
 		<key>style/css/layout.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>16</integer>
 				<key>line</key>
-				<integer>1173</integer>
+				<integer>1223</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1153</integer>
+			<integer>1193</integer>
+		</dict>
+		<key>team.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>24</integer>
+				<key>line</key>
+				<integer>31</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-<<<<<<< .mine
-		<string>partners.php</string>
-=======
-		<string>front-page.php</string>
-<<<<<<< .mine
->>>>>>> .r327
-		<string>style/css/layout.css</string>
-=======
-		<string>front_page_loop.php</string>
->>>>>>> .r329
-		<string>functions.php</string>
-<<<<<<< .mine
-<<<<<<< .mine
-		<string>events.php</string>
-=======
-		<string>front_page_loop.php</string>
-		<string>style/css/layout.css</string>
-=======
->>>>>>> .r329
->>>>>>> .r327
+		<string>program.php</string>
+		<string>sort_by_meta.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-<<<<<<< .mine
-<<<<<<< .mine
-	<string>{{13, 9}, {1104, 877}}</string>
-=======
-	<string>{{13, 0}, {1223, 878}}</string>
-=======
-	<string>{{4, 0}, {1225, 878}}</string>
->>>>>>> .r329
->>>>>>> .r327
+	<string>{{4, 1}, {1225, 877}}</string>
 </dict>
 </plist>
