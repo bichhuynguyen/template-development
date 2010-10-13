@@ -194,7 +194,7 @@ jQuery(document).ready(function($) {
 		pages_inc = 0;//increment for creating array
 	
 	
-	$("#pages li a").each(function(){
+	$("#pages li a").not('a[title="Buy Tickets"]').each(function(){
 		//identify and store URL
 		direct_url = $(this).attr('href');
 		
@@ -306,7 +306,7 @@ jQuery(document).ready(function($) {
 	
 	function program_js(){
 		program_titles = $('#program_feed .event h3');
-		program_elements = $('#program_feed .event').children('div');
+		program_elements = $('#program_feed .event').children('div').add($('#program_feed .event').children('p'));
 		program_elements.hide();
 		current_header_width = $('#program_feed .event h3').css('width');
 		$('#program_feed .event h3').css('width', '70%');
@@ -321,12 +321,12 @@ jQuery(document).ready(function($) {
 				$(this).addClass('active');
 
 				$(this).children('h3').children('span').html('less');
-				$(this).children('div').add($(this).children('div.event_content').children('p')).slideDown();
+				$(this).children('div').add($(this).children('p')).slideDown();
 			} else {
 
 				$(this).removeClass('active');
 				$(this).children('h3').children('span').html('more info / buy tickets');
-				$(this).children('div').add($(this).children('div.event_content').children('p')).slideUp();
+				$(this).children('div').add($(this).children('p')).slideUp();
 			}
 		});
 		//hide checks when different search criteria used (for usablity, makes it obvious only one can be used at once)
@@ -474,6 +474,8 @@ jQuery(document).ready(function($) {
 		$(this).parent().animate({'top': '-50px'}, 750);
 		return false;
 	})
+	/*open blank menu*/
+	$('a[title="Buy Tickets"]').attr('target','_blank');
 });
 
 	

@@ -111,7 +111,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		var templateDir = "<?php bloginfo('template_directory') ?>";
 		</script>
 		<noscript><h2 style="font-size: 14px; width: 100%; text-align: center; color: #A91611; background: #F8F700; border-bottom: 3px solid #9D1111; height: 24px">This site works best with Javascript turned on. Certain things may look different with it turned off.</h2></noscript>
-		<div class="top-message"><a href="http://www.bookmarketing.co.uk/surveys/salf10.htm" target="_blank">Help Shape The Future of Publishing <span class="italic">and</span> Win Prizes</a><a class='hide' href="#">hide</a>
+		<div style="display: none;" class="top-message"><a href="http://www.bookmarketing.co.uk/surveys/salf10.htm" target="_blank">Help Shape The Future of Publishing <span class="italic">and</span> Win Prizes</a><a class='hide' href="#">hide</a>
 		</div>
 		<div id="header">
 		<h1 style="float: left;">
