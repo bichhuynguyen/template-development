@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>footer.php</string>
+	<string>sidebar.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -35,34 +35,6 @@
 			<key>firstVisibleLine</key>
 			<integer>35</integer>
 		</dict>
-		<key>footer.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
-				<key>line</key>
-				<integer>19</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>functions/menus.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>functions/objects_and_tax.php</key>
 		<dict>
 			<key>caret</key>
@@ -82,14 +54,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>5</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>100</integer>
+				<integer>136</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>2</integer>
+			<integer>0</integer>
+		</dict>
+		<key>functions/vimeo_class.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>29</integer>
+				<key>line</key>
+				<integer>210</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>27</integer>
 		</dict>
 		<key>header.php</key>
 		<dict>
@@ -124,42 +110,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>36</integer>
+				<integer>52</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>40</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>single.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>7</integer>
+			<integer>20</integer>
 		</dict>
 		<key>style/css/layout.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>13</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>79</integer>
+				<integer>111</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>56</integer>
+			<integer>115</integer>
 		</dict>
 		<key>style/css/typography.css</key>
 		<dict>
@@ -192,16 +164,15 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>header.php</string>
-		<string>style/css/layout.css</string>
 		<string>sidebar.php</string>
-		<string>footer.php</string>
+		<string>functions/vimeo_class.php</string>
+		<string>header.php</string>
 		<string>functions/utilities.php</string>
-		<string>functions/menus.php</string>
+		<string>style/css/layout.css</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1465, 1027}}</string>
+	<string>{{14, 1}, {1463, 1027}}</string>
 </dict>
 </plist>

@@ -133,6 +133,7 @@ global $wp_query;
 $thePostID = $wp_query->post->ID;
 return $thePostID;
 }
+
 function post_has_video($id, $meta_results = "not_set"){
 	if ($meta_results=="not_set") $meta_results = get_post_meta($id, 'mf_vimeo', true);
 	
