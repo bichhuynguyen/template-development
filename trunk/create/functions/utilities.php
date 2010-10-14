@@ -97,9 +97,9 @@ function get_attached_images($id, $size = 'thumbnail'){
   	} 
 }
 
-function mf_get_extension(){
+function mf_get_extension($curl = false){
 	//determines whether to use ? or & before defining a GET variable
-	$curl = curPageURL();
+	if (!$curl) $curl = curPageURL();
 	$exploded_url = explode('?',$curl);
 	if (!$exploded_url[1]){
 		return "?";

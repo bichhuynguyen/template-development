@@ -8,12 +8,5 @@ ob_start();
 get_header(); ?>
 <?get_sidebar();?>
 <?php mf_loop();?>
-<?php
-
-
-//$vimeo->video_players_by_ID();
-echo $films['list'];
-
-?>
-
+<?php echo $films['list']; ?>
 <?php get_footer(); ?>
