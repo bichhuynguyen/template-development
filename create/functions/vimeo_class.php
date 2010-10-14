@@ -20,7 +20,7 @@ class VimeoObject{
 		}
 		
 		$curl = $this->strip_vimeo_get_vars();
-		$ext = mf_get_extension();
+		$ext = mf_get_extension($curl);
 		$this->curl = $curl.$ext;
 		
 		$this->all_vids = $this->get_video_array();//get all videos and place them in an array
@@ -204,8 +204,11 @@ class VimeoObject{
 	
 	function strip_vimeo_get_vars(){
 		$curl = curPageURL();
-		$curl = explode('vimeo',$curl);
-		return $curl[0];
+		if(strpos($curl, '?vimeo')){ 
+			$curl = explode('?vimeo',$curl);
+			$curl = $curl[0];
+		}
+		return $curl;
 	}
 	
 	function title_thumb_desc(){
@@ -224,9 +227,6 @@ class VimeoObject{
 			$return['list'] .= "'>";
 			$return['list'] .= $video['title'];
 			$return['list'] .= '</a>';
-			//$return['list'] .= '<p>';
-			//$return['list'] .= $video['description'];
-			//$return['list'] .= '</p>';
 			$return['list'] .= '</li>';
 		}
 		$return['list'] .= '</ul>';
