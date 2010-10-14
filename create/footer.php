@@ -16,9 +16,7 @@
 			$args = array(
 			        'theme_location' => 'footer',
 			        'container_id' => 'navigation',
-			        'fallback_cb' => 'wp_page_menu',
-					'link_before'		=> '/ ',
-					'link_after'		=> ' /  '
+			        'fallback_cb' => 'wp_page_menu'
 			        );
 			    wp_nav_menu($args);
 			 ?>

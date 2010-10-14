@@ -121,6 +121,7 @@ add_filter( 'wp_insert_post_data', 'default_comments_off' );
 function mf_customised_pages(){
 	if (is_page('Videos')||post_has_video(ID_ouside_loop())){
 		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/videos.css" type="text/css" media="screen" /><?php
+		wp_enqueue_script('vimeo ajax', get_bloginfo('template_url').'/js/vimeo_ajax.js', array('jquery'));
 	}
 	if (is_page('Contact')){
 		?><link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/page-customs/css/contact.css" type="text/css" media="screen" /><?php
@@ -148,5 +149,12 @@ function post_has_video($id, $meta_results = "not_set"){
 	
 
 	
+}
+
+function remove_post_vars($url){//crude function for removing anything after the first ? in a string
+	
+	$url_split = explode('?', $url);
+	
+	return $url_split[0];
 }
 ?>

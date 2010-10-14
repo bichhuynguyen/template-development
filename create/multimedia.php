@@ -13,6 +13,7 @@ get_header(); ?>
 
 //$vimeo->video_players_by_ID();
 echo $films['list'];
-fb::log($_GET,"Multimedia");
+
 ?>
+
 <?php get_footer(); ?>
