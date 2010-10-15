@@ -11,9 +11,22 @@ function mf_ajax_load_new_content(url, div){
 		$(div).animate({opacity:0.1},500,function(){
 			$(this).children().remove();
 			
-			$(this).parent().load(url+div, function() {
+			$(this).load(url+' '+div, function() {
+				mf_pop_parent($(this).children("#sidebar"));
 				$(this).animate({opacity:1},500);
+				
+	 
 			});
 		})
 }
+
+function mf_pop_parent(selector){
+	$(selector).each(function(){
+          grandparent = $(this).parent().parent();
+          object = $(this).parent().html();
+          grandparent.prepend(object);
+          $(this).parent().remove();
+     })
+}
+
 });
