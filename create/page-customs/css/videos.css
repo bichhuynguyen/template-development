@@ -11,3 +11,22 @@
 .video a{
 	font-size: 11px;
 }
+#sidebar{
+	overflow: hidden;
+}
+img.loader{
+	
+	border: none;
+	position: absolute;
+	display: none;
+	top: 230px;
+	left: 680px;
+
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+img, #sidebar iframe{
+	border: 3px solid black;
+	-moz-box-shadow: -2px 2px 8px gray;
+	-webkit-box-shadow: -2px 2px 8px gray;
+}

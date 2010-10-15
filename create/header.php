@@ -43,4 +43,6 @@
 		<h1><a href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name'); ?>"><span class="hidden-text"><?php bloginfo('name'); ?></span></a></h1>
 	</div>
 	<div id="content-wrapper">
-	
+	<?if (is_page('Videos')):?>
+		<img class="loader" src="<?php bloginfo("template_url"); ?>/style/images/create_logo_loader.gif" width="25" height="24" alt="Create Logo Loader">
+	<?php endif; ?>
