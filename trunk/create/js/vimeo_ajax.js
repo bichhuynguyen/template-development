@@ -8,12 +8,16 @@ jQuery(document).ready(function($){
 	
 function mf_ajax_load_new_content(url, div){
 		//$('#ajax_loader').clone().prependTo('#main-content-area').show();
-		$(div).animate({opacity:0.1},500,function(){
+		$(div).animate({opacity:0},500,function(){
 			$(this).children().remove();
+			$("img.loader").fadeIn(100);
 			
 			$(this).load(url+' '+div, function() {
+				$("img.loader").fadeOut(100);
 				mf_pop_parent($(this).children("#sidebar"));
+				
 				$(this).animate({opacity:1},500);
+				
 				
 	 
 			});
