@@ -19,13 +19,10 @@ Template Name: Front Page
 
 				<?php
 
-				$temp = $wp_query;
-
-				$wp_query= null;
-
-				$wp_query = new WP_Query();
-
-				$wp_query->query('post_type=post&paged='.$paged);
+				global $query_string;
+				parse_str( $query_string, $my_query_array );
+				$paged = ( isset( $my_query_array['paged'] ) && !empty( $my_query_array['paged'] ) ) ? $my_query_array['paged'] : 1;
+				query_posts('post_type=post&posts_per_page=5&paged='.$paged);
 				
 
 
@@ -38,7 +35,8 @@ Template Name: Front Page
 
 					<div class="new-entry">
 						
-						<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a><div class="post-details"><?php the_time('l, F jS, Y') ?><?php comments_number('',' - 1 comment',' - % comments'); ?></div>
+						<a href="<?php the_permalink();?>"><h2><?php the_title(); ?></h2></a>
+						<div class="post-details"><?php the_time('l, F jS, Y') ?><?php comments_number('',' - 1 comment',' - % comments'); ?></div>
 						<?php mf_post_thumbnail('med-cropped');?>
 						<?php 
 						global $more;    // Declare global $more (before the loop).
@@ -68,12 +66,12 @@ Template Name: Front Page
 
 							?>
 
-							<!--><div class="custom-pagination">
+							<div class="custom-pagination clear">
 
-							<div class="alignleft"><?php //previous_posts_link('&laquo; Previous') ?></div>
+							<div><?php previous_posts_link('&laquo; Previous') ?></div>
 
-							<div class="alignright"><?php //next_posts_link('More &raquo;') ?></div><-->
-
+							<div><?php next_posts_link('More &raquo;') ?></div>
+							</div>
 
 
 
@@ -87,9 +85,7 @@ Template Name: Front Page
 
 							?>
 
-							<?php $wp_query = null; $wp_query = $temp;?>
-
-							<a href="<?php get_permalink(294)?>">See More News</a>		
+								
 					
 					
 					
@@ -98,7 +94,8 @@ Template Name: Front Page
 			<div id="stream-tweet">
 			<div class="dsc_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-from.png" width="150" height="25" alt="TWEETS FROM US"></H2></div>
 			<div class="query_tweet tweets"><H2><img src="<?php echo bloginfo('template_url');?>/style/images/tweets-about.png" width="150" height="25" alt="TWEETS ABOUT US"></H2></div>
-			</div>	
+			</div>
+			
 		</div>
 			
 			

@@ -170,7 +170,7 @@ class FlickrObject{
 		$this->params = array('photoset_id' => $id, 'per_page' => 5);
 		
 		$this->images_and_links('photoset');
-		//fb::log($this->photo_array,'get_photoset');
+		////fb::log($this->photo_array,'get_photoset');
 	}
 	
 

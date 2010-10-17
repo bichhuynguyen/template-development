@@ -88,14 +88,18 @@ jQuery(document).ready(function($) {
 		});
 		
 		//function for hover submenus
+		//alert(jQuery.browser.version);
+		
+		
+		
 		menu_items = $('#nav #pages li');
 		submenus = $('#nav #pages li ul.sub-menu');
 		submenu_pointers = $(submenus).siblings('a');
 		submenus_parents = $(submenus).parent();
 		
 		
-		
-		
+	
+	
 		$(submenus_parents).hover(function(){
 				hovered = $(this).data('hovered');
 				pointer = $(this).children('a');
@@ -127,6 +131,8 @@ jQuery(document).ready(function($) {
 				
 			
 			});
+		
+	
 	//*/
 
 	/*

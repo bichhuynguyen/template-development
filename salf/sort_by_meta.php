@@ -2,8 +2,8 @@
 ob_start();
 session_start();//firephp
 
-//////fb::log($_SESSION['artist_query'],'artist_debug');//firephp
-////////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
+////////fb::log($_SESSION['artist_query'],'artist_debug');//firephp
+//////////fb::log($_SESSION['get_post_ID_by_meta_value'],'Venues');//firephp
 
 
 //-------------
@@ -290,7 +290,7 @@ function create_html_calendar($october){
 //date formatting
 function mf_date_format($date){
 	$date = explode('/',$date);
-	$months = array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+	$months = array('','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
 	$formatted_date = $date[0].' '.$months[$date[1]].' '.$date[2];
 	
 	return $formatted_date;
@@ -338,7 +338,9 @@ function program_meta_display($date = false,$time=false,$venue=false, $artist=fa
 		if ($eventbrite_link != "")
 		{ $return .='<li class="tickets"><a  href="'. $eventbrite_link.'" target="_blank"><img src="'.get_bloginfo('template_url').'/style/images/tickets.png" /></a></li>';
 		}
+		
 		if ($concession_link != "") 
+		
 		{$return .='<li class="tickets"><a  href="'. $concession_link .'" target="_blank">Concessions</a></li>'; 
 		} 
 	$return .='</ul>';
@@ -443,7 +445,7 @@ function mf_get_posts_connected_to_meta($meta_value, $return_array = false, $art
 		$html_list .= $list_element['title'];
 		$html_list .= '</a></li>';
 	}
-	//////fb::log($html_list,'Venue Debug');
+	////////fb::log($html_list,'Venue Debug');
 	return $html_list;
 }
 function remove_unpublished_posts($post_ID_query){

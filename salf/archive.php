@@ -53,7 +53,7 @@ Template Name: News Page
 			<div id="news-feed">
 			<?php
 			
-			//fb::log($news_query);
+			////fb::log($news_query);
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 

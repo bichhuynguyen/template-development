@@ -15,6 +15,7 @@
 	</div>
 	
 	</div><!--END WRAPPER-->
+	</div>
 	<script src="http://assets.vimeo.com/js/embedinator.min.js"></script>
 </body>
 

@@ -75,7 +75,7 @@ class FlickrObject{
 			$this->callback_array = get_object_vars($user_photos_callback);
 			//Set results $stat
 			$this->stat = $this->callback_array['@attributes']['stat'];
-			//fb::log($this->callback_array);
+			////fb::log($this->callback_array);
 			
 			
 		}
@@ -107,7 +107,7 @@ class FlickrObject{
 				$link .= "'>View on Flickr</a>";
 				$links[] = $link;
 			}
-			//fb::log($links,"links:");
+			////fb::log($links,"links:");
 			$return[0] = $images;
 			$return[1] = $links; 
 			return $return;

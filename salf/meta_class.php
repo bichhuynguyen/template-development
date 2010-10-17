@@ -106,7 +106,7 @@ class MetaBox{
 	
 	function save($post_id) {
 		
-		//fb::log('Save Fired');
+		////fb::log('Save Fired');
 		
 		
 
@@ -115,35 +115,35 @@ class MetaBox{
 
 	    // check autosave
 	    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-			//fb::log('AutoSave Failed');
+			////fb::log('AutoSave Failed');
 	        return $post_id;
 	    }
 
 	    // check permissions
 	    if ('page' == $_POST['post_type']) {
 	        if (!current_user_can('edit_page', $post_id)) {
-				//fb::log('User Check Failed');
+				////fb::log('User Check Failed');
 	            return $post_id;
 	        }
 	    } elseif (!current_user_can('edit_post', $post_id)) {
-			//fb::log('User Check Failed');
+			////fb::log('User Check Failed');
 	        return $post_id;
 	    }
 
 	    foreach ($this->fields as $field) {
-			//fb::log($_POST);
+			////fb::log($_POST);
 	        $old = get_post_meta($post_id, $field['id'], true);
 	        $new = $_POST[$field['id']];
-			//fb::log($old,'old = ');
-			//fb::log($new,'new = ');
+			////fb::log($old,'old = ');
+			////fb::log($new,'new = ');
 
 			//var_dump($field['id']);
 	        //var_dump($new);
 	        if ($new && $new != $old) {
-				//fb::log('Post Meta updated');
+				////fb::log('Post Meta updated');
 	            update_post_meta($post_id, $field['id'], $new);
 	        } elseif ('' == $new && $old) {
-				//fb::log('Post Meta deleted');
+				////fb::log('Post Meta deleted');
 	            delete_post_meta($post_id, $field['id'], $old);
 	        }
 	    }
@@ -206,7 +206,7 @@ function create_new_meta_boxes(){
 	            )        
 					);
 	
-	fb::log($books_metabox->connect_to_post_type('Events'));												
+	//fb::log($books_metabox->connect_to_post_type('Events'));												
 	
 
 	

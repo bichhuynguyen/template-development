@@ -1179,11 +1179,11 @@ div.paypal form td{
 /*
 NEW Homepage
 */
-.home .right{
+.home .3col .right{
 	width: 32%;
 	float: right;
 }
-.home .centre-left{
+.home .3col .centre-left{
 	width: 66%;
 	float: left;
 	
@@ -1193,35 +1193,35 @@ NEW Homepage
 	margin-bottom: -4000px;
 	
 }
-.home .centre-left .cnl{
+.home .3col .centre-left .cnl{
 	width: 46%;
 	float: left;
 	border-right: solid white 2px;
 }
-.home .centre-left .centre{
+.home .3col .centre-left .centre{
 	
 	float: right;
 	
 }
-.home .new-entry .post-details{
+.home .3col .new-entry .post-details{
 	font-size: 10px;
 }
-.home .new-entry{
+.home .3col .new-entry{
 	width: 100%;
 }
-.home .new-entry img{
+.home .3col .new-entry img{
 	padding: 0 0 8px 8px;
 }
-.home .new-entry p{
+.home .3col .new-entry p{
 	width: 100%;
 	text-align: justify; 
 	text-justify: newspaper;
 }
-.home #news-feed {
+.home .3col #news-feed {
 	width: 100%;
 	overflow-y: hidden;
 }
-.home .new-entry a h2{
+.home .3col .new-entry a h2{
 	min-height: 37px;
 }
 /*
@@ -1231,16 +1231,20 @@ Messages
 	position: fixed;
 	width: 100%;
 	font-size: 15px;
-	background: #FFF097;
-	background: rgba(255,255,255,0.4);
+	background: #943229;
+	background: rgba(148,50,41,0.7);
+	
 	padding: 4px 0;
 	text-align: center;
-	border-bottom: solid 1px #A90900;
+	border-bottom: solid 1px #000;
 	z-index: 3;
 	
 }
-.hide{
-	color: black;
+.top-message a{
+	color: white;
+}
+.top-message a.hide{
+	color: #551717;
 	font-size: 11px;
 	margin: 0 0 0 12px;
 }
