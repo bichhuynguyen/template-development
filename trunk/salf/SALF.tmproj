@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>meta_class.php</string>
+	<string>header.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -124,7 +124,9 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-13T13:09:22Z</date>
+			<date>2010-10-15T20:40:04Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -152,9 +154,7 @@
 			<key>filename</key>
 			<string>meta_class.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-13T14:29:27Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-10-13T18:43:14Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -191,6 +191,8 @@
 		<dict>
 			<key>filename</key>
 			<string>program-meta-include.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-15T19:45:29Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -231,6 +233,8 @@
 		<dict>
 			<key>filename</key>
 			<string>single.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-15T20:37:47Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -240,13 +244,15 @@
 			<key>filename</key>
 			<string>sort_by_meta.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-10T21:17:28Z</date>
+			<date>2010-10-15T19:44:40Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>speakers.php</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -370,9 +376,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>220</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -384,14 +390,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>7</integer>
 				<key>line</key>
 				<integer>113</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>117</integer>
+			<integer>98</integer>
 		</dict>
 		<key>meta_box_functions.php</key>
 		<dict>
@@ -428,28 +434,42 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>9</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>328</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>269</integer>
 		</dict>
+		<key>program-meta-include.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>41</integer>
+				<key>line</key>
+				<integer>45</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>3</integer>
+		</dict>
 		<key>program.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>38</integer>
 				<key>line</key>
-				<integer>34</integer>
+				<integer>165</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>143</integer>
 		</dict>
 		<key>scripts/program.js</key>
 		<dict>
@@ -470,58 +490,56 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>52</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>477</integer>
+				<integer>93</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>252</integer>
+			<integer>69</integer>
+		</dict>
+		<key>single.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>23</integer>
+				<key>line</key>
+				<integer>105</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>95</integer>
 		</dict>
 		<key>sort_by_meta.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>37</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>464</integer>
+				<integer>340</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>441</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>464</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>37</integer>
-				<key>line</key>
-				<integer>464</integer>
-			</dict>
+			<integer>304</integer>
 		</dict>
 		<key>style/css/layout.css</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>16</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>1223</integer>
+				<integer>212</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1193</integer>
+			<integer>177</integer>
 		</dict>
 		<key>team.php</key>
 		<dict>
@@ -540,16 +558,16 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>program.php</string>
+		<string>single.php</string>
 		<string>header.php</string>
-		<string>scripts/program.js</string>
+		<string>program-meta-include.php</string>
 		<string>scripts/salf_ui.js</string>
-		<string>meta_class.php</string>
+		<string>program.php</string>
 		<string>sort_by_meta.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1225, 877}}</string>
+	<string>{{14, 1}, {1225, 877}}</string>
 </dict>
 </plist>

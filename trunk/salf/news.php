@@ -55,7 +55,7 @@ Template Name: News Page
 			<div id="news-feed">
 			<?php
 			$news_query = new WP_Query('post_type=post&orderby=date&order=asc');
-			//fb::log($news_query);
+			////fb::log($news_query);
 			if ($news_query->have_posts()) : while ($news_query->have_posts()) : $news_query->the_post(); ?>
 
 
