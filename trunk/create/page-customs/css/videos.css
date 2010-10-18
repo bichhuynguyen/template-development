@@ -30,3 +30,6 @@ img, #sidebar iframe{
 	-moz-box-shadow: -2px 2px 8px gray;
 	-webkit-box-shadow: -2px 2px 8px gray;
 }
+p.video-nav{
+	margin: 0;
+}
