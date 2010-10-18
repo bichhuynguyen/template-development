@@ -156,9 +156,9 @@ class VimeoObject{
 								
 				$return .= "<a class='next'  href='";
 				$return .= $curl."vimeo=".$next['id'];
-				$return .= "'>";
+				$return .= "'> ";
 				$return .= $next['title'];
-				$return .= '&raquo;</a>';
+				$return .= '</a>';
 				return $return;	
 			} 
 		}
@@ -177,8 +177,7 @@ class VimeoObject{
 				
 				if($prev):
 					$return .= "<a class='prev' href='";
-					$return .= $curl."vimeo=".$prev['id'];
-					$return .= "'>&laquo;";
+					$return .= $curl."vimeo=".$prev['id']."'> ";
 					$return .= $prev['title'];
 					$return .= '</a>';
 					return $return;
