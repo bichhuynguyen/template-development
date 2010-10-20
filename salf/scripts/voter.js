@@ -1,14 +1,21 @@
 jQuery(document).ready(function(){
+	$('.voter').unbind();
 	
-  	$('.thumbs').click(function(){
-		loader = $('#vote_count span.voter_loader').html();
-		current_count = parseFloat($('#vote_count span.number').html());
-		$('#vote_count span.number').html(loader);
+  	$('.voter').submit(function(){
+		parent = this.parentNode;
+		home = $(this);
+	
+		loader = $('.vote_count span.voter_loader',$(this).parent()).html();
+		current_count = parseFloat($('.vote_count span.number',$(this).parent()).html());
 		
-		if ($(this).hasClass('up')){
-			$(this).removeClass('up');
-			$(this).addClass('down');
-			action = $(this).parent().attr('action');
+		
+		
+		$('.vote_count span.number',$(home).parent()).html(loader);
+		
+		if ($(home).children('.thumbs').hasClass('up')){
+			$(home).children('.thumbs').removeClass('up');
+			$(home).children('.thumbs').addClass('down');
+			action = $(home).attr('action');
 			
 			
 			
@@ -17,63 +24,69 @@ jQuery(document).ready(function(){
 			key,
 			value;
 		
-			$(this).siblings('input').each(function(){
+			$(home).children('input').not($(home).children('.thumbs')).each(function(){
 				key = $(this).attr('name'),
 				value = $(this).attr('value');
-					
+			
 			elements[key]=value;
 			});
-		
+			
 			$.post(action, {ip : elements['ip'],curl : elements['curl'],post_id : elements['post_id']},function(data){
 				//on success
+				
 				count = current_count + 1;
-				$('#vote_count span.number').html(count);
-				$('.thumbs').attr('value',"Undo Vote");
+			
+				$(parent).children('.vote_count').children('span.number').html(count);
+				
+				
+				$(home).children('.thumbs').attr('value',"Undo Vote");
+				
 				if (count == 1){
-					$('#vote_count span.vote_grammer').html("person likes");
+					$(parent).children('.vote_count').children('span.vote_grammer').html("person likes");
 				} else {
-					$('#vote_count span.vote_grammer').html("people like");
+					$(parent).children('.vote_count').children('span.vote_grammer').html("people like");
 				}
 				if (!count){
-						$('#vote_count span.bethefirst').html("Be The first!");
+						$(parent).children('.vote_count').children('span.bethefirst').html("Be The first!");
 				} else {
-					$('#vote_count span.bethefirst').html("");
+					$(parent).children('.vote_count').children('span.bethefirst').html("");
 				}
 			});//*/
 	} else {
-		$(this).removeClass('down');
-		$(this).addClass('up');
-		if ($(this).parent().hasClass('up')){
-			action = $(this).parent().attr('action')+'?remove=true';
+		$(home).children('.thumbs').removeClass('down');
+		$(home).children('.thumbs').addClass('up');
+		if ($(home).hasClass('up')){
+			action = $(home).attr('action')+'?remove=true';
 		} else {
-			action = $(this).parent().attr('action');
+			action = $(home).attr('action');
 		}
 		
 		var elements = new Object(),
 			key,
 			value;
 		
-		$(this).siblings('input').each(function(){
-			key = $(this).attr('name'),
-			value = $(this).attr('value');
-					
+			$(home).children('input').not($(this).children('.thumbs')).each(function(){
+				key = $(this).attr('name'),
+				value = $(this).attr('value');
+				
 			elements[key]=value;
-		});
-		
+			});
+			
 		$.post(action, {ip : elements['ip'],curl : elements['curl'],post_id : elements['post_id']},function(data){
-			//on success
+			
 			count = current_count - 1;
-			$('#vote_count span.number').html(count);
-			$('.thumbs').attr('value',"I Like This");
+			
+			$(parent).children('.vote_count').children('span.number').html(count);
+			$(home).children('.thumbs').attr('value',"I Like This");
 			if (count == 1){
-				$('#vote_count span.vote_grammer').html("person likes");
+				$(parent).children('.vote_count').children('span.vote_grammer').html("person likes");
 			} else {
-				$('#vote_count span.vote_grammer').html("people like");
+				$(parent).children('.vote_count').children('span.vote_grammer').html("people like");
 			}
 			if (!count){
-					$('#vote_count span.bethefirst').html("Be The first!");
+					$(parent).children('.vote_count').children('span.bethefirst').html("Be The first!");
 			} else {
-				$('#vote_count span.bethefirst').html("");
+				$(parent).children('.vote_count').children('span.bethefirst').html("");
 			}
 		});//*/
 	}
