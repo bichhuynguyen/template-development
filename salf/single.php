@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $wp_query; 
+?>
 
 	<?php if(get_post_type()=='Venues'):?>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -146,9 +148,46 @@
 
 			<p>Sorry, no posts matched your criteria.</p>
 
-	<?php endif; ?>
-		
-	<?php else:// if single post ?>
+		<?php endif; ?>
+	<?php elseif(get_post_type()=='Books'): ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+			<div class="post" id="post-<?php the_ID(); ?>">
+
+				<?php mf_post_thumbnail('large-uncropped');?>
+
+				
+				<h2><?php the_title(); ?></h2>
+
+				<div class='the_content'>
+					<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+				</div>
+				<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				<?php //the_tags( '<p>Tags: ', ', ', '</p>'); ?>
+
+
+
+
+
+
+
+
+
+					 <?php mf_voting_form(); ?>
+					<?php mf_socialise_post('Please vote for ','#salftop50');?>
+					
+					<div id="comment_block">
+						<?php comments_template( '', true ); ?>
+					</div>
+
+
+			</div>
+			<?php endwhile; else: ?>
+
+				<p>Sorry, no posts matched your criteria.</p>
+
+		<?php endif; ?>
+	<?php else:?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
@@ -193,6 +232,7 @@
 				<?php endif;?>
 			</div>
 			<h2><?php the_title(); ?></h2>
+			
 			<div class='the_content'>
 				<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
 			</div>
