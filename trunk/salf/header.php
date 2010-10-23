@@ -71,6 +71,10 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		<script src="<?php bloginfo('template_url'); ?>/scripts/salf_ui.js" type="text/javascript"></script>
 		<script src="<?php bloginfo('template_url'); ?>/scripts/date.js" type="text/javascript"></script>
 		<script src="<?php bloginfo('template_url'); ?>/scripts/datePicker.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_url'); ?>/scripts/voter.js" type="text/javascript"></script>
+		
+		
+		
 		<script language="javascript" src="<?php bloginfo('template_url'); ?>/scripts/tweet/jquery.tweet.js" type="text/javascript"></script>  
 		<script type='text/javascript'>
 		    $(document).ready(function(){
@@ -110,7 +114,7 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		<script type="text/javascript">
 		var templateDir = "<?php bloginfo('template_directory') ?>";
 		</script>
-		<noscript><h2 style="font-size: 14px; width: 100%; text-align: center; color: #A91611; background: #F8F700; border-bottom: 3px solid #9D1111; height: 24px">This site works best with Javascript turned on. Certain things may look different with it turned off.</h2></noscript>
+		<noscript><h2 style="position: fixed; top: 30px; z-index: 3;font-size: 14px; width: 100%; text-align: center; color: #A91611; background: #F8F700; border-bottom: 3px solid #9D1111; height: 24px">This site works best with Javascript turned on. Certain things may look different with it turned off.</h2></noscript>
 		<div class="top-message">
 			<a href="http://www.bookmarketing.co.uk/surveys/dscsalf10.htm" target="_blank">Help Shape The Future of Publishing <span class="italic">and</span> Win Prizes</a><a class='hide' href="#">hide</a> 
 		</div>

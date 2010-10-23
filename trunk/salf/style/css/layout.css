@@ -1248,3 +1248,9 @@ Messages
 	font-size: 11px;
 	margin: 0 0 0 12px;
 }
+/*
+Books
+*/
+.books .new-entry{
+	margin-bottom: 12px;
+}

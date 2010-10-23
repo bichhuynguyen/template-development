@@ -178,7 +178,7 @@ get_header();
 						<div class="event_content">
 						<?php the_content(); ?>
 						</div>
-						<?php mf_socialise_post('Can\'t wait for');?>
+						<?php mf_socialise_post("Can\'t wait for");?>
 						</div>
 			
 						
