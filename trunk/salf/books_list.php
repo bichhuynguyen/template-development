@@ -10,7 +10,7 @@ Template Name: Book List
 		
 		<div class="post books">
 			
-			<img src="<?php echo bloginfo('template_url'); ?>/style/images/speakers.png" alt="Speakers">
+			<img src="<?php echo bloginfo('template_url'); ?>/style/images/books_title.png" alt="Speakers">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="clear"><?php the_content(); ?></div>
 			<?php endwhile; endif; ?>
