@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentDocument</key>
-	<string>header.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -128,9 +126,7 @@
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-22T21:11:14Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-10-25T18:56:50Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -256,13 +252,15 @@
 			<key>filename</key>
 			<string>books_list.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-20T21:30:37Z</date>
+			<date>2010-10-25T19:21:35Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>speakers.php</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>style</string>
 			<key>regexFolderFilter</key>
@@ -353,6 +351,20 @@
 				<integer>42</integer>
 			</dict>
 		</dict>
+		<key>books_list.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>77</integer>
+				<key>line</key>
+				<integer>12</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>7</integer>
+		</dict>
 		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
@@ -411,49 +423,19 @@
 			<key>firstVisibleLine</key>
 			<integer>27</integer>
 		</dict>
-		<key>functions.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>61</integer>
-				<key>line</key>
-				<integer>448</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>443</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>50</integer>
-				<key>line</key>
-				<integer>448</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>61</integer>
-				<key>line</key>
-				<integer>448</integer>
-			</dict>
-		</dict>
 		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>164</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>118</integer>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>101</integer>
+			<integer>-1</integer>
 		</dict>
 		<key>meta_box_functions.php</key>
 		<dict>
@@ -541,50 +523,6 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>scripts/salf_ui.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>36</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>36</integer>
-				<key>line</key>
-				<integer>16</integer>
-			</dict>
-		</dict>
-		<key>scripts/voter.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>4</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
 		<key>single.php</key>
 		<dict>
 			<key>caret</key>
@@ -634,12 +572,12 @@
 				<key>column</key>
 				<integer>20</integer>
 				<key>line</key>
-				<integer>1254</integer>
+				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1208</integer>
+			<integer>0</integer>
 		</dict>
 		<key>team.php</key>
 		<dict>
@@ -670,13 +608,6 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
-	<key>openDocuments</key>
-	<array>
-		<string>scripts/voter.js</string>
-		<string>scripts/salf_ui.js</string>
-		<string>functions.php</string>
-		<string>header.php</string>
-	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
