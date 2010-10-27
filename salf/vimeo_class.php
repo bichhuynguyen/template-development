@@ -148,20 +148,20 @@ function multimedia_options_do_page() {
 
             <table class="form-table">
 
-                <tr valign="top"><th scope="row">Vimeo ID</th>
+                <tr valign="top"><th scope="row">Vimeo Username</th>
 
-                    <td><input type="text" name="multimedia_[vimeo_id]" value="<?php echo $options['vimeo_id']; ?>" /></td>
+                    <td><input type="text" name="multimedia_[vimeo_id]" value="<?php echo $options['vimeo_id']; ?>" /><p>as it appears in the address bar</p></td>
 
                 </tr>
 				
 				<tr valign="top"><th scope="row">Flickr Api Key</th>
 
-                    <td><input type="text" name="multimedia_[flickr_api_key]" value="<?php echo $options['flickr_api_key']; ?>" /></td>
+                    <td><input type="text" name="multimedia_[flickr_api_key]" value="<?php echo $options['flickr_api_key']; ?>" /><p>Fetch from 'my apps' within FLickr</p></td>
 
                 </tr>
 				<tr valign="top"><th scope="row">Flickr User ID</th>
 
-                    <td><input type="text" name="multimedia_[flickr_user_id]" value="<?php echo $options['flickr_user_id']; ?>" /></td>
+                    <td><input type="text" name="multimedia_[flickr_user_id]" value="<?php echo $options['flickr_user_id']; ?>" /><p>Fetch from <a href="http://get-flickr-id.ubuntu4life.com/" target="_blank">here</a></p></td>
 
                 </tr>
             </table>

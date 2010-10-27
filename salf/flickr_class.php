@@ -11,7 +11,7 @@ class FlickrObject{
 	private $callback_array; //holds API responce array
 	private $photo_array;//holds array of photo info
 	
-	function image_tag($photo){
+	function image_tag($photo, $thumbs=false){
 		//return URL for displaying image, based on array of attributes from flickr
 		
 		$img_tag = '<img src="';
@@ -23,7 +23,7 @@ class FlickrObject{
 		$img_tag .= $photo['id'];
 		$img_tag .= '_';
 		$img_tag .= $photo['secret'];
-		$img_tag .= '_m.jpg';
+		$img_tag .= ($thumbs?'_s.jpg':'_m.jpg');
 		$img_tag .= '" />';
 		
 		return $img_tag;
@@ -34,7 +34,7 @@ class FlickrObject{
 		
 		$img_tag = "<a target='_blank' href='";
 		$img_tag .= "http://www.flickr.com/photos/";
-		$img_tag .= $photo['owner'];
+		$img_tag .= $this->user_id;
 		$img_tag .= '/';
 		$img_tag .= $photo['id'];
 		if ($inc_end):
@@ -104,7 +104,7 @@ class FlickrObject{
 		//converts returned API call into associative array
 		$this->api_call();
 		if ($this->stat!='ok') return false; //Kills function if API call failed.
-		
+	
 		if(!$single):
 			foreach ($this->callback_array[$relevant_array] as $photo){
 				$photos[]=get_object_vars($photo);
@@ -142,7 +142,8 @@ class FlickrObject{
 	endif;
 	}
 	
-	function get_image_by_id($id){
+	function get_image_by_id($id, $url=false, $thumbs=false, $title=false){
+		
 		$this->method = 'flickr.photos.getInfo';
 		$this->params = array('photo_id' => $id);
 		$this->convert_XML('photo', true);
@@ -155,8 +156,15 @@ class FlickrObject{
 				'owner'	=> 	$this->photo_array['owner']->attributes['nsid']			
 				),$photo);
 		
-			echo "<a href='$link'>";
-			echo $this->image_tag($photo);
+		if($url) $link = $url;
+		if($title) {
+			$title_attr = 'title="'.$title.'"';
+			
+		} else {
+			$title_attr = "";
+		}
+			echo "<a href='$link' $title_attr>";
+			echo $this->image_tag($photo, $thumbs);
 			echo "</a>";
 		else: //if API call failed
 			echo "Flickr Call Failed - Please Check Photo ID";
@@ -164,10 +172,31 @@ class FlickrObject{
 		
 		
 	}
-	
+	function get_sets(){
+		$this->method = "flickr.photosets.getList";
+		$this->convert_XML('photosets');
+		
+		foreach ($this->photo_array as $photoset){
+			//fb::log($photoset,'photoset');
+			$thumb_id = $photoset['@attributes']['primary'];
+			$title = $photoset['title'];
+			$url = "?id=".$photoset['@attributes']['id']."&title=".urlencode($title);
+			$this->display_photoset_thumb($title,$thumb_id,$url);
+			
+			
+			 //fetch photoset thumbnail
+			
+		}
+	}
+	function display_photoset_thumb($title,$thumb_id,$url=false){
+		echo "<div class='photoset'>";
+		//echo "<h3>".$title."</h3>";
+		$this->get_image_by_id($thumb_id,($url?$url:false), true, $title);
+		echo "</div>";
+	}
 	function get_photoset($id){
 		$this->method = 'flickr.photosets.getPhotos';
-		$this->params = array('photoset_id' => $id, 'per_page' => 5);
+		$this->params = array('photoset_id' => $id);
 		
 		$this->images_and_links('photoset');
 		////fb::log($this->photo_array,'get_photoset');

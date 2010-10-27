@@ -22,7 +22,7 @@ html, body{
 body{
 	width: 100%;
 	
-	background: #D92417 url('../images/backdrop-grate.png') repeat-x right 0px;
+	background: #b61d22 url('../images/backdrop-grate.png') repeat-x right 0px;
 	
 	color: #414042;
 	
@@ -185,7 +185,7 @@ h1, h2, h3, h4,h5,h6{
 }
 
 #header{
-	height: 265px;
+	height: 255px;
 	width: 960px;
 	padding: 0;
 	border-bottom: 1px white solid;
@@ -1237,7 +1237,7 @@ Messages
 	padding: 4px 0;
 	text-align: center;
 	border-bottom: solid 1px #000;
-	z-index: 3;
+	z-index: 1000;
 	
 }
 .top-message a{
@@ -1253,4 +1253,29 @@ Books
 */
 .books .new-entry{
 	margin-bottom: 12px;
+}
+/*
+Media - Flickr
+*/
+#photoset, .photoset{
+	float: left;
+}
+ul.flickr_feed li{
+	list-style: none;
+	float: left;
+	height: 260px;
+	width: 260px;
+}
+ul.flickr_feed li a img{
+	position: relative;
+	border: white 3px solid;
+}
+ul.flickr_feed li a{
+	position: relative;
+	display: block;
+}
+ul.flickr_feed li a img:hover{
+	-webkit-box-shadow: -1px 1px 7px #DE9228;  
+	-moz-box-shadow: -1px 1px 7px #DE9228;
+	
 }
