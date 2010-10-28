@@ -16,7 +16,28 @@ Template Name: Flickr Page
 		
 		<?php if($_GET['media']=='video'): ?>
 			<div id='flickr' class="multimedia">
+				<?php $vimeo = new VimeoObject(); 
+				
+				?>
+				<?php $films = $vimeo->title_thumb_desc();?>
+				<?php echo $films['list']; ?>
+			</div>
+			<div class="video">
+			<?php 
 			
+			
+			
+			
+			$player = $vimeo->get_requested_video($films['first_film_id']);
+			echo '<h4>'.$player['title'].'</h4>';
+			
+			
+			echo "<p class='video-nav'>Next Video:".$player['next']."</p>";
+			echo "<p class='video-nav'>Previous Video:".$player['prev']."</p>";
+			echo $player['video'];
+			
+			echo '<p>'.$player['desc'].'</p>';?>
+		
 			</div>
 		<?php else: ?>
 			<div id='flickr' class="multimedia">
