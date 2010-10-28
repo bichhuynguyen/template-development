@@ -1,13 +1,15 @@
 <?php
 
 
-class VimeoObject{
+class VimeoObject{ 
 	var $id;//vimeo username
 	var $video_code;//individual video code
 	var $api_endpoint = 'http://vimeo.com/api/v2/';//start URL for VIMEO simple API
 	var $width = 400;//default video width
 	var $height = 230;//default video width
-	
+	var $call;//oembed call results 
+	private $curl; //current URL WITH additional symbol for correct GET var addition
+	private $all_vids;//array containing all videos - created in construct
 	function __construct($id = false){
 		if($id){
 			$this->id=$id;
@@ -16,6 +18,12 @@ class VimeoObject{
 			$multimedia = get_option('multimedia_');
 			$this->id = $multimedia['vimeo_id'];
 		}
+		
+		$curl = $this->strip_vimeo_get_vars();
+		$ext = mf_get_extension($curl);
+		$this->curl = $curl.$ext;
+		
+		$this->all_vids = $this->get_video_array();//get all videos and place them in an array
 	}
 			
 	function curl_get($url) {
@@ -27,18 +35,40 @@ class VimeoObject{
 			return $return;
 	}
 	
-	
 	function get_video_array(){
 	$url = $this->curl_get($this->api_endpoint.$this->id. '/videos.xml');
 	$videos = simplexml_load_string($url);//get XML
 	
 	//convert XML objects to array elements
 	$videos_array = get_object_vars($videos);
+	
 	foreach ($videos_array['video'] as $id=>$video){
 		$videos_array['video'][$id]=get_object_vars($video);
 	}
 	return $videos_array;
 	
+	}
+	
+	function oembed_single_video_by_id($id){
+		$url = $this->curl_get("http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/".$id."&width=".$this->width);
+		
+		$call = simplexml_load_string($url);//get XML
+		$this->call = $call;
+		return $call;
+	}
+	
+	function id_is_video($id){//fetches data from vimeo's oembed mechaninism
+		if($id):
+			$call = $this->oembed_single_video_by_id($id);//get XML
+		
+			if(isset($call->title)){
+				return true;
+			} else {
+				return false;
+			}
+		endif;
+		
+		return false;
 	}
 	
 	function get_single_video_player($id){
@@ -51,8 +81,6 @@ class VimeoObject{
 		return $return;
 		
 	}
-	
-	
 	
 	function get_universal_player_object($id){
 		$url = $this->curl_get('http://vimeo.com/api/oembed.xml?url=http%3A//vimeo.com/'.$id);
@@ -75,8 +103,10 @@ class VimeoObject{
 		
 		return $player;
 	}
+	
 	function get_video_player_array_by_username(){
-		$entries = $this->get_video_array();
+		$entries = $this->all_vids;
+		
 		foreach ($entries['video'] as $video){
 			
 			//$props = $this->get_universal_player_object($video['id']); need to control width!!
@@ -87,6 +117,129 @@ class VimeoObject{
 		}
 		return $player_array;
 	}
+	
+	function desc_by_id($id){
+		
+		$array = $this->all_vids;
+		$videos = $array['video'];
+		
+		foreach ($videos as $video){
+			
+			if($video['id']==$id){
+				return $video['description'];
+			} 
+		}
+	}
+	
+	function title_by_id($id){
+		
+		$array = $this->all_vids;
+		$videos = $array['video'];
+		
+		foreach ($videos as $video){
+			
+			if($video['id']==$id){
+				return $video['title'];
+			} 
+		}
+	}
+	
+	function next_video_by_id($id){
+	$curl = $this->curl;	
+		$array = $this->all_vids;
+		$videos = $array['video'];
+		
+		foreach ($videos as $key=>$video){
+			
+			if($video['id']==$id){
+				$next = $videos[$key+1];
+								
+				$return .= "<a class='next'  href='";
+				$return .= $curl."vimeo=".$next['id'];
+				$return .= "'> ";
+				$return .= $next['title'];
+				$return .= '</a>';
+				return $return;	
+			} 
+		}
+		
+	}
+	
+	function prev_video_by_id($id){
+	$curl = $this->curl;	
+		$array = $this->all_vids;
+		$videos = $array['video'];
+		
+		foreach ($videos as $key=>$video){
+			
+			if($video['id']==$id){
+				$prev = $videos[$key-1];
+				
+				if($prev):
+					$return .= "<a class='prev' href='";
+					$return .= $curl."vimeo=".$prev['id']."'> ";
+					$return .= $prev['title'];
+					$return .= '</a>';
+					return $return;
+				endif;
+			} 
+		}
+	}
+	
+	function get_requested_video($id){
+		if(isset($_GET['vimeo'])){
+			$id = $_GET['vimeo'];
+			
+		}
+		
+		
+		$return['title'] = $this->title_by_id($id);
+		$return['video'] = $this->create_video_player_by_ID($id);
+		$return['desc'] = $this->desc_by_id($id);
+		$return['next'] = $this->next_video_by_id($id);
+		$return['prev'] = $this->prev_video_by_id($id);
+		
+		return $return;
+	}
+	
+	function strip_vimeo_get_vars(){
+		$curl = curPageURL();
+		
+		if(strpos($curl, '?vimeo')){ 
+			$curl = explode('?vimeo',$curl);
+			$curl = $curl[0];
+		} elseif(strpos($curl, '&vimeo')){ 
+			$curl = explode('&vimeo',$curl);
+			$curl = $curl[0];
+			
+		} 
+		return $curl;
+	}
+	
+	function title_thumb_desc(){
+		
+		$curl = $this->curl;
+		
+		$entries = $this->all_vids;
+		$return['first_film_id'] = $entries['video'][0]['id'];
+		
+		//$return = $this->get_requested_video($entries['video'][0]['id']);
+		
+		$return['list'] = '<ul class="vimeo_desc_feed">';
+		foreach ($entries['video'] as $video){
+			$return['list'] .= '<li>';
+			$return['list'] .= "<a href='";
+			$return['list'] .= $curl."vimeo=".$video['id'];
+			$return['list'] .= "'>";
+			$return['list'] .= $video['title'];
+			$return['list'] .= '</a>';
+			$return['list'] .= '</li>';
+		}
+		$return['list'] .= '</ul>';
+		
+		return $return;
+	}
+	
 	function video_players_by_ID(){
 		$videos = $this->get_video_player_array_by_username();
 		$player_list = "<ul class='video_list>";
@@ -101,7 +254,17 @@ class VimeoObject{
 }
 
 
-
+function mf_get_extension($curl = false){
+	//determines whether to use ? or & before defining a GET variable
+	if (!$curl) $curl = curPageURL();
+	$exploded_url = explode('?',$curl);
+	if (!$exploded_url[1]){
+		return "?";
+	} else {
+		return '&';
+	}
+	
+}
 
 
 add_action('admin_init', 'multimedia_options_init' );
