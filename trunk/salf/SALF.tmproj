@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>currentDocument</key>
+	<string>header.php</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -49,6 +51,8 @@
 		<dict>
 			<key>filename</key>
 			<string>classes.php</string>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -67,16 +71,10 @@
 			<string>events.php</string>
 		</dict>
 		<dict>
-			<key>name</key>
-			<string>FirePHPCore</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>FirePHPCore</string>
-		</dict>
-		<dict>
 			<key>filename</key>
 			<string>flickr_class.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-27T09:59:37Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -120,13 +118,13 @@
 			<key>filename</key>
 			<string>functions.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-23T17:49:59Z</date>
+			<date>2010-10-30T14:45:18Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>header.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-25T18:56:50Z</date>
+			<date>2010-10-31T15:24:03Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -154,7 +152,7 @@
 			<key>filename</key>
 			<string>meta_class.php</string>
 			<key>lastUsed</key>
-			<date>2010-10-13T18:43:14Z</date>
+			<date>2010-10-30T15:06:12Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -166,7 +164,15 @@
 		</dict>
 		<dict>
 			<key>filename</key>
+			<string>flickr_page.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-30T14:38:09Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>multimedia.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-27T09:54:50Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -305,6 +311,8 @@
 		<dict>
 			<key>filename</key>
 			<string>vimeo_class.php</string>
+			<key>lastUsed</key>
+			<date>2010-10-28T21:03:25Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -365,6 +373,48 @@
 			<key>firstVisibleLine</key>
 			<integer>7</integer>
 		</dict>
+		<key>classes.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>flickr_class.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>44</integer>
+				<key>line</key>
+				<integer>198</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>flickr_page.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>29</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>15</integer>
+		</dict>
 		<key>footer.php</key>
 		<dict>
 			<key>caret</key>
@@ -423,19 +473,49 @@
 			<key>firstVisibleLine</key>
 			<integer>27</integer>
 		</dict>
+		<key>functions.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>25</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>25</integer>
+				<key>line</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
 		<key>header.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>meta_box_functions.php</key>
 		<dict>
@@ -472,28 +552,74 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>35</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>354</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>269</integer>
+			<integer>0</integer>
+		</dict>
+		<key>multimedia.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>22</integer>
+				<key>line</key>
+				<integer>44</integer>
+			</dict>
 		</dict>
 		<key>program-meta-include.php</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>41</integer>
+				<integer>68</integer>
 				<key>line</key>
-				<integer>45</integer>
+				<integer>25</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>46</integer>
 			<key>firstVisibleLine</key>
 			<integer>10</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>68</integer>
+				<key>line</key>
+				<integer>25</integer>
+			</dict>
 		</dict>
 		<key>program.php</key>
 		<dict>
@@ -570,14 +696,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>20</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>1279</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
+			<integer>1235</integer>
+		</dict>
+		<key>style/css/typography.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>91</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
 			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>45</integer>
 		</dict>
 		<key>team.php</key>
 		<dict>
@@ -592,6 +732,20 @@
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>vimeo_class.php</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>3</integer>
+				<key>line</key>
+				<integer>213</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>190</integer>
 		</dict>
 		<key>voter_form.php</key>
 		<dict>
@@ -608,9 +762,22 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
+	<key>openDocuments</key>
+	<array>
+		<string>multimedia.php</string>
+		<string>flickr_page.php</string>
+		<string>meta_class.php</string>
+		<string>header.php</string>
+		<string>functions.php</string>
+		<string>classes.php</string>
+		<string>program-meta-include.php</string>
+		<string>vimeo_class.php</string>
+		<string>style/css/layout.css</string>
+		<string>flickr_class.php</string>
+	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{4, 1}, {1225, 877}}</string>
+	<string>{{4, 0}, {718, 878}}</string>
 </dict>
 </plist>

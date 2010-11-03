@@ -174,8 +174,23 @@ class MetaBox{
 
 
 function create_new_meta_boxes(){
-	
-	
+	$redirect_metabox = new MetaBox();
+	$redirect_metabox->id="redirect";//
+	$redirect_metabox->title = "Redirect this page?";//Box Title
+	$redirect_metabox->page = 'page';//Section to attach metbox to (page, post or custom)
+	$redirect_metabox->context = 'side';
+	$redirect_metabox->priority = 'high';
+	$redirect_metabox->prefix = 'mf_';
+	$redirect_metabox->fields = array(
+	        
+	   		array(
+           		'name' => 'URL',
+           		'id' => $redirect_metabox->prefix . 'redirect_url',
+           		'type' => 'wide-text',
+				'desc' => "<p>Enter the URL you would like this page to redirect to</p>"
+				
+        	)	
+	);
 	
 	
 							
@@ -337,6 +352,7 @@ $google_metabox->fields = array(
 	add_action('admin_menu', $program_metabox->add());
 	add_action('admin_menu', $books_metabox->add());
 	add_action('admin_menu', $team_metabox->add());
+	add_action('admin_menu', $redirect_metabox->add());
 	
 	
 }
