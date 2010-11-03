@@ -1231,8 +1231,8 @@ Messages
 	position: fixed;
 	width: 100%;
 	font-size: 15px;
-	background: #943229;
-	background: rgba(148,50,41,0.7);
+	background: #ffffff;
+	background: rgba(255,255,255,0.7);
 	
 	padding: 4px 0;
 	text-align: center;
@@ -1241,7 +1241,7 @@ Messages
 	
 }
 .top-message a{
-	color: white;
+	color: #5E0F09;
 }
 .top-message a.hide{
 	color: #551717;

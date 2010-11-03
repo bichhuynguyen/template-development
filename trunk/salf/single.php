@@ -194,7 +194,7 @@ global $wp_query;
 			
 			<?php mf_post_thumbnail('large-uncropped');?>
 			
-			<div id="multimedia-block">
+			<!--<div id="multimedia-block">
 				<?php
 				$flickr = new FlickrObject();
 				$vimeo = new VimeoObject();
@@ -230,7 +230,7 @@ global $wp_query;
 						
 					</div>
 				<?php endif;?>
-			</div>
+			</div>-->
 			<h2><?php the_title(); ?></h2>
 			
 			<div class='the_content'>
