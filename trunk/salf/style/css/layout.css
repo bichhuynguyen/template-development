@@ -1228,20 +1228,21 @@ NEW Homepage
 Messages
 */
 .top-message{
+	top: -50px;
 	position: fixed;
 	width: 100%;
 	font-size: 15px;
-	background: #ffffff;
-	background: rgba(255,255,255,0.7);
+	background: #E0EB34;
+	background: rgba(246,251,81,0.8);
 	
 	padding: 4px 0;
 	text-align: center;
-	border-bottom: solid 1px #000;
+	border-bottom: double 3px #ffffff;
 	z-index: 1000;
 	
 }
 .top-message a{
-	color: #5E0F09;
+	color: #000000;
 }
 .top-message a.hide{
 	color: #551717;

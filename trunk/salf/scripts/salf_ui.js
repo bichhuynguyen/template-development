@@ -476,6 +476,7 @@ jQuery(document).ready(function($) {
 	/*
 	Messages
 	*/
+	$(".top-message").delay(1000).animate({'top': '0px'}, 750, 'swing');
 	$(".top-message .hide").click(function(){
 		$(this).parent().animate({'top': '-50px'}, 750);
 		return false;

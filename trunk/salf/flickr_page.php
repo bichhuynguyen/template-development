@@ -19,10 +19,11 @@ Template Name: Flickr Page
 				<?php $vimeo = new VimeoObject(); 
 				
 				?>
-				<?php $films = $vimeo->title_thumb_desc();?>
+				
+				<?php $films = $vimeo->thumb_list();?>
 				<?php echo $films['list']; ?>
 			</div>
-			<div class="video">
+			<div class="video clear">
 			<?php 
 			
 			

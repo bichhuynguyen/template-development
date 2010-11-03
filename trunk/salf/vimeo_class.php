@@ -221,6 +221,7 @@ class VimeoObject{
 		$curl = $this->curl;
 		
 		$entries = $this->all_vids;
+		
 		$return['first_film_id'] = $entries['video'][0]['id'];
 		
 		//$return = $this->get_requested_video($entries['video'][0]['id']);
@@ -231,15 +232,47 @@ class VimeoObject{
 			$return['list'] .= "<a href='";
 			$return['list'] .= $curl."vimeo=".$video['id'];
 			$return['list'] .= "'>";
-			$return['list'] .= $video['title'];
+			$return['list'] .= htmlspecialchars($video['title'], ENT_QUOTES, 'UTF-8', true);
 			$return['list'] .= '</a>';
 			$return['list'] .= '</li>';
+			
 		}
 		$return['list'] .= '</ul>';
 		
 		return $return;
 	}
-	
+	function thumb_list(){
+		/*as title_thumb_desc, but outputs a list of thumbs with titles as title tags*/
+			$curl = $this->curl;
+
+			$entries = $this->all_vids;
+
+			$return['first_film_id'] = $entries['video'][0]['id'];
+
+			//$return = $this->get_requested_video($entries['video'][0]['id']);
+
+			$return['list'] = '<div id="photoset_select" class="clear">';
+			foreach ($entries['video'] as $video){
+				$return['list'] .= '<div class="photoset">';
+				
+				$return['list'] .= "<a href='";
+				$return['list'] .= $curl."vimeo=".$video['id'];
+				$return['list'] .= "' title='";
+				$return['list'] .= htmlspecialchars($video['title'], ENT_QUOTES, 'UTF-8', true);
+				fb::log(htmlspecialchars($video['title'], ENT_QUOTES, 'UTF-8', true),'html');
+				$return['list'] .= "'>";
+				$return['list'] .= "<img src='";
+				$return['list'] .= $video['thumbnail_small']."' alt='";
+				$return['list'] .= htmlspecialchars($video['title'], ENT_QUOTES, 'UTF-8', true);
+				$return['list'] .= "'/>";
+				$return['list'] .= '</a>';
+				$return['list'] .= '</div>';
+				
+			}
+			$return['list'] .= '</div>';
+
+			return $return;
+	}
 	function video_players_by_ID(){
 		$videos = $this->get_video_player_array_by_username();
 		$player_list = "<ul class='video_list>";
