@@ -1,5 +1,11 @@
 <?php
 
+function ID_ouside_loop() {
+global $wp_query;
+
+$thePostID = $wp_query->post->ID;
+return $thePostID;
+}
 /*
 ---------------
 Menus
