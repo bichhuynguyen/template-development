@@ -123,9 +123,16 @@ xmlns:fb="http://www.facebook.com/2008/fbml" <?php language_attributes(); ?>>
 		var templateDir = "<?php bloginfo('template_directory') ?>";
 		</script>
 		<noscript><h2 style="position: fixed; top: 30px; z-index: 3;font-size: 14px; width: 100%; text-align: center; color: #A91611; background: #F8F700; border-bottom: 3px solid #9D1111; height: 24px">This site works best with Javascript turned on. Certain things may look different with it turned off.</h2></noscript>
+		<?php $top_message = get_option('top_message_'); ?>
+		<?php if ($top_message['text']):?>
 		<div class="top-message">
-			<a href="http://www.bookmarketing.co.uk/surveys/dscsalf10.htm" target="_blank">Take part in our survey about reading habits, for a chance to win fantastic prizes</a><a class='hide' href="#" style="font-size: 18px;">&uarr;</a> 
+			<a href="<?php echo $top_message['url'];?>" target="_blank">
+				<?php echo $top_message['text'];?>
+			</a>
+			
+			<a class='hide' href="#" style="font-size: 18px;">&uarr;</a> 
 		</div>
+		<?php endif; ?>
 		<div id="header">
 		<h1 style="float: left;">
 			<a href="<?php echo get_option('home'); ?>/" >
