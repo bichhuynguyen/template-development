@@ -26,6 +26,7 @@ include('functions/utilities.php');
 include('functions/thumbnails.php');
 
 include('functions/vimeo_class.php');
+include('functions/objects_class.php');
 
 
 
