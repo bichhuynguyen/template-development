@@ -54,6 +54,7 @@ class optionObject{
 	}
 
 	function option_rows($db){
+		
 		/* $options =
 		* Multi Dimensional Array, requires title, slug and help (all strings) for each
 		* required option 	
