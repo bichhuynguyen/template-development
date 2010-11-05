@@ -26,7 +26,7 @@ class optionObject{
 
 	
 	function __construct($args = false){
-		fb::log("constructed");
+		
 		if($args && is_array($args)){
 			foreach ($args as $k=>$v){
 				$this->args[$k]= $args[$k];
@@ -36,7 +36,7 @@ class optionObject{
 		
 		register_setting( $this->args['option_group'], $this->args['option_prefix'], array(&$this, 'validate') );
 		//add_action('admin_init', array(&$this, 'add_page'));
-		add_options_page($this->args['menu_page_title'], $this->args['page_title'], $this->args['user_level'], $this->args['menu_slug'], array(&$this, 'do_page'));
+		$this->add_page();
 
 	
 	}
@@ -53,28 +53,30 @@ class optionObject{
 
 	}
 
-	function option_rows($options = false){
+	function option_rows($db){
 		/* $options =
 		* Multi Dimensional Array, requires title, slug and help (all strings) for each
 		* required option 	
 		*/
 		
-		if(!$options) $options = $this->args['options'];
 		
 		
-		foreach ($options as $option):?>
+		
+		foreach ($this->args['options'] as $option):
+		$name = $this->args['option_prefix']."[".$option['slug']."]";
+		
+		?>
+			
 			<tr valign="top"><th scope="row"><?php echo $option['title']; ?></th>
 
-                <td><input type="text" name=<?php echo $this->args['option_name'].'['.$option['slug'].']'?> value="<?php echo $options['text']; ?>" /><p><?php echo $option[$option['slug']]; ?></p></td>
+                <td><input type="text" name="<?php echo $name;?>" value="<?php echo $db[$option['slug']]; ?>" /><p><?php echo $option['help']; ?></p></td>
 
             </tr>	
 		<?php endforeach;
 	}
 
 	function do_page() {
-		fb::log("Do Page launched");
-
-	    ?>
+		?>
 
 	    <div class="wrap">
 
@@ -84,11 +86,11 @@ class optionObject{
 
 	            <?php settings_fields($this->args['option_group']); ?>
 
-	            <?php $options = get_option($this->args['option_name']); ?>
+	            <?php $db = get_option($this->args['option_prefix']);//get results from DB ?>
 
 	            <table class="form-table">
 
-	            <?php $this->option_rows(); ?>
+	            <?php $this->option_rows($db); ?>
 					
 	            </table>
 
@@ -125,15 +127,24 @@ class optionObject{
 
 
 function test_options(){
-	
-	//$options->user_level = "read";
-	$args['page_title'] = "Test Options";
-	$args['menu_page_title'] = "Test Settings";
-	$args['menu_slug'] = "test_settings";
-	$args['options'] = array(
-								array("title"=>"Test 1","slug"=>"test1","help"=>"Help with Test 1"),
+	$args = array(
+			'option_group'		=> "test_options",		//Group Slug for settings whitelist	
+			'option_prefix'		=> "test_",			//name prefix set
+			'page_title'		=> "Test Settings",	//Page Title
+			'menu_page_title' 	=> "Test Settings",	//Settings Page Name for sidemenu
+			'user_level' 		=> 'manage_options',	//set minimum user access level
+			'menu_slug' 		=> "test_settings",	//ID for top level menu
+			'options'			=> array(
+								array("title"=>"Test 1","slug"=>"test1","help"=>"A little test."),
 								array("title"=>"Test 2","slug"=>"test2","help"=>"Help with Test 2")
-	);
+								)
+								
+						/*
+						* Multi Dimensional Array, requires title, slug and help (all strings) for each
+						* required option 	
+						*/
+			);//End of Args Defintion
+	
 	$options = new optionObject($args);
 	
 	
