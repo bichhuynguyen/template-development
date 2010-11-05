@@ -1,5 +1,13 @@
 <?php
 class optionObject{
+	/*
+	* Class for the for the defining, rendering and saving of additional settings within wordpress.
+	* Function beneath class demonstrates how best to create additional settings.
+	*
+	* All values have defined defaults, so all values are optional.
+	*/
+	
+	
 	var $args = array(
 			'option_group'		=> "extra_options",		//Group Slug for settings whitelist	
 			'option_prefix'		=> "extra_",			//name prefix set
@@ -7,6 +15,7 @@ class optionObject{
 			'menu_page_title' 	=> "Extra Settings",	//Settings Page Name for sidemenu
 			'user_level' 		=> 'manage_options',	//set minimum user access level
 			'menu_slug' 		=> "extra_settings",	//ID for top level menu
+			'button_text'		=> 'Save Changes',		//Display text on submit button in admin panel
 			'options'			=> array(
 								array("title"=>"Extra 1","slug"=>"extra1","help"=>"A little extra something"))
 								
@@ -27,6 +36,7 @@ class optionObject{
 	
 	function __construct($args = false){
 		
+		//set all $this->args as $args
 		if($args && is_array($args)){
 			foreach ($args as $k=>$v){
 				$this->args[$k]= $args[$k];
@@ -35,17 +45,12 @@ class optionObject{
 		
 		
 		register_setting( $this->args['option_group'], $this->args['option_prefix'], array(&$this, 'validate') );
-		//add_action('admin_init', array(&$this, 'add_page'));
 		$this->add_page();
 
 	
 	}
 	
-	function init(){
 
-	    register_setting( $this->args['option_group'], $this->args['option_prefix'], array(&$this, 'validate') );
-		
-	}
 
 	function add_page() {
 		
@@ -53,16 +58,17 @@ class optionObject{
 
 	}
 
-	function option_rows($db){
+	function option_rows(){
 		
 		/* $options =
 		* Multi Dimensional Array, requires title, slug and help (all strings) for each
 		* required option 	
+		* 
 		*/
 		
 		
 		
-		
+		$db = get_option($this->args['option_prefix']); //$db is current stored results in WPDB
 		foreach ($this->args['options'] as $option):
 		$name = $this->args['option_prefix']."[".$option['slug']."]";
 		
@@ -77,6 +83,7 @@ class optionObject{
 	}
 
 	function do_page() {
+		//HTML output for displaying page
 		?>
 
 	    <div class="wrap">
@@ -87,11 +94,11 @@ class optionObject{
 
 	            <?php settings_fields($this->args['option_group']); ?>
 
-	            <?php $db = get_option($this->args['option_prefix']);//get results from DB ?>
+	            
 
 	            <table class="form-table">
 
-	            <?php $this->option_rows($db); ?>
+	            <?php $this->option_rows(); //render rows based on $this->args['options'] ?>
 					
 	            </table>
 
@@ -115,7 +122,10 @@ class optionObject{
 
 	    // Say our option must be safe text with no HTML tags
 	foreach ($input as $k => $v){
-    		$input[$k] =  wp_filter_nohtml_kses($input[$k]);
+			
+			$input[$k] = clean($input[$k]);
+    		$input[$k] = wp_filter_nohtml_kses($input[$k]);
+
 	}
 
     return $input;
