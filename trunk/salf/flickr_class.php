@@ -106,7 +106,9 @@ class FlickrObject{
 		if ($this->stat!='ok') return false; //Kills function if API call failed.
 	
 		if(!$single):
+			
 			foreach ($this->callback_array[$relevant_array] as $photo){
+				
 				$photos[]=get_object_vars($photo);
 			}
 		else://single is true
@@ -141,7 +143,16 @@ class FlickrObject{
 			echo "Flickr Call Failed - Please Check Details";
 	endif;
 	}
-	
+	function get_photoset_info($id){
+		$this->method = 'flickr.photosets.getInfo';
+		$this->params = array('photoset_id' => $id);
+		$this->api_call();
+		$details = get_object_vars($this->callback_array['photoset']);
+		$thumb_id = $details['@attributes']['primary'];
+		$photoset_url = "http://www.flickr.com/photos/".$details['@attributes']['owner']."/sets/".$details['@attributes']['id']."/";
+		$this->get_image_by_id($thumb_id, $photoset_url);
+		fb::log($details,'hello world');
+	}
 	function get_image_by_id($id, $url=false, $thumbs=false, $title=false){
 		
 		$this->method = 'flickr.photos.getInfo';
@@ -197,6 +208,7 @@ class FlickrObject{
 	function get_photoset($id){
 		$this->method = 'flickr.photosets.getPhotos';
 		$this->params = array('photoset_id' => $id);
+		
 		
 		$this->images_and_links('photoset');
 		////fb::log($this->photo_array,'get_photoset');

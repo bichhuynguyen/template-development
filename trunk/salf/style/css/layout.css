@@ -1280,3 +1280,10 @@ ul.flickr_feed li a img:hover{
 	-moz-box-shadow: -1px 1px 7px #DE9228;
 	
 }
+#multimedia-block, #multimedia-block div{
+	float: right;
+	clear: right;
+}
+#multimedia-block h3{
+	width: 240px;
+}
