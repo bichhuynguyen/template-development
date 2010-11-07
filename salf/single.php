@@ -194,7 +194,7 @@ global $wp_query;
 			
 			<?php mf_post_thumbnail('large-uncropped');?>
 			
-			<!--<div id="multimedia-block">
+			<div id="multimedia-block">
 				<?php
 				$flickr = new FlickrObject();
 				$vimeo = new VimeoObject();
@@ -202,7 +202,7 @@ global $wp_query;
 				if ($image_id):
 				?>
 					<div id='flickr_image' class="multimedia">
-						<h3>Flickr Image</h3>
+						<h3>Click the image to view this image on flickr</h3>
 						<?php $flickr->get_image_by_id($image_id); ?>
 					</div>
 				<?php endif;?>
@@ -212,8 +212,8 @@ global $wp_query;
 				if ($set_id):
 				?>
 					<div id='flickr_set' class="multimedia">
-						<h3>Flickr Set</h3>
-						<?php $flickr->get_photoset($set_id); ?>
+						<h3>Click the image to see the rest of this set on flickr</h3>
+						<?php $flickr->get_photoset_info($set_id); ?>
 					</div>
 				<?php endif;?>
 				
@@ -230,7 +230,7 @@ global $wp_query;
 						
 					</div>
 				<?php endif;?>
-			</div>-->
+			</div>
 			<h2><?php the_title(); ?></h2>
 			
 			<div class='the_content'>

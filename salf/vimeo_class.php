@@ -16,7 +16,11 @@ class VimeoObject{
 			
 		} else {
 			$multimedia = get_option('multimedia_');
-			$this->id = $multimedia['vimeo_id'];
+			if($multimedia){
+				$this->id = $multimedia['vimeo_id'];
+			} else {
+				$this->id = 'mildfuzz';
+			}
 		}
 		
 		$curl = $this->strip_vimeo_get_vars();

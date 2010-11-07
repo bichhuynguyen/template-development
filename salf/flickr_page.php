@@ -49,7 +49,7 @@ Template Name: Flickr Page
 			<div id="photoset_select" class='clear'>		
 				<?php $flickr->get_sets(); ?>
 			</div>
-			<div id="photoset">	
+			<div id="photoset" class='clear'>	
 			<?php if ($_GET['id']):?>
 			
 				<?php if($_GET['title']) echo "<h2>".$_GET['title'].'</h2>'; ?>
