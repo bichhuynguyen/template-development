@@ -195,7 +195,7 @@ h1, h2, h3, h4,h5,h6{
 #header h1{
 	float: left;
 	
-	height: 256px;
+	margin-top: 15px;
 
 }
 #header h1 a span, #header p{
